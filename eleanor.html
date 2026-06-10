@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eleanor's Story — Yes Car No Car</title>
+  <meta name="description" content="Eleanor's 2018 Equinox needed one $350 part to avoid a $3,000 engine failure. No warning light ever came on." />
+  <link rel="icon" type="image/png" href="ycnc-badge.png" />
+  <meta property="og:title" content="The $350 Part That Saves the $3,000 Engine" />
+  <meta property="og:description" content="What Eleanor learned about the car already sitting in her driveway." />
+  <meta property="og:image" content="https://yescarnocar.app/ycnc-full.png" />
+  <meta property="og:url" content="https://yescarnocar.app/eleanor.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-deep: #050505;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --gold-bright: #6fd06f;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-size: 0.95rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .wordmark .good { color: var(--gold-bright); }
+    .wordmark .divider { color: var(--text-mute); margin: 0 0.4rem; }
+    .wordmark .bad { color: var(--silver); }
+    .nav-cta {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+    }
+    article {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 5rem;
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 5vw, 3.1rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .standfirst {
+      font-size: 1.15rem;
+      color: var(--silver-dim);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin: 2.8rem 0 1rem;
+    }
+    p { font-size: 1.05rem; color: var(--silver-2); margin-bottom: 1.3rem; }
+    strong { color: var(--silver); }
+    .pull {
+      border-left: 3px solid var(--gold);
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      margin: 2.2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-style: italic;
+      color: var(--silver);
+      line-height: 1.4;
+    }
+    .cta-block {
+      margin-top: 4rem;
+      padding: 2.2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-align: center;
+    }
+    .cta-block p { color: var(--silver-2); margin-bottom: 1.4rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #06130a;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      padding: 0.95rem 2.2rem;
+      border-radius: 999px;
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--text-mute);
+      font-size: 0.85rem;
+      position: relative;
+      z-index: 1;
+    }
+    footer a { color: var(--silver-dim); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html"><span class="good">Yes Car</span><span class="divider">|</span><span class="bad">No Car</span></a>
+      <a class="nav-cta" href="index.html#waitlist">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <article>
+    <div class="eyebrow">Real Stories &middot; The Owner</div>
+    <h1>The $350 Part That Saves the $3,000 Engine</h1>
+    <p class="standfirst">What Eleanor learned about the car already sitting in her driveway.</p>
+
+    <p>Eleanor wasn't shopping for a car. She already had one &mdash; a 2018 Chevrolet Equinox, paid for, running fine, no warning lights, no drama.</p>
+    <p>Which is exactly the kind of car that ends up costing people thousands of dollars. Because "running fine" and "fine" are not the same thing.</p>
+    <p>Eleanor ran her Equinox through Yes Car No Car &mdash; not to buy it, not to sell it, just to understand it. And the report flagged something specific: at her current mileage, the oil vacuum pump was due for replacement.</p>
+    <p>Cost to replace it now: <strong>about $350.</strong></p>
+    <p>Cost of not replacing it: a failed pump can starve the engine of what it needs, and the failure cascades. The damage on the other side of that cascade runs <strong>$2,000&ndash;$3,000</strong> &mdash; catastrophic engine territory, on a car that gave no outward sign anything was coming.</p>
+
+    <h2>No Light Came On</h2>
+    <p>That's the part worth sitting with. There was no check-engine light. No noise. No symptom Eleanor could have noticed. The car wasn't hiding anything &mdash; it just had no way to tell her, and nobody in her life had any reason to know that this specific component, on this specific engine, at this specific mileage, was the thing to watch.</p>
+    <p>That knowledge existed. It lives in service patterns, owner reports, and documented failure histories. It just doesn't live anywhere a normal person looks on a Tuesday.</p>
+    <div class="pull">A $350 scheduled fix versus a $3,000 failure isn't a close call. It's the easiest decision a car owner will ever make &mdash; if someone puts it in front of them in time.</div>
+
+    <h2>GCBC Isn't Just for Buying</h2>
+    <p>Most people hear "vehicle intelligence" and think about the moment of purchase &mdash; the test drive, the negotiation, the leap of faith. That moment matters, and we built for it.</p>
+    <p>But there are roughly 290 million registered vehicles in America and only a fraction change hands each year. The biggest audience for what we do isn't people buying cars. It's people who already own one and want to know what's coming.</p>
+    <p>Eleanor's report didn't just answer "is this a good car?" It answered the better question: <strong>"what does this car need from me next?"</strong> History, recalls, market value, upcoming maintenance, and a three-year picture of what owning it will actually cost.</p>
+    <p>Her Equinox is a good car. It just needed one $350 favor to stay that way.</p>
+
+    <div class="cta-block">
+      <p>Built for buyers &mdash; and for the car you already own.</p>
+      <a class="cta-btn" href="index.html#waitlist">Join the Waitlist</a>
+    </div>
+  </article>
+
+  <footer>
+    A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &middot; &copy; 2026
+  </footer>
+</body>
+</html>
