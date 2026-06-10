@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carey's Story — Yes Car No Car</title>
+  <meta name="description" content="Hyundai replaced Carey's failed Theta II engine with the same engine — and didn't tell her. The story behind why Yes Car No Car exists." />
+  <link rel="icon" type="image/png" href="ycnc-badge.png" />
+  <meta property="og:title" content="They Put the Same Engine Back In. They Just Didn't Mention It." />
+  <meta property="og:description" content="Carey's Hyundai Theta II story — and why the answer was in the public record the whole time." />
+  <meta property="og:image" content="https://yescarnocar.com/ycnc-full.png" />
+  <meta property="og:url" content="https://yescarnocar.com/carey.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-deep: #050505;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --gold-bright: #6fd06f;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-size: 0.95rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .wordmark .good { color: var(--gold-bright); }
+    .wordmark .divider { color: var(--text-mute); margin: 0 0.4rem; }
+    .wordmark .bad { color: var(--silver); }
+    .nav-cta {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+    }
+    article {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 5rem;
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 5vw, 3.1rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .standfirst {
+      font-size: 1.15rem;
+      color: var(--silver-dim);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin: 2.8rem 0 1rem;
+    }
+    p { font-size: 1.05rem; color: var(--silver-2); margin-bottom: 1.3rem; }
+    strong { color: var(--silver); }
+    .pull {
+      border-left: 3px solid var(--gold);
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      margin: 2.2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-style: italic;
+      color: var(--silver);
+      line-height: 1.4;
+    }
+    .cta-block {
+      margin-top: 4rem;
+      padding: 2.2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-align: center;
+    }
+    .cta-block p { color: var(--silver-2); margin-bottom: 1.4rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #06130a;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      padding: 0.95rem 2.2rem;
+      border-radius: 999px;
+    }
+    footer {
+      border-top: 1px solid var(--line-soft);
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--text-mute);
+      font-size: 0.85rem;
+      position: relative;
+      z-index: 1;
+    }
+    footer a { color: var(--silver-dim); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html"><span class="good">Yes Car</span><span class="divider">|</span><span class="bad">No Car</span></a>
+      <a class="nav-cta" href="index.html#waitlist">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <article>
+    <div class="eyebrow">Real Stories &middot; The Buyer</div>
+    <h1>They Put the Same Engine Back In. They Just Didn't Mention It.</h1>
+    <p class="standfirst">Carey's story, and the engine Hyundai paid $760 million over.</p>
+
+    <p>Carey did everything right.</p>
+    <p>She bought a Hyundai. A sensible, reasonable, nobody-ever-got-fired-for-buying-one Hyundai. She maintained it. She drove it like a normal person drives a car.</p>
+    <p>Then the engine failed.</p>
+    <p>Not "started running rough." Not "made a noise." Failed. And here's the thing &mdash; Carey wasn't unlucky. She was <em>on schedule</em>. Her car had a Theta II engine, and the Theta II is one of the most documented engine failures in modern automotive history. NHTSA investigations. Multiple recall campaigns covering millions of vehicles. A class action settlement that cost Hyundai and Kia $760 million in 2020. Entire online communities of owners comparing notes on the exact same failure.</p>
+    <p>The engines could fail with little warning. Owners across the country reported it at ordinary mileages, doing ordinary driving.</p>
+
+    <h2>The Part That Should Make You Angry</h2>
+    <p>Hyundai replaced Carey's engine under warranty. Sounds like the system working, right?</p>
+    <p>Here's what they didn't tell her: <strong>the replacement was the same engine.</strong> Same Theta II family. Same documented problems. They took out a failed engine and put back its twin &mdash; and graciously omitted that detail.</p>
+    <div class="pull">A defect is a mistake. This was a decision. Somebody chose not to tell Carey what was going back into her car.</div>
+    <p>And Carey isn't unique. Owner accounts of warranty replacements drawn from the same engine generation are documented across Hyundai and Kia communities by the thousands. She's just one of the people willing to say it out loud.</p>
+
+    <h2>What This Has to Do With Us</h2>
+    <p>Everything. This story is why Yes Car No Car exists.</p>
+    <p>The information about the Theta II was <em>public</em>. The recalls were public. The NHTSA filings were public. The settlement was front-page news in the car world. And none of it reached Carey at the moment it mattered &mdash; because no one in the transaction had any reason to bring it up. The dealer doesn't volunteer it. The history report shows what happened to <em>that</em> car, not what's documented across the engine family. The manufacturer, as established, wasn't in a sharing mood.</p>
+    <p>Run that same car through GCBC and the verdict engine knows what a Theta II is. It knows the recall history, the failure pattern, the settlement. The verdict doesn't depend on anyone in the deal deciding to be honest, because nobody in the deal pays us.</p>
+    <p>Carey's answer was sitting in the public record the whole time. She just needed something on her side of the table to read it.</p>
+    <p>That's the product. That's the whole point.</p>
+
+    <div class="cta-block">
+      <p>One verdict. Backed by data. Independent of the industry.</p>
+      <a class="cta-btn" href="index.html#waitlist">Join the Waitlist</a>
+    </div>
+  </article>
+
+  <footer>
+    A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &middot; &copy; 2026
+  </footer>
+</body>
+</html>
