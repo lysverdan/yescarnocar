@@ -137,9 +137,9 @@
     .story { position: relative; border: 1px solid var(--line); background: var(--ink); padding: 38px 36px; text-decoration: none; display: block; transition: border-color .3s, transform .3s; overflow: hidden; }
     .story:hover { border-color: var(--gold-line); transform: translateY(-6px); }
     .story::before { content:''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; }
-    .story.buyer::before { background: var(--bad); } .story.owner::before { background: var(--good); }
+    .story.burn::before { background: var(--bad); } .story.save::before { background: var(--good); }
     .story .s-tag { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 700; }
-    .story.buyer .s-tag { color: var(--bad); } .story.owner .s-tag { color: var(--good); }
+    .story.burn .s-tag { color: var(--bad); } .story.save .s-tag { color: var(--good); }
     .story h3 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--bone); font-size: 1.85rem; line-height: 1.08; margin: 14px 0 14px; }
     .story p { color: var(--bone-2); font-size: 0.96rem; }
     .story .s-veh { margin-top: 12px; font-size: 0.66rem; letter-spacing: 0.08em; color: var(--bone-mute); display: block; }
@@ -284,7 +284,7 @@
     <div class="container">
       <div class="sec-head reveal">
         <h2 class="display">The report is the sale.</h2>
-        <p class="sh-side">Not a generic history printout. A confidential-feeling intelligence brief — with a verdict, real costs, known failure patterns, inspection triggers, and better alternatives when the answer is no.</p>
+        <p class="sh-side">A history report tells you where the car's been. We tell you whether to buy it. Drop in your Carfax and the verdict only gets sharper — backed by real costs, known failure patterns, inspection triggers, and better alternatives when the answer is no.</p>
       </div>
       <div class="rgrid">
         <article class="rmini reveal">
@@ -332,18 +332,18 @@
     <div class="container">
       <div class="sec-head reveal">
         <h2 class="display">Real people. Real reports.</h2>
-        <p class="sh-side">One reason to use it before you buy. One reason to use it on the car already in your driveway.</p>
+        <p class="sh-side">The cost of not knowing what you own — and the payoff of knowing. Two owners found out.</p>
       </div>
       <div class="stories">
-        <a class="story buyer reveal" href="carey.html">
-          <span class="s-tag">The Buyer</span>
+        <a class="story burn reveal" href="carey.html">
+          <span class="s-tag">The Cover-Up</span>
           <h3>They put the same engine back in. They just didn't mention it.</h3>
           <p>Carey did everything right — bought a sensible Hyundai, maintained it, drove it normally. Then the Theta II engine failed. She wasn't unlucky. She was on schedule.</p>
           <span class="s-veh">Hyundai · Theta II engine</span>
           <span class="s-read">Read Carey's story →</span>
         </a>
-        <a class="story owner reveal" href="eleanor.html">
-          <span class="s-tag">The Owner</span>
+        <a class="story save reveal" href="eleanor.html">
+          <span class="s-tag">The Save</span>
           <h3>The $350 part that saves the $3,000 engine.</h3>
           <p>Eleanor wasn't shopping. She ran the Equinox already in her driveway through the report — just to understand it. It flagged the one part due before it became a failure.</p>
           <span class="s-veh">2018 Chevrolet Equinox</span>
@@ -398,9 +398,9 @@
       </div>
       <div class="inside-grid">
         <div class="icell reveal"><h3>The Verdict</h3><p>Good Car, Good Car If, Good Car / Bad Car, or Bad Car. No mush.</p></div>
-        <div class="icell reveal"><h3>Repair Exposure</h3><p>Realistic next-12-to-24-month cost ranges — not a vague "maybe."</p></div>
+        <div class="icell reveal"><h3>Repair Exposure</h3><p>Realistic next-12-to-24-month cost ranges — what each issue costs to fix, and what it costs to ignore.</p></div>
         <div class="icell reveal"><h3>Known Failure Patterns</h3><p>What the forums know, mechanics know, and sellers avoid mentioning.</p></div>
-        <div class="icell reveal"><h3>Driveway Tests</h3><p>What to check yourself before you pay for a mechanic's inspection.</p></div>
+        <div class="icell reveal"><h3>Mechanic's Checklist</h3><p>A custom inspection list for this exact car — built from its known failure points and where it's lived. A salt-belt car and a desert one get different lists. You hand it to your mechanic so nothing gets missed.</p></div>
         <div class="icell reveal"><h3>Market Reality</h3><p>Value, depreciation, and whether the asking price actually makes sense.</p></div>
         <div class="icell reveal"><h3>Better Alternatives</h3><p>When the answer is no, you still leave with somewhere to go.</p></div>
       </div>
@@ -417,7 +417,7 @@
       <div class="steps">
         <div class="step reveal"><div class="s-n">01</div><h3>Scan or enter the VIN</h3><p>Point your phone at the windshield, dash, or door jamb — or type it in. Add mileage and asking price. Thirty seconds.</p></div>
         <div class="step reveal"><div class="s-n">02</div><h3>Get the verdict</h3><p>A complete report — history, recalls, known issues, repair exposure, market value — and one clear verdict on whether it's worth your money.</p></div>
-        <div class="step reveal"><div class="s-n">03</div><h3>Ask anything</h3><p>Follow up against the same VIN forever. Negotiation, repairs, alternatives — stored and accessible anytime.</p></div>
+        <div class="step reveal"><div class="s-n">03</div><h3>Negotiate with leverage</h3><p>Know exactly what to offer and what to say — pulled straight from the repair math. Every report includes a set of follow-up questions, saved against the VIN.</p></div>
       </div>
     </div>
   </section>
