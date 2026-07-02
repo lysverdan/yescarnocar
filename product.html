@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Used Car Report & VIN Check — What Yes Car No Car Gives You</title>
+  <meta name="description" content="A verdict. A full used car report — documented failure patterns, real repair costs, a mechanic inspection checklist, a negotiating angle, and five follow-up questions. All tied to that exact VIN. $19.99. First report $9.99 for founding members." />
+  <link rel="canonical" href="https://yescarnocar.com/product.html" />
+  <link rel="icon" type="image/png" href="ycnc-badge.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yes Car No Car" />
+  <meta property="og:title" content="Used Car Report & VIN Check — Yes Car No Car" />
+  <meta property="og:description" content="Not a data dump. A verdict from someone with no reason to lie to you — and a full report that explains every dollar at stake." />
+  <meta property="og:image" content="https://yescarnocar.com/ycnc-badge.png" />
+  <meta property="og:url" content="https://yescarnocar.com/product.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Used Car Report & VIN Check — Yes Car No Car" />
+  <meta name="twitter:description" content="Verdict + full report: failure patterns, real repair costs, mechanic checklist, and 5 follow-up questions. $19.99 — $9.99 for founding members." />
+  <meta name="twitter:image" content="https://yescarnocar.com/ycnc-badge.png" />
+
+  <!-- JSON-LD: WebPage + Product -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://yescarnocar.com/product.html",
+        "url": "https://yescarnocar.com/product.html",
+        "name": "Used Car Report & VIN Check — Yes Car No Car",
+        "description": "Full vehicle intelligence report: documented failure patterns, real repair costs, accident-aware mechanic checklist, negotiating angle, and five VIN-specific follow-up questions.",
+        "isPartOf": { "@id": "https://yescarnocar.com/#website" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yescarnocar.com/" },
+            { "@type": "ListItem", "position": 2, "name": "What You Get", "item": "https://yescarnocar.com/product.html" }
+          ]
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Yes Car No Car Vehicle Intelligence Report",
+        "description": "Enter a VIN or upload a Carfax report. Get an independent Good Car or Bad Car verdict plus a full report: documented failure patterns, real repair costs, an accident-aware mechanic checklist, a negotiating angle, and five VIN-specific follow-up questions.",
+        "brand": { "@type": "Brand", "name": "Yes Car No Car" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Single Report",
+            "price": "19.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder"
+          },
+          {
+            "@type": "Offer",
+            "name": "Founding Member First Report",
+            "price": "9.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder",
+            "description": "First report at founding member price."
+          },
+          {
+            "@type": "Offer",
+            "name": "Three-Report Bundle",
+            "price": "49.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-deep: #050505;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --gold-bright: #6fd06f;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+      --good: #5fd866;
+      --condition: #2d9b8a;
+      --warning: #e8a838;
+      --bad: #d94848;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(76, 175, 80, 0.03) 0%, transparent 60%);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; position: relative; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 1.1rem 2rem;
+      background: rgba(10, 10, 10, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(76, 175, 80, 0.12);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--silver);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .wordmark .gold { color: var(--gold); }
+    .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--silver-dim);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--silver); }
+    .nav-link.active { color: var(--gold); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-cta {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--silver);
+      text-decoration: none;
+      padding: 0.6rem 1.1rem;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+    .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
+
+    /* ── TYPOGRAPHY ── */
+    .eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--silver);
+      margin-bottom: 1.75rem;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      color: var(--silver);
+      margin-bottom: 1.5rem;
+    }
+    h2 em { font-style: italic; color: var(--gold); }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      line-height: 1.2;
+      color: var(--silver);
+      margin-bottom: 0.75rem;
+    }
+
+    .lede {
+      font-size: 1.1rem;
+      line-height: 1.72;
+      color: var(--silver-2);
+      max-width: 640px;
+    }
+
+    p { font-size: 1.05rem; color: var(--silver-2); line-height: 1.7; }
+    p + p { margin-top: 1.2rem; }
+
+    .pull {
+      border-left: 3px solid var(--gold);
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      margin: 2.5rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-style: italic;
+      color: var(--silver);
+      line-height: 1.4;
+    }
+    .pull .accent { color: var(--gold); font-style: normal; font-weight: 600; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 7rem 0 5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .page-header .container-narrow .lede {
+      margin-top: 1.25rem;
+      max-width: 580px;
+    }
+
+    /* ── VERDICT SECTION ── */
+    .verdict-section { border-top: 1px solid var(--line); }
+    .verdict-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+    .verdict-explain p { margin-bottom: 1.2rem; }
+    .verdict-explain p:last-child { margin-bottom: 0; }
+
+    .verdict-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--line-soft);
+      border: 1px solid var(--line-soft);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .verdict-card {
+      background: var(--bg-card);
+      padding: 1.4rem 1.5rem;
+      border-left: 3px solid var(--accent);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .verdict-card.good    { --accent: var(--good); }
+    .verdict-card.condition { --accent: var(--condition); }
+    .verdict-card.warning { --accent: var(--warning); }
+    .verdict-card.bad     { --accent: var(--bad); }
+
+    .verdict-card-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .verdict-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--silver);
+      line-height: 1.2;
+    }
+    .verdict-card-desc {
+      font-size: 0.9rem;
+      color: var(--silver-dim);
+      line-height: 1.55;
+    }
+
+    /* ── REPORT SECTION ── */
+    .report-section { border-top: 1px solid var(--line); }
+    .report-intro {
+      max-width: 640px;
+      margin-bottom: 4rem;
+    }
+    .report-intro p { margin-top: 1rem; }
+
+    .report-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .report-item {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--line-soft);
+      align-items: start;
+    }
+    .report-item:last-child { border-bottom: 1px solid var(--line-soft); }
+
+    .report-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 0.3rem;
+    }
+    .report-item-content { }
+    .report-item-content h3 { margin-bottom: 0.6rem; }
+    .report-item-content p { font-size: 1rem; color: var(--silver-2); }
+    .report-item-content p + p { margin-top: 0.9rem; }
+    .report-item-content .detail {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      border: 1px solid var(--line);
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+    }
+
+    /* ── WHO SECTION ── */
+    .who-section { border-top: 1px solid var(--line); }
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .who-card { }
+    .who-card .who-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .who-card h3 {
+      font-size: clamp(1.3rem, 2vw, 1.6rem);
+      margin-bottom: 1rem;
+    }
+    .who-card p { font-size: 1rem; color: var(--silver-2); line-height: 1.65; }
+
+    /* ── PRICING ── */
+    .pricing-section { border-top: 1px solid var(--line); }
+    .pricing-intro {
+      max-width: 560px;
+      margin-bottom: 3.5rem;
+    }
+    .pricing-intro p { margin-top: 1rem; }
+
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--line-soft);
+      border: 1px solid var(--line-soft);
+      border-radius: 4px;
+      overflow: hidden;
+      max-width: 860px;
+    }
+    .pricing-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      background: var(--bg-card);
+      padding: 1.75rem 2rem;
+    }
+    .pricing-row--featured {
+      background: #0f1f0f;
+      border-left: 3px solid var(--gold);
+    }
+    .pricing-row--free {
+      background: var(--bg-card);
+    }
+
+    .pricing-info { display: flex; flex-direction: column; gap: 0.3rem; }
+    .pricing-tier {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--silver);
+      letter-spacing: 0.02em;
+    }
+    .pricing-desc {
+      font-size: 0.9rem;
+      color: var(--silver-dim);
+      line-height: 1.5;
+      max-width: 46ch;
+    }
+    .pricing-amount { text-align: right; flex-shrink: 0; }
+    .pricing-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--silver);
+      line-height: 1;
+    }
+    .pricing-founding {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .pricing-strike {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-mute);
+      text-decoration: line-through;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.04em;
+    }
+    .pricing-founding-note {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+    .pricing-free-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--good);
+      line-height: 1;
+    }
+
+    .pricing-note {
+      margin-top: 1.75rem;
+      font-size: 0.85rem;
+      color: var(--text-mute);
+      letter-spacing: 0.04em;
+      max-width: 860px;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how { border-top: 1px solid var(--line); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.25rem;
+      margin-top: 3.5rem;
+      counter-reset: step;
+    }
+    .step {
+      position: relative;
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--line);
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step, decimal-leading-zero);
+      position: absolute;
+      top: -0.8rem; left: 0;
+      background: var(--bg);
+      padding-right: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--silver);
+      margin-bottom: 0.85rem;
+      line-height: 1.2;
+    }
+    .step-desc {
+      font-size: 1rem;
+      color: var(--silver-2);
+      line-height: 1.6;
+    }
+
+    /* ── WHY ── */
+    .why { border-top: 1px solid var(--line); }
+    .why-quote {
+      margin-top: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+      line-height: 1.4;
+      color: var(--silver);
+      max-width: 820px;
+    }
+    .why-quote .accent { color: var(--gold); font-style: normal; font-weight: 600; }
+    .why-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 4rem;
+    }
+    .pillar-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.85rem;
+      font-weight: 600;
+    }
+    .pillar-text {
+      font-size: 1rem;
+      color: var(--silver-2);
+      line-height: 1.65;
+    }
+
+    /* ── INDEPENDENCE ── */
+    .independence { border-top: 1px solid var(--line); }
+    .independence-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+    .independence-statement {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+      line-height: 1.4;
+      color: var(--silver);
+      max-width: 520px;
+    }
+    .independence-statement .accent { color: var(--gold); font-style: normal; font-weight: 600; }
+    .independence-detail { display: flex; flex-direction: column; gap: 1.5rem; padding-top: 0.5rem; }
+    .independence-point .pillar-label { font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; font-weight: 600; }
+    .independence-point p { font-size: 1rem; color: var(--silver-2); line-height: 1.65; }
+
+    /* ── FINAL INTELLIGENCE ── */
+    .final-intelligence { border-top: 1px solid var(--line); }
+    .fi-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+    .fi-left .lede {
+      font-size: 1.12rem;
+      line-height: 1.7;
+      color: var(--silver-2);
+      max-width: 520px;
+      margin-bottom: 1.5rem;
+    }
+    .fi-left p {
+      font-size: 1rem;
+      color: var(--silver-2);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 1.2rem;
+    }
+    .fi-pull {
+      border-left: 3px solid var(--gold);
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      margin: 2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-style: italic;
+      color: var(--silver);
+      line-height: 1.4;
+      max-width: 480px;
+    }
+    .fi-closing {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--silver-dim);
+      margin-top: 1.5rem !important;
+    }
+    .fi-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--line-soft);
+      border: 1px solid var(--line-soft);
+      border-radius: 3px;
+      overflow: hidden;
+      position: sticky;
+      top: 6rem;
+    }
+    .fi-card {
+      background: var(--bg-card);
+      padding: 1.75rem 1.75rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      border-left: 3px solid var(--gold);
+    }
+    .fi-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+      line-height: 1;
+      padding-top: 0.2rem;
+      width: 1.8rem;
+    }
+    .fi-card-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 0.4rem;
+    }
+    .fi-card-desc {
+      font-size: 0.95rem;
+      color: var(--silver-dim);
+      line-height: 1.6;
+    }
+    .fi-badge {
+      background: #0a1a0a;
+      border-left: 3px solid var(--gold);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .fi-badge-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .fi-badge-text {
+      font-size: 0.85rem;
+      color: var(--silver-2);
+      line-height: 1.55;
+    }
+    .fi-badge-text strong { color: var(--silver); }
+
+    /* ── CTA BLOCK ── */
+    .cta-section { border-top: 1px solid var(--line); text-align: center; }
+    .cta-inner { max-width: 580px; margin: 0 auto; }
+    .cta-inner h2 { margin-bottom: 1.25rem; }
+    .cta-inner p { margin: 0 auto 2.5rem; max-width: 46ch; margin-left: auto; margin-right: auto; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #051008;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      padding: 1rem 2.5rem;
+      border-radius: 2px;
+      border: 2px solid var(--gold-bright);
+      transition: all 0.25s ease;
+    }
+    .cta-btn:hover { background: var(--gold-bright); transform: translateY(-1px); }
+    .cta-fine {
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--text-mute);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(76, 175, 80, 0.12);
+    }
+    .footer-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    .footer-mark .gold { color: var(--gold); }
+    .footer-mark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .footer-sub {
+      font-size: 0.74rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--silver-dim);
+      font-weight: 500;
+    }
+    .footer-sub a { color: var(--gold); text-decoration: none; }
+    .footer-sub a:hover { color: var(--gold-bright); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 760px) {
+      section { padding: 4.5rem 0; }
+      .container { padding: 0 1.5rem; }
+      .container-narrow { padding: 0 1.5rem; }
+      .verdict-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .who-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .report-item { grid-template-columns: 2rem 1fr; gap: 1.25rem; }
+      .pricing-row { grid-template-columns: 1fr; gap: 0.75rem; }
+      .pricing-amount { text-align: left; }
+      .steps { grid-template-columns: 1fr; gap: 2.5rem; }
+      .why-pillars { grid-template-columns: 1fr; gap: 2rem; }
+      .independence-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .fi-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .fi-right { position: static; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">
+        <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+      </a>
+      <div class="nav-right" style="display:flex;align-items:center;gap:2rem;">
+        <div class="nav-links">
+          <a class="nav-link active" href="product.html">What You Get</a>
+          <a class="nav-link" href="stories.html">Real Stories</a>
+        </div>
+        <a href="waitlist.html" class="nav-cta">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <div class="container-narrow">
+        <div class="eyebrow">What You Get</div>
+        <h1>Not a report.<br /><em>A verdict.</em></h1>
+        <p class="lede">Every other tool in this category hands you data and leaves you to figure out what it means. Yes Car No Car hands you judgment — one honest answer on that exact car, from a platform that has no financial relationship with anyone trying to sell it to you.</p>
+      </div>
+    </header>
+
+    <!-- THE VERDICT -->
+    <section class="verdict-section">
+      <div class="container">
+        <div class="eyebrow">The Verdict</div>
+        <div class="verdict-layout">
+          <div class="verdict-explain">
+            <h2>One word.<br /><em>Always free.</em></h2>
+            <p>Before you spend anything, before you decide anything, you get the verdict. One plain-language answer on the car in front of you — not a score, not a percentage, not a recommendation to "consult a mechanic." A word.</p>
+            <p>This is the hook, and it's the promise. Yes Car No Car earns your trust before it asks for your money. The verdict is free because the verdict is the point. Everything else is the explanation.</p>
+            <div class="pull">There is a profound difference between a report that says <span class="accent">"three accidents on record"</span> and a voice that says "this car has been hit three times — here is exactly what to inspect, and here is the one question to ask the seller."</div>
+            <p>That interpretive layer — the verdict backed by a reason — is exactly what every other tool in this market is missing. We built the whole product around it.</p>
+          </div>
+          <div class="verdict-cards">
+            <div class="verdict-card good">
+              <div class="verdict-card-label">Verdict 01</div>
+              <div class="verdict-card-title">Good Car</div>
+              <div class="verdict-card-desc">Buy with confidence. History is clean, price is in range, no documented failure pattern at this age and mileage.</div>
+            </div>
+            <div class="verdict-card condition">
+              <div class="verdict-card-label">Verdict 02</div>
+              <div class="verdict-card-title">Good Car — One Condition</div>
+              <div class="verdict-card-desc">A solid car with one specific fixable thing to handle first. We tell you what it is, what it costs, and whether the seller should cover it.</div>
+            </div>
+            <div class="verdict-card warning">
+              <div class="verdict-card-label">Verdict 03</div>
+              <div class="verdict-card-title">Good Car / Bad Car</div>
+              <div class="verdict-card-desc">Mixed signals. Could still be the right buy at the right price — but only with eyes open. We tell you exactly what tips it either way.</div>
+            </div>
+            <div class="verdict-card bad">
+              <div class="verdict-card-label">Verdict 04</div>
+              <div class="verdict-card-title">Bad Car</div>
+              <div class="verdict-card-desc">Walk away. The data points to recurring or catastrophic issues no negotiation can fix. We'll suggest better alternatives in the same class and budget.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE FULL REPORT -->
+    <section class="report-section">
+      <div class="container">
+        <div class="eyebrow">The Full Report</div>
+        <div class="report-intro">
+          <h2>Five things the seller<br /><em>hopes you never find out.</em></h2>
+          <p>The full report is the product. It's designed to look and feel like something worth paying for — an editorial dossier on that exact car, not a data dump. Here's what's in it.</p>
+        </div>
+
+        <div class="report-items">
+
+          <div class="report-item">
+            <div class="report-num">01</div>
+            <div class="report-item-content">
+              <h3>Documented Failure Patterns</h3>
+              <p>Not generic reliability ratings. The specific, expensive, model-particular problems that sink buyers — the kind of thing that turns into a repair bill nobody saw coming.</p>
+              <p>We know that the Hyundai Theta II engine has a documented failure pattern at ordinary mileages. We know that the 2018 Equinox oil vacuum pump is the $350 part that prevents a $3,000 engine failure. We know what this exact engine, in this exact year, tends to do — and we tell you before you sign anything.</p>
+              <span class="detail">Specific to your VIN · Model · Year · Engine</span>
+            </div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-num">02</div>
+            <div class="report-item-content">
+              <h3>Real Repair Costs</h3>
+              <p>Dollar figures, not vague warnings. If the timing chain on this generation is known to go at 90,000 miles and you're at 82,000, we tell you what that repair costs and what it costs to ignore it.</p>
+              <p>Catching one expensive repair before it happens pays for the product many times over. That's not a sales pitch — it's arithmetic.</p>
+              <span class="detail">Parts · Labour · Cost to ignore</span>
+            </div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-num">03</div>
+            <div class="report-item-content">
+              <h3>Tailored Mechanic Checklist</h3>
+              <p>A pre-purchase inspection is only as good as the instructions you give the mechanic. Most buyers hand their car to a shop and say "check it over." The mechanic runs a standard inspection. The specific thing that was going to cost you $4,000 doesn't get found.</p>
+              <p>Yes Car No Car generates a checklist tailored to your exact VIN — the specific things to inspect on this car, at this mileage, with this history. You walk into the inspection appointment already knowing what matters.</p>
+              <span class="detail">VIN-specific · Ready to hand to your mechanic</span>
+            </div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-num">04</div>
+            <div class="report-item-content">
+              <h3>A Negotiating Angle</h3>
+              <p>The report doesn't end with the findings. It ends with what to do with them. If there's a documented issue, we give you the language to take back to the seller — how to frame the ask, what number is reasonable, and when to walk instead of negotiate.</p>
+              <p>You don't need to be a car person to use this. You just need the right information at the right moment.</p>
+              <span class="detail">Specific to this car's findings</span>
+            </div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-num">05</div>
+            <div class="report-item-content">
+              <h3>Five Follow-Up Questions</h3>
+              <p>The report answers what we know. Your situation has details we don't. Five follow-up questions come with every report, tied to that VIN, for as long as you own the decision.</p>
+              <p>Ask about the specific recall you found. Ask whether the repair estimate the seller quoted is reasonable. Ask what to watch in year two of ownership. The conversation stays open.</p>
+              <span class="detail">Tied to your VIN · No expiry</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="who-section">
+      <div class="container">
+        <div class="eyebrow">Who It's For</div>
+        <h2>One product.<br /><em>Three kinds of buyer.</em></h2>
+
+        <div class="who-grid">
+
+          <div class="who-card">
+            <div class="who-label">The Buyer</div>
+            <h3>You're about to spend serious money on a car you know almost nothing about.</h3>
+            <p>The seller knows more than you. The dealer knows more than you. The history report tells you what happened — not what it means, or what it will cost. Yes Car No Car is the one thing in the transaction that works entirely for you.</p>
+          </div>
+
+          <div class="who-card">
+            <div class="who-label">The Owner</div>
+            <h3>You already own the car. You want to know what's coming before it costs you.</h3>
+            <p>There are roughly 290 million registered vehicles in the United States. Most of them will never be sold — but every one of them has a repair history, an upcoming maintenance window, and a failure pattern worth knowing about. The same VIN scan that protects a buyer also protects an owner.</p>
+          </div>
+
+          <div class="who-card">
+            <div class="who-label">The Cross-Shopper</div>
+            <h3>You're weighing three cars and you need a straight answer on each one.</h3>
+            <p>The three-report bundle was built for this. Not three separate purchases — one decision, fully informed, across every option on your list. Buy the right car on the first try. The one that doesn't become a lesson.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="eyebrow">Pricing</div>
+        <div class="pricing-intro">
+          <h2>Simple. <em>Transparent. No surprises.</em></h2>
+          <p>The verdict is always free. You only pay for the full picture. And right now, founding members get their first report at half the standard price — because getting here early should mean something.</p>
+        </div>
+
+        <div class="pricing-table">
+
+          <div class="pricing-row pricing-row--free">
+            <div class="pricing-info">
+              <div class="pricing-tier">The Verdict</div>
+              <div class="pricing-desc">One honest word on the car — Good Car, Bad Car, or the two in between. Always free. No account required. This is where it starts.</div>
+            </div>
+            <div class="pricing-amount">
+              <div class="pricing-free-label">Free</div>
+            </div>
+          </div>
+
+          <div class="pricing-row pricing-row--featured">
+            <div class="pricing-info">
+              <div class="pricing-tier">Single Report — Founding Member</div>
+              <div class="pricing-desc">The full report: failure patterns, real repair costs, mechanic checklist, negotiating angle, and five follow-up questions. Founding member rate — locked on your first report.</div>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-strike">$19.99</span>
+              <div class="pricing-founding">$9.99</div>
+              <span class="pricing-founding-note">Founding members only</span>
+            </div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="pricing-info">
+              <div class="pricing-tier">Single Report</div>
+              <div class="pricing-desc">Standard rate at launch. Everything in the full report — verdict, failure patterns, costs, checklist, negotiating angle, five follow-up questions.</div>
+            </div>
+            <div class="pricing-amount">
+              <div class="pricing-main">$19.99</div>
+            </div>
+          </div>
+
+          <div class="pricing-row">
+            <div class="pricing-info">
+              <div class="pricing-tier">Three-Report Bundle</div>
+              <div class="pricing-desc">For cross-shoppers weighing several cars. Three full reports — use them on any combination of vehicles, in any order, at any time.</div>
+            </div>
+            <div class="pricing-amount">
+              <div class="pricing-main">$49.99</div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="pricing-note">Yes Car No Car is independent. No dealer relationships, no automotive advertisers, no conflicts — ever. The product makes money when buyers pay for intelligence. Full stop.</p>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how">
+      <div class="container">
+        <div class="eyebrow">How It Works</div>
+        <h2>Three steps. <em>Built for buyers and owners.</em></h2>
+        <p class="lede">
+          Whether you're considering a purchase, verifying a deal, or simply trying to understand the car you already own — Yes Car No Car works the same way.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <h3 class="step-title">Scan &amp; enter the basics</h3>
+            <p class="step-desc">Point your phone at any windshield, dashboard, or door jamb &mdash; or type the VIN in. Add the asking price and mileage. Thirty seconds, tops.</p>
+          </div>
+          <div class="step">
+            <h3 class="step-title">Get the verdict</h3>
+            <p class="step-desc">In seconds, a full report: history, recalls, market value, three-year cost projection, upcoming maintenance, and the verdict.</p>
+          </div>
+          <div class="step">
+            <h3 class="step-title">Ask anything</h3>
+            <p class="step-desc">Follow up with questions specific to your situation. Stored against the VIN forever — accessible anytime you need it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IT'S DIFFERENT -->
+    <section class="why">
+      <div class="container">
+        <div class="eyebrow">Why It's Different</div>
+        <h2>Built to be <em>permanently</em> on your side.</h2>
+        <blockquote class="why-quote">
+          "Zero dealer conflicts — <span class="accent">permanently and structurally</span>. Independent. Unownable by industry. Built for the person whose money is on the line."
+        </blockquote>
+
+        <div class="why-pillars">
+          <div class="pillar">
+            <div class="pillar-label">Independent</div>
+            <p class="pillar-text">No dealer partnerships, no manufacturer relationships, no paid recommendations. The product can't be co-opted because it isn't structured to be.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label">Comprehensive</div>
+            <p class="pillar-text">Not just history. Cost projections, recall outlook, comparable alternatives, follow-up Q&amp;A — the full picture of what owning the car will mean.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-label">Lifelong</div>
+            <p class="pillar-text">Not a one-time report. A vehicle intelligence platform that follows the car through every owner, every transaction, every question.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDEPENDENCE -->
+    <section class="independence">
+      <div class="container">
+        <div class="eyebrow">Independence</div>
+        <h2>The one thing <em>no competitor can copy.</em></h2>
+        <div class="independence-inner">
+          <p class="independence-statement">
+            "No dealer relationships. No automotive advertisers. No industry partnerships that create a conflict with the buyer. <span class="accent">This is not a marketing position.</span> It is the permanent foundation of the business."
+          </p>
+          <div class="independence-detail">
+            <div class="independence-point">
+              <div class="pillar-label">Structural</div>
+              <p>The product makes money when buyers pay for intelligence. Full stop. Any competitor that takes even one dollar of dealer or advertiser money loses the credibility that makes this worth paying for.</p>
+            </div>
+            <div class="independence-point">
+              <div class="pillar-label">Permanent</div>
+              <p>Independence becomes more valuable, not less, as the category gets more crowded. It's the one position that gets stronger the more it's tested.</p>
+            </div>
+            <div class="independence-point">
+              <div class="pillar-label">On Your Side</div>
+              <p>History reports and mechanics aren't the enemy — drop in your Carfax and the verdict only gets sharper. Yes Car No Car slots into your existing process and makes it better.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL INTELLIGENCE -->
+    <section class="final-intelligence">
+      <div class="container">
+        <div class="eyebrow">Carfax + YCNC</div>
+        <h2>You already have the history.<br /><em>Now get what it means.</em></h2>
+        <div class="fi-layout">
+
+          <div class="fi-left">
+            <p class="lede">A Carfax report is one of the most powerful documents in a used-car transaction. It tells you what happened to the car — every accident, every owner, every odometer reading on record. What it cannot tell you is what any of it means for the specific machine in front of you, what it will cost, or whether you should buy it.</p>
+            <p>That interpretive layer is what Yes Car No Car provides. And when you bring both together, the verdict doesn't just get better. It gets precise.</p>
+            <blockquote class="fi-pull">"Drop in your Carfax and the verdict only gets sharper."</blockquote>
+            <p>A vehicle's accident history means different things depending on where the impact occurred, what the car is, and what systems were in range. Regional history matters too — a car that spent years in a flood-prone area or near coastal salt carries risk that no accident report surfaces on its own. A single long-term owner at high mileage tells a different story than four owners in seven years at the same number.</p>
+            <p>Yes Car No Car reads all of it. Not as isolated data points — as a complete picture of what this car is, what it has been through, and what is likely coming next.</p>
+            <p class="fi-closing">Carfax tells you the story. We tell you the verdict.</p>
+          </div>
+
+          <div class="fi-right">
+            <div class="fi-card">
+              <div class="fi-card-num">A</div>
+              <div class="fi-card-body">
+                <div class="fi-card-title">VIN Only</div>
+                <div class="fi-card-desc">Scan or enter the VIN. We identify the exact vehicle and return the verdict — one honest word on the car, free, before anything else changes hands.</div>
+              </div>
+            </div>
+            <div class="fi-card" style="border-left-color: var(--gold-bright); background: #0a1a0a;">
+              <div class="fi-card-num">B</div>
+              <div class="fi-card-body">
+                <div class="fi-card-title">Carfax Upload</div>
+                <div class="fi-card-desc">Drop in the Carfax. We read the VIN automatically, pull everything we know about that vehicle, and layer our full analysis on top of their history. One step. A sharper verdict.</div>
+              </div>
+            </div>
+            <div class="fi-badge">
+              <div class="fi-badge-icon">→</div>
+              <div class="fi-badge-text"><strong>Either way, you get the verdict.</strong> The Carfax makes the analysis more precise — it was never a requirement to get started.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="eyebrow">Early Access</div>
+          <h2>Be first <em>when we launch.</em></h2>
+          <p>Yes Car No Car is launching soon in the United States. Join the waitlist and we'll let you know the moment it's live — founding members get priority access and the $9.99 first-report rate.</p>
+          <a href="waitlist.html" class="cta-btn">Join the Waitlist</a>
+          <p class="cta-fine">No spam. One email at launch. That's it.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-mark">
+      <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+    </div>
+    <div class="footer-sub">
+      A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026
+    </div>
+  </footer>
+
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>

@@ -3,47 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hyundai Theta II Engine Replaced Without Disclosure — Carey's Story</title>
-  <meta name="description" content="Carey's Hyundai Theta II engine failed. The dealer replaced it — with the same engine that failed, under the same recall — and didn't mention it. The answer was in the public record the whole time." />
-  <link rel="canonical" href="https://yescarnocar.com/carey.html" />
+  <title>Join the Waitlist — Yes Car No Car Early Access</title>
+  <meta name="description" content="Be first when Yes Car No Car launches. Founding members get their first full vehicle intelligence report at $9.99 — half the standard $19.99 price. One email at launch. No spam." />
+  <link rel="canonical" href="https://yescarnocar.com/waitlist.html" />
   <link rel="icon" type="image/png" href="ycnc-badge.png" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yes Car No Car" />
-  <meta property="og:title" content="They Put the Same Engine Back In. They Just Didn't Mention It." />
-  <meta property="og:description" content="Carey's Hyundai Theta II story — and why the answer was in the public record the whole time." />
+  <meta property="og:title" content="Join the Waitlist — Yes Car No Car Early Access" />
+  <meta property="og:description" content="Early access. Founding member pricing. First report at $9.99. One email at launch. That's it." />
   <meta property="og:image" content="https://yescarnocar.com/ycnc-badge.png" />
-  <meta property="og:url" content="https://yescarnocar.com/carey.html" />
+  <meta property="og:url" content="https://yescarnocar.com/waitlist.html" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="They Put the Same Engine Back In. They Just Didn't Mention It." />
-  <meta name="twitter:description" content="Carey's Hyundai Theta II engine failed. The dealer replaced it with the same engine — without telling her. The answer was in the public record." />
+  <meta name="twitter:title" content="Join the Waitlist — Yes Car No Car" />
+  <meta name="twitter:description" content="Founding members get their first vehicle intelligence report at $9.99. Standard price at launch: $19.99. One email. No spam." />
   <meta name="twitter:image" content="https://yescarnocar.com/ycnc-badge.png" />
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": "https://yescarnocar.com/carey.html",
-    "url": "https://yescarnocar.com/carey.html",
-    "headline": "They Put the Same Engine Back In. They Just Didn't Mention It.",
-    "description": "Carey's Hyundai Theta II engine failed under a known defect. The dealer replaced it with the same recalled engine and disclosed nothing. The public record had the answer.",
-    "keywords": "Hyundai Theta II engine defect, used car disclosure, engine replacement without disclosure, undisclosed repair history, vehicle history report",
+    "@type": "WebPage",
+    "@id": "https://yescarnocar.com/waitlist.html",
+    "url": "https://yescarnocar.com/waitlist.html",
+    "name": "Join the Waitlist — Yes Car No Car Early Access",
+    "description": "Sign up for early access to Yes Car No Car. Founding members get their first vehicle intelligence report at $9.99.",
     "isPartOf": { "@id": "https://yescarnocar.com/#website" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "BackedWisely Inc.",
-      "url": "https://yescarnocar.com/"
-    },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yescarnocar.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Real Stories", "item": "https://yescarnocar.com/stories.html" },
-        { "@type": "ListItem", "position": 3, "name": "Carey's Story", "item": "https://yescarnocar.com/carey.html" }
+        { "@type": "ListItem", "position": 2, "name": "Join the Waitlist", "item": "https://yescarnocar.com/waitlist.html" }
       ]
     }
   }
@@ -66,29 +59,46 @@
       --text-mute: #707075;
       --line: rgba(76, 175, 80, 0.2);
       --line-soft: rgba(255,255,255,0.06);
+      --good: #5fd866;
+      --condition: #2d9b8a;
+      --warning: #e8a838;
+      --bad: #d94848;
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       background: var(--bg);
       color: var(--silver);
       font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
       line-height: 1.6;
     }
+
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.08) 0%, transparent 60%);
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(76, 175, 80, 0.04) 0%, transparent 60%);
+      z-index: -2;
       pointer-events: none;
-      z-index: 0;
     }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    /* ── NAV ── */
     nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(10,10,10,0.85);
+      z-index: 50;
+      padding: 1.1rem 2rem;
+      background: rgba(10, 10, 10, 0.82);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(76, 175, 80, 0.12);
@@ -96,19 +106,18 @@
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 1.1rem 1.5rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
     .wordmark {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem;
       letter-spacing: 0.26em;
       text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 600;
       color: var(--silver);
+      font-weight: 600;
+      text-decoration: none;
     }
     .wordmark .gold { color: var(--gold); }
     .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
@@ -127,7 +136,6 @@
       transition: color 0.2s ease;
     }
     .nav-link:hover { color: var(--silver); }
-    .nav-link.active { color: var(--gold); }
     .nav-right {
       display: flex;
       align-items: center;
@@ -146,92 +154,147 @@
       transition: all 0.25s ease;
     }
     .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
-    article {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 4.5rem 1.5rem 5rem;
+
+    /* ── HERO ── */
+    .waitlist-hero {
+      padding: 7rem 2rem 2rem;
+      text-align: center;
     }
+    .waitlist-badge {
+      width: 160px;
+      max-width: 50vw;
+      margin: 0 auto 2.5rem;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+    }
+    .waitlist-badge img { width: 100%; height: auto; display: block; }
+
     .eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .waitlist-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      color: var(--silver);
+      margin-bottom: 2rem;
+    }
+    .waitlist-hero h1 em { font-style: italic; color: var(--gold); }
+
+    .pricing-callout {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+      color: var(--silver-2);
+      margin-bottom: 1rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .pricing-callout strong {
+      color: var(--gold);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .region-note {
       font-size: 0.72rem;
-      letter-spacing: 0.32em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold);
       font-weight: 600;
-      margin-bottom: 1.2rem;
-    }
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.1rem, 5vw, 3.1rem);
-      font-weight: 600;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-    .standfirst {
-      font-size: 1.15rem;
-      color: var(--silver-dim);
-      font-style: italic;
-      font-family: 'Cormorant Garamond', serif;
       margin-bottom: 3rem;
     }
-    h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem;
-      font-weight: 600;
-      margin: 2.8rem 0 1rem;
+
+    /* ── FORM SECTION ── */
+    .waitlist-form-section {
+      padding: 0 2rem 6rem;
     }
-    p { font-size: 1.05rem; color: var(--silver-2); margin-bottom: 1.3rem; }
-    strong { color: var(--silver); }
-    .pull {
-      border-left: 3px solid var(--gold);
-      padding: 0.4rem 0 0.4rem 1.4rem;
-      margin: 2.2rem 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.45rem;
-      font-style: italic;
-      color: var(--silver);
-      line-height: 1.4;
+    .waitlist-form-inner {
+      max-width: 520px;
+      margin: 0 auto;
     }
-    .cta-block {
-      margin-top: 4rem;
-      padding: 2.2rem;
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
+    .waitlist-embed {
+      margin-bottom: 1.5rem;
+    }
+    .waitlist-note {
+      font-size: 0.8rem;
+      color: var(--silver-dim);
+      letter-spacing: 0.04em;
       text-align: center;
+      margin-bottom: 3rem;
     }
-    .cta-block p { color: var(--silver-2); margin-bottom: 1.4rem; }
-    .cta-btn {
-      display: inline-block;
-      background: var(--gold);
-      color: #051008;
-      text-decoration: none;
+
+    /* ── TRUST BULLETS ── */
+    .trust-bullets {
+      border-top: 1px solid var(--line);
+      padding-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .trust-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .trust-bullet-dash {
+      color: var(--gold);
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      padding: 0.95rem 2.2rem;
-      border-radius: 999px;
-      border: 2px solid var(--gold-bright);
-      box-shadow: 0 0 0 1px rgba(111,208,111,0.3);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+      font-size: 1rem;
     }
+    .trust-bullet-text {
+      font-size: 0.95rem;
+      color: var(--silver-2);
+      line-height: 1.55;
+    }
+    .trust-bullet-text strong { color: var(--silver); }
+
+    /* ── FOOTER ── */
     footer {
-      border-top: 1px solid var(--line-soft);
+      padding: 3rem 2rem 2.5rem;
       text-align: center;
-      padding: 2.5rem 1.5rem;
-      color: var(--text-mute);
-      font-size: 0.85rem;
-      position: relative;
-      z-index: 1;
+      border-top: 1px solid rgba(76, 175, 80, 0.12);
     }
-    footer a { color: var(--silver-dim); }
+    .footer-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    .footer-mark .gold { color: var(--gold); }
+    .footer-mark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .footer-sub {
+      font-size: 0.74rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--silver-dim);
+      font-weight: 500;
+    }
+    .footer-sub a { color: var(--gold); text-decoration: none; }
+    .footer-sub a:hover { color: var(--gold-bright); }
+
+    /* ── MOBILE ── */
     @media (max-width: 760px) {
+      .container { padding: 0 1.5rem; }
+      .waitlist-hero { padding: 5rem 1.5rem 2rem; }
+      .waitlist-form-section { padding: 0 1.5rem 4.5rem; }
       .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav>
     <div class="nav-inner">
       <a class="wordmark" href="index.html">
@@ -240,46 +303,68 @@
       <div class="nav-right">
         <div class="nav-links">
           <a class="nav-link" href="product.html">What You Get</a>
-          <a class="nav-link active" href="stories.html">Real Stories</a>
+          <a class="nav-link" href="stories.html">Real Stories</a>
         </div>
-        <a class="nav-cta" href="waitlist.html">Join Waitlist</a>
+        <a href="waitlist.html" class="nav-cta">Join Waitlist</a>
       </div>
     </div>
   </nav>
 
-  <article>
-    <div class="eyebrow">Real Stories &middot; The Buyer</div>
-    <h1>They Put the Same Engine Back In. They Just Didn't Mention It.</h1>
-    <p class="standfirst">Carey's story, and the engine Hyundai paid $760 million over.</p>
+  <main>
 
-    <p>Carey did everything right.</p>
-    <p>She bought a Hyundai. A sensible, reasonable, nobody-ever-got-fired-for-buying-one Hyundai. She maintained it. She drove it like a normal person drives a car.</p>
-    <p>Then the engine failed.</p>
-    <p>Not "started running rough." Not "made a noise." Failed. And here's the thing &mdash; Carey wasn't unlucky. She was <em>on schedule</em>. Her car had a Theta II engine, and the Theta II is one of the most documented engine failures in modern automotive history. NHTSA investigations. Multiple recall campaigns covering millions of vehicles. A class action settlement that cost Hyundai and Kia $760 million in 2020. Entire online communities of owners comparing notes on the exact same failure.</p>
-    <p>The engines could fail with little warning. Owners across the country reported it at ordinary mileages, doing ordinary driving.</p>
+    <!-- HERO -->
+    <header class="waitlist-hero">
+      <div class="waitlist-badge">
+        <img src="ycnc-badge.png" alt="Yes Car No Car" />
+      </div>
+      <div class="eyebrow">Early Access</div>
+      <h1>Be first <em>when we launch.</em></h1>
+      <p class="pricing-callout">
+        <strong>$9.99</strong> founding member rate &nbsp;&middot;&nbsp; <strong>$19.99</strong> standard at launch
+      </p>
+      <p class="region-note">Currently available in the United States only.</p>
+    </header>
 
-    <h2>The Part That Should Make You Angry</h2>
-    <p>Hyundai replaced Carey's engine under warranty. Sounds like the system working, right?</p>
-    <p>Here's what they didn't tell her: <strong>the replacement was the same engine.</strong> Same Theta II family. Same documented problems. They took out a failed engine and put back its twin &mdash; and graciously omitted that detail.</p>
-    <div class="pull">A defect is a mistake. This was a decision. Somebody chose not to tell Carey what was going back into her car.</div>
-    <p>And Carey isn't unique. Owner accounts of warranty replacements drawn from the same engine generation are documented across Hyundai and Kia communities by the thousands. She's just one of the people willing to say it out loud.</p>
+    <!-- FORM -->
+    <section class="waitlist-form-section">
+      <div class="waitlist-form-inner">
+        <div class="waitlist-embed">
+          <iframe data-tally-src="https://tally.so/embed/Bz6YVQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="157" frameborder="0" marginheight="0" marginwidth="0" title="YES CAR NO CAR WAITLIST"></iframe>
+        </div>
+        <p class="waitlist-note">No spam. One email at launch. That's it.</p>
 
-    <h2>What This Has to Do With Us</h2>
-    <p>Everything. This story is why Yes Car No Car exists.</p>
-    <p>The information about the Theta II was <em>public</em>. The recalls were public. The NHTSA filings were public. The settlement was front-page news in the car world. And none of it reached Carey at the moment it mattered &mdash; because no one in the transaction had any reason to bring it up. The dealer doesn't volunteer it. The history report shows what happened to <em>that</em> car, not what's documented across the engine family. The manufacturer, as established, wasn't in a sharing mood.</p>
-    <p>Run that same car through Yes Car No Car and the verdict engine knows what a Theta II is. It knows the recall history, the failure pattern, the settlement. The verdict doesn't depend on anyone in the deal deciding to be honest, because nobody in the deal pays us.</p>
-    <p>Carey's answer was sitting in the public record the whole time. She just needed something on her side of the table to read it.</p>
-    <p>That's the product. That's the whole point.</p>
+        <div class="trust-bullets">
+          <div class="trust-bullet">
+            <span class="trust-bullet-dash">—</span>
+            <span class="trust-bullet-text"><strong>Independent.</strong> No dealer relationships and no automotive advertisers.</span>
+          </div>
+          <div class="trust-bullet">
+            <span class="trust-bullet-dash">—</span>
+            <span class="trust-bullet-text"><strong>The verdict is always free.</strong> You only pay for the full report.</span>
+          </div>
+          <div class="trust-bullet">
+            <span class="trust-bullet-dash">—</span>
+            <span class="trust-bullet-text"><strong>Founding member rate locked</strong> on your first report.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="cta-block">
-      <p>One verdict. Backed by data. Independent of the industry.</p>
-      <a class="cta-btn" href="waitlist.html">Join the Waitlist</a>
-    </div>
-  </article>
+  </main>
 
+  <!-- FOOTER -->
   <footer>
-    A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &middot; &copy; 2026
+    <div class="footer-mark">
+      <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+    </div>
+    <div class="footer-sub">
+      A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026
+    </div>
   </footer>
+
+  <!-- Tally embed loader -->
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
 <script data-pplx-inline-edit>
 (function () {
   if (window === window.top) return;
