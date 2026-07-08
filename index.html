@@ -454,17 +454,27 @@
       font-weight: 400;
     }
 
-    /* ---------- Real Stories teaser ---------- */
+    /* ---------- Real Stories carousel ---------- */
     .real-stories { border-top: 1px solid var(--line); }
-    .real-stories-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .carousel-wrap { position: relative; margin-top: 2.5rem; }
+    .carousel-track-outer { overflow: hidden; }
+    .carousel-track {
+      display: flex;
+      transition: transform 480ms cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
     .story-link-card {
       display: flex; flex-direction: column;
+      flex: 0 0 100%;
       background: var(--bg-card); border: 1px solid var(--line-soft);
       border-left: 3px solid var(--good); border-radius: 3px;
       padding: 2rem 2rem 2rem 1.75rem; text-decoration: none; color: inherit;
-      transition: background 180ms ease, border-left-color 180ms ease; gap: 0.75rem;
+      gap: 0.75rem; box-sizing: border-box;
+      transition: background 180ms ease;
+      cursor: pointer;
+      user-select: none;
     }
-    .story-link-card:hover { background: #161616; border-left-color: var(--gold); }
+    .story-link-card:hover { background: #161616; }
     .story-link-card .eyebrow { color: var(--good); margin-bottom: 0; }
     .story-link-card h3 {
       font-family: 'Cormorant Garamond', serif;
@@ -473,8 +483,26 @@
     }
     .story-link-card p { font-size: 0.875rem; color: var(--silver-dim); margin: 0; max-width: 100%; }
     .story-link-card .card-arrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; color: var(--good); margin-top: auto; padding-top: 1rem; }
+    /* dots */
+    .carousel-dots { display: flex; gap: 0.5rem; margin-top: 1.5rem; align-items: center; }
+    .carousel-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--text-mute); border: none; padding: 0; cursor: pointer;
+      transition: background 250ms ease, transform 250ms ease;
+    }
+    .carousel-dot.active { background: var(--gold); transform: scale(1.4); }
+    /* prev/next arrows */
+    .carousel-arrows { display: flex; gap: 0.75rem; margin-left: auto; }
+    .carousel-btn {
+      background: none; border: 1px solid var(--line-soft); color: var(--silver-dim);
+      width: 2rem; height: 2rem; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; transition: border-color 180ms, color 180ms;
+    }
+    .carousel-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .carousel-footer { display: flex; align-items: center; margin-top: 1.5rem; }
     .stories-teaser {
-      margin-top: 2rem;
+      margin-top: 1.25rem;
       font-size: 0.8rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -700,29 +728,127 @@
     <div class="container">
       <div class="eyebrow">Real Stories</div>
       <h2 id="stories-heading">The report already <em>paid for itself.</em></h2>
-      <div class="real-stories-grid">
-        <a href="carey.html" class="story-link-card">
-          <div class="eyebrow">Real Stories &middot; The Owner</div>
-          <h3>They Put the Same Engine Back In.</h3>
-          <p>The Hyundai Theta II defect Carey's dealership never mentioned.</p>
-          <span class="card-arrow">Read her story &rarr;</span>
-        </a>
-        <a href="eleanor.html" class="story-link-card">
-          <div class="eyebrow">Real Stories &middot; The Owner</div>
-          <h3>The $350 Part That Saves the $3,000 Engine</h3>
-          <p>What Eleanor learned about the car already in her driveway.</p>
-          <span class="card-arrow">Read her story &rarr;</span>
-        </a>
-        <a href="jan.html" class="story-link-card">
-          <div class="eyebrow">Real Stories &middot; The Owner</div>
-          <h3>200,000 Miles on a Timing Belt That Was Never Changed</h3>
-          <p>Jan's 2012 VW Jetta had been great since new. Then she learned what a timing belt was.</p>
-          <span class="card-arrow">Read her story &rarr;</span>
-        </a>
+
+      <div class="carousel-wrap" id="storiesCarousel">
+        <div class="carousel-track-outer">
+          <div class="carousel-track" id="carouselTrack">
+
+            <a href="carey.html" class="story-link-card">
+              <div class="eyebrow">Real Stories &middot; The Owner</div>
+              <h3>They Put the Same Engine Back In.</h3>
+              <p>The Hyundai Theta II defect Carey's dealership never mentioned. The answer was in the public record the whole time.</p>
+              <span class="card-arrow">Read her story &rarr;</span>
+            </a>
+
+            <a href="eleanor.html" class="story-link-card">
+              <div class="eyebrow">Real Stories &middot; The Owner</div>
+              <h3>The $350 Part That Saves the $3,000 Engine</h3>
+              <p>What Eleanor learned about the car already sitting in her driveway. No warning light ever came on.</p>
+              <span class="card-arrow">Read her story &rarr;</span>
+            </a>
+
+            <a href="jan.html" class="story-link-card">
+              <div class="eyebrow">Real Stories &middot; The Owner</div>
+              <h3>200,000 Miles on a Timing Belt That Was Never Changed</h3>
+              <p>Jan's 2012 VW Jetta had been great since new. Then she learned what a timing belt was — and what happens when one snaps.</p>
+              <span class="card-arrow">Read her story &rarr;</span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="carousel-footer">
+          <div class="carousel-dots" id="carouselDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-btn" id="carouselPrev" aria-label="Previous story">&#8592;</button>
+            <button class="carousel-btn" id="carouselNext" aria-label="Next story">&#8594;</button>
+          </div>
+        </div>
       </div>
+
       <p class="stories-teaser">A fourth story is coming &nbsp;&mdash;&nbsp; cross-border, cross-country, with complete confidence.</p>
     </div>
   </section>
+
+  <script>
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    const cards = track.querySelectorAll('.story-link-card');
+    const total = cards.length;
+    let current = 0;
+    let autoTimer;
+    let touchStartX = 0;
+    let touchDeltaX = 0;
+    let isDragging = false;
+
+    // Build dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Story ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(next, 4500);
+    }
+    function stopAuto() { clearInterval(autoTimer); }
+
+    document.getElementById('carouselNext').addEventListener('click', () => { next(); stopAuto(); startAuto(); });
+    document.getElementById('carouselPrev').addEventListener('click', () => { prev(); stopAuto(); startAuto(); });
+
+    // Touch / swipe
+    track.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      isDragging = true;
+      stopAuto();
+    }, { passive: true });
+
+    track.addEventListener('touchmove', e => {
+      if (!isDragging) return;
+      touchDeltaX = e.touches[0].clientX - touchStartX;
+      const offset = -(current * 100) + (touchDeltaX / track.offsetWidth * 100);
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(' + offset + '%)';
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      isDragging = false;
+      track.style.transition = '';
+      if (touchDeltaX < -50) next();
+      else if (touchDeltaX > 50) prev();
+      else goTo(current);
+      touchDeltaX = 0;
+      startAuto();
+    });
+
+    // Pause on hover
+    document.getElementById('storiesCarousel').addEventListener('mouseenter', stopAuto);
+    document.getElementById('storiesCarousel').addEventListener('mouseleave', startAuto);
+
+    // Prevent card link from firing on swipe
+    cards.forEach(card => {
+      card.addEventListener('click', e => {
+        if (Math.abs(touchDeltaX) > 10) e.preventDefault();
+      });
+    });
+
+    startAuto();
+  })();
+  </script>
 
   <!-- ============ FINAL INTELLIGENCE TEASER ============ -->
   <section class="fi-teaser">
