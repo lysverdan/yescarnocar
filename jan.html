@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jan's 2012 Jetta — She Just Wanted to Know What She Was Sitting On</title>
+  <meta name="description" content="137,000 miles. No warning light, no puddle, no trouble. Jan ran her Jetta through Yes Car No Car anyway — and got a plan instead of a gamble." />
+  <link rel="canonical" href="https://yescarnocar.com/jan.html" />
+  <link rel="icon" type="image/png" href="ycnc-badge.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Yes Car No Car" />
+  <meta property="og:title" content="Jan's 2012 Jetta — She Just Wanted to Know What She Was Sitting On" />
+  <meta property="og:description" content="No warning light, no puddle, no trouble. The car was fine — which is exactly when most people stop paying attention." />
+  <meta property="og:image" content="https://yescarnocar.com/ycnc-badge.png" />
+  <meta property="og:url" content="https://yescarnocar.com/jan.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jan's 2012 Jetta — She Just Wanted to Know What She Was Sitting On" />
+  <meta name="twitter:description" content="137,000 miles. No warning light. No trouble. Jan ran it through Yes Car No Car anyway — and got a plan instead of a gamble." />
+  <meta name="twitter:image" content="https://yescarnocar.com/ycnc-badge.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Jan's 2012 Jetta — She Just Wanted to Know What She Was Sitting On",
+    "description": "137,000 miles. No warning light, no puddle, no trouble. Jan ran her Jetta through Yes Car No Car anyway and got a plan instead of a gamble.",
+    "publisher": { "@type": "Organization", "name": "Yes Car No Car", "url": "https://yescarnocar.com/" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://yescarnocar.com/jan.html" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+      --good: #4caf50;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76,175,80,0.07) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(76,175,80,0.12);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem; letter-spacing: 0.26em;
+      text-transform: uppercase; text-decoration: none;
+      font-weight: 600; color: var(--silver); white-space: nowrap;
+    }
+    .wordmark .gold { color: var(--gold); }
+    .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-link {
+      font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; text-decoration: none;
+      color: var(--silver-dim); transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--silver); }
+    .nav-cta {
+      font-size: 0.65rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 0.55rem 1.2rem;
+      border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
+
+    /* ── mobile menu button ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.2s;
+    }
+    .hamburger:hover { background: var(--gold); color: #0a0a0a; }
+    .hamburger.open { background: var(--gold); color: #0a0a0a; }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98);
+      z-index: 50;
+      flex-direction: column; align-items: center; justify-content: center; gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 8vw, 2.8rem);
+      font-weight: 600; color: var(--silver-2);
+      text-decoration: none; padding: 1rem 2rem;
+      letter-spacing: 0.04em; transition: color 0.2s;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      width: 100%; text-align: center;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      margin-top: 2rem;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold); color: var(--gold); font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
+    }
+
+    /* ── layout ── */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── story header ── */
+    .story-header {
+      position: relative; z-index: 1;
+      padding: 6rem 1.5rem 3rem;
+      max-width: 760px; margin: 0 auto;
+      border-bottom: 1px solid var(--line);
+    }
+    .story-eyebrow {
+      font-size: 0.6rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .story-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 700; line-height: 1.1;
+      color: var(--silver); margin-bottom: 1.5rem;
+    }
+    .story-dek {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--silver-2); line-height: 1.65;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* ── story meta strip ── */
+    .story-meta {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 1.5rem;
+      display: flex; gap: 3rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-mute); }
+    .meta-value { font-size: 0.85rem; color: var(--silver-2); font-weight: 500; }
+    @media (max-width: 600px) { .story-meta { gap: 1.5rem; flex-wrap: wrap; } }
+
+    /* ── body ── */
+    .story-body {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+    .story-body p {
+      font-size: 1.05rem; color: var(--silver-2);
+      line-height: 1.8; margin-bottom: 1.75rem;
+    }
+    .story-body p:last-child { margin-bottom: 0; }
+
+    /* ── pull quote ── */
+    .pull {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      font-weight: 600; line-height: 1.3;
+      color: var(--silver);
+      border-left: 2px solid var(--gold);
+      padding: 1.25rem 0 1.25rem 1.75rem;
+      margin: 2.5rem 0;
+    }
+
+    /* ── verdict ── */
+    .verdict-block {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .verdict-inner {
+      background: #0d160d;
+      border: 1px solid rgba(76,175,80,0.3);
+      padding: 2.5rem;
+      display: flex; align-items: flex-start; gap: 2rem;
+    }
+    .verdict-dot {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--good);
+      flex-shrink: 0; margin-top: 0.35rem;
+      box-shadow: 0 0 12px rgba(76,175,80,0.5);
+    }
+    .verdict-content {}
+    .verdict-label {
+      font-size: 0.58rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--text-mute);
+      margin-bottom: 0.5rem;
+    }
+    .verdict-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--good); line-height: 1; margin-bottom: 0.75rem;
+    }
+    .verdict-desc {
+      font-size: 0.9rem; color: var(--silver-dim); line-height: 1.65;
+    }
+
+    /* ── cta ── */
+    .story-cta {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 3rem 1.5rem 5rem;
+      border-top: 1px solid var(--line);
+    }
+    .story-cta p {
+      font-size: 0.8rem; color: var(--text-mute);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      font-size: 0.68rem; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; transition: all 0.2s;
+    }
+    .cta-btn:hover { background: var(--gold); color: #0a0a0a; }
+
+    /* ── back link ── */
+    .back-link {
+      position: relative; z-index: 1;
+      display: block; text-align: center;
+      padding: 2rem 1.5rem 0;
+      font-size: 0.65rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--text-mute);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--gold); }
+
+    /* ── footer ── */
+    footer {
+      position: relative; z-index: 1;
+      text-align: center; padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem; color: var(--text-mute);
+      border-top: 1px solid var(--line-soft); margin-top: 3rem;
+    }
+    footer a { color: var(--silver-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">
+        <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">MENU</button>
+      <div class="nav-links">
+        <a class="nav-link" href="product.html">What You Get</a>
+        <a class="nav-link" href="owner.html">For Owners</a>
+        <a class="nav-link" href="about.html">Our Story</a>
+        <a class="nav-link active" href="stories.html">Real Stories</a>
+        <a class="nav-cta" href="waitlist.html">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="product.html">What You Get</a>
+    <a href="owner.html">For Owners</a>
+    <a href="about.html">Our Story</a>
+    <a href="stories.html">Real Stories</a>
+    <a href="waitlist.html" class="mobile-cta">Join Waitlist</a>
+  </div>
+
+  <a class="back-link" href="stories.html">&larr; Real Stories</a>
+
+  <div class="story-header">
+    <p class="story-eyebrow">Owner Story &nbsp;&middot;&nbsp; 2012 Volkswagen Jetta 2.5L</p>
+    <h1 class="story-title">She Just Wanted to Know What She Was Sitting On</h1>
+    <p class="story-dek">No warning light. No puddle. No trouble. The car was fine — which is exactly when most people stop paying attention.</p>
+  </div>
+
+  <div class="story-meta">
+    <div class="meta-item">
+      <span class="meta-label">Vehicle</span>
+      <span class="meta-value">2012 Volkswagen Jetta 2.5L</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Mileage</span>
+      <span class="meta-value">137,000 miles</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Situation</span>
+      <span class="meta-value">Current owner</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Verdict</span>
+      <span class="meta-value" style="color: var(--good);">Good Car</span>
+    </div>
+  </div>
+
+  <div class="story-body">
+    <p>Jan's 2012 Jetta 2.5L had carried her 137,000 miles. No warning light, no puddle, no trouble. By every sign she could see, the car was fine — which is exactly when most people stop paying attention.</p>
+
+    <p>She ran it through Yes Car No Car anyway. Not to sell it. Just to know what she was sitting on.</p>
+
+    <div class="pull">The report knew this engine. And it told her the one thing worth knowing about a 2.5L at her mileage.</div>
+
+    <p>The timing chain is the wear item that matters on this motor — the single component that's cheap to stay ahead of and expensive to ignore. Not a mystery. Not a scare. The specific thing a smart owner of this exact engine plans for.</p>
+
+    <p>So Jan got ahead of it — on her terms, on her schedule, before it could ever leave her stranded. The report laid out the rest too: the PCV diaphragm to keep an eye on, the transmission fluid service she'd never had done. For the first time she wasn't guessing about her own car. She had a plan instead of a gamble.</p>
+  </div>
+
+  <div class="verdict-block">
+    <div class="verdict-inner">
+      <div class="verdict-dot"></div>
+      <div class="verdict-content">
+        <div class="verdict-label">Verdict</div>
+        <div class="verdict-name">Good Car</div>
+        <div class="verdict-desc">The car checks out. Knowing what to watch for — and when — is the difference between a car that surprises you and one that never gets the chance to.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="story-cta">
+    <p>Know your car the way Jan knows hers.</p>
+    <a class="cta-btn" href="waitlist.html">Join the Waitlist</a>
+  </div>
+
+  <footer>
+    A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026 &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
