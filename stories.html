@@ -333,7 +333,70 @@
       .story-card:hover { transform: none; }
       .nav-links { display: none; }
     }
-  </style>
+  
+    /* ── mobile menu button ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.2s;
+    }
+    .hamburger:hover { background: var(--gold); color: #0a0a0a; }
+    .hamburger.open { background: var(--gold); color: #0a0a0a; }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98);
+      z-index: 50;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 8vw, 2.8rem);
+      font-weight: 600;
+      color: var(--silver-2);
+      text-decoration: none;
+      padding: 1rem 2rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      width: 100%;
+      text-align: center;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      margin-top: 2rem;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-socials, .topbar-socials { display: none !important; }
+      .nav-cta { display: none; }
+      .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
+    }
+
+    </style>
 </head>
 <body>
 
@@ -343,6 +406,7 @@
       <a class="wordmark" href="index.html">
         <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
       </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">MENU</button>
       <div class="nav-right">
         <div class="nav-links">
           <a class="nav-link" href="product.html">What You Get</a>
@@ -353,6 +417,16 @@
       </div>
     </div>
   </nav>
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="product.html">What You Get</a>
+    <a href="owner.html">For Owners</a>
+    <a href="about.html">Our Story</a>
+    <a href="stories.html">Real Stories</a>
+    <a href="waitlist.html" class="mobile-cta">Join Waitlist</a>
+  </div>
+
 
   <main>
 
@@ -753,5 +827,23 @@
 })();
 
 
-</script></body>
+</script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
 </html>
