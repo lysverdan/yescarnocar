@@ -610,6 +610,63 @@
       .hero-badge { width: 220px; }
     }
   
+
+    /* ── two audiences ── */
+    .two-audiences {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #0d0d0d;
+      padding: 5rem 0;
+    }
+    .ta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0 4rem;
+      align-items: start;
+    }
+    .ta-divider {
+      background: var(--line);
+      align-self: stretch;
+    }
+    .ta-card { padding: 1rem 0; }
+    .ta-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .ta-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--silver);
+      margin-bottom: 1.25rem;
+    }
+    .ta-body {
+      font-size: 0.95rem;
+      color: var(--silver-dim);
+      line-height: 1.75;
+      margin-bottom: 1.75rem;
+    }
+    .ta-link {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(76,175,80,0.3);
+      padding-bottom: 0.15rem;
+      transition: border-color 0.2s;
+    }
+    .ta-link:hover { border-color: var(--gold); }
+    .ta-owner .ta-headline { color: var(--silver-2); }
+    @media (max-width: 700px) {
+      .ta-grid { grid-template-columns: 1fr; gap: 3rem 0; }
+      .ta-divider { display: none; }
+    }
+
     /* ── urgency strip ── */
     .urgency-strip {
       border-top: 1px solid rgba(76,175,80,0.25);
@@ -783,6 +840,31 @@
           <h3 class="verdict-title">Bad Car</h3>
           <p class="verdict-lede">Walk away.</p>
           <p class="verdict-desc">The data points to recurring or catastrophic issues — a documented prevalent failure pattern on this specific year and engine, multiple safety recalls outstanding, or a price-to-condition mismatch that no negotiation can fix. We'll suggest better alternatives in the same class and budget so you don't leave empty-handed.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TWO AUDIENCES ============ -->
+  <section class="two-audiences">
+    <div class="container">
+      <div class="ta-grid">
+
+        <div class="ta-card ta-buyer">
+          <p class="ta-eyebrow">For the Buyer</p>
+          <h3 class="ta-headline">Standing in a parking lot about to spend your savings.</h3>
+          <p class="ta-body">The seller knows what's wrong with it. The dealer knows what it's worth. You have a gut feeling and a history report that tells you what happened — but not what it means. Yes Car No Car hands you the verdict before you hand over the money.</p>
+          <a class="ta-link" href="product.html">See what's in the report &rarr;</a>
+        </div>
+
+        <div class="ta-divider"></div>
+
+        <div class="ta-card ta-owner">
+          <p class="ta-eyebrow">For the Owner</p>
+          <h3 class="ta-headline">290 million vehicles. Most of them driving toward something their owners don't see coming.</h3>
+          <p class="ta-body">No warning light. No noise. Just a car that was fine yesterday — and a $3,000 repair that didn't have to happen. Yes Car No Car tells you what to watch for on your exact engine, at your exact mileage, before it becomes a crisis.</p>
+          <a class="ta-link" href="owner.html">See how it works for owners &rarr;</a>
         </div>
 
       </div>
