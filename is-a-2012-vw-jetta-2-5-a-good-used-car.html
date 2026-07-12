@@ -80,6 +80,27 @@
   }
   </script>
 
+  <!-- FAQ schema — swap questions/answers per car. 4–6 questions ideal.
+       Drives AI citations (Perplexity, ChatGPT, Claude) and Google People Also Ask. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "QUESTION ONE?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ANSWER ONE." }
+      },
+      {
+        "@type": "Question",
+        "name": "QUESTION TWO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ANSWER TWO." }
+      }
+    ]
+  }
+  <\/script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
