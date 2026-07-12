@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclaimer | Yes Car No Car</title>
+  <meta name="description" content="Yes Car No Car provides informational opinions to help people make more informed decisions when buying or owning a used vehicle. Read our full disclaimer." />
+  <link rel="canonical" href="https://yescarnocar.com/disclaimer.html" />
+  <link rel="icon" type="image/png" href="ycnc-badge.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76,175,80,0.06) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(76,175,80,0.12);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem; letter-spacing: 0.26em;
+      text-transform: uppercase; text-decoration: none;
+      font-weight: 600; color: var(--silver); white-space: nowrap;
+    }
+    .wordmark .gold { color: var(--gold); }
+    .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-link {
+      font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; text-decoration: none;
+      color: var(--silver-dim); transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--silver); }
+    .nav-cta {
+      font-size: 0.65rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 0.55rem 1.2rem;
+      border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
+    .hamburger {
+      display: none;
+      background: none; border: 1px solid var(--gold);
+      color: var(--gold); font-family: 'Inter Tight', sans-serif;
+      font-size: 0.62rem; letter-spacing: 0.2em;
+      padding: 0.45rem 0.9rem; cursor: pointer; z-index: 100;
+      transition: all 0.2s;
+    }
+    .hamburger:hover, .hamburger.open { background: var(--gold); color: #0a0a0a; }
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98); z-index: 50;
+      flex-direction: column; align-items: center; justify-content: center;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 8vw, 2.8rem); font-weight: 600;
+      color: var(--silver-2); text-decoration: none;
+      padding: 1rem 2rem; letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      width: 100%; text-align: center; transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      margin-top: 2rem; font-family: 'Inter Tight', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold); color: var(--gold); font-weight: 600;
+    }
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
+    }
+
+    /* ── layout ── */
+    .page-wrap {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 5rem 1.5rem 6rem;
+    }
+    .page-eyebrow {
+      font-size: 0.6rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700; line-height: 1.1;
+      color: var(--silver); margin-bottom: 0.75rem;
+    }
+    .page-updated {
+      font-size: 0.75rem; color: var(--text-mute);
+      margin-bottom: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* ── sections ── */
+    .disclaimer-section {
+      margin-bottom: 3rem;
+    }
+    .disclaimer-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--silver); margin-bottom: 0.85rem;
+      line-height: 1.2;
+    }
+    .disclaimer-section p {
+      font-size: 0.95rem; color: var(--silver-dim);
+      line-height: 1.8; margin-bottom: 0.75rem;
+    }
+    .disclaimer-section p:last-child { margin-bottom: 0; }
+
+    /* ── contact ── */
+    .contact-block {
+      margin-top: 3rem; padding-top: 3rem;
+      border-top: 1px solid var(--line);
+    }
+    .contact-block p {
+      font-size: 0.9rem; color: var(--silver-dim); line-height: 1.7;
+    }
+    .contact-block a { color: var(--gold); text-decoration: none; }
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ── footer ── */
+    footer {
+      position: relative; z-index: 1;
+      text-align: center; padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem; color: var(--text-mute);
+      border-top: 1px solid var(--line-soft);
+    }
+    footer a { color: var(--silver-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">
+        <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">MENU</button>
+      <div class="nav-links">
+        <a class="nav-link" href="product.html">What You Get</a>
+        <a class="nav-link" href="owner.html">For Owners</a>
+        <a class="nav-link" href="about.html">Our Story</a>
+        <a class="nav-link" href="stories.html">Real Stories</a>
+        <a class="nav-cta" href="waitlist.html">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="product.html">What You Get</a>
+    <a href="owner.html">For Owners</a>
+    <a href="about.html">Our Story</a>
+    <a href="stories.html">Real Stories</a>
+    <a href="waitlist.html" class="mobile-cta">Join Waitlist</a>
+  </div>
+
+  <div class="page-wrap">
+    <p class="page-eyebrow">Legal</p>
+    <h1 class="page-title">Disclaimer</h1>
+    <p class="page-updated">Last updated: July 2026</p>
+
+    <p style="font-size:0.95rem;color:var(--silver-dim);line-height:1.8;margin-bottom:3rem;">Yes Car No Car provides information and opinions to help people make more informed decisions when buying or owning a used vehicle. Please read this disclaimer carefully. By using this website and our reports, you agree to the terms below.</p>
+
+    <div class="disclaimer-section">
+      <h2>Informational opinion only</h2>
+      <p>Our verdicts, reports, and content represent our informational opinion based on general vehicle data, publicly available information, and automotive knowledge. They are not professional, mechanical, financial, or legal advice, and should not be treated as such. We are not acting as your mechanic, appraiser, financial advisor, or attorney.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>Not a substitute for an inspection</h2>
+      <p>Our reports are not a substitute for an in-person inspection by a qualified, licensed mechanic. We cannot see, drive, or physically examine any specific vehicle. Before purchasing any used vehicle, you should always arrange an independent pre-purchase inspection by a professional you trust. If a seller refuses to allow one, we strongly recommend you walk away.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>Third-party data sources</h2>
+      <p>VIN-specific report data — including service history, accident records, title information, recall status, ownership history, and mileage records — is sourced from third-party databases. Yes Car No Car does not independently verify this underlying data and is not responsible for its accuracy, completeness, or timeliness. Errors, omissions, and delays in third-party data can occur. The information in any VIN-specific report reflects what those data sources contain at the time the report is generated.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>General model information</h2>
+      <p>Some of our content describes vehicles at the model level — that is, what is generally true of a make, model, year, and engine. General information may not reflect the specific condition, history, or configuration of the individual vehicle you are considering. The actual car in front of you may differ.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>No warranty or guarantee</h2>
+      <p>We work hard to be accurate, but we make no warranty or guarantee — express or implied — as to the accuracy, completeness, reliability, or timeliness of any information or verdict we provide. Vehicle data sources can be incomplete, out of date, or contain errors, and automotive information changes over time. We do not guarantee any particular outcome, condition, value, or performance of any vehicle.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>Your decision, your responsibility</h2>
+      <p>Any decision to buy, sell, keep, repair, or pass on a vehicle is yours alone. You assume full responsibility for your own decisions and their consequences. To the fullest extent permitted by law, Yes Car No Car and Backed Wisely Inc. are not liable for any loss, damage, cost, or expense of any kind arising from your use of, or reliance on, our website, reports, or content.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>Estimates and figures</h2>
+      <p>Any prices, repair costs, values, projections, or figures we provide are rough estimates for general guidance only. Real-world costs and values vary widely by location, condition, market, and provider, and may differ significantly from any figure we show.</p>
+    </div>
+
+    <div class="disclaimer-section">
+      <h2>Independence</h2>
+      <p>We are independent. We are not paid by dealers, sellers, manufacturers, or any party to a transaction, and we do not accept payment to influence a verdict. Our opinions are our own.</p>
+    </div>
+
+    <div class="contact-block">
+      <p>Questions about this disclaimer can be sent to <a href="mailto:hello@yescarnocar.com">hello@yescarnocar.com</a>.</p>
+    </div>
+  </div>
+
+  <footer>
+    A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026 &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="disclaimer.html">Disclaimer</a>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
