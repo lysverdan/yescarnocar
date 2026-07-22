@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2015 Mazda3 i Touring — Good Car Bad Car</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0f0f; --surface:#161616; --border:#2a2a2a; --text:#f0ece0;
+    --dim:#888880; --gold:#c8a84b; --green:#3d9970; --green-b:#4fbf87;
+    --amber:#e8aa30; --amber-b:#f5c842; --red:#c0392b; --red-b:#e84040; --teal:#2a9d8f;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:var(--bg); color:var(--text);
+    font-family:'DM Sans',sans-serif; line-height:1.9;
+    padding:24px 14px 60px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:760px; margin:0 auto; }
+
+  .report-actions { display:flex; justify-content:flex-end; margin-bottom:14px; }
+  .copy-btn {
+    font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px;
+    text-transform:uppercase; background:#1e1e1e; color:var(--gold);
+    border:1px solid var(--border); padding:9px 16px; border-radius:4px; cursor:pointer;
+  }
+  .copy-btn:active { background:#262626; }
+
+  .masthead {
+    background:var(--surface); border-top:3px solid var(--gold); border-radius:6px;
+    padding:32px 26px 26px; text-align:center; margin-bottom:14px;
+  }
+  .vehicle-name { font-family:'DM Serif Display',serif; font-size:36px; line-height:1.15; color:var(--text); }
+  .wordmark { font-family:'DM Mono',monospace; color:var(--gold); text-transform:uppercase; letter-spacing:.34em; font-size:12px; margin-top:10px; }
+  .subtitle { font-family:'DM Sans',sans-serif; color:var(--dim); font-size:12.5px; letter-spacing:.05em; margin-top:6px; }
+  .specline { font-size:13px; color:var(--dim); margin-top:12px; }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; }
+  .meta-pill { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:.04em; background:#1e1e1e; color:var(--dim); border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
+  .verdict-badge { display:inline-block; font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; padding:9px 22px; border-radius:5px; margin-top:20px; letter-spacing:.02em; }
+  .verdict-badge.good-car { background:var(--green); color:#fff; }
+  .verdict-badge.good-car-if { background:var(--teal); color:#fff; }
+  .verdict-badge.good-car-bad-car { background:var(--amber); color:#0f0f0f; }
+  .verdict-badge.bad-car { background:var(--red); color:#fff; }
+  .condition-line { font-style:italic; color:#d8d2c2; font-size:14px; margin-top:14px; max-width:560px; margin-left:auto; margin-right:auto; }
+
+  .section { background:var(--surface); border-radius:6px; padding:24px 24px; margin-bottom:14px; }
+
+  .rn-verdict { font-size:17px; font-weight:700; color:var(--text); margin-bottom:20px; }
+  .rn-label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .driveway-check { font-size:14.5px; font-weight:500; margin-bottom:11px; padding-left:22px; position:relative; }
+  .driveway-check:before { content:"\2192"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .risk-number { border-left:3px solid var(--red-b); background:#1e1e1e; padding:14px 18px; border-radius:4px; margin-top:20px; }
+  .risk-amount { font-family:'DM Serif Display',serif; font-size:30px; color:var(--red-b); line-height:1.1; }
+  .risk-desc { font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); margin-top:6px; letter-spacing:.03em; }
+
+  .traffic-section { margin-bottom:16px; }
+  .traffic-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; font-weight:500; }
+  .green-label { color:var(--green-b); } .amber-label { color:var(--amber-b); } .red-label { color:var(--red-b); }
+  .traffic-item { font-size:14px; font-weight:500; margin-bottom:9px; padding-left:22px; position:relative; }
+  .green-item { color:#b8e8c8; } .amber-item { color:#f5dc9a; } .red-item { color:#f5b0b0; }
+  .green-item:before { content:"\2713"; position:absolute; left:0; color:var(--green-b); }
+  .amber-item:before { content:"!"; position:absolute; left:2px; color:var(--amber-b); font-weight:700; }
+  .red-item:before { content:"\2715"; position:absolute; left:0; color:var(--red-b); }
+
+  .section-header { font-family:'DM Serif Display',serif; font-size:15px; color:var(--gold); margin-bottom:12px; letter-spacing:.01em; }
+  .report-prose p { font-size:14.5px; color:#e8e4d8; margin-bottom:16px; }
+  .report-prose p:last-child { margin-bottom:0; }
+  .sub-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+
+  .footer-note { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); text-align:center; margin-top:22px; line-height:1.8; }
+
+  @media print {
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    html, body { background:#0f0f0f !important; background-color:#0f0f0f !important; color:#f0ece0 !important; }
+    .masthead { background:#161616 !important; background-color:#161616 !important; border-top:3px solid #c8a84b !important; page-break-inside:avoid !important; break-inside:avoid !important; }
+    .section { background:#161616 !important; background-color:#161616 !important; page-break-inside:avoid !important; break-inside:avoid !important; }
+    .traffic-section { background:#161616 !important; background-color:#161616 !important; page-break-inside:avoid !important; break-inside:avoid !important; }
+    .traffic-item { page-break-inside:avoid !important; break-inside:avoid !important; }
+    .driveway-check { page-break-inside:avoid !important; break-inside:avoid !important; }
+    .risk-number { page-break-inside:avoid !important; break-inside:avoid !important; background:#1e1e1e !important; background-color:#1e1e1e !important; border-left:3px solid #e84040 !important; }
+    .report-prose p { orphans:4 !important; widows:4 !important; page-break-inside:avoid !important; break-inside:avoid !important; }
+    .meta-pill { background:#1e1e1e !important; background-color:#1e1e1e !important; color:#888880 !important; border:1px solid #2a2a2a !important; }
+    .verdict-badge.good-car { background:#3d9970 !important; background-color:#3d9970 !important; color:#ffffff !important; }
+    .verdict-badge.good-car-if { background:#2a9d8f !important; background-color:#2a9d8f !important; color:#ffffff !important; }
+    .verdict-badge.good-car-bad-car { background:#e8aa30 !important; background-color:#e8aa30 !important; color:#0f0f0f !important; }
+    .verdict-badge.bad-car { background:#c0392b !important; background-color:#c0392b !important; color:#ffffff !important; }
+    .risk-amount { color:#e84040 !important; }
+    .wordmark { color:#c8a84b !important; }
+    .vehicle-name { color:#f0ece0 !important; }
+    .report-prose p { color:#e8e4d8 !important; }
+    .green-label { color:#4fbf87 !important; } .green-item { color:#b8e8c8 !important; }
+    .amber-label { color:#f5c842 !important; } .amber-item { color:#f5dc9a !important; }
+    .red-label { color:#e84040 !important; } .red-item { color:#f5b0b0 !important; }
+    .copy-btn { display:none !important; }
+    .report-actions { display:none !important; }
+  }
+  p { page-break-inside:avoid !important; orphans:3; widows:3; }
+</style>
+</head>
+<body>
+<div class="wrap" id="report-root">
+
+  <div class="report-actions">
+    <button class="copy-btn" onclick="copyReport()">Copy report</button>
+  </div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="vehicle-name">2015 Mazda3 i Touring</div>
+    <div class="wordmark">Good Car Bad Car</div>
+    <div class="subtitle">Pre-Purchase Intelligence</div>
+    <div class="specline">Compact sedan · 2.0L Skyactiv-G I4 (155 hp) · 6-speed Skyactiv-Drive automatic · FWD</div>
+    <div class="pills">
+      <span class="meta-pill">Market $8,000–$10,000</span>
+      <span class="meta-pill">MSRP ~$20,500 new</span>
+      <span class="meta-pill">Asking $9,500</span>
+      <span class="meta-pill">118,000 mi</span>
+      <span class="meta-pill">U.S. national market</span>
+      <span class="meta-pill">Compact sedan</span>
+    </div>
+    <div class="verdict-badge good-car">GOOD CAR</div>
+    <div class="condition-line">One of the most quietly durable cars of its decade — a Skyactiv-G engine and conventional automatic with no systemic defect between them. Buy on condition, not fear.</div>
+  </div>
+
+  <!-- RIGHT NOW -->
+  <div class="section">
+    <div class="rn-verdict">GOOD CAR. This is a genuinely sound compact with no expensive skeleton in the closet — the only real question is whether this particular one was maintained and rust-free.</div>
+    <div class="rn-label">Stand in the driveway and do these now</div>
+    <div class="driveway-check">Pop the hood cold and pull the dipstick — the 2.0 Skyactiv doesn't burn oil when healthy, so a low or dark, thin reading tells you about neglect, not a design flaw.</div>
+    <div class="driveway-check">Get under the back end with a light and check the rear subframe, brake lines, and rocker seams for scale rust — on a salt-state car this is the single thing that decides the deal.</div>
+    <div class="driveway-check">Reverse in the driveway and watch the backup camera image for flicker or distortion — it ties to an open recall and tells you whether the previous owner kept up with campaigns.</div>
+    <div class="risk-number">
+      <div class="risk-amount">$1,800</div>
+      <div class="risk-desc">Worst realistic single item — a failed A/C compressor and condenser job, the priciest common repair on this platform. Nothing here threatens the engine or transmission.</div>
+    </div>
+  </div>
+
+  <!-- TRAFFIC LIGHT -->
+  <div class="section">
+    <div class="traffic-section">
+      <div class="traffic-label green-label">Green — genuine strengths</div>
+      <div class="traffic-item green-item">2.0L Skyactiv-G is chain-driven and undersquare-simple: no timing belt, no turbo, no direct-injection carbon crisis. 150,000–250,000-mile engines are ordinary.</div>
+      <div class="traffic-item green-item">The Skyactiv-Drive 6-speed automatic is a conventional torque-converter box — no CVT, no dual-clutch — and has a strong durability record.</div>
+      <div class="traffic-item green-item">Real-world 33–38 mpg from owners; the drivetrain is as cheap to run as anything in the class.</div>
+      <div class="traffic-item green-item">Parts are inexpensive and any independent shop can service it without special tools.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label amber-label">Amber — price it, don't fear it</div>
+      <div class="traffic-item amber-item">A/C weakness with age — compressor, condenser, or a refrigerant leak. Budget up to ~$1,800 if it blows cold poorly.</div>
+      <div class="traffic-item amber-item">Mazda Connect infotainment quirks: Bluetooth dropouts, occasional screen freezes, aging head-unit software.</div>
+      <div class="traffic-item amber-item">Soy-based wiring insulation can attract rodents if the car sits or is parked near green space — check the engine-bay harness for chew marks.</div>
+      <div class="traffic-item amber-item">Front struts, control-arm bushings, and sway-bar links are the normal wear points near this mileage.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label red-label">Red — confirm before you buy</div>
+      <div class="traffic-item red-item">Underbody rust on any salt-state car — surface scale is fine, but flaking rockers, rotten brake lines, or a scaling rear subframe is a walk-away.</div>
+      <div class="traffic-item red-item">Open recalls by VIN: the fuel-system campaign (15V-621) and the backup-camera campaign (23V-487). Confirm both are closed.</div>
+      <div class="traffic-item red-item">Any history of hard front-end collision — the Skyactiv unibody is fine repaired correctly, but confirm structural work was done properly.</div>
+    </div>
+  </div>
+
+  <!-- FULL REPORT -->
+  <div class="section report-prose">
+    <div class="section-header">The full picture</div>
+
+    <div class="sub-head">The Depreciation Story</div>
+    <p>This is a car that has already done all of its falling. A 2015 Mazda3 i Touring stickered somewhere around $20,500 new; today a clean one sits in the $8,000–$10,000 window, and it has effectively stopped depreciating — KBB shows barely any movement on this trim over the last three years. That's the signature of a car people hold onto because it keeps working. You are buying at the flat part of the curve, which means the money you put in isn't going to evaporate the way it does on something still shedding value.</p>
+
+    <div class="sub-head">What the Car Actually Is</div>
+    <p>This is the third-generation Mazda3, the one that introduced the full Skyactiv package — engine, transmission, and a stiff, light chassis engineered as a system. It shares its bones with the CX-3 and much of its philosophy with the CX-5, and it earned Mazda a reputation the brand still trades on: an ordinary-priced compact that drives like something more expensive. The "i" designation means the 2.0-liter engine (the "s" cars got the 2.5). Both are Skyactiv-G, both are reliable; the 2.0 is the volume engine and the one you'll mostly find at this price.</p>
+
+    <div class="sub-head">Engine and Drivetrain</div>
+    <p>The 2.0L Skyactiv-G makes 155 horsepower and, more importantly, was built to be boring in the best way — a high-compression naturally aspirated four with a timing chain, port and direct injection, and none of the failure-prone complexity that defines this era's turbocharged rivals. Owners routinely report 150,000 to 250,000 miles with nothing but fluids and wear items, and plenty go further. It is paired with the Skyactiv-Drive six-speed automatic, a real torque-converter automatic rather than a CVT or dual-clutch — which is exactly why this car never shows up on the transmission-horror lists that plague some competitors. Real-world fuel economy lands in the mid-to-high 30s for most owners. This is a passenger car, not rated for towing, and shouldn't be asked to.</p>
+
+    <div class="sub-head">What Breaks and What It Means</div>
+    <p>The honest answer is: not much that matters. The most expensive thing that commonly goes wrong is the air conditioning — a tired compressor, a leaking condenser, or a refrigerant leak — which is why the worst realistic single repair on this car is an A/C job around $1,800, not an engine or transmission event. Below that, the Mazda Connect infotainment can be glitchy with age (Bluetooth dropouts, the occasional frozen screen), and the soy-based wiring insulation Mazda used in this era can attract rodents on cars that sit. None of these is a design defect that follows every example; they are the ordinary aging of a ten-year-old car, and every one of them is visible and priceable before you buy.</p>
+
+    <div class="sub-head">Red Flags</div>
+    <p>The real red flag on this generation isn't mechanical — it's corrosion. In salt states, check the rear subframe, brake and fuel lines, and rocker panels; a rotten one is scrap with a nice interior, no matter how sweet the engine sounds. The second is deferred recall work: the fuel-system campaign (NHTSA 15V-621, affecting a specific build window) and the backup-camera campaign (NHTSA 23V-487) should both be confirmed closed against the VIN, and there was a parking-brake corrosion campaign on 2014–2016 cars worth checking as well. Recall repairs are free, but an owner who ignored them tells you how the rest of the car was treated.</p>
+
+    <div class="sub-head">Driveway Inspection</div>
+    <p>Start cold: pull the dipstick before the engine runs and confirm the oil is full and honey-to-brown, not sludgy or gritty. Listen at cold start for anything ticking past the first second or two. On the test drive, the automatic should shift crisply and imperceptibly — any hunting, flaring, or shudder is unusual on this box and worth investigating. Then get underneath with a flashlight: this is the inspection that actually matters on a car this age. Solid metal underneath plus a clean oil reading is most of the decision made. Finally, cycle the A/C to full cold and the infotainment through Bluetooth and reverse gear to catch the two known nuisances.</p>
+
+    <div class="sub-head">Upcoming Maintenance Outlook</div>
+    <p>At roughly 118,000 miles, plan for the normal 120k service window over the next year or two: spark plugs if they haven't been done (~$120–$200), a transmission fluid service if there's no record of one (~$150–$250 — this box benefits from it), brake fluid exchange (~$100), and coolant if undocumented (~$120). Front brakes and tires are wear items to budget as they come due. Struts and suspension bushings are the likeliest larger wear item as the car pushes past 120k, at a few hundred dollars a corner if needed. None of this is unusual; it's simply the cost of a well-kept compact at this age.</p>
+
+    <div class="sub-head">Three Year Cost Projection</div>
+    <p>Budget roughly $2,600 over three years, assuming about 12,000 miles a year and a car that checks out clean at purchase. That covers routine oil services, the 120k maintenance items above, one brake service, a set of tires, and a buffer for a suspension component or the A/C if it goes. It excludes fuel and insurance, which are about you and not the car, and it excludes rust repair — because if the underbody is bad, the math stops being about maintenance and becomes about whether to buy the car at all.</p>
+
+    <div class="sub-head">Who This Car Is Actually For</div>
+    <p>Anyone who wants a genuinely reliable, fun-to-drive, cheap-to-run compact and doesn't need to tow or haul. It's an ideal first car, commuter, or second car — the rare inexpensive used vehicle where the smart move is simply to buy a clean one and drive it, rather than bracing for a big repair.</p>
+
+    <div class="sub-head">The Verdict</div>
+    <p>GOOD CAR. There is no systemic defect on this platform to inspect your way out of — the engine and transmission are among the more durable pairings of their era, and the depreciation has already flattened. That makes the entire decision about this specific car's condition rather than the model's reputation: confirm the underbody is solid, the oil is clean, the automatic shifts right, and the two open recalls are closed. Do that and you're buying one of the smartest cheap cars on the road. The only way this one goes wrong is rust or neglect on the individual example — both of which you can see for yourself before you pay.</p>
+  </div>
+
+  <div class="footer-note">
+    Yes Car No Car · Pre-Purchase Intelligence<br>
+    To save as PDF — open in Chrome · press Cmd+P (Mac) or Ctrl+P (Windows) · set destination to Save as PDF · click More Settings · check Background Graphics · Save.
+  </div>
+
+</div>
+
+<script>
+function copyReport(){
+  var el = document.getElementById('report-root');
+  var text = el.innerText.replace(/Copy report\s*/,'').trim();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){
+      var b=document.querySelector('.copy-btn'); var o=b.textContent; b.textContent='Copied';
+      setTimeout(function(){b.textContent=o;},1600);
+    });
+  }
+}
+</script>
+</body>
+</html>

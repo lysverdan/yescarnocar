@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2012 Mercedes-Benz ML350 4MATIC — Good Car Bad Car</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0f0f0f; --surface:#161616; --border:#2a2a2a; --text:#f0ece0; --dim:#888880; --gold:#c8a84b; --green:#3d9970; --green-b:#4fbf87; --amber:#e8aa30; --amber-b:#f5c842; --red:#c0392b; --red-b:#e84040; --teal:#2a9d8f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; line-height:1.9; padding:24px 14px 60px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .report-actions { display:flex; justify-content:flex-end; margin-bottom:14px; }
+  .copy-btn { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; background:#1e1e1e; color:var(--gold); border:1px solid var(--border); padding:9px 16px; border-radius:4px; cursor:pointer; }
+  .copy-btn:active { background:#262626; }
+  .masthead { background:var(--surface); border-top:3px solid var(--gold); border-radius:6px; padding:32px 26px 26px; text-align:center; margin-bottom:14px; }
+  .vehicle-name { font-family:'DM Serif Display',serif; font-size:34px; line-height:1.15; color:var(--text); }
+  .wordmark { font-family:'DM Mono',monospace; color:var(--gold); text-transform:uppercase; letter-spacing:.34em; font-size:12px; margin-top:10px; }
+  .subtitle { color:var(--dim); font-size:12.5px; letter-spacing:.05em; margin-top:6px; }
+  .specline { font-size:13px; color:var(--dim); margin-top:12px; }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; }
+  .meta-pill { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:.04em; background:#1e1e1e; color:var(--dim); border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
+  .verdict-badge { display:inline-block; font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; padding:9px 22px; border-radius:5px; margin-top:20px; letter-spacing:.02em; }
+  .verdict-badge.good-car { background:var(--green); color:#fff; }
+  .verdict-badge.good-car-if { background:var(--teal); color:#fff; }
+  .verdict-badge.good-car-bad-car { background:var(--amber); color:#0f0f0f; }
+  .verdict-badge.bad-car { background:var(--red); color:#fff; }
+  .condition-line { font-style:italic; color:#d8d2c2; font-size:14px; margin-top:14px; max-width:580px; margin-left:auto; margin-right:auto; }
+  .cost-summary { background:var(--surface); border-left:3px solid var(--teal); border-radius:4px; padding:18px 20px; margin-bottom:14px; }
+  .cost-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+  .cost-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:8px 0; border-bottom:1px solid #232323; }
+  .cost-row:last-of-type { border-bottom:none; }
+  .cost-name { font-size:13.5px; font-weight:500; color:var(--text); flex:1; }
+  .cost-figs { font-family:'DM Mono',monospace; font-size:11.5px; color:#cfc9ba; text-align:right; white-space:nowrap; }
+  .cost-foot { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); margin-top:12px; }
+  .section { background:var(--surface); border-radius:6px; padding:24px 24px; margin-bottom:14px; }
+  .rn-verdict { font-size:17px; font-weight:700; color:var(--text); margin-bottom:20px; }
+  .rn-label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .driveway-check { font-size:14.5px; font-weight:500; margin-bottom:11px; padding-left:22px; position:relative; }
+  .driveway-check:before { content:"\2192"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .risk-number { border-left:3px solid var(--red-b); background:#1e1e1e; padding:14px 18px; border-radius:4px; margin-top:20px; }
+  .risk-amount { font-family:'DM Serif Display',serif; font-size:30px; color:var(--red-b); line-height:1.1; }
+  .risk-desc { font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); margin-top:6px; letter-spacing:.03em; }
+  .traffic-section { margin-bottom:16px; }
+  .traffic-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; font-weight:500; }
+  .green-label { color:var(--green-b); } .amber-label { color:var(--amber-b); } .red-label { color:var(--red-b); }
+  .traffic-item { font-size:14px; font-weight:500; margin-bottom:9px; padding-left:22px; position:relative; }
+  .green-item { color:#b8e8c8; } .amber-item { color:#f5dc9a; } .red-item { color:#f5b0b0; }
+  .green-item:before { content:"\2713"; position:absolute; left:0; color:var(--green-b); }
+  .amber-item:before { content:"!"; position:absolute; left:2px; color:var(--amber-b); font-weight:700; }
+  .red-item:before { content:"\2715"; position:absolute; left:0; color:var(--red-b); }
+  .section-header { font-family:'DM Serif Display',serif; font-size:15px; color:var(--gold); margin-bottom:12px; }
+  .report-prose p { font-size:14.5px; color:#e8e4d8; margin-bottom:16px; }
+  .report-prose p:last-child { margin-bottom:0; }
+  .sub-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+  .footer-note { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); text-align:center; margin-top:22px; line-height:1.8; }
+  @media print {
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    html, body { background:#0f0f0f !important; color:#f0ece0 !important; }
+    .masthead { background:#161616 !important; border-top:3px solid #c8a84b !important; page-break-inside:avoid !important; }
+    .cost-summary { background:#161616 !important; border-left:3px solid #2a9d8f !important; page-break-inside:avoid !important; }
+    .section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-item, .driveway-check { page-break-inside:avoid !important; }
+    .risk-number { page-break-inside:avoid !important; background:#1e1e1e !important; border-left:3px solid #e84040 !important; }
+    .report-prose p { orphans:4 !important; widows:4 !important; page-break-inside:avoid !important; }
+    .meta-pill { background:#1e1e1e !important; color:#888880 !important; border:1px solid #2a2a2a !important; }
+    .verdict-badge.good-car-if { background:#2a9d8f !important; color:#fff !important; }
+    .risk-amount { color:#e84040 !important; } .wordmark { color:#c8a84b !important; } .vehicle-name { color:#f0ece0 !important; }
+    .report-prose p { color:#e8e4d8 !important; }
+    .green-label { color:#4fbf87 !important; } .green-item { color:#b8e8c8 !important; }
+    .amber-label { color:#f5c842 !important; } .amber-item { color:#f5dc9a !important; }
+    .red-label { color:#e84040 !important; } .red-item { color:#f5b0b0 !important; }
+    .copy-btn, .report-actions { display:none !important; }
+  }
+  p { page-break-inside:avoid !important; orphans:3; widows:3; }
+</style>
+</head>
+<body>
+<div class="wrap" id="report-root">
+  <div class="report-actions"><button class="copy-btn" onclick="copyReport()">Copy report</button></div>
+
+  <div class="masthead">
+    <div class="vehicle-name">2012 Mercedes-Benz ML350 4MATIC</div>
+    <div class="wordmark">Good Car Bad Car</div>
+    <div class="subtitle">Pre-Purchase Intelligence</div>
+    <div class="specline">Midsize luxury SUV · 3.5L M276 V6 <strong>gasoline</strong> (302 hp) · 7G-Tronic 7-speed automatic · 4MATIC AWD</div>
+    <div class="pills">
+      <span class="meta-pill">Market $8,500–$10,000</span>
+      <span class="meta-pill">MSRP ~$48,000 new</span>
+      <span class="meta-pill">Asking $9,900</span>
+      <span class="meta-pill">120,000 mi</span>
+      <span class="meta-pill">U.S. national market</span>
+      <span class="meta-pill">Midsize luxury SUV</span>
+    </div>
+    <div class="verdict-badge good-car-if">GOOD CAR — WITH CONDITIONS</div>
+    <div class="condition-line">…it's confirmed the gasoline M276 V6 (not the diesel), there are no active oil-cooler or valley-pan leaks, and the transmission and transfer case are dry and shifting cleanly.</div>
+  </div>
+
+  <div class="cost-summary">
+    <div class="cost-head">If the mechanic finds a problem:</div>
+    <div class="cost-row">
+      <div class="cost-name">Oil-cooler / valley-pan seal reseal (if leaking)</div>
+      <div class="cost-figs">DIY ~$400 · Shop $1,500–$2,500 · ~22% of value</div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">Transfer-case reseal or 7G conductor plate (if faulty)</div>
+      <div class="cost-figs">DIY ~$300 · Shop $700–$1,500 · ~12% of value</div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">Air suspension per corner — only if Airmatic-equipped</div>
+      <div class="cost-figs">DIY ~$500 · Shop $1,200–$2,000 · ~17% of value</div>
+    </div>
+    <div class="cost-foot">All figures are rough estimates.</div>
+  </div>
+
+  <div class="section">
+    <div class="rn-verdict">GOOD CAR — WITH CONDITIONS. This is a lot of luxury SUV for under $10,000 — and the reason it isn't a trap is that its scariest reputation belongs to a different engine than this one has.</div>
+    <div class="rn-label">Stand in the driveway and do these now</div>
+    <div class="driveway-check">Confirm it's the gasoline M276 V6, not the BlueTec diesel — the camshaft/balance-shaft horror stories people cite belong to the diesel and the older engines, not this gas V6. Check the badge and decode the VIN.</div>
+    <div class="driveway-check">Look under the engine and at the pavement for oil — the M276's oil-cooler and valley-pan seals are the known leak point, so a dry underside is a very good sign.</div>
+    <div class="driveway-check">On the drive, the 7-speed should shift smoothly with no flare or clunk, and the transfer case should be quiet — then bounce each corner to check for Airmatic sag if it's air-sprung.</div>
+    <div class="risk-number">
+      <div class="risk-amount">$2,500</div>
+      <div class="risk-desc">Biggest single realistic item — resealing the M276 oil cooler and valley pan if it's leaking. If the truck has Airmatic and a strut is failing, budget separately.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="traffic-section">
+      <div class="traffic-label green-label">Green — genuine strengths</div>
+      <div class="traffic-item green-item">The gasoline M276 3.5L V6 (302 hp) avoids the diesel OM642's costly camshaft/emissions issues and the balance-shaft problem of the older M272 — a fundamentally sound engine.</div>
+      <div class="traffic-item green-item">Genuinely premium W166 cabin, 4MATIC all-weather traction, and a ~7,200-lb tow rating with the tow package — real capability.</div>
+      <div class="traffic-item green-item">Enormous depreciation already absorbed: a $48,000 SUV new for under $10,000 used.</div>
+      <div class="traffic-item green-item">Strong independent Mercedes specialist network keeps costs far below dealer rates.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label amber-label">Amber — price it, don't fear it</div>
+      <div class="traffic-item amber-item">Oil-cooler and valley-pan seals seep with age (~$1,500–$2,500 to reseal at an independent) — check for active leaks.</div>
+      <div class="traffic-item amber-item">Transfer case can weep fluid; the 7G-Tronic conductor plate is an occasional age item (~$700–$1,500).</div>
+      <div class="traffic-item amber-item">If equipped with Airmatic air suspension, treat it as a standing cost risk; premium fuel and ~18–20 mpg are running costs.</div>
+      <div class="traffic-item amber-item">Aging German electronics, COMAND infotainment quirks, and normal suspension/brake wear near this mileage.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label red-label">Red — confirm before you buy</div>
+      <div class="traffic-item red-item">Confirm gasoline M276, not diesel — this single fact is what separates a good buy from an expensive one on this model.</div>
+      <div class="traffic-item red-item">No active oil leaks and a clean transmission/transfer-case — get a Mercedes independent to put it on a lift and scan it before you commit.</div>
+      <div class="traffic-item red-item">Verify open recalls by VIN — the fuel-pump-control-unit water-intrusion stall recall and the airbag-control-unit software recall both list 2012 ML350 4MATIC.</div>
+    </div>
+  </div>
+
+  <div class="section report-prose">
+    <div class="section-header">The full picture</div>
+
+    <div class="sub-head">The Depreciation Story</div>
+    <p>This is the luxury exception the budget market occasionally hands you. A 2012 ML350 4MATIC stickered near $48,000 new and now sells for under $10,000 — it has shed more than 80% of its value, and you're buying at the very bottom. The trick, as with any cheap German SUV, is that the purchase price is the easy part; the reason this one works is that its worst reputation doesn't apply to the engine it actually has.</p>
+
+    <div class="sub-head">What the Car Actually Is</div>
+    <p>This is the third-generation M-Class (the W166, 2012–2015), Mercedes' midsize luxury SUV, in its most sensible form: the gasoline ML350 4MATIC. The critical distinction is the engine. This gas car uses the M276 V6 — not the OM642 BlueTec diesel that carries the expensive emissions and camshaft-adjuster stories, and not the older M272 with its balance-shaft defect. Same body, very different ownership math.</p>
+
+    <div class="sub-head">Engine and Drivetrain</div>
+    <p>The 3.5L M276 makes 302 horsepower and is a genuinely sound engine — the camshaft and balance-shaft failures people associate with "old Mercedes V6s" belong to the earlier M272 and to the diesel, not to this one. Its real, documented weak point is external: the oil-cooler and valley-pan seals seep oil with age, a resealing job rather than an engine failure. Paired with the 7G-Tronic seven-speed automatic and 4MATIC all-wheel drive, it's a capable, refined drivetrain rated to tow about 7,200 pounds with the package. Real-world economy is thirsty — around 18–20 mpg on premium.</p>
+
+    <div class="sub-head">What Breaks and What It Means</div>
+    <p>Nothing here is a systemic, uninspectable defect — every concern is visible on a lift. The main one is the oil-cooler/valley-pan seal leak, $1,500–$2,500 to reseal at an independent and the biggest single realistic cost. Below that: the transfer case can weep, the 7G conductor plate is an occasional age item, and — importantly — if the truck has the optional Airmatic air suspension, that's a standing cost risk you price in separately. On steel springs, that concern disappears. This is a car you buy on a pre-purchase inspection, not on faith.</p>
+
+    <div class="sub-head">Red Flags</div>
+    <p>The one flag that governs everything is the engine badge: confirm gasoline M276, not diesel. After that, the flags are ordinary and inspectable — active oil leaks, transmission behavior, transfer-case seepage, and Airmatic condition if fitted. Confirm the two open recalls (the fuel-pump-control-unit water-intrusion stall and the airbag-control-unit software) are closed by VIN. A German SUV this age with no service history is a reason to price in the worst.</p>
+
+    <div class="sub-head">Driveway Inspection</div>
+    <p>Confirm the engine type first — badge and VIN. Then get it on a lift or at least look underneath for oil at the valley pan, oil cooler, transfer case, and differentials. On the drive, the 7-speed should shift imperceptibly with no flare or clunk, 4MATIC should feel planted, and there should be no air-suspension sag if it's Airmatic. Above all, have a Mercedes independent scan it and inspect it before you buy — on a car this age, the scan and the lift are worth more than the test drive.</p>
+
+    <div class="sub-head">Upcoming Maintenance Outlook</div>
+    <p>At ~120,000 miles, plan for the next year or two: a transmission service (fluid and filter, ~$400–$600 at an independent), spark plugs if not done (~$300–$450 for the V6), brake fluid and a likely brake service (~$500–$900), an oil-cooler reseal if seeping (~$1,500–$2,500), and coolant/differential service if undocumented (~$300–$500 combined). Budget premium fuel as a running cost. These are Mercedes-at-this-age numbers — real, but manageable at an independent.</p>
+
+    <div class="sub-head">Three Year Cost Projection</div>
+    <p>Budget roughly $5,000 over three years at about 12,000 miles a year, assuming the engine is confirmed gas, leaks are addressed, and it passes inspection at purchase. That covers routine services, the maintenance items above, one brake service, tires, and a realistic buffer for the electrical and seal items that come with a German luxury SUV this age. It excludes fuel and insurance, and it assumes no Airmatic replacement — which is the outcome the pre-purchase inspection exists to price or rule out.</p>
+
+    <div class="sub-head">Who This Car Is Actually For</div>
+    <p>The buyer who wants a genuinely premium, capable SUV at economy-car money and either has the budget headroom to absorb a surprise four-figure repair or a good independent Mercedes shop on speed dial. It's a smart buy for someone who understands German ownership — and a poor choice for anyone who needs a worry-free, cheap-to-run family hauler.</p>
+
+    <div class="sub-head">The Verdict</div>
+    <p>GOOD CAR — WITH CONDITIONS. The conditions are specific and all inspectable: it's the gasoline M276 (not the diesel), there are no active oil-cooler or valley-pan leaks, the transmission and transfer case are dry and shifting cleanly, and any Airmatic suspension is healthy. Make each a condition of the sale. If they come back clean, this is a remarkable amount of luxury SUV for the money — and living proof that model, engine, and history matter far more than the badge. If a condition fails, negotiate the cost off using the figures above, or walk. What keeps this out of trap territory is simple: the failure everyone fears on an old ML belongs to a different engine than the one in front of you.</p>
+  </div>
+
+  <div class="footer-note">
+    Yes Car No Car · Pre-Purchase Intelligence<br>
+    To save as PDF — open in Chrome · press Cmd+P (Mac) or Ctrl+P (Windows) · set destination to Save as PDF · click More Settings · check Background Graphics · Save.
+  </div>
+</div>
+<script>
+function copyReport(){ var el=document.getElementById('report-root'); var text=el.innerText.replace(/Copy report\s*/,'').trim(); if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ var b=document.querySelector('.copy-btn'); var o=b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1600); }); } }
+</script>
+</body>
+</html>

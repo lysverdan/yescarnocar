@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2018 Subaru Crosstrek 2.0i Premium — Good Car Bad Car</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0f0f0f; --surface:#161616; --border:#2a2a2a; --text:#f0ece0; --dim:#888880; --gold:#c8a84b; --green:#3d9970; --green-b:#4fbf87; --amber:#e8aa30; --amber-b:#f5c842; --red:#c0392b; --red-b:#e84040; --teal:#2a9d8f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; line-height:1.9; padding:24px 14px 60px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .report-actions { display:flex; justify-content:flex-end; margin-bottom:14px; }
+  .copy-btn { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; background:#1e1e1e; color:var(--gold); border:1px solid var(--border); padding:9px 16px; border-radius:4px; cursor:pointer; }
+  .copy-btn:active { background:#262626; }
+  .masthead { background:var(--surface); border-top:3px solid var(--gold); border-radius:6px; padding:32px 26px 26px; text-align:center; margin-bottom:14px; }
+  .vehicle-name { font-family:'DM Serif Display',serif; font-size:36px; line-height:1.15; color:var(--text); }
+  .wordmark { font-family:'DM Mono',monospace; color:var(--gold); text-transform:uppercase; letter-spacing:.34em; font-size:12px; margin-top:10px; }
+  .subtitle { color:var(--dim); font-size:12.5px; letter-spacing:.05em; margin-top:6px; }
+  .specline { font-size:13px; color:var(--dim); margin-top:12px; }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; }
+  .meta-pill { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:.04em; background:#1e1e1e; color:var(--dim); border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
+  .verdict-badge { display:inline-block; font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; padding:9px 22px; border-radius:5px; margin-top:20px; letter-spacing:.02em; }
+  .verdict-badge.good-car { background:var(--green); color:#fff; }
+  .verdict-badge.good-car-if { background:var(--teal); color:#fff; }
+  .verdict-badge.good-car-bad-car { background:var(--amber); color:#0f0f0f; }
+  .verdict-badge.bad-car { background:var(--red); color:#fff; }
+  .condition-line { font-style:italic; color:#d8d2c2; font-size:14px; margin-top:14px; max-width:580px; margin-left:auto; margin-right:auto; }
+  .section { background:var(--surface); border-radius:6px; padding:24px 24px; margin-bottom:14px; }
+  .rn-verdict { font-size:17px; font-weight:700; color:var(--text); margin-bottom:20px; }
+  .rn-label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .driveway-check { font-size:14.5px; font-weight:500; margin-bottom:11px; padding-left:22px; position:relative; }
+  .driveway-check:before { content:"\2192"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .risk-number { border-left:3px solid var(--red-b); background:#1e1e1e; padding:14px 18px; border-radius:4px; margin-top:20px; }
+  .risk-amount { font-family:'DM Serif Display',serif; font-size:30px; color:var(--red-b); line-height:1.1; }
+  .risk-desc { font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); margin-top:6px; letter-spacing:.03em; }
+  .traffic-section { margin-bottom:16px; }
+  .traffic-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; font-weight:500; }
+  .green-label { color:var(--green-b); } .amber-label { color:var(--amber-b); } .red-label { color:var(--red-b); }
+  .traffic-item { font-size:14px; font-weight:500; margin-bottom:9px; padding-left:22px; position:relative; }
+  .green-item { color:#b8e8c8; } .amber-item { color:#f5dc9a; } .red-item { color:#f5b0b0; }
+  .green-item:before { content:"\2713"; position:absolute; left:0; color:var(--green-b); }
+  .amber-item:before { content:"!"; position:absolute; left:2px; color:var(--amber-b); font-weight:700; }
+  .red-item:before { content:"\2715"; position:absolute; left:0; color:var(--red-b); }
+  .section-header { font-family:'DM Serif Display',serif; font-size:15px; color:var(--gold); margin-bottom:12px; }
+  .report-prose p { font-size:14.5px; color:#e8e4d8; margin-bottom:16px; }
+  .report-prose p:last-child { margin-bottom:0; }
+  .sub-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+  .footer-note { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); text-align:center; margin-top:22px; line-height:1.8; }
+  @media print {
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    html, body { background:#0f0f0f !important; color:#f0ece0 !important; }
+    .masthead { background:#161616 !important; border-top:3px solid #c8a84b !important; page-break-inside:avoid !important; }
+    .section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-item, .driveway-check { page-break-inside:avoid !important; }
+    .risk-number { page-break-inside:avoid !important; background:#1e1e1e !important; border-left:3px solid #e84040 !important; }
+    .report-prose p { orphans:4 !important; widows:4 !important; page-break-inside:avoid !important; }
+    .meta-pill { background:#1e1e1e !important; color:#888880 !important; border:1px solid #2a2a2a !important; }
+    .verdict-badge.good-car { background:#3d9970 !important; color:#fff !important; }
+    .risk-amount { color:#e84040 !important; } .wordmark { color:#c8a84b !important; } .vehicle-name { color:#f0ece0 !important; }
+    .report-prose p { color:#e8e4d8 !important; }
+    .green-label { color:#4fbf87 !important; } .green-item { color:#b8e8c8 !important; }
+    .amber-label { color:#f5c842 !important; } .amber-item { color:#f5dc9a !important; }
+    .red-label { color:#e84040 !important; } .red-item { color:#f5b0b0 !important; }
+    .copy-btn, .report-actions { display:none !important; }
+  }
+  p { page-break-inside:avoid !important; orphans:3; widows:3; }
+</style>
+</head>
+<body>
+<div class="wrap" id="report-root">
+  <div class="report-actions"><button class="copy-btn" onclick="copyReport()">Copy report</button></div>
+
+  <div class="masthead">
+    <div class="vehicle-name">2018 Subaru Crosstrek 2.0i Premium</div>
+    <div class="wordmark">Good Car Bad Car</div>
+    <div class="subtitle">Pre-Purchase Intelligence</div>
+    <div class="specline">Subcompact AWD SUV · 2.0L FB20 boxer-4 (152 hp) · Lineartronic CVT · Symmetrical AWD</div>
+    <div class="pills">
+      <span class="meta-pill">Market $14,000–$16,500</span>
+      <span class="meta-pill">MSRP ~$22,700 new</span>
+      <span class="meta-pill">Asking $16,000</span>
+      <span class="meta-pill">90,000 mi</span>
+      <span class="meta-pill">U.S. national market</span>
+      <span class="meta-pill">Subcompact SUV · AWD</span>
+    </div>
+    <div class="verdict-badge good-car">GOOD CAR</div>
+    <div class="condition-line">A tough, sure-footed little SUV that holds its value stubbornly — the one cost people forget isn't mechanical at all: the tall camera-equipped windshield.</div>
+  </div>
+
+  <div class="section">
+    <div class="rn-verdict">GOOD CAR. This is a dependable, capable all-weather crossover — the decision comes down to condition, a closed PCV recall, and knowing the one budget item nobody warns you about.</div>
+    <div class="rn-label">Stand in the driveway and do these now</div>
+    <div class="driveway-check">Inspect the windshield closely for chips and cracks — on an EyeSight car, a replacement means tall acoustic glass plus camera recalibration, so an existing crack is a real negotiating point.</div>
+    <div class="driveway-check">On the drive, confirm the CVT is smooth with no shudder, and pull the dipstick cold — the FB20 uses less oil than the 2.5, but you still confirm the level and cleanliness.</div>
+    <div class="driveway-check">Ask whether the PCV-valve recall was done — a cracked PCV on this 2.0L can cause a loss of power, and it's a free fix worth confirming.</div>
+    <div class="risk-number">
+      <div class="risk-amount">$1,500</div>
+      <div class="risk-desc">Worst realistic single item — a windshield replacement with EyeSight recalibration. It's the Crosstrek's signature surprise cost, not an engine or transmission event.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="traffic-section">
+      <div class="traffic-label green-label">Green — genuine strengths</div>
+      <div class="traffic-item green-item">Second-generation Crosstrek on Subaru's Global Platform — a big step up in refinement and rigidity, with standard AWD and 8.7 inches of clearance.</div>
+      <div class="traffic-item green-item">FB20 is timing-chain driven; the CVT is generally durable with fluid care. No dual-clutch or turbo complexity.</div>
+      <div class="traffic-item green-item">Exceptional resale — these hold value better than almost anything in the class — and a deep U.S. Subaru service network.</div>
+      <div class="traffic-item green-item">Real-world 28–30 mpg combined, genuinely capable in snow and light trail.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label amber-label">Amber — price it, don't fear it</div>
+      <div class="traffic-item amber-item">The acoustic, camera-equipped windshield is expensive to replace (~$1,000–$1,500 with recalibration) — the one cost owners routinely underestimate.</div>
+      <div class="traffic-item amber-item">Starlink/DCM parasitic battery drain — confirm the software fix was applied.</div>
+      <div class="traffic-item amber-item">FB20 uses some oil — monitor the level; CVT fluid service if there's no record.</div>
+      <div class="traffic-item amber-item">The 2.0L is modestly powered; wheel bearings and suspension are the normal wear items.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label red-label">Red — confirm before you buy</div>
+      <div class="traffic-item red-item">Confirm the PCV-valve recall (2018–2019 2.0L Subaru) is closed against the VIN — a cracked PCV can cause loss of power.</div>
+      <div class="traffic-item red-item">Verify all open recalls by VIN and any Takata airbag campaign.</div>
+      <div class="traffic-item red-item">Underbody rust on any salt-state car — check the rear subframe, rockers, and lines.</div>
+    </div>
+  </div>
+
+  <div class="section report-prose">
+    <div class="section-header">The full picture</div>
+
+    <div class="sub-head">The Depreciation Story</div>
+    <p>The Crosstrek is one of the most depreciation-proof vehicles on the market. A 2018 2.0i Premium stickered around $22,700 new and still commands $14,000–$16,500 used — barely moving. That's a testament to demand, but it also means you pay fairly and won't find a bargain; the value here is in a car that holds up and holds its price.</p>
+
+    <div class="sub-head">What the Car Actually Is</div>
+    <p>This is the second-generation Crosstrek (2018–2023), the first on Subaru's Global Platform — a much stiffer, more refined car than the original. It's essentially a lifted, AWD Impreza with rugged cladding and real ground clearance, sharing its FB20 engine and CVT with the Impreza. Standard all-wheel drive and standard EyeSight (on Premium and up) are the draw.</p>
+
+    <div class="sub-head">Engine and Drivetrain</div>
+    <p>The 2.0L FB20 makes 152 horsepower — adequate, not quick — and is timing-chain driven and durable, using less oil than the larger FB25 though still worth monitoring. It's paired with the Lineartronic CVT, which is generally reliable with routine fluid service. Standard Symmetrical AWD is the point of the car. Real-world economy runs 28–30 mpg combined; towing is rated at 1,500 pounds.</p>
+
+    <div class="sub-head">What Breaks and What It Means</div>
+    <p>Mechanically, very little of consequence — the FB20 and CVT are a low-drama pairing. The signature cost is the windshield: it's tall, acoustic, and carries the EyeSight cameras, so a crack means glass plus recalibration, around $1,000–$1,500 — the single item owners forget to budget for. Beyond that, the Starlink module's battery drain is the usual Subaru software nuisance to confirm fixed, and the FB20's modest oil use is worth monitoring rather than fearing.</p>
+
+    <div class="sub-head">Red Flags</div>
+    <p>The one recall to nail down is the PCV valve (2018–2019 2.0L Subaru): a cracked valve can cause a loss of power, and the fix is free — confirm it's closed against the VIN, along with any other open campaign including Takata. Then the usual: check the windshield for existing damage and the underbody for rust on salt-state cars.</p>
+
+    <div class="sub-head">Driveway Inspection</div>
+    <p>Examine the windshield for chips and cracks first — it's the expensive glass. On the drive, the CVT should be smooth with no shudder, and the engine should pull cleanly (it's not fast, but it should be even). Pull the dipstick cold for level and cleanliness, cycle the AWD on a tight turn, confirm EyeSight and the backup camera work, and get underneath for rust.</p>
+
+    <div class="sub-head">Upcoming Maintenance Outlook</div>
+    <p>At ~90,000 miles, plan for the next year or two: a CVT fluid service if undocumented (~$250–$400), spark plugs if not done (~$200–$300), brake fluid (~$100), and coolant if there's no record (~$120). Wheel bearings are a known Subaru wear item (~$300–$500 per corner). Tires and brakes are the usual wear costs, and keep a windshield-replacement contingency in mind given the EyeSight glass.</p>
+
+    <div class="sub-head">Three Year Cost Projection</div>
+    <p>Budget roughly $2,800 over three years at about 12,000 miles a year, assuming a clean car at purchase. That covers routine oil services, the CVT fluid service, spark plugs, one brake service, a set of tires, and a buffer for a wheel bearing or the windshield. It excludes fuel and insurance, and it excludes rust repair — the thing that changes the calculus on any salt-belt example.</p>
+
+    <div class="sub-head">Who This Car Is Actually For</div>
+    <p>The buyer who wants a tough, economical, all-weather small SUV that will hold its value and go almost anywhere within reason — and who's willing to keep a windshield contingency in the back of their mind. It's one of the most sensible used crossovers going.</p>
+
+    <div class="sub-head">The Verdict</div>
+    <p>GOOD CAR. The FB20 and CVT are a durable, low-drama pairing with no systemic defect to inspect your way out of. The decision is about this specific car's condition and two knowable items: confirm the PCV recall is closed and the CVT is smooth, and go in aware that the EyeSight windshield is the one surprise cost. Do that and you're buying one of the most capable, value-retentive small SUVs on the road — just don't let a cracked windshield catch you off guard at the negotiating table.</p>
+  </div>
+
+  <div class="footer-note">
+    Yes Car No Car · Pre-Purchase Intelligence<br>
+    To save as PDF — open in Chrome · press Cmd+P (Mac) or Ctrl+P (Windows) · set destination to Save as PDF · click More Settings · check Background Graphics · Save.
+  </div>
+</div>
+<script>
+function copyReport(){ var el=document.getElementById('report-root'); var text=el.innerText.replace(/Copy report\s*/,'').trim(); if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ var b=document.querySelector('.copy-btn'); var o=b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1600); }); } }
+</script>
+</body>
+</html>

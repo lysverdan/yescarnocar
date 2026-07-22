@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2015 Toyota Corolla LE — Good Car Bad Car</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0f0f0f; --surface:#161616; --border:#2a2a2a; --text:#f0ece0; --dim:#888880; --gold:#c8a84b; --green:#3d9970; --green-b:#4fbf87; --amber:#e8aa30; --amber-b:#f5c842; --red:#c0392b; --red-b:#e84040; --teal:#2a9d8f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; line-height:1.9; padding:24px 14px 60px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .report-actions { display:flex; justify-content:flex-end; margin-bottom:14px; }
+  .copy-btn { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; background:#1e1e1e; color:var(--gold); border:1px solid var(--border); padding:9px 16px; border-radius:4px; cursor:pointer; }
+  .copy-btn:active { background:#262626; }
+  .masthead { background:var(--surface); border-top:3px solid var(--gold); border-radius:6px; padding:32px 26px 26px; text-align:center; margin-bottom:14px; }
+  .vehicle-name { font-family:'DM Serif Display',serif; font-size:36px; line-height:1.15; color:var(--text); }
+  .wordmark { font-family:'DM Mono',monospace; color:var(--gold); text-transform:uppercase; letter-spacing:.34em; font-size:12px; margin-top:10px; }
+  .subtitle { color:var(--dim); font-size:12.5px; letter-spacing:.05em; margin-top:6px; }
+  .specline { font-size:13px; color:var(--dim); margin-top:12px; }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; }
+  .meta-pill { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:.04em; background:#1e1e1e; color:var(--dim); border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
+  .verdict-badge { display:inline-block; font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; padding:9px 22px; border-radius:5px; margin-top:20px; letter-spacing:.02em; }
+  .verdict-badge.good-car { background:var(--green); color:#fff; }
+  .verdict-badge.good-car-if { background:var(--teal); color:#fff; }
+  .verdict-badge.good-car-bad-car { background:var(--amber); color:#0f0f0f; }
+  .verdict-badge.bad-car { background:var(--red); color:#fff; }
+  .condition-line { font-style:italic; color:#d8d2c2; font-size:14px; margin-top:14px; max-width:560px; margin-left:auto; margin-right:auto; }
+  .section { background:var(--surface); border-radius:6px; padding:24px 24px; margin-bottom:14px; }
+  .rn-verdict { font-size:17px; font-weight:700; color:var(--text); margin-bottom:20px; }
+  .rn-label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .driveway-check { font-size:14.5px; font-weight:500; margin-bottom:11px; padding-left:22px; position:relative; }
+  .driveway-check:before { content:"\2192"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .risk-number { border-left:3px solid var(--red-b); background:#1e1e1e; padding:14px 18px; border-radius:4px; margin-top:20px; }
+  .risk-amount { font-family:'DM Serif Display',serif; font-size:30px; color:var(--red-b); line-height:1.1; }
+  .risk-desc { font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); margin-top:6px; letter-spacing:.03em; }
+  .traffic-section { margin-bottom:16px; }
+  .traffic-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; font-weight:500; }
+  .green-label { color:var(--green-b); } .amber-label { color:var(--amber-b); } .red-label { color:var(--red-b); }
+  .traffic-item { font-size:14px; font-weight:500; margin-bottom:9px; padding-left:22px; position:relative; }
+  .green-item { color:#b8e8c8; } .amber-item { color:#f5dc9a; } .red-item { color:#f5b0b0; }
+  .green-item:before { content:"\2713"; position:absolute; left:0; color:var(--green-b); }
+  .amber-item:before { content:"!"; position:absolute; left:2px; color:var(--amber-b); font-weight:700; }
+  .red-item:before { content:"\2715"; position:absolute; left:0; color:var(--red-b); }
+  .section-header { font-family:'DM Serif Display',serif; font-size:15px; color:var(--gold); margin-bottom:12px; }
+  .report-prose p { font-size:14.5px; color:#e8e4d8; margin-bottom:16px; }
+  .report-prose p:last-child { margin-bottom:0; }
+  .sub-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+  .footer-note { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); text-align:center; margin-top:22px; line-height:1.8; }
+  @media print {
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    html, body { background:#0f0f0f !important; color:#f0ece0 !important; }
+    .masthead { background:#161616 !important; border-top:3px solid #c8a84b !important; page-break-inside:avoid !important; }
+    .section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-item, .driveway-check { page-break-inside:avoid !important; }
+    .risk-number { page-break-inside:avoid !important; background:#1e1e1e !important; border-left:3px solid #e84040 !important; }
+    .report-prose p { orphans:4 !important; widows:4 !important; page-break-inside:avoid !important; }
+    .meta-pill { background:#1e1e1e !important; color:#888880 !important; border:1px solid #2a2a2a !important; }
+    .verdict-badge.good-car { background:#3d9970 !important; color:#fff !important; }
+    .risk-amount { color:#e84040 !important; } .wordmark { color:#c8a84b !important; } .vehicle-name { color:#f0ece0 !important; }
+    .report-prose p { color:#e8e4d8 !important; }
+    .green-label { color:#4fbf87 !important; } .green-item { color:#b8e8c8 !important; }
+    .amber-label { color:#f5c842 !important; } .amber-item { color:#f5dc9a !important; }
+    .red-label { color:#e84040 !important; } .red-item { color:#f5b0b0 !important; }
+    .copy-btn, .report-actions { display:none !important; }
+  }
+  p { page-break-inside:avoid !important; orphans:3; widows:3; }
+</style>
+</head>
+<body>
+<div class="wrap" id="report-root">
+  <div class="report-actions"><button class="copy-btn" onclick="copyReport()">Copy report</button></div>
+
+  <div class="masthead">
+    <div class="vehicle-name">2015 Toyota Corolla LE</div>
+    <div class="wordmark">Good Car Bad Car</div>
+    <div class="subtitle">Pre-Purchase Intelligence</div>
+    <div class="specline">Compact sedan · 1.8L 2ZR-FE I4 (132 hp) · CVTi-S · FWD</div>
+    <div class="pills">
+      <span class="meta-pill">Market $9,000–$11,000</span>
+      <span class="meta-pill">MSRP ~$18,700 new</span>
+      <span class="meta-pill">Asking $11,000</span>
+      <span class="meta-pill">115,000 mi</span>
+      <span class="meta-pill">U.S. national market</span>
+      <span class="meta-pill">Compact sedan</span>
+    </div>
+    <div class="verdict-badge good-car">GOOD CAR</div>
+    <div class="condition-line">Reliability as a personality trait — a 2ZR-FE and CVT that routinely run past 200,000 miles. There's almost nothing to fear here except a neglected or rusty individual car.</div>
+  </div>
+
+  <div class="section">
+    <div class="rn-verdict">GOOD CAR. This is about as low-risk as a used car gets — the entire decision is whether this specific one was maintained, rust-free, and had its recall done.</div>
+    <div class="rn-label">Stand in the driveway and do these now</div>
+    <div class="driveway-check">Pull the dipstick cold — the 2ZR-FE is not an oil burner when healthy, so a low or dirty reading is a maintenance flag, not a design one.</div>
+    <div class="driveway-check">On the drive, confirm the CVT pulls away smoothly and cruises without drone or shudder — this box is normally seamless, so anything unusual is worth a closer look.</div>
+    <div class="driveway-check">Check the underbody on any salt-state car — rocker panels, brake lines, subframe — because corrosion, not mechanicals, is the real risk at this age.</div>
+    <div class="risk-number">
+      <div class="risk-amount">$1,200</div>
+      <div class="risk-desc">Worst realistic single item — a water pump or A/C repair. There is no expensive powertrain failure lurking on this platform.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="traffic-section">
+      <div class="traffic-label green-label">Green — genuine strengths</div>
+      <div class="traffic-item green-item">The 1.8L 2ZR-FE is timing-chain driven and among the most durable four-cylinders ever mass-produced — 200,000-plus miles is ordinary.</div>
+      <div class="traffic-item green-item">The CVTi-S transmission has a strong reliability record with routine fluid care — no dual-clutch or belt failure modes.</div>
+      <div class="traffic-item green-item">Real-world 32–36 mpg, 40-plus on the highway, with the lowest ownership costs in its class (RepairPal ranks it #1 among compacts).</div>
+      <div class="traffic-item green-item">Parts and service are everywhere and cheap; resale stays strong for exactly this reason.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label amber-label">Amber — price it, don't fear it</div>
+      <div class="traffic-item amber-item">Water pump and A/C are the most likely age-related repairs — budget around $1,200 if either goes.</div>
+      <div class="traffic-item amber-item">CVT fluid service if there's no record — cheap insurance that keeps this transmission happy.</div>
+      <div class="traffic-item amber-item">Owner-reported backup-camera and infotainment quirks; road noise is a characteristic, not a fault.</div>
+      <div class="traffic-item amber-item">Aging 12V battery and normal suspension wear (struts, bushings) near this mileage.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label red-label">Red — confirm before you buy</div>
+      <div class="traffic-item red-item">Confirm the airbag-ECU recall (2011–2019 Corolla, NHTSA) is closed — a faulty ECU can disable airbag deployment. The fix is a free noise filter.</div>
+      <div class="traffic-item red-item">Verify any Takata airbag campaign by VIN for this era before buying.</div>
+      <div class="traffic-item red-item">Underbody rust on any salt-state car — rotten rockers or brake lines are a walk-away regardless of how well it runs.</div>
+    </div>
+  </div>
+
+  <div class="section report-prose">
+    <div class="section-header">The full picture</div>
+
+    <div class="sub-head">The Depreciation Story</div>
+    <p>The Corolla has already flattened out. A 2015 LE stickered around $18,700 new and now sits near $9,000–$11,000, with barely any movement over the last three years — Toyota resale holds because the cars simply last. You're buying at the point where depreciation stops working against you.</p>
+
+    <div class="sub-head">What the Car Actually Is</div>
+    <p>This is the eleventh-generation Corolla (2014–2019), the roomier, better-looking redesign, in its volume LE trim: 1.8-liter engine, CVT, and a mandate to never surprise you. It shares its bones and reliability DNA with the same-era Matrix and the global Corolla family — proven, boring in the best way, and supported everywhere.</p>
+
+    <div class="sub-head">Engine and Drivetrain</div>
+    <p>The 1.8L 2ZR-FE makes 132 horsepower and is one of the great durability engines — timing chain, port injection, no turbo — the kind that shrugs off 200,000 miles on basic maintenance. It's paired with Toyota's CVTi-S, which has proven reliable with routine fluid service. Real-world economy runs in the low-to-mid 30s, into the 40s on the highway. This is a passenger car, not rated for towing.</p>
+
+    <div class="sub-head">What Breaks and What It Means</div>
+    <p>Genuinely little. The likeliest age-related repairs are a water pump or the air conditioning, which is why the worst realistic single-item cost sits around $1,200 rather than any powertrain event. Below that: minor infotainment and backup-camera complaints, a tired battery, and ordinary suspension wear. None is a systemic defect; every one is visible and priceable before purchase.</p>
+
+    <div class="sub-head">Red Flags</div>
+    <p>As with any car this age, the real red flag is rust on salt-state examples — check the rockers, brake lines, and subframe. The second is skipped recall work: confirm the airbag-ECU campaign (2011–2019 Corolla) is closed and check for any open Takata airbag campaign by VIN. Both fixes are free, and an owner who skipped them is telling you about the rest of the car.</p>
+
+    <div class="sub-head">Driveway Inspection</div>
+    <p>Cold first: pull the dipstick before startup for a clean, full reading. On the drive, the CVT should be seamless and the engine smooth — any drone, shudder, or hesitation is unusual and worth checking. Then get underneath with a light; solid metal plus clean oil is most of the decision. Cycle the A/C to full cold and run the backup camera and Bluetooth to catch the known minor gripes.</p>
+
+    <div class="sub-head">Upcoming Maintenance Outlook</div>
+    <p>At ~115,000 miles, plan for the next year or two: CVT fluid service if undocumented (~$160–$250), spark plugs if not done (~$120–$200 — these are long-life plugs), brake fluid (~$100), and coolant if there's no record (~$120). A water pump is a plausible near-term item (~$400–$600). Brakes and tires are the usual wear costs as they come due.</p>
+
+    <div class="sub-head">Three Year Cost Projection</div>
+    <p>Budget roughly $2,200 over three years at about 12,000 miles a year, assuming a clean car at purchase. That covers routine oil services, the maintenance items above, one brake service, a set of tires, and a buffer for a water pump or the A/C. It excludes fuel and insurance, which are about you and not the car, and it excludes rust repair, which changes the calculus entirely if the underbody is bad.</p>
+
+    <div class="sub-head">Who This Car Is Actually For</div>
+    <p>Anyone who wants the lowest-drama, lowest-cost transportation available and doesn't need to tow or haul. It's the textbook first car, commuter, or dependable second car — buy a clean one and it will simply keep working.</p>
+
+    <div class="sub-head">The Verdict</div>
+    <p>GOOD CAR. There is no systemic defect to inspect your way out of — the 2ZR-FE and CVTi-S are among the most durable pairings ever put in a compact. That makes the entire decision about this specific car's condition: confirm clean oil, a smooth CVT, a closed airbag recall, and a solid underbody. Do that and you're buying one of the most sensible used cars on the road. The only way this one disappoints is rust or neglect on the individual example — both of which you can see for yourself before you pay.</p>
+  </div>
+
+  <div class="footer-note">
+    Yes Car No Car · Pre-Purchase Intelligence<br>
+    To save as PDF — open in Chrome · press Cmd+P (Mac) or Ctrl+P (Windows) · set destination to Save as PDF · click More Settings · check Background Graphics · Save.
+  </div>
+</div>
+<script>
+function copyReport(){ var el=document.getElementById('report-root'); var text=el.innerText.replace(/Copy report\s*/,'').trim(); if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ var b=document.querySelector('.copy-btn'); var o=b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1600); }); } }
+</script>
+</body>
+</html>

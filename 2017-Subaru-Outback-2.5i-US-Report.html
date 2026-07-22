@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2017 Subaru Outback 2.5i — Good Car Bad Car</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0f0f0f; --surface:#161616; --border:#2a2a2a; --text:#f0ece0; --dim:#888880; --gold:#c8a84b; --green:#3d9970; --green-b:#4fbf87; --amber:#e8aa30; --amber-b:#f5c842; --red:#c0392b; --red-b:#e84040; --teal:#2a9d8f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; line-height:1.9; padding:24px 14px 60px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .report-actions { display:flex; justify-content:flex-end; margin-bottom:14px; }
+  .copy-btn { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; background:#1e1e1e; color:var(--gold); border:1px solid var(--border); padding:9px 16px; border-radius:4px; cursor:pointer; }
+  .copy-btn:active { background:#262626; }
+  .masthead { background:var(--surface); border-top:3px solid var(--gold); border-radius:6px; padding:32px 26px 26px; text-align:center; margin-bottom:14px; }
+  .vehicle-name { font-family:'DM Serif Display',serif; font-size:36px; line-height:1.15; color:var(--text); }
+  .wordmark { font-family:'DM Mono',monospace; color:var(--gold); text-transform:uppercase; letter-spacing:.34em; font-size:12px; margin-top:10px; }
+  .subtitle { color:var(--dim); font-size:12.5px; letter-spacing:.05em; margin-top:6px; }
+  .specline { font-size:13px; color:var(--dim); margin-top:12px; }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; }
+  .meta-pill { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:.04em; background:#1e1e1e; color:var(--dim); border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
+  .verdict-badge { display:inline-block; font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; padding:9px 22px; border-radius:5px; margin-top:20px; letter-spacing:.02em; }
+  .verdict-badge.good-car { background:var(--green); color:#fff; }
+  .verdict-badge.good-car-if { background:var(--teal); color:#fff; }
+  .verdict-badge.good-car-bad-car { background:var(--amber); color:#0f0f0f; }
+  .verdict-badge.bad-car { background:var(--red); color:#fff; }
+  .condition-line { font-style:italic; color:#d8d2c2; font-size:14px; margin-top:14px; max-width:580px; margin-left:auto; margin-right:auto; }
+  .cost-summary { background:var(--surface); border-left:3px solid var(--teal); border-radius:4px; padding:18px 20px; margin-bottom:14px; }
+  .cost-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+  .cost-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:8px 0; border-bottom:1px solid #232323; }
+  .cost-row:last-of-type { border-bottom:none; }
+  .cost-name { font-size:13.5px; font-weight:500; color:var(--text); flex:1; }
+  .cost-figs { font-family:'DM Mono',monospace; font-size:11.5px; color:#cfc9ba; text-align:right; white-space:nowrap; }
+  .cost-foot { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); margin-top:12px; }
+  .section { background:var(--surface); border-radius:6px; padding:24px 24px; margin-bottom:14px; }
+  .rn-verdict { font-size:17px; font-weight:700; color:var(--text); margin-bottom:20px; }
+  .rn-label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .driveway-check { font-size:14.5px; font-weight:500; margin-bottom:11px; padding-left:22px; position:relative; }
+  .driveway-check:before { content:"\2192"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .risk-number { border-left:3px solid var(--red-b); background:#1e1e1e; padding:14px 18px; border-radius:4px; margin-top:20px; }
+  .risk-amount { font-family:'DM Serif Display',serif; font-size:30px; color:var(--red-b); line-height:1.1; }
+  .risk-desc { font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); margin-top:6px; letter-spacing:.03em; }
+  .traffic-section { margin-bottom:16px; }
+  .traffic-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; font-weight:500; }
+  .green-label { color:var(--green-b); } .amber-label { color:var(--amber-b); } .red-label { color:var(--red-b); }
+  .traffic-item { font-size:14px; font-weight:500; margin-bottom:9px; padding-left:22px; position:relative; }
+  .green-item { color:#b8e8c8; } .amber-item { color:#f5dc9a; } .red-item { color:#f5b0b0; }
+  .green-item:before { content:"\2713"; position:absolute; left:0; color:var(--green-b); }
+  .amber-item:before { content:"!"; position:absolute; left:2px; color:var(--amber-b); font-weight:700; }
+  .red-item:before { content:"\2715"; position:absolute; left:0; color:var(--red-b); }
+  .section-header { font-family:'DM Serif Display',serif; font-size:15px; color:var(--gold); margin-bottom:12px; }
+  .report-prose p { font-size:14.5px; color:#e8e4d8; margin-bottom:16px; }
+  .report-prose p:last-child { margin-bottom:0; }
+  .sub-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+  .footer-note { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); text-align:center; margin-top:22px; line-height:1.8; }
+  @media print {
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    html, body { background:#0f0f0f !important; color:#f0ece0 !important; }
+    .masthead { background:#161616 !important; border-top:3px solid #c8a84b !important; page-break-inside:avoid !important; }
+    .cost-summary { background:#161616 !important; border-left:3px solid #2a9d8f !important; page-break-inside:avoid !important; }
+    .section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-item, .driveway-check { page-break-inside:avoid !important; }
+    .risk-number { page-break-inside:avoid !important; background:#1e1e1e !important; border-left:3px solid #e84040 !important; }
+    .report-prose p { orphans:4 !important; widows:4 !important; page-break-inside:avoid !important; }
+    .meta-pill { background:#1e1e1e !important; color:#888880 !important; border:1px solid #2a2a2a !important; }
+    .verdict-badge.good-car-if { background:#2a9d8f !important; color:#fff !important; }
+    .risk-amount { color:#e84040 !important; } .wordmark { color:#c8a84b !important; } .vehicle-name { color:#f0ece0 !important; }
+    .report-prose p { color:#e8e4d8 !important; }
+    .green-label { color:#4fbf87 !important; } .green-item { color:#b8e8c8 !important; }
+    .amber-label { color:#f5c842 !important; } .amber-item { color:#f5dc9a !important; }
+    .red-label { color:#e84040 !important; } .red-item { color:#f5b0b0 !important; }
+    .copy-btn, .report-actions { display:none !important; }
+  }
+  p { page-break-inside:avoid !important; orphans:3; widows:3; }
+</style>
+</head>
+<body>
+<div class="wrap" id="report-root">
+  <div class="report-actions"><button class="copy-btn" onclick="copyReport()">Copy report</button></div>
+
+  <div class="masthead">
+    <div class="vehicle-name">2017 Subaru Outback 2.5i</div>
+    <div class="wordmark">Good Car Bad Car</div>
+    <div class="subtitle">Pre-Purchase Intelligence</div>
+    <div class="specline">Midsize AWD wagon · 2.5L FB25 boxer-4 (175 hp) · Lineartronic CVT · Symmetrical AWD</div>
+    <div class="pills">
+      <span class="meta-pill">Market $11,500–$13,500</span>
+      <span class="meta-pill">MSRP ~$28,000 new</span>
+      <span class="meta-pill">Asking $13,500</span>
+      <span class="meta-pill">105,000 mi</span>
+      <span class="meta-pill">U.S. national market</span>
+      <span class="meta-pill">Midsize AWD wagon</span>
+    </div>
+    <div class="verdict-badge good-car-if">GOOD CAR — WITH CONDITIONS</div>
+    <div class="condition-line">…the FB25 isn't consuming oil beyond Subaru's threshold, and the CVT shifts smoothly with no shudder and ideally a documented fluid service behind it.</div>
+  </div>
+
+  <div class="cost-summary">
+    <div class="cost-head">If the mechanic finds a problem:</div>
+    <div class="cost-row">
+      <div class="cost-name">CVT replacement (if it fails or shudders badly)</div>
+      <div class="cost-figs">DIY ~$3,200 · Shop $5,000–$5,500 · ~42% of value</div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">Oil-consumption remedy (short block / rings, if severe)</div>
+      <div class="cost-figs">DIY ~$1,200 · Shop $3,000–$4,000 · ~28% of value</div>
+    </div>
+    <div class="cost-foot">All figures are rough estimates.</div>
+  </div>
+
+  <div class="section">
+    <div class="rn-verdict">GOOD CAR — WITH CONDITIONS. This is a genuinely capable all-weather wagon, and the decision comes down to two inspectable things: that it isn't burning oil, and that the CVT is healthy.</div>
+    <div class="rn-label">Stand in the driveway and do these now</div>
+    <div class="driveway-check">Pull the dipstick cold, check the level and color, and ask the seller directly how often they add oil — the FB25 is known to consume, and a low reading with no records is your first flag.</div>
+    <div class="driveway-check">On the test drive, accelerate gently and at steady cruise and feel for any shudder, judder, or RPM flare — a smooth CVT is what you want; anything that hunts or shakes is the expensive risk showing itself.</div>
+    <div class="driveway-check">Have the seller confirm the Starlink/DCM battery-drain fix was done — these are known to flatten batteries when the module won't sleep. A repeatedly dead battery is the tell.</div>
+    <div class="risk-number">
+      <div class="risk-amount">$5,500</div>
+      <div class="risk-desc">Worst-case single item — a CVT replacement. It's the one repair that would change the math, which is exactly why confirming transmission health is a condition of buying.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="traffic-section">
+      <div class="traffic-label green-label">Green — genuine strengths</div>
+      <div class="traffic-item green-item">Standard Symmetrical AWD, 8.7 inches of clearance, and standard EyeSight on most trims — genuinely capable and safe.</div>
+      <div class="traffic-item green-item">The FB25 is timing-chain driven with no EJ-era head-gasket reputation — a cleaner engine than Subaru's past.</div>
+      <div class="traffic-item green-item">Wagon practicality with car-like ride; huge U.S. parts and independent-Subaru network.</div>
+      <div class="traffic-item green-item">Real-world 26–28 mpg combined — strong for a standard-AWD midsize.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label amber-label">Amber — price it, don't fear it</div>
+      <div class="traffic-item amber-item">Starlink/DCM parasitic battery drain — confirm the software fix was applied (about $700 if out of coverage); a repeatedly dead battery is the symptom.</div>
+      <div class="traffic-item amber-item">CVT fluid service if there's no record (~$250–$400) — cheap insurance on this transmission.</div>
+      <div class="traffic-item amber-item">The 8-year/100,000-mile oil-consumption warranty extension has now lapsed on time — any oil fix is out of pocket.</div>
+      <div class="traffic-item amber-item">Wheel bearings and front suspension are the common wear items near this mileage.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label red-label">Red — confirm before you buy</div>
+      <div class="traffic-item red-item">Oil consumption: confirm it isn't burning more than roughly a quart per 1,000–1,200 miles — the FB25's known trait, now uncovered.</div>
+      <div class="traffic-item red-item">CVT health: any shudder, flare, or delayed engagement is a walk-or-renegotiate, not a footnote.</div>
+      <div class="traffic-item red-item">Verify open recalls by VIN (this year had several) and any Takata airbag campaign.</div>
+    </div>
+  </div>
+
+  <div class="section report-prose">
+    <div class="section-header">The full picture</div>
+
+    <div class="sub-head">The Depreciation Story</div>
+    <p>The Outback barely depreciates. A 2017 2.5i Premium stickered around $28,000 new and now sits near $11,500–$13,500, on a nearly flat curve — Subaru's cold-climate loyalty keeps demand high. You won't get one cheap, but the money you put in holds, which puts the weight on confirming this specific car is a clean example.</p>
+
+    <div class="sub-head">What the Car Actually Is</div>
+    <p>This is the fifth-generation Outback (2015–2019), the taller, more SUV-like wagon that cemented the model's mainstream success. The 2.5i pairs the FB25 boxer-four with the Lineartronic CVT and standard Symmetrical AWD. It shares its powertrain and traits with the same-era Forester and Legacy — including the FB25's oil-consumption tendency, which is the first thing to verify.</p>
+
+    <div class="sub-head">Engine and Drivetrain</div>
+    <p>The 2.5L FB25 makes 175 horsepower and is a real improvement over the old EJ engines — timing-chain driven and free of the head-gasket reputation that haunted earlier Subarus. Its documented trait is oil consumption; the worst of it belonged to earlier FB cars, but a 2017 can still do it, so you verify rather than assume. The Lineartronic CVT is smooth and efficient and most are durable, but it's the single expensive component, so its health is what you confirm. Real-world economy runs 26–28 mpg combined; towing is rated at 2,700 pounds.</p>
+
+    <div class="sub-head">What Breaks and What It Means</div>
+    <p>Two things carry real money, both inspectable. First, oil consumption — a severe burner means a ring or short-block job in the $3,000–$4,000 range, and importantly, the 8-year/100,000-mile oil-consumption warranty extension has now lapsed on time, so any remedy is out of pocket. Second, the CVT — a healthy one runs well past this mileage, but a failed or badly shuddering unit is a $5,000-plus replacement. Neither is a certainty on a well-kept car; they're the two questions a good inspection answers. Below those, the Starlink communication module's battery drain is a documented nuisance addressed by a software fix — confirm it was done.</p>
+
+    <div class="sub-head">Red Flags</div>
+    <p>The mechanical red flags are the two above — burning oil and an unhappy CVT — both detectable on the driveway and test drive. Beyond those, confirm the DCM battery-drain fix and check open recalls by VIN, including any Takata campaign. A car with a history of repeated dead batteries and no DCM fix is telling you something.</p>
+
+    <div class="sub-head">Driveway Inspection</div>
+    <p>Cold first: pull the dipstick before startup, confirm full and clean oil, and ask directly how much oil it uses. On the drive, the CVT should be seamless — feel for shudder or flare and confirm prompt engagement from a stop. Cycle the AWD on a slow tight turn for binding, confirm all warning lights extinguish, and ask about battery history as the tell for the DCM issue.</p>
+
+    <div class="sub-head">Upcoming Maintenance Outlook</div>
+    <p>At ~105,000 miles, plan for the next year or two: a CVT fluid service if undocumented (~$250–$400), spark plugs if not done (~$200–$300 on a boxer), a coolant flush if there's no record (~$120–$150), and brake fluid (~$100). Wheel bearings are a known wear item (~$300–$500 per corner). Front struts and bushings are the likely larger suspension item as it passes 105k.</p>
+
+    <div class="sub-head">Three Year Cost Projection</div>
+    <p>Budget roughly $3,400 over three years at about 12,000 miles a year, assuming a car that passes its two conditions clean. That covers routine oil services (watching consumption), the CVT fluid service, spark plugs, one brake service, a likely wheel bearing or suspension item, and tires. It excludes fuel and insurance, and it explicitly excludes a CVT replacement or an oil-consumption engine repair — the outcomes the pre-purchase checks exist to rule out.</p>
+
+    <div class="sub-head">Who This Car Is Actually For</div>
+    <p>The buyer who wants dependable all-weather capability with wagon practicality and will spend one inspection confirming the engine isn't burning oil and the transmission is healthy. Get those confirmed and the Outback is one of the most sensible used vehicles in its class.</p>
+
+    <div class="sub-head">The Verdict</div>
+    <p>GOOD CAR — WITH CONDITIONS. This is a good wagon, and the two conditions are the only things standing between you and a solid purchase: confirm the FB25 isn't consuming oil beyond Subaru's threshold, and confirm the CVT shifts smoothly with no shudder — ideally with a documented fluid service behind it. Make both a written condition of the sale. If they come back clean, buy with confidence. If the oil consumption is real or the transmission shudders, that's a number you negotiate off the price using the cost summary above, or you walk. What makes this a good car rather than a gamble is that both risks are fully visible before you pay.</p>
+  </div>
+
+  <div class="footer-note">
+    Yes Car No Car · Pre-Purchase Intelligence<br>
+    To save as PDF — open in Chrome · press Cmd+P (Mac) or Ctrl+P (Windows) · set destination to Save as PDF · click More Settings · check Background Graphics · Save.
+  </div>
+</div>
+<script>
+function copyReport(){ var el=document.getElementById('report-root'); var text=el.innerText.replace(/Copy report\s*/,'').trim(); if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ var b=document.querySelector('.copy-btn'); var o=b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1600); }); } }
+</script>
+</body>
+</html>

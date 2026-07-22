@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2016 Audi Q3 2.0T Premium Plus — Good Car Bad Car</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0f0f0f; --surface:#161616; --border:#2a2a2a; --text:#f0ece0; --dim:#888880; --gold:#c8a84b; --green:#3d9970; --green-b:#4fbf87; --amber:#e8aa30; --amber-b:#f5c842; --red:#c0392b; --red-b:#e84040; --teal:#2a9d8f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; line-height:1.9; padding:24px 14px 60px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .report-actions { display:flex; justify-content:flex-end; margin-bottom:14px; }
+  .copy-btn { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; background:#1e1e1e; color:var(--gold); border:1px solid var(--border); padding:9px 16px; border-radius:4px; cursor:pointer; }
+  .copy-btn:active { background:#262626; }
+  .masthead { background:var(--surface); border-top:3px solid var(--gold); border-radius:6px; padding:32px 26px 26px; text-align:center; margin-bottom:14px; }
+  .vehicle-name { font-family:'DM Serif Display',serif; font-size:36px; line-height:1.15; color:var(--text); }
+  .wordmark { font-family:'DM Mono',monospace; color:var(--gold); text-transform:uppercase; letter-spacing:.34em; font-size:12px; margin-top:10px; }
+  .subtitle { color:var(--dim); font-size:12.5px; letter-spacing:.05em; margin-top:6px; }
+  .specline { font-size:13px; color:var(--dim); margin-top:12px; }
+  .pills { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; }
+  .meta-pill { font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:.04em; background:#1e1e1e; color:var(--dim); border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
+  .verdict-badge { display:inline-block; font-family:'DM Serif Display',serif; font-size:22px; font-weight:700; padding:9px 22px; border-radius:5px; margin-top:20px; letter-spacing:.02em; }
+  .verdict-badge.good-car { background:var(--green); color:#fff; }
+  .verdict-badge.good-car-if { background:var(--teal); color:#fff; }
+  .verdict-badge.good-car-bad-car { background:var(--amber); color:#0f0f0f; }
+  .verdict-badge.bad-car { background:var(--red); color:#fff; }
+  .condition-line { font-style:italic; color:#d8d2c2; font-size:14px; margin-top:14px; max-width:580px; margin-left:auto; margin-right:auto; }
+  .cost-summary { background:var(--surface); border-left:3px solid var(--teal); border-radius:4px; padding:18px 20px; margin-bottom:14px; }
+  .cost-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+  .cost-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:8px 0; border-bottom:1px solid #232323; }
+  .cost-row:last-of-type { border-bottom:none; }
+  .cost-name { font-size:13.5px; font-weight:500; color:var(--text); flex:1; }
+  .cost-figs { font-family:'DM Mono',monospace; font-size:11.5px; color:#cfc9ba; text-align:right; white-space:nowrap; }
+  .cost-foot { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); margin-top:12px; }
+  .section { background:var(--surface); border-radius:6px; padding:24px 24px; margin-bottom:14px; }
+  .rn-verdict { font-size:17px; font-weight:700; color:var(--text); margin-bottom:20px; }
+  .rn-label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .driveway-check { font-size:14.5px; font-weight:500; margin-bottom:11px; padding-left:22px; position:relative; }
+  .driveway-check:before { content:"\2192"; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .risk-number { border-left:3px solid var(--red-b); background:#1e1e1e; padding:14px 18px; border-radius:4px; margin-top:20px; }
+  .risk-amount { font-family:'DM Serif Display',serif; font-size:30px; color:var(--red-b); line-height:1.1; }
+  .risk-desc { font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); margin-top:6px; letter-spacing:.03em; }
+  .traffic-section { margin-bottom:16px; }
+  .traffic-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; font-weight:500; }
+  .green-label { color:var(--green-b); } .amber-label { color:var(--amber-b); } .red-label { color:var(--red-b); }
+  .traffic-item { font-size:14px; font-weight:500; margin-bottom:9px; padding-left:22px; position:relative; }
+  .green-item { color:#b8e8c8; } .amber-item { color:#f5dc9a; } .red-item { color:#f5b0b0; }
+  .green-item:before { content:"\2713"; position:absolute; left:0; color:var(--green-b); }
+  .amber-item:before { content:"!"; position:absolute; left:2px; color:var(--amber-b); font-weight:700; }
+  .red-item:before { content:"\2715"; position:absolute; left:0; color:var(--red-b); }
+  .section-header { font-family:'DM Serif Display',serif; font-size:15px; color:var(--gold); margin-bottom:12px; }
+  .report-prose p { font-size:14.5px; color:#e8e4d8; margin-bottom:16px; }
+  .report-prose p:last-child { margin-bottom:0; }
+  .sub-head { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+  .footer-note { font-family:'DM Mono',monospace; font-size:10.5px; color:var(--dim); text-align:center; margin-top:22px; line-height:1.8; }
+  @media print {
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    html, body { background:#0f0f0f !important; color:#f0ece0 !important; }
+    .masthead { background:#161616 !important; border-top:3px solid #c8a84b !important; page-break-inside:avoid !important; }
+    .cost-summary { background:#161616 !important; border-left:3px solid #2a9d8f !important; page-break-inside:avoid !important; }
+    .section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-section { background:#161616 !important; page-break-inside:avoid !important; }
+    .traffic-item, .driveway-check { page-break-inside:avoid !important; }
+    .risk-number { page-break-inside:avoid !important; background:#1e1e1e !important; border-left:3px solid #e84040 !important; }
+    .report-prose p { orphans:4 !important; widows:4 !important; page-break-inside:avoid !important; }
+    .meta-pill { background:#1e1e1e !important; color:#888880 !important; border:1px solid #2a2a2a !important; }
+    .verdict-badge.good-car-if { background:#2a9d8f !important; color:#fff !important; }
+    .risk-amount { color:#e84040 !important; } .wordmark { color:#c8a84b !important; } .vehicle-name { color:#f0ece0 !important; }
+    .report-prose p { color:#e8e4d8 !important; }
+    .green-label { color:#4fbf87 !important; } .green-item { color:#b8e8c8 !important; }
+    .amber-label { color:#f5c842 !important; } .amber-item { color:#f5dc9a !important; }
+    .red-label { color:#e84040 !important; } .red-item { color:#f5b0b0 !important; }
+    .copy-btn, .report-actions { display:none !important; }
+  }
+  p { page-break-inside:avoid !important; orphans:3; widows:3; }
+</style>
+</head>
+<body>
+<div class="wrap" id="report-root">
+  <div class="report-actions"><button class="copy-btn" onclick="copyReport()">Copy report</button></div>
+
+  <div class="masthead">
+    <div class="vehicle-name">2016 Audi Q3 2.0T Premium Plus</div>
+    <div class="wordmark">Good Car Bad Car</div>
+    <div class="subtitle">Pre-Purchase Intelligence</div>
+    <div class="specline">Subcompact luxury SUV · 2.0L TFSI turbo (EA888) · 6-speed Tiptronic automatic · quattro AWD</div>
+    <div class="pills">
+      <span class="meta-pill">Market $11,000–$13,500</span>
+      <span class="meta-pill">MSRP ~$35,000 new</span>
+      <span class="meta-pill">Asking $13,995</span>
+      <span class="meta-pill">90,000 mi</span>
+      <span class="meta-pill">U.S. national market</span>
+      <span class="meta-pill">Subcompact luxury SUV</span>
+    </div>
+    <div class="verdict-badge good-car-if">GOOD CAR — WITH CONDITIONS</div>
+    <div class="condition-line">…the EA888 timing-chain tensioner is the updated part, the water pump has recent service, and a scan shows no faults with the oil consumption in check.</div>
+  </div>
+
+  <div class="cost-summary">
+    <div class="cost-head">If the mechanic finds a problem:</div>
+    <div class="cost-row">
+      <div class="cost-name">Timing-chain tensioner — updated part (if not already fitted)</div>
+      <div class="cost-figs">DIY ~$700 · Shop $1,800–$2,800 · ~18% of value</div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">Water pump + thermostat (plastic-impeller pump)</div>
+      <div class="cost-figs">DIY ~$250 · Shop $600–$900 · ~6% of value</div>
+    </div>
+    <div class="cost-row">
+      <div class="cost-name">Intake carbon cleaning (walnut blast, if due)</div>
+      <div class="cost-figs">DIY ~$150 · Shop $500–$800 · ~5% of value</div>
+    </div>
+    <div class="cost-foot">All figures are rough estimates.</div>
+  </div>
+
+  <div class="section">
+    <div class="rn-verdict">GOOD CAR — WITH CONDITIONS. This is a fully-loaded luxury crossover for used-commuter money — as long as the EA888's known maintenance items check out clean.</div>
+    <div class="rn-label">Stand in the driveway and do these now</div>
+    <div class="driveway-check">On a cold start, listen for a brief rattle before oil pressure builds — that's the timing-chain tensioner tell; confirm by part number whether the updated tensioner is fitted, not just by ear.</div>
+    <div class="driveway-check">Pull the dipstick and the oil filler cap — check the level (the EA888 can consume oil) and the cap underside for creamy residue.</div>
+    <div class="driveway-check">Have any independent VW/Audi shop run a VCDS scan before you commit — stored faults on this platform tell you far more than a test drive.</div>
+    <div class="risk-number">
+      <div class="risk-amount">$3,000</div>
+      <div class="risk-desc">Biggest single risk — a timing-chain tensioner and chain service. Done proactively it's manageable; ignored, a chain jump can mean $4,000–$6,000 in engine damage.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="traffic-section">
+      <div class="traffic-label green-label">Green — genuine strengths</div>
+      <div class="traffic-item green-item">In North America the Q3 uses a conventional 6-speed Tiptronic automatic — not the dual-clutch — so it carries none of the DSG failure risk of some VW/Audi models.</div>
+      <div class="traffic-item green-item">A genuinely premium, fully-equipped interior and standard quattro AWD for the price of a mainstream used compact.</div>
+      <div class="traffic-item green-item">The EA888 2.0T is one of the most heavily supported engines in the world — parts, forums, and independent specialists everywhere.</div>
+      <div class="traffic-item green-item">Solid on-road manners and a premium feel that mainstream rivals can't match.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label amber-label">Amber — price it, don't fear it</div>
+      <div class="traffic-item amber-item">Intake-valve carbon buildup is inherent to this direct-injection engine — a walnut blast (~$500–$800) restores it if due.</div>
+      <div class="traffic-item amber-item">The plastic-impeller water pump and thermostat are known wear items (~$600–$900 at an independent).</div>
+      <div class="traffic-item amber-item">PCV valve and minor oil consumption are typical EA888 items to monitor; the engine wants premium fuel.</div>
+      <div class="traffic-item amber-item">Aging German electronics and MMI infotainment quirks come with the territory at this age.</div>
+    </div>
+    <div class="traffic-section">
+      <div class="traffic-label red-label">Red — confirm before you buy</div>
+      <div class="traffic-item red-item">Timing-chain tensioner: confirm the updated/revised part is fitted (by part number or invoice), not just by listening — a failed tensioner can let the chain jump and damage the engine.</div>
+      <div class="traffic-item red-item">A clean VCDS/VAG-COM scan with no active engine, emissions, or quattro faults — and evidence the water pump/thermostat were serviced.</div>
+      <div class="traffic-item red-item">Confirm the brake-light/parking-brake recall (Audi 97DK, 2016–2017 Q3) is closed by VIN, along with any other open campaign.</div>
+    </div>
+  </div>
+
+  <div class="section report-prose">
+    <div class="section-header">The full picture</div>
+
+    <div class="sub-head">The Depreciation Story</div>
+    <p>This is where luxury depreciation becomes your opportunity. A 2016 Q3 2.0T Premium Plus quattro stickered around $35,000 new and now sits near $11,000–$13,500 — it lost most of its value in its first several years, and you're buying at the bottom. The badge that made it expensive new makes it a bargain used, provided you go in understanding what German ownership at this age asks of you.</p>
+
+    <div class="sub-head">What the Car Actually Is</div>
+    <p>This is the first-generation Q3 (the 8U, sold in North America 2015–2018), Audi's entry luxury crossover, built on the same MQB-era mechanicals as the VW Tiguan and Golf of its day. Crucially for the U.S. car: it pairs the EA888 2.0 TFSI with a conventional 6-speed Tiptronic automatic and quattro — a simpler, more robust drivetrain than the dual-clutch setups found elsewhere in the lineup.</p>
+
+    <div class="sub-head">Engine and Drivetrain</div>
+    <p>The 2.0T EA888 is a strong, well-understood turbocharged four with a deep support network. Its known maintenance items are the point of this report: the timing-chain tensioner (early versions could fail and let the chain skip — confirm the updated part is installed), the plastic-impeller water pump, intake-valve carbon from direct injection, and the PCV system. Paired with the 6-speed Tiptronic — a real torque-converter automatic — and quattro, it's a durable combination when those items are kept up. Real-world economy runs about 22–24 mpg on premium fuel. This is not a tow vehicle.</p>
+
+    <div class="sub-head">What Breaks and What It Means</div>
+    <p>Nothing here is a systemic, uninspectable defect — every concern is a known EA888 maintenance item you can verify before buying. The one that carries real stakes is the timing-chain tensioner: fitted with the updated part, the risk is retired; left on an old tensioner, a failure can let the chain jump and cause four-figure engine damage. The water pump and carbon cleaning are routine at this mileage and cost. The whole game is confirming the tensioner and getting a clean scan.</p>
+
+    <div class="sub-head">Red Flags</div>
+    <p>The tensioner is the flag that matters — confirm the revised part by number or service invoice, not by ear alone. Pair that with a clean VCDS scan (no engine, emissions, or quattro faults) and evidence the water pump and thermostat were done. Then confirm the brake-light/parking-brake recall (Audi 97DK) is closed by VIN. An owner without records on a German car this age is a reason to price in the worst, not assume the best.</p>
+
+    <div class="sub-head">Driveway Inspection</div>
+    <p>Cold start and listen for a momentary rattle before oil pressure builds — the tensioner tell. Check the oil level and the filler-cap underside. On the drive, the Tiptronic should shift cleanly and quattro should feel planted with no binding on tight turns. Above all, arrange a VCDS scan through an independent VW/Audi shop before committing — on this platform the scan is worth more than anything you'll feel from the driver's seat.</p>
+
+    <div class="sub-head">Upcoming Maintenance Outlook</div>
+    <p>At ~90,000 miles, plan for the next year or two: a carbon walnut blast if not recently done (~$500–$800), water pump and thermostat if there's no record (~$600–$900), spark plugs and coils as due (~$300–$500), a DSG-free transmission service on the Tiptronic (~$250–$400), Haldex/quattro service (~$150–$250), and brake fluid (~$100–$150). Premium fuel is a running cost. These are the price of a German luxury vehicle at this mileage — budget for them like a partner, not an afterthought.</p>
+
+    <div class="sub-head">Three Year Cost Projection</div>
+    <p>Budget roughly $4,500 over three years at about 12,000 miles a year, assuming the tensioner is confirmed updated and the scan is clean at purchase. That covers routine oil services, the maintenance items above, one brake service, tires, and a realistic buffer for the small electrical and trim items that come with any German car this age. It excludes fuel and insurance, and it assumes no major engine or turbo work — which is exactly what the pre-purchase checks exist to rule out.</p>
+
+    <div class="sub-head">Who This Car Is Actually For</div>
+    <p>The buyer who wants a genuinely premium small SUV at a bargain price and has either the budget headroom to absorb a surprise four-figure repair or a good relationship with an independent VW/Audi shop. It's a sharp buy for the right owner — and an expensive mistake for anyone treating it as a frugal, worry-free commuter.</p>
+
+    <div class="sub-head">The Verdict</div>
+    <p>GOOD CAR — WITH CONDITIONS. The conditions are specific and all inspectable before you hand over a dollar: the timing-chain tensioner is the updated part (confirmed by part number, not by ear), the water pump and thermostat have recent service, and a VCDS scan is clean with oil consumption in check. Make each a written condition of the sale. If they come back clean, this is a fully-loaded luxury crossover for the price of a used compact. If one fails, negotiate the cost off using the figures above, or walk. There's nothing special enough about any single Q3 to buy it without these protections — they're the difference between a smart buy and the money pit the badge is famous for.</p>
+  </div>
+
+  <div class="footer-note">
+    Yes Car No Car · Pre-Purchase Intelligence<br>
+    To save as PDF — open in Chrome · press Cmd+P (Mac) or Ctrl+P (Windows) · set destination to Save as PDF · click More Settings · check Background Graphics · Save.
+  </div>
+</div>
+<script>
+function copyReport(){ var el=document.getElementById('report-root'); var text=el.innerText.replace(/Copy report\s*/,'').trim(); if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ var b=document.querySelector('.copy-btn'); var o=b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1600); }); } }
+</script>
+</body>
+</html>
