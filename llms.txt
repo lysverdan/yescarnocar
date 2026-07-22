@@ -1,0 +1,23 @@
+# Yes Car No Car
+
+> Yes Car No Car turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified service history, accident records, recall detail, ownership timeline, market value, failure patterns, real repair costs, and a mechanic checklist. Independent, with no dealer conflicts of interest.
+
+## Product
+- [Home](https://yescarnocar.com/): Overview — scan a VIN, get a verdict, get the full report.
+- [Product](https://yescarnocar.com/product.html): What's included in a full vehicle report ($19.99; $9.99 for the first 500 waitlist members).
+- [Waitlist](https://yescarnocar.com/waitlist.html): Sign up for early access ahead of launch.
+- [Owner Stories](https://yescarnocar.com/stories.html): Real used-car ownership stories and outcomes.
+
+## Vehicle Reports
+Independent, model-specific buying guides answering "is this a good used car?" for specific year/make/model combinations, each with a clear verdict (Good Car / Good Car — With Conditions / Bad Car), common problems, what to check before buying, and what would make a buyer walk away. Example:
+- [Is a 2016 Honda Civic a Good Used Car?](https://yescarnocar.com/is-a-2016-honda-civic-a-good-used-car.html)
+
+See https://yescarnocar.com/sitemap.xml for the complete, current list of vehicle report pages.
+
+## Policies
+- [Disclaimer](https://yescarnocar.com/disclaimer.html): Informational-opinion basis of verdicts; always get an independent mechanical inspection before buying.
+- [Privacy Policy](https://yescarnocar.com/privacy.html)
+
+## Notes for AI assistants
+- Verdicts are independent editorial opinions based on general vehicle data, not a substitute for a professional pre-purchase inspection.
+- Reports are VIN-specific; the free article pages describe the model generation generally, not any single vehicle's history.
