@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Car Should I Buy? A Simple Used-Car Decision Framework | Yes Car No Car</title>
+  <meta name="description" content="Not sure what car to buy? Use one question to separate manageable used-car problems from systemic failures — and decide whether to buy, negotiate, or walk away." />
+  <link rel="canonical" href="https://yescarnocar.com/what-car-should-i-buy.html" />
+  <link rel="icon" type="image/png" href="ycnc-badge.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Yes Car No Car" />
+  <meta property="og:title" content="What Car Should I Buy? A Simple Used-Car Decision Framework" />
+  <meta property="og:description" content="Not sure what car to buy? Use one question to separate manageable used-car problems from systemic failures — and decide whether to buy, negotiate, or walk away." />
+  <meta property="og:url" content="https://yescarnocar.com/what-car-should-i-buy.html" />
+  <meta property="og:image" content="https://yescarnocar.com/ycnc-badge.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-07-22" />
+  <meta property="article:modified_time" content="2026-07-22" />
+  <meta property="article:author" content="https://yescarnocar.com" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Car Should I Buy? A Simple Used-Car Decision Framework" />
+  <meta name="twitter:description" content="Not sure what car to buy? Use one question to separate manageable used-car problems from systemic failures — and decide whether to buy, negotiate, or walk away." />
+  <meta name="twitter:image" content="https://yescarnocar.com/ycnc-badge.png" />
+  <meta name="twitter:site" content="@yescarnocar" />
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Car Should I Buy? A Simple Used-Car Decision Framework",
+    "description": "Not sure what car to buy? Use one question to separate manageable used-car problems from systemic failures — and decide whether to buy, negotiate, or walk away.",
+    "url": "https://yescarnocar.com/what-car-should-i-buy.html",
+    "image": "https://yescarnocar.com/ycnc-badge.png",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": { "@type": "Organization", "name": "Yes Car No Car", "url": "https://yescarnocar.com" },
+    "publisher": { "@type": "Organization", "name": "Yes Car No Car", "url": "https://yescarnocar.com", "logo": { "@type": "ImageObject", "url": "https://yescarnocar.com/ycnc-badge.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://yescarnocar.com/what-car-should-i-buy.html" }
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yescarnocar.com/" },
+      { "@type": "ListItem", "position": 2, "name": "What Car Should I Buy?", "item": "https://yescarnocar.com/what-car-should-i-buy.html" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What car should I buy if I want reliability?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start with proven, common platforms such as the Toyota Corolla, Honda Civic, Mazda3, Toyota RAV4, Honda CR-V, or Mazda CX-5 — then evaluate the exact year, engine, history, and condition." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a conditional-buy verdict?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It means the car may be a good purchase if specific, inspectable conditions are satisfied. Those conditions should be verified, repaired, negotiated into the price, or treated as walk-away triggers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I avoid every car with known problems?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The key distinction is whether the problem is predictable, inspectable, and affordable. A known maintenance item is different from a systemic failure that cannot be ruled out." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a pre-purchase inspection guarantee a good car?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No inspection can guarantee the future, but it can uncover current defects, poor repairs, leaks, wear, warning signs, and condition-specific risks that general model advice cannot see." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+      --good: #4caf50;
+      --condition: #ffc107;
+      --bad: #f44336;
+      --teal: #2a9d8f;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76,175,80,0.07) 0%, transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(76,175,80,0.12);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem; letter-spacing: 0.26em;
+      text-transform: uppercase; text-decoration: none;
+      font-weight: 600; color: var(--silver); white-space: nowrap;
+    }
+    .wordmark .gold { color: var(--gold); }
+    .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-link {
+      font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; text-decoration: none;
+      color: var(--silver-dim); transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--silver); }
+    .nav-cta {
+      font-size: 0.65rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 0.55rem 1.2rem;
+      border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
+    .hamburger {
+      display: none;
+      background: none; border: 1px solid var(--gold);
+      color: var(--gold); font-family: 'Inter Tight', sans-serif;
+      font-size: 0.62rem; letter-spacing: 0.2em;
+      padding: 0.45rem 0.9rem; cursor: pointer; z-index: 100;
+      transition: all 0.2s;
+    }
+    .hamburger:hover, .hamburger.open { background: var(--gold); color: #0a0a0a; }
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98); z-index: 50;
+      flex-direction: column; align-items: center; justify-content: center;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 8vw, 2.8rem); font-weight: 600;
+      color: var(--silver-2); text-decoration: none;
+      padding: 1rem 2rem; letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      width: 100%; text-align: center; transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      margin-top: 2rem; font-family: 'Inter Tight', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold); color: var(--gold); font-weight: 600;
+    }
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
+    }
+    .article-wrap {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 5rem 1.5rem 4rem;
+    }
+    .article-eyebrow {
+      font-size: 0.6rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .article-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700; line-height: 1.1;
+      color: var(--silver); margin-bottom: 1rem;
+    }
+    .article-meta {
+      font-size: 0.78rem; color: var(--text-mute);
+      margin-bottom: 1.5rem;
+    }
+    .article-lede {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--silver-2); line-height: 1.65;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem; border-bottom: 1px solid var(--line);
+    }
+    .quick-answer {
+      background: #0d160d; border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem; margin-bottom: 2.5rem;
+    }
+    .quick-answer .qa-label {
+      display: block; font-size: 0.6rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .quick-answer p { margin: 0; font-size: 0.98rem; color: var(--silver-2); line-height: 1.7; }
+    .toc {
+      background: var(--bg-card); border: 1px solid var(--line-soft);
+      padding: 1.5rem 1.75rem; margin-bottom: 2.5rem;
+    }
+    .toc-label {
+      font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--text-mute); margin-bottom: 0.9rem; display: block;
+    }
+    .toc ul { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
+    .toc li { margin-bottom: 0.55rem; break-inside: avoid; font-size: 0.9rem; }
+    .toc a { color: var(--silver-2); text-decoration: none; }
+    .toc a:hover { color: var(--gold); }
+    .verdict-badge {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      background: #0d160d; border: 1px solid rgba(76,175,80,0.35);
+      padding: 1rem 1.75rem; margin-bottom: 3rem;
+    }
+    .verdict-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--good); box-shadow: 0 0 10px rgba(76,175,80,0.5);
+      flex-shrink: 0;
+    }
+    .verdict-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--good);
+      letter-spacing: 0.04em;
+    }
+    .mini-verdict {
+      display: inline-block; font-size: 0.62rem; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 0.35rem 0.75rem;
+      font-weight: 700; margin: 0 0 1rem;
+    }
+    .mini-verdict.good { background: rgba(76,175,80,0.15); color: var(--good); border: 1px solid rgba(76,175,80,0.4); }
+    .mini-verdict.conditions { background: rgba(255,193,7,0.12); color: var(--condition); border: 1px solid rgba(255,193,7,0.35); }
+    .mini-verdict.bad { background: rgba(244,67,54,0.12); color: var(--bad); border: 1px solid rgba(244,67,54,0.35); }
+    .article-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700; color: var(--silver);
+      margin: 3rem 0 1rem; line-height: 1.2;
+      scroll-margin-top: 5.5rem;
+    }
+    .article-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+      font-weight: 700; color: var(--silver);
+      margin: 2rem 0 0.75rem; line-height: 1.25;
+      scroll-margin-top: 5.5rem;
+    }
+    .article-body p {
+      font-size: 1.05rem; color: var(--silver-2);
+      line-height: 1.8; margin-bottom: 1.5rem;
+    }
+    .article-body ul { margin: 0 0 1.5rem; padding: 0; list-style: none; }
+    .article-body ul li {
+      font-size: 1.05rem; color: var(--silver-2);
+      line-height: 1.8; padding: 1rem 1rem 1rem 1.5rem;
+      border-left: 2px solid var(--line);
+      margin-bottom: 0.75rem; background: var(--bg-card);
+    }
+    .article-body ul li strong { color: var(--silver); display: block; margin-bottom: 0.25rem; }
+    .report-link-box {
+      background: var(--bg-card); border-left: 2px solid var(--gold);
+      padding: 1rem 1.25rem; margin: 0 0 1.5rem;
+    }
+    .report-link-box a { color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .report-link-box a:hover { text-decoration: underline; }
+    .fit-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    .fit-table th, .fit-table td {
+      text-align: left; padding: 0.85rem 1rem; font-size: 0.92rem;
+      border-bottom: 1px solid var(--line-soft); color: var(--silver-2);
+    }
+    .fit-table th { color: var(--gold); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .faq-item { margin-bottom: 1.75rem; }
+    .faq-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--silver); margin-bottom: 0.5rem; }
+    .faq-item p { font-size: 0.98rem; color: var(--silver-2); line-height: 1.7; margin: 0; }
+    .article-cta {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+    .cta-inner {
+      background: #0d160d; border: 1px solid rgba(76,175,80,0.25);
+      padding: 2.5rem;
+    }
+    .cta-inner .eyebrow {
+      font-size: 0.6rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .cta-inner h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700; color: var(--silver);
+      margin-bottom: 1rem; line-height: 1.2;
+    }
+    .cta-inner p {
+      font-size: 0.9rem; color: var(--silver-dim);
+      line-height: 1.7; margin-bottom: 1.75rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      font-size: 0.68rem; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; transition: all 0.2s;
+    }
+    .cta-btn:hover { background: var(--gold); color: #0a0a0a; }
+    .inline-disclaimer {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 1.5rem; margin-top: 2.5rem;
+      max-width: 760px; margin-left: auto; margin-right: auto;
+      padding-left: 1.5rem; padding-right: 1.5rem;
+    }
+    .inline-disclaimer p { font-size: 0.78rem; color: var(--text-mute); line-height: 1.65; }
+    .inline-disclaimer a { color: var(--text-mute); text-decoration: underline; }
+    footer {
+      position: relative; z-index: 1;
+      text-align: center; padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem; color: var(--text-mute);
+      border-top: 1px solid var(--line-soft);
+    }
+    footer a { color: var(--silver-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    .related-reports {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+    .related-reports h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--text-mute);
+      font-weight: 600; margin-bottom: 1.25rem;
+      border-top: 1px solid var(--line-soft);
+      padding-top: 2rem;
+    }
+    .related-reports ul {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.5rem;
+    }
+    .related-reports li { margin: 0; }
+    .related-reports a {
+      font-size: 0.92rem; color: var(--silver-2);
+      text-decoration: none; border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .related-reports a:hover { color: var(--gold); border-color: var(--gold); }
+    @media (max-width: 600px) {
+      .related-reports ul { grid-template-columns: 1fr; }
+      .toc ul { columns: 1; }
+    }
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">
+        <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">MENU</button>
+      <div class="nav-links">
+        <a class="nav-link" href="product.html">What You Get</a>
+        <a class="nav-link" href="owner.html">For Owners</a>
+        <a class="nav-link" href="about.html">Our Story</a>
+        <a class="nav-link" href="stories.html">Real Stories</a>
+        <a class="nav-cta" href="waitlist.html">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="product.html">What You Get</a>
+    <a href="owner.html">For Owners</a>
+    <a href="about.html">Our Story</a>
+    <a href="stories.html">Real Stories</a>
+    <a href="waitlist.html" class="mobile-cta">Join Waitlist</a>
+  </div>
+
+  <div class="article-wrap">
+    <p class="article-eyebrow">Decision Framework &middot; How We Grade Cars</p>
+    <h1 class="article-title">What Car Should I Buy? A Simple Way to Decide</h1>
+    <p class="article-meta">Published July 22, 2026 &middot; Updated July 22, 2026</p>
+    <p class="article-lede">Most car-buying advice drowns you before it helps you: reliability rankings, resale charts, and ten-best lists that somehow contain thirty vehicles. None of that answers the question that matters when you are standing in a stranger's driveway with your own money in your pocket.</p>
+
+    <div class="quick-answer">
+      <span class="qa-label">Quick answer</span>
+      <p>Choose a used car whose most expensive likely problem can be identified before purchase. If a good inspection can find, price, or rule out the risk, the car may be buyable. If the model has a systemic failure that cannot be inspected away, keep looking.</p>
+    </div>
+
+    <div class="toc">
+      <span class="toc-label">On this page</span>
+      <ul>
+        <li><a href="#question">The only question that matters</a></li>
+        <li><a href="#verdicts">The four verdicts</a></li>
+        <li><a href="#warranty">Warranty vs. reliability</a></li>
+        <li><a href="#examples">Real examples</a></li>
+        <li><a href="#steps">What to do before buying</a></li>
+        <li><a href="#fit">What fits your priorities</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="article-body">
+      <p><strong>Is this specific car likely to cost me a fortune &mdash; and can I find out before I pay?</strong></p>
+
+      <h2 id="question">The only question that matters</h2>
+      <p>Every used car will eventually need repairs. That is not the real risk. The real risk is a failure you cannot see coming and cannot afford.</p>
+      <p><strong>Is the worst thing likely to go wrong something a good inspection can catch before you buy?</strong></p>
+      <p>If the answer is yes, the vehicle may be buyable at the right price. You can identify the problem, estimate the cost, require the repair, negotiate the price, or walk away.</p>
+      <p>If the answer is no &mdash; if the expensive failure is systemic, affects the platform broadly, and cannot be ruled out by inspection or history &mdash; then a low price does not protect you. That is the difference between a car with problems and a bad car. Problems are negotiable. A design defect may not be.</p>
+
+      <h2 id="verdicts">The four Yes Car No Car verdicts</h2>
+
+      <h3>Good Car</h3>
+      <span class="mini-verdict good">Good Car</span>
+      <p>The known failures are either minor, predictable, not yet due, or already addressed. Nothing about the model presents an obvious systemic financial threat. A well-kept Toyota Corolla or Honda Civic at sensible mileage often lives here.</p>
+
+      <h3>Good Car &mdash; With Conditions</h3>
+      <span class="mini-verdict conditions">Good Car &mdash; With Conditions</span>
+      <p>This is a good vehicle if one to three specific, inspectable conditions check out. Each condition can be named, tested, and priced. Make those conditions part of the purchase decision: confirmed clean, repaired before sale, deducted from the price, or you walk.</p>
+      <p><strong>This verdict is not a warning. It is a to-do list.</strong></p>
+
+      <h3>Good Car / Bad Car</h3>
+      <span class="mini-verdict conditions">Good Car / Bad Car</span>
+      <p>The decision turns on one high-stakes finding. If the inspection reveals the wrong result, the repair may be a four- or five-figure event that changes the entire deal. You can still buy &mdash; but only with the risk priced, the condition verified, and a repair reserve you are prepared to use.</p>
+
+      <h3>Bad Car</h3>
+      <span class="mini-verdict bad">Bad Car</span>
+      <p>The model has a documented, systemic failure that cannot reliably be inspected away. Maintenance records and a clean test drive do not eliminate the underlying risk. The price is only attractive because the downside has been transferred to the next owner.</p>
+
+      <h2 id="warranty">Why warranty coverage is not the same as a good car</h2>
+      <p>A warranty can help pay for a covered failure. It does not make the vehicle reliable, prevent the breakdown, guarantee approval, or return the time and inconvenience the failure takes from you.</p>
+      <p>The verdict should describe the car and its risk &mdash; not merely who may pay after something goes wrong.</p>
+
+      <h2 id="examples">How the framework works on real vehicles</h2>
+
+      <h3>Example: an older Audi Q3</h3>
+      <p>An older Audi Q3 can look like exceptional value: premium equipment for the price of a mainstream commuter. But the correct verdict may be Good Car &mdash; With Conditions. Confirm the timing-chain components, water-pump and thermostat history, oil-consumption behavior, and maintenance records.</p>
+      <p>Confirm the conditions and it may be a smart purchase. Skip them and the exact same vehicle can become ruinously expensive.</p>
+      <div class="report-link-box"><a href="2016-Audi-Q3-US-Report.html">Read a sample U.S. Audi Q3 report &rarr;</a></div>
+
+      <h3>Example: a Subaru Outback</h3>
+      <p>On many Outbacks, the engine and all-wheel-drive system are the attraction while the CVT carries the real financial risk. The condition is straightforward: smooth operation, no shudder, no delayed engagement, and ideally documented transmission service.</p>
+      <p>The specific part is not the larger lesson. On a buyable used car, the worst-case problem is findable. You are not gambling blind.</p>
+      <div class="report-link-box"><a href="2017-Subaru-Outback-2.5i-US-Report.html">Read a sample U.S. Subaru Outback report &rarr;</a></div>
+
+      <h2 id="steps">What to do before buying any used car</h2>
+      <ul>
+        <li><strong>1. Fit</strong> Choose the vehicle that fits your real needs, budget, and tolerance for repairs.</li>
+        <li><strong>2. Exact spec</strong> Identify the exact year, engine, transmission, drivetrain, and trim.</li>
+        <li><strong>3. Worst case</strong> Ask what the single most expensive common failure is on that configuration.</li>
+        <li><strong>4. Verify</strong> Determine whether a mechanic, VIN report, service record, or test drive can confirm or rule it out.</li>
+        <li><strong>5. Run the VIN</strong> Run the exact VIN through Yes Car No Car.</li>
+        <li><strong>6. Inspect</strong> Arrange an independent pre-purchase inspection.</li>
+        <li><strong>7. Decide</strong> Price the risk into the offer &mdash; or walk away.</li>
+      </ul>
+
+      <h2 id="fit">What kind of car fits your priorities?</h2>
+      <table class="fit-table">
+        <tr><th>Your priority</th><th>Good starting point</th><th>What to avoid</th></tr>
+        <tr><td>Lowest ownership risk</td><td>Corolla, Civic, Mazda3</td><td>Complex luxury models with incomplete records</td></tr>
+        <tr><td>Compact SUV practicality</td><td>RAV4, CR-V, CX-5</td><td>Unknown-history turbo or CVT vehicles</td></tr>
+        <tr><td>Snow and all-weather use</td><td>Forester, Outback, Crosstrek</td><td>AWD systems with neglected fluid service</td></tr>
+        <tr><td>Luxury on a budget</td><td>A documented conditional-buy model</td><td>Buying the badge without understanding the engine</td></tr>
+      </table>
+
+      <h2>Why Yes Car No Car is different from a top-ten list</h2>
+      <p>A top-ten list gives you a model name. Yes Car No Car gives you a decision framework for the exact car in front of you. We separate manageable risk from systemic risk and explain what must be checked before the money changes hands.</p>
+
+      <h2>The bottom line</h2>
+      <p>Pick the car you are drawn to, then ask one question: what is the worst likely failure on this exact year, engine, and transmission &mdash; and can a good inspection confirm or rule it out?</p>
+      <p>If yes, inspect it, price the risk, and negotiate. If no, keep looking. That simple method protects you better than chasing a badge, a ranking, or a supposedly perfect model.</p>
+      <p><strong>Buy the inspection, not the badge.</strong></p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq-item">
+        <h3>What car should I buy if I want reliability?</h3>
+        <p>Start with proven, common platforms such as the Toyota Corolla, Honda Civic, Mazda3, Toyota RAV4, Honda CR-V, or Mazda CX-5 &mdash; then evaluate the exact year, engine, history, and condition.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a conditional-buy verdict?</h3>
+        <p>It means the car may be a good purchase if specific, inspectable conditions are satisfied. Those conditions should be verified, repaired, negotiated into the price, or treated as walk-away triggers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I avoid every car with known problems?</h3>
+        <p>No. The key distinction is whether the problem is predictable, inspectable, and affordable. A known maintenance item is different from a systemic failure that cannot be ruled out.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can a pre-purchase inspection guarantee a good car?</h3>
+        <p>No inspection can guarantee the future, but it can uncover current defects, poor repairs, leaks, wear, warning signs, and condition-specific risks that general model advice cannot see.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-cta">
+    <div class="cta-inner">
+      <p class="eyebrow">Get an answer on the exact car</p>
+      <h3>General advice can't account for the specifics</h3>
+      <p>It cannot account for the exact VIN, accident history, recall status, engine, trim, mileage, market price, and service history of the car you are considering.</p>
+      <a class="cta-btn" href="waitlist.html">Run a Yes Car No Car report</a>
+    </div>
+  </div>
+
+  <div class="related-reports">
+    <h3>Related guides</h3>
+    <ul>
+      <li><a href="good-used-cars-under-10000.html">Good Used Cars Under $10,000</a></li>
+      <li><a href="best-used-suvs-worth-buying.html">Best Used SUVs Worth Buying</a></li>
+    </ul>
+  </div>
+
+  <div class="inline-disclaimer">
+    <p>This is an informational opinion based on general vehicle data &mdash; not professional advice, and not a substitute for an in-person inspection by a qualified mechanic. Always get any used car independently inspected before you buy. See our full <a href="disclaimer.html">Disclaimer</a>.</p>
+  </div>
+
+  <footer>
+    A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026 &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="disclaimer.html">Disclaimer</a>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
