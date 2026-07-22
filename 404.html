@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Yes Car No Car</title>
+  <meta name="description" content="This page doesn't exist. Head back to Yes Car No Car for verdicts on used cars, real repair costs, and honest reports." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yes Car No Car" />
+  <meta property="og:title" content="Page Not Found — Yes Car No Car" />
+  <meta property="og:description" content="This page doesn't exist. Head back to Yes Car No Car for verdicts on used cars, real repair costs, and honest reports." />
+  <meta property="og:image" content="https://yescarnocar.com/ycnc-badge.png" />
+  <meta property="og:url" content="https://yescarnocar.com/404.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Page Not Found — Yes Car No Car" />
+  <meta name="twitter:description" content="This page doesn't exist. Head back to Yes Car No Car for verdicts on used cars, real repair costs, and honest reports." />
+  <meta name="twitter:image" content="https://yescarnocar.com/ycnc-badge.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-deep: #050505;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --gold-bright: #6fd06f;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+      --good: #5fd866;
+      --condition: #2d9b8a;
+      --warning: #e8a838;
+      --bad: #d94848;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(76, 175, 80, 0.04) 0%, transparent 60%);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 1.1rem 2rem;
+      background: rgba(10, 10, 10, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(76, 175, 80, 0.12);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--silver);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .wordmark .gold { color: var(--gold); }
+    .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--silver-dim);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--silver); }
+    .nav-cta {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--silver);
+      text-decoration: none;
+      padding: 0.6rem 1.1rem;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+    .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* ── mobile menu button ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.2s;
+    }
+    .hamburger:hover { background: var(--gold); color: #0a0a0a; }
+    .hamburger.open { background: var(--gold); color: #0a0a0a; }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98);
+      z-index: 50;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 8vw, 2.8rem);
+      font-weight: 600;
+      color: var(--silver-2);
+      text-decoration: none;
+      padding: 1rem 2rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      width: 100%;
+      text-align: center;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      margin-top: 2rem;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-weight: 600;
+    }
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
+    }
+
+    /* ---------- ERROR SECTION ---------- */
+    .error-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .error-inner { max-width: 620px; }
+    .error-code {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: clamp(4.5rem, 14vw, 8rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--silver);
+      margin-bottom: 1.5rem;
+    }
+    .error-code .gold { color: var(--gold); }
+    .verdict-badge {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      background: #1a0d0d; border: 1px solid rgba(217,72,72,0.35);
+      padding: 1rem 1.75rem; margin-bottom: 2rem;
+    }
+    .verdict-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--bad); box-shadow: 0 0 10px rgba(217,72,72,0.5);
+      flex-shrink: 0;
+    }
+    .verdict-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--bad);
+      letter-spacing: 0.04em;
+    }
+    .error-lede {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+      color: var(--silver);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .error-sub {
+      font-size: 1rem;
+      color: var(--silver-2);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .btn-primary {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      background: var(--gold);
+      text-decoration: none;
+      padding: 0.9rem 1.9rem;
+      border-radius: 2px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover { background: var(--gold-bright); }
+    .btn-secondary {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--silver);
+      text-decoration: none;
+      padding: 0.9rem 1.9rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 2px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+      border-top: 1px solid var(--line-soft);
+    }
+    .footer-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--silver-2);
+    }
+    .footer-mark .gold { color: var(--gold); }
+    .footer-mark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .socials { display: flex; align-items: center; gap: 1rem; }
+    .social-link {
+      display: flex; align-items: center; justify-content: center;
+      color: var(--silver-2);
+      transition: color 0.25s ease, transform 0.25s ease;
+      text-decoration: none;
+    }
+    .social-link:hover { color: var(--gold); transform: translateY(-1px); }
+    .social-link svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+    .footer-socials {
+      justify-content: center; gap: 1.5rem;
+      margin: 1.5rem 0 1.25rem;
+    }
+    .footer-socials .social-link { width: 22px; height: 22px; }
+    .footer-sub {
+      font-size: 0.78rem;
+      color: var(--text-mute);
+      letter-spacing: 0.01em;
+    }
+    .footer-sub a { color: var(--silver-dim); text-decoration: none; }
+    .footer-sub a:hover { color: var(--gold-bright); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">
+        <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">MENU</button>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a class="nav-link" href="product.html">What You Get</a>
+          <a class="nav-link" href="about.html">Our Story</a>
+          <a class="nav-link" href="stories.html">Real Stories</a>
+        </div>
+        <a href="waitlist.html" class="nav-cta">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="product.html">What You Get</a>
+    <a href="about.html">Our Story</a>
+    <a href="stories.html">Real Stories</a>
+    <a href="waitlist.html" class="mobile-cta">Join Waitlist</a>
+  </div>
+
+  <!-- ============ 404 ============ -->
+  <main class="error-main">
+    <div class="error-inner">
+      <div class="error-code">4<span class="gold">0</span>4</div>
+      <div class="verdict-badge">
+        <span class="verdict-dot"></span>
+        <span class="verdict-text">BAD LINK</span>
+      </div>
+      <p class="error-lede">This page didn't pass inspection.</p>
+      <p class="error-sub">The link you followed is broken or the page has moved. Head back home, or go check out a car that actually exists.</p>
+      <div class="error-actions">
+        <a href="index.html" class="btn-primary">Back to Home</a>
+        <a href="waitlist.html" class="btn-secondary">Join Waitlist</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-mark">
+      <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+    </div>
+    <div class="socials footer-socials">
+      <a class="social-link" href="https://www.instagram.com/yescarnocar" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.2 8.8 2.2 12 2.2zm0-2.2C8.75 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.4A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.75 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.73 1.48 1.4 2.13a5.9 5.9 0 0 0 2.13 1.4c.76.3 1.64.5 2.91.56C8.33 23.99 8.75 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.4 5.9 5.9 0 0 0 1.4-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.7.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.4-2.13A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.25 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+      </a>
+      <a class="social-link" href="https://www.tiktok.com/@yescarnocar" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.66a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.09z"/></svg>
+      </a>
+      <a class="social-link" href="https://x.com/yescarnocar" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a class="social-link" href="https://www.youtube.com/@yescarnocar" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+      </a>
+    </div>
+    <div class="footer-sub">
+      A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026 &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
+</html>

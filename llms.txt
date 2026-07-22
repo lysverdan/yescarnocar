@@ -8,11 +8,31 @@
 - [Waitlist](https://yescarnocar.com/waitlist.html): Sign up for early access ahead of launch.
 - [Owner Stories](https://yescarnocar.com/stories.html): Real used-car ownership stories and outcomes.
 
+## Guides
+Longer-form buying guides that group multiple vehicles by budget, body style, or decision framework, cross-linking to the individual model reports and vehicle report pages below.
+- [Good Used Cars Under $10,000](https://yescarnocar.com/good-used-cars-under-10000.html): Which models hold up best when shopping under a $10,000 budget.
+- [Best Used SUVs Worth Buying](https://yescarnocar.com/best-used-suvs-worth-buying.html): Reliable used SUV picks and what to inspect before buying.
+- [What Car Should I Buy?](https://yescarnocar.com/what-car-should-i-buy.html): A simple decision framework for narrowing down a used-car purchase.
+
 ## Vehicle Reports
 Independent, model-specific buying guides answering "is this a good used car?" for specific year/make/model combinations, each with a clear verdict (Good Car / Good Car — With Conditions / Bad Car), common problems, what to check before buying, and what would make a buyer walk away. Example:
 - [Is a 2016 Honda Civic a Good Used Car?](https://yescarnocar.com/is-a-2016-honda-civic-a-good-used-car.html)
 
 See https://yescarnocar.com/sitemap.xml for the complete, current list of vehicle report pages.
+
+## Sample Reports
+Full-length examples of the paid, VIN-specific Yes Car No Car report format — verdict, driveway checks, cost projection, and red flags for one real vehicle. These illustrate what a buyer receives after running an actual VIN, distinct from the general model-generation guides above.
+- [2012 Mercedes-Benz ML350 4MATIC Sample Report](https://yescarnocar.com/2012-Mercedes-ML350-US-Report.html)
+- [2015 Honda Civic LX Sample Report](https://yescarnocar.com/2015-Honda-Civic-US-Report.html)
+- [2015 Mazda3 i Touring Sample Report](https://yescarnocar.com/2015-Mazda3-US-Report.html)
+- [2015 Toyota Corolla LE Sample Report](https://yescarnocar.com/2015-Toyota-Corolla-US-Report.html)
+- [2016 Audi Q3 2.0T Premium Plus Sample Report](https://yescarnocar.com/2016-Audi-Q3-US-Report.html)
+- [2016 Honda CR-V EX Sample Report](https://yescarnocar.com/2016-Honda-CRV-US-Report.html)
+- [2016 Mazda CX-5 Grand Touring Sample Report](https://yescarnocar.com/2016-Mazda-CX5-US-Report.html)
+- [2016 Subaru Forester 2.5i Sample Report](https://yescarnocar.com/2016-Subaru-Forester-US-Report.html)
+- [2017 Subaru Outback 2.5i Sample Report](https://yescarnocar.com/2017-Subaru-Outback-2.5i-US-Report.html)
+- [2017 Subaru Outback 3.6R Sample Report](https://yescarnocar.com/2017-Subaru-Outback-3.6R-US-Report.html)
+- [2018 Subaru Crosstrek 2.0i Premium Sample Report](https://yescarnocar.com/2018-Subaru-Crosstrek-US-Report.html)
 
 ## Policies
 - [Disclaimer](https://yescarnocar.com/disclaimer.html): Informational-opinion basis of verdicts; always get an independent mechanical inspection before buying.
@@ -21,3 +41,4 @@ See https://yescarnocar.com/sitemap.xml for the complete, current list of vehicl
 ## Notes for AI assistants
 - Verdicts are independent editorial opinions based on general vehicle data, not a substitute for a professional pre-purchase inspection.
 - Reports are VIN-specific; the free article pages describe the model generation generally, not any single vehicle's history.
+- Sample reports are illustrative examples only, not live/interactive VIN lookups.
