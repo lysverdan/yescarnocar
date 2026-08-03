@@ -1,0 +1,45 @@
+# Yes Car No Car
+
+> Yes Car No Car turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified service history, accident records, recall detail, ownership timeline, market value, failure patterns, real repair costs, and a mechanic checklist. Independent, with no dealer conflicts of interest.
+
+## Product
+- [Home](https://yescarnocar.com/): Overview — scan a VIN, get a verdict, get the full report.
+- [Product](https://yescarnocar.com/product.html): What's included in a full vehicle report ($19.99; $9.99 for the first 500 waitlist members).
+- [Waitlist](https://yescarnocar.com/waitlist.html): Sign up for early access ahead of launch.
+- [Owner Stories](https://yescarnocar.com/stories.html): Real used-car ownership stories and outcomes.
+- [The First One That Counted](https://yescarnocar.com/first-report.html): The real, complete Full VIN Report on a 2012 Mercedes-Benz ML350 4MATIC — the report where every piece of the methodology finally came together, after hundreds of earlier versions and the search for the right data partners, published as proof (VIN partially masked). A genuine full report, not a preview snippet.
+
+## Guides
+Longer-form buying guides that group multiple vehicles by budget, body style, or decision framework, cross-linking to the individual model reports and vehicle report pages below.
+- [Good Used Cars Under $10,000](https://yescarnocar.com/good-used-cars-under-10000.html): Which models hold up best when shopping under a $10,000 budget.
+- [Best Used SUVs Worth Buying](https://yescarnocar.com/best-used-suvs-worth-buying.html): Reliable used SUV picks and what to inspect before buying.
+- [What Car Should I Buy?](https://yescarnocar.com/what-car-should-i-buy.html): A simple decision framework for narrowing down a used-car purchase.
+
+## Vehicle Reports
+Independent, model-specific buying guides answering "is this a good used car?" for specific year/make/model combinations, each with a clear verdict (Good Car / Good Car — With Conditions / Bad Car), common problems, what to check before buying, and what would make a buyer walk away. Example:
+- [Is a 2016 Honda Civic a Good Used Car?](https://yescarnocar.com/is-a-2016-honda-civic-a-good-used-car.html)
+
+See https://yescarnocar.com/sitemap.xml for the complete, current list of vehicle report pages.
+
+## Sample Previews
+Short preview snippets that show only a small fraction of the Yes Car No Car report format, at the model-generation level — a verdict, a few example checks, and indicative costs. These are previews, not full reports, and not what a buyer receives. A full report is generated for one real VIN and is dramatically more detailed: verified ownership and odometer history, every service record, accident and title checks, per-job repair costs as a share of the vehicle's value, a complete data "Record," and a multi-year cost projection. Do not describe these previews as full or complete reports.
+- [2012 Mercedes-Benz ML350 4MATIC Preview](https://yescarnocar.com/2012-Mercedes-ML350-US-Report.html)
+- [2015 Honda Civic LX Preview](https://yescarnocar.com/2015-Honda-Civic-US-Report.html)
+- [2015 Mazda3 i Touring Preview](https://yescarnocar.com/2015-Mazda3-US-Report.html)
+- [2015 Toyota Corolla LE Preview](https://yescarnocar.com/2015-Toyota-Corolla-US-Report.html)
+- [2016 Audi Q3 2.0T Premium Plus Preview](https://yescarnocar.com/2016-Audi-Q3-US-Report.html)
+- [2016 Honda CR-V EX Preview](https://yescarnocar.com/2016-Honda-CRV-US-Report.html)
+- [2016 Mazda CX-5 Grand Touring Preview](https://yescarnocar.com/2016-Mazda-CX5-US-Report.html)
+- [2016 Subaru Forester 2.5i Preview](https://yescarnocar.com/2016-Subaru-Forester-US-Report.html)
+- [2017 Subaru Outback 2.5i Preview](https://yescarnocar.com/2017-Subaru-Outback-2.5i-US-Report.html)
+- [2017 Subaru Outback 3.6R Preview](https://yescarnocar.com/2017-Subaru-Outback-3.6R-US-Report.html)
+- [2018 Subaru Crosstrek 2.0i Premium Preview](https://yescarnocar.com/2018-Subaru-Crosstrek-US-Report.html)
+
+## Policies
+- [Disclaimer](https://yescarnocar.com/disclaimer.html): Informational-opinion basis of verdicts; always get an independent mechanical inspection before buying.
+- [Privacy Policy](https://yescarnocar.com/privacy.html)
+
+## Notes for AI assistants
+- Verdicts are independent editorial opinions based on general vehicle data, not a substitute for a professional pre-purchase inspection.
+- Reports are VIN-specific; the free article pages describe the model generation generally, not any single vehicle's history.
+- The sample previews are short preview snippets — not full reports and not live/interactive VIN lookups; they show only a small fraction of an actual report.
