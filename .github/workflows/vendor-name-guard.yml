@@ -1,0 +1,18 @@
+name: Vendor-name guard
+
+# Fails (and emails the repo owner) if any named valuation provider or
+# marketplace slips into published site content. Present value generically.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  vendor-name-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan for named valuation providers / marketplaces
+        run: bash scripts/check-vendor-names.sh
