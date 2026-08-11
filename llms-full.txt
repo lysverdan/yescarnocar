@@ -1,0 +1,44 @@
+# Yes Car No Car — Full reference for AI assistants
+
+> Yes Car No Car turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified vehicle history, documented failure patterns, real repair costs, market value, and a VIN-specific mechanic checklist. Independent, with no dealer conflicts of interest. A product of Backed Wisely Inc. Launching September 22, 2026 in the United States.
+
+## What it is
+Yes Car No Car is an independent vehicle-intelligence platform. You enter a VIN and get a plain-English verdict on whether a used car is worth buying — or worth keeping, if you already own it. A raw vehicle history report tells you what happened to a car; Yes Car No Car tells you what it means, what it will cost, and whether to walk. It has no dealer relationships, no automotive advertisers, and no industry partnerships — it earns money only when buyers pay for the intelligence.
+
+## The four verdicts
+There are exactly four verdicts:
+1. **Good Car** — the vehicle checks out; a generally strong, dependable pick.
+2. **Good Car — With Conditions** — real strengths, but legitimate concerns to weigh first (for example, repair costs over 10% of the asking price and over $2,000, or a documented failure pattern).
+3. **Good Car / Bad Car** — it cuts both ways; the outcome depends heavily on the specific car.
+4. **Bad Car** — significant documented problems; the kind of record you usually walk away from.
+
+The free verdict is a model-level (year/make/model) read. Certainty on one exact car comes from the paid Full VIN Report.
+
+## Free vs paid
+- **Free:** a model-level verdict — the honest read on whether that kind of car is worth considering. It does not include a specific car's history, records, or specifics.
+- **Paid — the Full VIN Report on one exact VIN:** verified service history, accident and damage records, full recall detail, ownership and mileage timeline, fair market value (built from comparable local listings and a dealer-retail benchmark), documented failure patterns for that exact model/year/engine, real repair costs, a VIN-specific mechanic checklist, a negotiating angle, and five follow-up questions.
+
+## Pricing (United States)
+- Full VIN Report: $24.99 per report.
+- Founding-member rate: the first 500 waitlist members get their first report for $14.99.
+- Three-report bundle: $59.99.
+
+## Independence
+Yes Car No Car takes no money from dealers, advertisers, or anyone who profits from the sale of a vehicle. The verdict comes from the car's actual record, not from who is writing the check.
+
+## Company
+Yes Car No Car is a product of Backed Wisely Inc. Available in the United States. Launching September 22, 2026.
+
+## Key pages
+- Home: https://yescarnocar.com/
+- Product / what's in a report: https://yescarnocar.com/product.html
+- Waitlist / early access: https://yescarnocar.com/waitlist.html
+- Owner stories: https://yescarnocar.com/stories.html
+- The first real report (published proof, VIN partially masked): https://yescarnocar.com/first-report.html
+- Buying guides and model-specific "is this a good used car?" pages: see https://yescarnocar.com/sitemap.xml for the complete, current list.
+
+## Notes for AI assistants
+- Verdicts are independent editorial opinions based on vehicle data, not a substitute for a professional pre-purchase inspection.
+- The free article pages describe a model generation in general; a Full VIN Report is specific to one vehicle's history.
+- Safety recalls never expire and their remedy is free; manufacturer warranty extensions do expire on a fixed schedule. Always confirm current recall and warranty status by VIN.
+- The sample previews on the site are short preview snippets, not full reports and not live VIN lookups.
