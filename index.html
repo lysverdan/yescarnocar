@@ -920,11 +920,81 @@
       .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
     }
 
+    /* ============ INTERACTIVE HERO (redesign) ============ */
+    .hero { min-height: auto; padding: 7rem 1.5rem 5rem; }
+    .hero-demo { width:100%; max-width:760px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .hero-demo .hb { width:92px; opacity:0; transform:translateY(14px) scale(.96); animation:hero-rise 1.2s cubic-bezier(.2,.7,.2,1) .15s forwards; filter:drop-shadow(0 18px 40px rgba(0,0,0,.6)); }
+    .hero-demo .hb img { width:100%; display:block; }
+    .hero-demo .hb.scanning { animation:hero-rise 1.2s cubic-bezier(.2,.7,.2,1) .15s forwards, dm-hum 1.3s ease-in-out infinite; }
+    @keyframes dm-hum { 50% { filter:drop-shadow(0 0 22px rgba(76,175,80,.55)); } }
+    .hero-h1 { margin-top:1.5rem; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(2.3rem,6vw,4rem); line-height:1.03; letter-spacing:-.01em; color:var(--silver); text-wrap:balance; opacity:0; animation:hero-fade 1.2s ease .5s forwards; }
+    .hero-h1 em { font-style:italic; color:var(--silver-2); }
+    .hero-sub2 { margin-top:1.1rem; max-width:36ch; font-size:1.08rem; color:var(--silver-2); line-height:1.5; opacity:0; animation:hero-fade 1.2s ease .7s forwards; }
+    .dm-scan { margin-top:2.2rem; width:100%; max-width:620px; opacity:0; animation:hero-fade 1.2s ease .9s forwards; }
+    .dm-row { display:flex; }
+    .dm-vin { flex:1; display:flex; align-items:center; gap:.7rem; background:var(--bg-card); border:1px solid var(--line); border-radius:10px; padding:0 .9rem; }
+    .dm-vin .dot { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold); flex:none; }
+    .dm-vin input { flex:1; background:transparent; border:0; outline:0; color:var(--silver); font-family:'Inter Tight',monospace; font-size:1rem; letter-spacing:.14em; padding:1rem 0; min-width:0; }
+    .dm-btns { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-top:.7rem; }
+    .dm-go { border:0; cursor:pointer; border-radius:10px; padding:0 1.4rem; height:54px; display:inline-flex; align-items:center; justify-content:center; gap:.5rem; text-decoration:none; background:var(--gold); color:#04180a; font-family:'Inter Tight',sans-serif; font-weight:700; font-size:.9rem; transition:transform .15s, box-shadow .3s, border-color .3s, color .3s; box-shadow:0 8px 28px -8px rgba(76,175,80,.6); }
+    .dm-go:hover { transform:translateY(-2px); box-shadow:0 14px 38px -8px rgba(76,175,80,.8); }
+    .dm-go:disabled { opacity:.5; cursor:default; transform:none; }
+    .dm-go.ghost { background:transparent; color:var(--silver); border:1px solid var(--line); box-shadow:none; }
+    .dm-go.ghost:hover { border-color:var(--gold); color:var(--gold-bright); box-shadow:none; }
+    .dm-go span { transition:transform .2s; } .dm-go:hover span { transform:translateX(3px); }
+    .dm-chips { display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; margin-top:1rem; align-items:center; }
+    .dm-try { font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--text-mute); }
+    .dm-chip { cursor:pointer; background:transparent; border:1px solid var(--line-soft); color:var(--silver-2); border-radius:100px; padding:.42rem .9rem; font-size:.8rem; font-family:'Inter Tight',sans-serif; transition:border-color .2s,color .2s,background .2s; }
+    .dm-chip:hover { border-color:var(--silver-dim); color:var(--silver); }
+    .dm-chip.sel { background:#171717; border-color:var(--silver-dim); color:var(--silver); }
+    .dm-chip em { font-style:normal; font-size:.62em; letter-spacing:.14em; text-transform:uppercase; color:var(--condition); margin-left:.4rem; }
+    .dm-stage { margin-top:2.1rem; width:100%; max-width:620px; opacity:0; animation:hero-fade 1.2s ease 1.05s forwards; }
+    .dm-brow { display:flex; align-items:center; justify-content:center; gap:1.2rem; min-height:1.6rem; }
+    .dm-analyzing { font-family:'Inter Tight',monospace; font-size:.9rem; color:var(--silver-dim); }
+    .dm-analyzing .tick { color:var(--gold); }
+    .dm-verdict { text-align:left; opacity:0; transform:translateY(12px); transition:opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1); margin-top:1.5rem; border-radius:14px; padding:1.6rem 1.7rem; background:var(--bg-card); border:1px solid var(--line-soft); border-left:3px solid var(--vc,var(--line)); position:relative; overflow:hidden; }
+    .dm-verdict.show { opacity:1; transform:none; }
+    .dm-verdict::before { content:''; position:absolute; inset:0; opacity:.13; pointer-events:none; background:radial-gradient(120% 100% at 0 0,var(--vc,transparent),transparent 62%); }
+    .dm-vpill { display:inline-block; font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:var(--vc,var(--gold)); border:1px solid var(--vc,var(--line)); border-radius:100px; padding:.26rem .8rem; margin-bottom:.9rem; }
+    .dm-vtitle { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(1.7rem,4vw,2.4rem); line-height:1.05; color:var(--silver); }
+    .dm-vline { color:var(--silver-2); margin-top:.6rem; font-size:1.02rem; }
+    .dm-vnote { color:var(--silver-dim); font-size:.9rem; margin-top:.75rem; }
+    .hero-launch { margin-top:2.4rem; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); opacity:0; animation:hero-fade 1.2s ease 1.2s forwards; }
+    .hero-launch a { color:var(--silver-2); text-decoration:underline; text-underline-offset:3px; }
+
+    /* verdict-color spine */
+    .spine { position:fixed; left:0; top:0; bottom:0; width:3px; z-index:45; pointer-events:none; background:linear-gradient(to bottom,transparent,var(--spine,var(--gold)) 12%,var(--spine,var(--gold)) 88%,transparent); box-shadow:0 0 20px 1px var(--spine,var(--gold)); opacity:.5; transition:background .8s ease, box-shadow .8s ease; }
+
+    /* verdict-card colored glow (enhance existing cards) */
+    .verdict::after { content:''; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; pointer-events:none; background:radial-gradient(130% 90% at 0 0,var(--accent),transparent 60%); }
+    .verdict:hover::after { opacity:.12; }
+    .verdict:hover { box-shadow:0 22px 46px -22px var(--accent); }
+
+    /* scroll reveal */
+    .rv { opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .rv.in { opacity:1; transform:none; }
+
+    /* cost chart */
+    .costviz { border-top:1px solid var(--line); }
+    .chartwrap { margin-top:2.4rem; background:var(--bg-card); border:1px solid var(--line-soft); border-radius:14px; padding:1.5rem 1.3rem 1rem; }
+    .chart-head { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; margin-bottom:.4rem; }
+    .chart-legend { display:flex; gap:1.2rem; font-size:.78rem; }
+    .chart-legend .lg { display:inline-flex; align-items:center; gap:.4rem; color:var(--silver-dim); }
+    .chart-legend .lg i { width:10px; height:10px; border-radius:3px; }
+    #costChart { display:block; width:100%; height:auto; }
+
+    @media (max-width:640px){ .dm-btns{ flex-direction:column; } .dm-go{ width:100%; } }
+    @media (prefers-reduced-motion:reduce){
+      .hero-demo .hb,.hero-h1,.hero-sub2,.dm-scan,.dm-stage,.hero-launch{ animation:none!important; opacity:1!important; transform:none!important; }
+      .rv{ opacity:1!important; transform:none!important; }
+    }
     </style>
   <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
 </head>
 <body>
+
+  <div class="spine" id="spine"></div>
 
   <!-- NAV -->
   <nav>
@@ -985,22 +1055,43 @@
   </div>
 
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero-badge">
-      <img src="ycnc-badge.png" alt="Yes Car No Car" />
+  <!-- ============ HERO (interactive) ============ -->
+  <section class="hero" id="hero" data-color="var(--good)">
+    <div class="hero-demo">
+      <div class="hb" id="heroBadge"><img src="ycnc-badge.png" alt="Yes Car No Car" /></div>
+      <h1 class="hero-h1">Know the car <em>before</em> you buy it.</h1>
+      <p class="hero-sub2">Scan a VIN, get a verdict — Good Car or Bad Car — from the one voice in the deal that isn't paid to sell it to you.</p>
+
+      <div class="dm-scan">
+        <div class="dm-row">
+          <label class="dm-vin"><span class="dot"></span><input id="vinInput" spellcheck="false" value="4JGDA5HB9••••••••" aria-label="VIN" /></label>
+        </div>
+        <div class="dm-btns">
+          <button class="dm-go" id="goBtn">See the free verdict</button>
+          <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Full report &mdash; $24.99 <span>&rarr;</span></a>
+        </div>
+        <div class="dm-chips">
+          <span class="dm-try">Try one:</span>
+          <button class="dm-chip" data-case="ml350">2012 Mercedes ML350 <em>Real report</em></button>
+          <button class="dm-chip" data-case="good">2016 Honda Civic</button>
+          <button class="dm-chip" data-case="cond">2015 Subaru Outback</button>
+          <button class="dm-chip" data-case="split">2016 Jeep Wrangler</button>
+          <button class="dm-chip" data-case="bad">2015 Santa Fe Sport</button>
+        </div>
+      </div>
+
+      <div class="dm-stage">
+        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Pick a car, then hit &ldquo;See the free verdict.&rdquo;</span></div></div>
+        <div class="dm-verdict" id="dmVerdict">
+          <span class="dm-vpill" id="dmPill">Free &middot; the model read</span>
+          <div class="dm-vtitle" id="dmTitle">&mdash;</div>
+          <p class="dm-vline" id="dmLine">&mdash;</p>
+          <p class="dm-vnote">This is the read on the model &mdash; <strong style="color:var(--gold)">free</strong>. The full report takes this exact VIN start to finish.</p>
+        </div>
+      </div>
+
+      <p class="hero-launch">Launching September 22, 2026 &nbsp;&middot;&nbsp; <a href="waitlist.html">Join the list.</a></p>
     </div>
-    <h1 class="hero-wordmark">
-      <span class="gold">Yes Car</span><span class="pipe">|</span><span class="silver">No Car</span>
-    </h1>
-    <p class="hero-tagline">
-      <span class="gold">Yes Car?</span> <span class="know">Know</span> <span class="gold">Car.</span>
-    </p>
-    <p class="hero-subhead">Scan a VIN. Get a verdict. Know the car before you buy it — or while you own it.</p>
-    <p class="hero-problem">The used-car buyer is the only person in the transaction who knows less than everyone else in the room. We fix that.</p>
-    <p class="hero-sub">Launching <span style="color:var(--gold);font-weight:600;">September 22</span> &nbsp;·&nbsp; <a href="waitlist.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Join the list.</a></p>
-    <div class="hero-divider"></div>
-    <div class="hero-scroll">Scroll</div>
   </section>
 
   <!-- urgency strip -->
@@ -1257,6 +1348,25 @@
     </div>
   </section>
 
+  <!-- ============ COST PROJECTION ============ -->
+  <section class="costviz" data-color="var(--bad)">
+    <div class="container">
+      <div class="eyebrow">The number a report never gives you</div>
+      <h2>The $3,000 you don't <em>see coming.</em></h2>
+      <p class="lede">A history report tells you what happened. It never tells you what the next three years cost — the difference between a clean pick and the one repair that ambushes you.</p>
+      <div class="chartwrap">
+        <div class="chart-head">
+          <div class="chart-legend">
+            <span class="lg"><i style="background:var(--good)"></i>Good Car &mdash; projected</span>
+            <span class="lg"><i style="background:var(--bad)"></i>Missed Bad Car</span>
+          </div>
+          <span style="font-size:.72rem;letter-spacing:.06em;color:var(--text-mute)">3-year cost of ownership</span>
+        </div>
+        <canvas id="costChart" width="1000" height="340" role="img" aria-label="Three-year cost-of-ownership projection: a Good Car stays low and steady while a missed Bad Car spikes past $8,000."></canvas>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CTA BAND ============ -->
   <div class="cta-band">
     <div class="cta-band-inner">
@@ -1324,5 +1434,97 @@
     });
   </script>
 
+  <!-- ============ REDESIGN: hero demo + motion (isolated) ============ -->
+  <script>
+  (function(){
+    var reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+    var REPORT="first-report.html", WAIT="waitlist.html";
+    var CASES = {
+      ml350:{vin:"4JGDA5HB9••••••••",car:"2012 Mercedes-Benz ML350 4MATIC",v:"cond",label:"Good Car — With Conditions",
+        line:"Likely a good car with some conditions — the ML350 is a lot of used SUV for the money, but a few inspectable things decide the individual truck.",report:REPORT,real:true},
+      good:{vin:"1HGFC2F5XGA004821",car:"2016 Honda Civic LX",v:"good",label:"Good Car",
+        line:"Likely a good car — this generation and trim are a generally strong, dependable pick.",report:WAIT},
+      cond:{vin:"4S4BSANC1F3300112",car:"2015 Subaru Outback 2.5i",v:"cond",label:"Good Car — With Conditions",
+        line:"Likely a good car with some conditions — a solid, durable model, but a couple of things are worth weighing first.",report:WAIT},
+      split:{vin:"1C4BJWDG7GL200145",car:"2016 Jeep Wrangler Unlimited",v:"split",label:"Good Car / Bad Car",
+        line:"Could go either way — this model leans hard on the specific vehicle and how it was used.",report:WAIT},
+      bad:{vin:"5XYZUDLB2FG600317",car:"2015 Hyundai Santa Fe Sport",v:"bad",label:"Bad Car",
+        line:"Likely a bad car — this model's engine record is the kind you usually walk away from.",report:WAIT}
+    };
+    var COLOR={good:"var(--good)",cond:"var(--condition)",split:"var(--warning)",bad:"var(--bad)"};
+    var STEPS=["Pulling verified history…","Checking accidents & recalls…","Matching failure patterns for this engine…","Weighing real repair costs…"];
+    var $=function(id){return document.getElementById(id);};
+    var badge=$("heroBadge"),input=$("vinInput"),go=$("goBtn"),paid=$("paidBtn"),
+        stageText=$("dmStageText"),verdict=$("dmVerdict"),pill=$("dmPill"),vtitle=$("dmTitle"),vline=$("dmLine");
+    var busy=false,current="ml350";
+
+    if(badge&&go&&input&&paid&&verdict){
+      var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'See the full report <span>&rarr;</span>':'Full report &mdash; $24.99 <span>&rarr;</span>';};
+      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; input.value=c.vin; setPaid(k);
+        document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.classList.toggle("sel", ch.getAttribute("data-case")===k); });
+        verdict.classList.remove("show");
+        stageText.innerHTML='<span class="dm-analyzing">Ready: <b style="color:var(--silver)">'+c.car+'</b> — hit “See the free verdict.”</span>'; };
+      var reveal=function(c){ badge.classList.remove("scanning");
+        stageText.innerHTML='<span class="dm-analyzing">Free verdict for <b style="color:var(--silver)">'+c.car+'</b></span>';
+        verdict.style.setProperty("--vc",COLOR[c.v]); pill.textContent="Free · the model read"; vtitle.textContent=c.label; vline.textContent=c.line;
+        void verdict.offsetWidth; verdict.classList.add("show"); busy=false; go.disabled=false; };
+      var run=function(k){ if(busy)return; var c=CASES[k]||CASES[current]; current=(k in CASES)?k:current; setPaid(current);
+        busy=true; go.disabled=true; input.value=c.vin; verdict.classList.remove("show"); badge.classList.add("scanning");
+        var i=0, dur=reduce?170:520;
+        stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[0]+'</span>';
+        var iv=setInterval(function(){ i++; if(i<STEPS.length){ stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[i]+'</span>'; } else { clearInterval(iv); reveal(c); } }, dur); };
+      go.addEventListener("click",function(){ run(current); });
+      input.addEventListener("keydown",function(e){ if(e.key==="Enter") run(current); });
+      document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.addEventListener("click",function(){ select(ch.getAttribute("data-case")); }); });
+      select("ml350");
+    }
+
+    /* scroll reveal (skip hero + carousel internals) */
+    var rvSel=".problem .eyebrow,.problem h2,.problem-list li,.solution .eyebrow,.solution h2,.solution .lede,.verdict,.two-audiences .eyebrow,.two-audiences h2,.ta-card,.fi-teaser .eyebrow,.fi-teaser h2,.fi-teaser .lede,.costviz .eyebrow,.costviz h2,.costviz .lede,.chartwrap,.real-stories .eyebrow,.real-stories h2";
+    var rvEls=document.querySelectorAll(rvSel);
+    if(reduce){ rvEls.forEach(function(e){e.classList.add("rv","in");}); }
+    else{
+      var ro=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); ro.unobserve(en.target);} }); },{threshold:.14});
+      rvEls.forEach(function(e){ e.classList.add("rv"); ro.observe(e); });
+    }
+
+    /* verdict-color spine follows the section in view */
+    var spine=$("spine");
+    if(spine){
+      var map=[[".problem","var(--bad)"],[".solution","var(--condition)"],[".two-audiences","var(--warning)"],[".real-stories","var(--good)"],[".fi-teaser","var(--condition)"],[".costviz","var(--bad)"]];
+      map.forEach(function(m){ var el=document.querySelector(m[0]); if(el) el.setAttribute("data-color",m[1]); });
+      var so=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ var col=en.target.getAttribute("data-color"); if(col) document.documentElement.style.setProperty("--spine",col); } }); },{threshold:.5});
+      document.querySelectorAll("[data-color]").forEach(function(s){ so.observe(s); });
+    }
+
+    /* cost projection chart */
+    var cv=$("costChart");
+    if(cv&&cv.getContext){
+      var ctx=cv.getContext("2d");
+      var gdat=[900,1500,2100,2600,3100,3500], bdat=[900,1700,2600,6200,7000,8600];
+      var rgbOf=function(v){ var d=document.createElement("div"); d.style.color=v; document.body.appendChild(d); var c=getComputedStyle(d).color; d.remove(); return c; };
+      var CG=rgbOf("var(--good)"),CB=rgbOf("var(--bad)"),CL=rgbOf("var(--line-soft)"),CT=rgbOf("var(--text-mute)");
+      var rgba=function(c,a){ return c.indexOf("rgba")===0?c:c.replace("rgb(","rgba(").replace(")",", "+a+")"); };
+      var draw=function(p){ var W=cv.width,H=cv.height,pl=52,pr=16,pt=16,pb=30,n=gdat.length-1,max=9000;
+        ctx.clearRect(0,0,W,H); ctx.font="20px 'Inter Tight',sans-serif";
+        var X=function(i){return pl+(W-pl-pr)*(i/n);}, Y=function(v){return pt+(H-pt-pb)*(1-v/max);};
+        ctx.strokeStyle=CL; ctx.fillStyle=CT; ctx.lineWidth=1;
+        for(var g=0;g<=9000;g+=3000){ var y=Y(g); ctx.beginPath(); ctx.moveTo(pl,y); ctx.lineTo(W-pr,y); ctx.stroke(); ctx.textAlign="right"; ctx.fillText("$"+(g/1000)+"k",pl-10,y+7); }
+        for(var yr=0;yr<=n;yr++){ ctx.textAlign="center"; ctx.fillText("Yr "+yr,X(yr),H-8); }
+        var series=function(data,color){ var lf=Math.floor(n*p), last=Math.max(1,lf), frac=(n*p)-lf;
+          var xe=X(last),ye=Y(data[last]); if(last<n&&frac>0){ xe=X(last)+(X(last+1)-X(last))*frac; ye=Y(data[last])+(Y(data[last+1])-Y(data[last]))*frac; }
+          ctx.beginPath(); for(var i=0;i<=last;i++){ i?ctx.lineTo(X(i),Y(data[i])):ctx.moveTo(X(i),Y(data[i])); } if(last<n&&frac>0)ctx.lineTo(xe,ye);
+          var grad=ctx.createLinearGradient(0,pt,0,H-pb); grad.addColorStop(0,rgba(color,.2)); grad.addColorStop(1,rgba(color,0));
+          ctx.save(); ctx.lineTo(xe,Y(0)); ctx.lineTo(X(0),Y(0)); ctx.closePath(); ctx.fillStyle=grad; ctx.fill(); ctx.restore();
+          ctx.beginPath(); for(var j=0;j<=last;j++){ j?ctx.lineTo(X(j),Y(data[j])):ctx.moveTo(X(j),Y(data[j])); } if(last<n&&frac>0)ctx.lineTo(xe,ye);
+          ctx.strokeStyle=color; ctx.lineWidth=3; ctx.lineJoin="round"; ctx.stroke();
+          ctx.beginPath(); ctx.arc(xe,ye,5,0,7); ctx.fillStyle=color; ctx.fill(); };
+        series(gdat,CG); series(bdat,CB); };
+      draw(.001); var drawn=false;
+      var co=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting&&!drawn){ drawn=true; if(reduce){draw(1);return;} var t0=null; var step=function(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/1300); draw(Math.max(.001,1-Math.pow(1-p,3))); if(p<1)requestAnimationFrame(step); }; requestAnimationFrame(step); } }); },{threshold:.4});
+      co.observe(cv); addEventListener("resize",function(){ if(drawn)draw(1); });
+    }
+  })();
+  </script>
 </body>
 </html>
