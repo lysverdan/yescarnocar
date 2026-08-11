@@ -1442,14 +1442,14 @@
     var CASES = {
       ml350:{vin:"4JGDA5HB9••••••••",car:"2012 Mercedes-Benz ML350 4MATIC",v:"cond",label:"Good Car — With Conditions",
         line:"Likely a good car with some conditions — the ML350 is a lot of used SUV for the money, but a few inspectable things decide the individual truck.",report:REPORT,real:true},
-      good:{vin:"1HGFC2F5XGA004821",car:"2016 Honda Civic LX",v:"good",label:"Good Car",
+      good:{vin:"1HGFC2F5X••••••••",car:"2016 Honda Civic LX",v:"good",label:"Good Car",
         line:"Likely a good car — this generation and trim are a generally strong, dependable pick.",report:WAIT},
-      cond:{vin:"4S4BSANC1F3300112",car:"2015 Subaru Outback 2.5i",v:"cond",label:"Good Car — With Conditions",
+      cond:{vin:"4S4BSANC1••••••••",car:"2015 Subaru Outback 2.5i",v:"cond",label:"Good Car — With Conditions",
         line:"Likely a good car with some conditions — a solid, durable model, but a couple of things are worth weighing first.",report:WAIT},
-      split:{vin:"1C4BJWDG7GL200145",car:"2016 Jeep Wrangler Unlimited",v:"split",label:"Good Car / Bad Car",
+      split:{vin:"1C4BJWDG7••••••••",car:"2016 Jeep Wrangler Unlimited",v:"split",label:"Good Car / Bad Car",
         line:"Could go either way — this model leans hard on the specific vehicle and how it was used.",report:WAIT},
-      bad:{vin:"5XYZUDLB2FG600317",car:"2015 Hyundai Santa Fe Sport",v:"bad",label:"Bad Car",
-        line:"Likely a bad car — this model's engine record is the kind you usually walk away from.",report:WAIT}
+      bad:{vin:"5XYZUDLB2••••••••",car:"2015 Hyundai Santa Fe Sport",v:"bad",label:"Bad Car",
+        line:"Likely a bad car — both engines share a documented failure that can seize the engine, and no trim gets you out of it. Whether the exact one you're looking at was already fixed is a VIN question — that's what the full report answers.",report:WAIT}
     };
     var COLOR={good:"var(--good)",cond:"var(--condition)",split:"var(--warning)",bad:"var(--bad)"};
     var STEPS=["Pulling verified history…","Checking accidents & recalls…","Matching failure patterns for this engine…","Weighing real repair costs…"];
