@@ -983,6 +983,15 @@
     .chart-legend .lg i { width:10px; height:10px; border-radius:3px; }
     #costChart { display:block; width:100%; height:auto; }
 
+    /* first-time interactivity cue — "click here" arrow, dismissed on first interaction */
+    .dm-cue { display:flex; flex-direction:column; align-items:center; gap:.1rem; margin:.9rem 0 -.1rem; color:var(--gold); pointer-events:none; transition:opacity .45s ease, transform .45s ease; }
+    .dm-cue.gone { opacity:0; transform:translateY(-8px); }
+    .dm-cue .cue-txt { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.12rem; color:var(--gold-bright); }
+    .dm-cue svg { width:30px; height:26px; display:block; animation:cue-bob 1.3s ease-in-out infinite; }
+    @keyframes cue-bob { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(6px); } }
+    .dm-go.cue-pulse { animation:cta-pulse 1.9s ease-out infinite; }
+    @keyframes cta-pulse { 0%{ box-shadow:0 8px 28px -8px rgba(76,175,80,.6), 0 0 0 0 rgba(76,175,80,.55); } 70%{ box-shadow:0 8px 28px -8px rgba(76,175,80,.6), 0 0 0 15px rgba(76,175,80,0); } 100%{ box-shadow:0 8px 28px -8px rgba(76,175,80,.6), 0 0 0 0 rgba(76,175,80,0); } }
+    @media (prefers-reduced-motion:reduce){ .dm-cue svg{ animation:none; } .dm-go.cue-pulse{ animation:none; } }
     @media (max-width:640px){ .dm-btns{ flex-direction:column; } .dm-go{ width:100%; } }
     @media (prefers-reduced-motion:reduce){
       .hero-demo .hb,.hero-h1,.hero-sub2,.dm-scan,.dm-stage,.hero-launch{ animation:none!important; opacity:1!important; transform:none!important; }
@@ -1066,8 +1075,12 @@
         <div class="dm-row">
           <label class="dm-vin"><span class="dot"></span><input id="vinInput" spellcheck="false" value="4JGDA5HB9••••••••" aria-label="VIN" /></label>
         </div>
+        <div class="dm-cue" id="dmCue" aria-hidden="true">
+          <span class="cue-txt">Click here — try it</span>
+          <svg viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 2 V17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 12 L15 21 L24 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
         <div class="dm-btns">
-          <button class="dm-go" id="goBtn">See the free verdict</button>
+          <button class="dm-go cue-pulse" id="goBtn">See the free verdict</button>
           <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Full report &mdash; $24.99 <span>&rarr;</span></a>
         </div>
         <div class="dm-chips">
@@ -1473,9 +1486,11 @@
         var i=0, dur=reduce?170:520;
         stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[0]+'</span>';
         var iv=setInterval(function(){ i++; if(i<STEPS.length){ stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[i]+'</span>'; } else { clearInterval(iv); reveal(c); } }, dur); };
-      go.addEventListener("click",function(){ run(current); });
-      input.addEventListener("keydown",function(e){ if(e.key==="Enter") run(current); });
-      document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.addEventListener("click",function(){ select(ch.getAttribute("data-case")); }); });
+      var cue=$("dmCue");
+      var killCue=function(){ if(cue)cue.classList.add("gone"); go.classList.remove("cue-pulse"); };
+      go.addEventListener("click",function(){ killCue(); run(current); });
+      input.addEventListener("keydown",function(e){ if(e.key==="Enter"){ killCue(); run(current); } });
+      document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.addEventListener("click",function(){ killCue(); select(ch.getAttribute("data-case")); }); });
       select("ml350");
     }
 
