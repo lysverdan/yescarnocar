@@ -16,7 +16,7 @@ Longer-form buying guides that group multiple vehicles by budget, body style, or
 - [What Car Should I Buy?](https://yescarnocar.com/what-car-should-i-buy.html): A simple decision framework for narrowing down a used-car purchase.
 
 ## Vehicle Reports
-Independent, model-specific buying guides answering "is this a good used car?" for specific year/make/model combinations, each with a clear verdict (Good Car / Good Car — With Conditions / Bad Car), common problems, what to check before buying, and what would make a buyer walk away. Example:
+Independent, model-specific buying guides answering "is this a good used car?" for specific year/make/model combinations, each with a clear verdict (Good Car / Good Car — With Conditions / Bad Car For You), common problems, what to check before buying, and what would make a buyer walk away. Example:
 - [Is a 2016 Honda Civic a Good Used Car?](https://yescarnocar.com/is-a-2016-honda-civic-a-good-used-car.html)
 
 See https://yescarnocar.com/sitemap.xml for the complete, current list of vehicle report pages.
