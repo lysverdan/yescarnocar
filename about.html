@@ -472,6 +472,17 @@
     @media (max-width: 760px) { .topbar-socials { display: none !important; } }
       .footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem auto 1.25rem; }
     .footer-socials .social-link { width: 22px; height: 22px; }
+    /* founder */
+    .founder-grid { display: grid; grid-template-columns: 260px 1fr; gap: 2.5rem; align-items: start; margin-top: 1.75rem; }
+    .founder-photo { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 20px 50px -22px rgba(0,0,0,0.75); }
+    .founder-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--silver); margin: 1rem 0 0.1rem; }
+    .founder-role { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+    .founder-sign { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: var(--silver-2); margin-top: 1.2rem; }
+    @media (max-width: 680px) {
+      .founder-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+      .founder-photo { max-width: 260px; margin: 0 auto; }
+      .founder-name, .founder-role { text-align: center; }
+    }
   </style>
   <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
@@ -569,6 +580,24 @@
       <p>The information to fix this already existed. Service histories, common failure points for specific models, recall records, real market pricing — it was all out there, scattered across places most buyers never think to look and wouldn't know how to read if they did. <strong>The problem was never that the information didn't exist. The problem was that it never sat on the buyer's side of the table.</strong></p>
       <p>And it never would, on its own. Nobody who makes money when you buy a car has a reason to hand you a clear-eyed verdict before you sign. Not the dealer. Not the platform selling you leads. Everyone's incentives point the same direction, and it isn't yours. So we stopped waiting for someone with a financial stake in the sale to do it, and built the thing ourselves.</p>
       <p>That independence isn't a selling point we added later. <em>It's the reason this exists at all.</em> No dealer money. No advertiser money. No industry partnerships, no data-sharing deals, no quiet arrangements with anyone on the other side of the table. The verdict you get comes from the car's actual record — not from who's writing the check.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">The Founder</p>
+      <div class="founder-grid">
+        <div>
+          <img class="founder-photo" src="founder.jpg" width="760" height="1549" alt="Drew, founder of Yes Car No Car" />
+          <p class="founder-name">Drew</p>
+          <p class="founder-role">Founder, Yes Car No Car</p>
+        </div>
+        <div class="founder-copy">
+          <p>Somewhere along the way I became the person my circle called before they signed anything. <em>Send Drew the listing. Drew will know.</em> And I usually did — the deal nobody else spotted, the older model everyone wrote off that would quietly outlast them all, the clean-looking car that wasn't. I got good at it because I did the work: pulling from millions of data points, separating the detail that mattered from the noise, and knowing from experience which small thing ended up costing real money.</p>
+          <p>I've been on the wrong end of it too — cars where the problem only showed itself after the money was gone. Every time, the same gut-punch: it was avoidable. It was documented somewhere. It was knowable. I just didn't have it in front of me when it mattered. Every competitor is built around a car's past — what it did, where it's been. But that was never the question keeping anyone up at night. The question is what it's <em>about to do</em>. So that's what I built.</p>
+          <p>It launches in the United States, but it was born in Nova Scotia — at a small oceanfront cottage, looking at the water. I'm a dual citizen, Canadian and American, and the idea followed me back and forth across the border until I stopped thinking about it and started building it.</p>
+          <p>Underneath everything, it's simple: I wanted to give everyone the thing my friends already had — a straight answer from someone who isn't getting paid by the person selling. The verdict is always free, and it stays independent on purpose. The day it answers to anyone but you, it stops being worth anything. That won't happen.</p>
+          <p class="founder-sign">— Drew, Founder</p>
+        </div>
+      </div>
     </div>
 
     <div class="section">
