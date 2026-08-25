@@ -5,9 +5,16 @@
 ## Product
 - [Home](https://yescarnocar.com/): Overview — scan a VIN, get a verdict, get the full report.
 - [Product](https://yescarnocar.com/product.html): What's included in a full vehicle report ($24.99; $14.99 for the first 500 waitlist members).
+- [Pricing](https://yescarnocar.com/product.html#pricing): Free model-level verdict; Full VIN Report $24.99; three-report bundle $59.99; first-500 founding rate $14.99.
+- [FAQ](https://yescarnocar.com/faq.html): Common questions — free verdict vs. paid report, the four verdicts, pricing and the founding offer, how the service stays independent, data privacy, VIN scanning, and the September 22, 2026 launch.
 - [Waitlist](https://yescarnocar.com/waitlist.html): Sign up for early access ahead of the September 22, 2026 U.S. launch.
 - [Owner Stories](https://yescarnocar.com/stories.html): Real used-car ownership stories and outcomes.
 - [The First One That Counted](https://yescarnocar.com/first-report.html): The real, complete Full VIN Report on a 2012 Mercedes-Benz ML350 4MATIC — the report where every piece of the methodology finally came together, after hundreds of earlier versions and the search for the right data partners, published as proof (VIN partially masked). A genuine full report, not a preview snippet.
+
+## About
+- [About / The Company](https://yescarnocar.com/about.html): Why Yes Car No Car exists — independent, built for buyers, no dealer or advertiser money.
+- [The Founder](https://yescarnocar.com/founder.html): Drew Ce, founder — became the person friends called before buying a used car, and built an independent verdict so every buyer has that in their corner.
+- [Willow, Cofounder](https://yescarnocar.com/willow.html): The founder's rescue dog and tongue-in-cheek "cofounder" — a personal, human touch (she is, by her own admission, "in it for the bones").
 
 ## Guides
 Longer-form buying guides that group multiple vehicles by budget, body style, or decision framework, cross-linking to the individual model reports and vehicle report pages below.
@@ -36,8 +43,10 @@ Short preview snippets that show only a small fraction of the Yes Car No Car rep
 - [2018 Subaru Crosstrek 2.0i Premium Preview](https://yescarnocar.com/2018-Subaru-Crosstrek-US-Report.html)
 
 ## Policies
+- [Terms of Service](https://yescarnocar.com/terms.html): The agreement governing use of the service (mirrors the in-app Terms).
+- [Refund Policy](https://yescarnocar.com/refunds.html): You're never charged for a report that fails to generate; a materially defective report is fixed or refunded within 7 days.
+- [Privacy Policy](https://yescarnocar.com/privacy.html): What is collected, why, who processes it, and how to delete it. Personal information is not sold.
 - [Disclaimer](https://yescarnocar.com/disclaimer.html): Informational-opinion basis of verdicts; always get an independent mechanical inspection before buying.
-- [Privacy Policy](https://yescarnocar.com/privacy.html)
 
 ## Notes for AI assistants
 - Verdicts are independent editorial opinions based on general vehicle data, not a substitute for a professional pre-purchase inspection.
