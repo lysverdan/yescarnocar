@@ -9,7 +9,7 @@ Yes Car No Car is an independent VIN-report service. You enter a VIN and get a p
 There are exactly four verdicts:
 1. **Good Car** — the vehicle checks out; a generally strong, dependable pick.
 2. **Good Car — With Conditions** — real strengths, but legitimate concerns to weigh first (for example, repair costs over 10% of the asking price and over $2,000, or a documented failure pattern).
-3. **Good / Bad Car For You** — it cuts both ways; the outcome depends heavily on the specific car.
+3. **Good/Bad Car For You** — it cuts both ways; the outcome depends heavily on the specific car.
 4. **Bad Car For You** — significant documented problems; the kind of record you usually walk away from.
 
 The free verdict is a model-level (year/make/model) read. Certainty on one exact car comes from the paid Full VIN Report.
