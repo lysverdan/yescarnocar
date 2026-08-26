@@ -1,6 +1,6 @@
 # Yes Car No Car
 
-> Yes Car No Car turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified service history, accident records, recall detail, ownership timeline, market value, failure patterns, real repair costs, and a mechanic checklist. Independent, with no dealer conflicts of interest.
+> Yes Car No Car is an independent VIN check and used-car verdict: it turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified service history, accident records, recall detail, ownership timeline, market value, failure patterns, real repair costs, and a mechanic checklist. Independent, with no dealer conflicts of interest.
 
 ## Product
 - [Home](https://yescarnocar.com/): Overview — scan a VIN, get a verdict, get the full report.
