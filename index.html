@@ -1018,6 +1018,8 @@
         color:#0a0a0a; background:var(--gold,#4caf50); font-weight:700;
         padding:0.5rem 1rem; border-radius:999px; font-size:0.92rem; white-space:nowrap;
       }
+      /* clear the fixed CTA bar so it never covers the footer */
+      footer{ padding-bottom: calc(5rem + env(safe-area-inset-bottom,0px)); }
     }
     /* What makes us different — early-scroll differentiators strip */
     .diffs{ padding:3.5rem 0; border-bottom:1px solid var(--line); }
