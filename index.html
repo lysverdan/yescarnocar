@@ -1002,6 +1002,23 @@
       .hero-demo .hb,.hero-eyebrow,.hero-h1,.hero-sub2,.dm-scan,.dm-stage,.hero-launch{ animation:none!important; opacity:1!important; transform:none!important; }
       .rv{ opacity:1!important; transform:none!important; }
     }
+    /* Mobile-only sticky bottom CTA — thumb-reachable, always visible without scrolling */
+    .sticky-cta{ display:none; }
+    @media (max-width:760px){
+      .sticky-cta{
+        display:flex; align-items:center; justify-content:center; gap:0.5rem;
+        position:fixed; left:0; right:0; bottom:0; z-index:40;
+        padding:0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom,0px));
+        background:rgba(10,10,10,0.92); backdrop-filter:blur(12px);
+        -webkit-backdrop-filter:blur(12px); border-top:1px solid rgba(76,175,80,0.25);
+        text-decoration:none;
+      }
+      .sticky-cta span{ color:#c8c8cc; font-size:0.9rem; }
+      .sticky-cta b{
+        color:#0a0a0a; background:var(--gold,#4caf50); font-weight:700;
+        padding:0.5rem 1rem; border-radius:999px; font-size:0.92rem; white-space:nowrap;
+      }
+    }
     </style>
   <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
@@ -1444,6 +1461,9 @@
       A product of <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026 &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a>&nbsp;&middot;&nbsp; <a href="refunds.html">Refunds</a>&nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="disclaimer.html">Disclaimer</a>
     </div>
   </footer>
+
+  <a class="sticky-cta" href="waitlist.html"><span>Free at launch —</span> <b>Join the Waitlist</b></a>
+
   <script>
     const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
     const navDropdown = document.querySelector('.nav-dropdown');
