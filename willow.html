@@ -688,7 +688,7 @@
       if(typeof e.data!=='string')return;
       var d;try{d=JSON.parse(e.data);}catch(_){return;}
       if(d&&d.event==='Tally.FormSubmitted'){
-        try{var a=window.__hcAnalytics;if(a){(a.capture||a.track||a.event||a.logEvent||function(){}).call(a,'waitlist_signup',U);}}catch(_){}
+        try{var a=window.__hcAnalytics;if(a&&typeof a.trackEvent==='function'){a.trackEvent('waitlist_signup',U);}}catch(_){}
         try{window.dispatchEvent(new CustomEvent('waitlist_signup',{detail:U}));}catch(_){}
       }
     });
