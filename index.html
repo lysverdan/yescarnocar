@@ -803,7 +803,9 @@
       transition: border-color 0.2s;
     }
     .ta-link:hover { border-color: var(--gold); }
-    .ta-owner .ta-headline { color: var(--silver-2); }
+    .ta-owner .ta-headline { color: var(--silver); }
+    .ta-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem,4vw,3rem); line-height: 1.1; color: var(--silver); text-align: center; margin: 0 0 3rem; }
+    .ta-title em { font-style: italic; color: var(--gold); }
     @media (max-width: 700px) {
       .ta-grid { grid-template-columns: 1fr; gap: 3rem 0; }
       .ta-divider { display: none; }
@@ -1057,6 +1059,7 @@
       <div class="nav-right">
         <div class="nav-links">
           <a class="nav-link" href="product.html">What You Get</a>
+          <a class="nav-link" href="owner.html">For Owners</a>
           <a class="nav-link" href="product.html#pricing">Pricing</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
@@ -1125,8 +1128,8 @@
     <div class="hero-demo">
       <div class="hb" id="heroBadge"><img src="ycnc-badge.png" width="600" height="601" decoding="async" fetchpriority="high" alt="Yes Car No Car — an independent VIN report service that tells you whether a used car is a Good Car or a Bad Car before you buy it." /></div>
       <p class="hero-eyebrow">The Independent VIN Check</p>
-      <h1 class="hero-h1">Know the car <em>before</em> you buy it.</h1>
-      <p class="hero-sub2">Scan or type a VIN, get a verdict — Good Car or Bad Car — from the one voice in the deal that isn't paid to sell it to you.</p>
+      <h1 class="hero-h1">Every report tells you where the car has been. <em>One tells you where it's going.</em></h1>
+      <p class="hero-sub2">Scan or type a VIN. Get a verdict — Good Car or Bad Car — plus what that car is about to cost you. Whether you're about to buy it or you already own it.</p>
 
       <div class="dm-scan">
         <div class="dm-row">
@@ -1160,7 +1163,27 @@
         </div>
       </div>
 
+      <p class="hero-trust" style="margin-top:1.6rem;font-size:0.9rem;color:var(--silver-dim);max-width:46ch;line-height:1.55;">From the one voice in the deal that isn't paid to sell it to you.</p>
       <p class="hero-launch">Launching September 22, 2026 &nbsp;&middot;&nbsp; <a href="waitlist.html">Join the list.</a></p>
+    </div>
+  </section>
+
+  <!-- ============ COST PROJECTION ============ -->
+  <section class="costviz" data-color="var(--bad)">
+    <div class="container">
+      <div class="eyebrow">The number a report never gives you</div>
+      <h2>The $3,000 you don't <em>see coming.</em></h2>
+      <p class="lede">A history report tells you what happened. It never tells you what the next three years cost — the difference between a clean pick and the one repair that ambushes you.</p>
+      <div class="chartwrap">
+        <div class="chart-head">
+          <div class="chart-legend">
+            <span class="lg"><i style="background:var(--good)"></i>Good Car &mdash; projected</span>
+            <span class="lg"><i style="background:var(--bad)"></i>Missed Bad Car</span>
+          </div>
+          <span style="font-size:.72rem;letter-spacing:.06em;color:var(--text-mute)">3-year cost of ownership</span>
+        </div>
+        <canvas id="costChart" width="1000" height="340" role="img" aria-label="Three-year cost-of-ownership projection: a Good Car stays low and steady while a missed Bad Car spikes past $8,000."></canvas>
+      </div>
     </div>
   </section>
 
@@ -1265,21 +1288,10 @@
     </div>
   </section>
 
-  <!-- ============ FIRST REPORT PROOF ============ -->
-  <section style="padding:5.5rem 1.5rem;border-bottom:1px solid var(--line);">
-    <div style="max-width:920px;margin:0 auto;">
-      <div style="background:var(--bg-card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:2.75rem 2.75rem 3rem;">
-        <div style="font-size:0.7rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.1rem;">The First One That Counted</div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;color:var(--silver);margin:0 0 1.1rem;">Not a demo. <em style="color:var(--gold);font-style:italic;">A real one.</em></h2>
-        <p style="font-family:'Inter Tight',sans-serif;font-size:1.05rem;color:var(--silver-2);line-height:1.7;max-width:620px;margin:0 0 1.9rem;">Hundreds of dry runs, thousands of hours — then the right data partners fell into place and everything came together. This was the one that counted, run on an actual 2012 Mercedes-Benz ML350 that crossed from Florida into Canada. Not a sample. Not staged. See it start to finish.</p>
-        <a href="first-report.html" style="display:inline-block;background:var(--gold);color:#051008;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:1rem 2.25rem;border-radius:2px;text-decoration:none;">See it start to finish &rarr;</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ TWO AUDIENCES ============ -->
   <section class="two-audiences">
     <div class="container">
+      <h2 class="ta-title">Two ways in. <em>Same honest answer.</em></h2>
       <div class="ta-grid">
 
         <div class="ta-card ta-buyer">
@@ -1298,6 +1310,18 @@
           <a class="ta-link" href="owner.html">See how it works for owners &rarr;</a>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIRST REPORT PROOF ============ -->
+  <section style="padding:5.5rem 1.5rem;border-bottom:1px solid var(--line);">
+    <div style="max-width:920px;margin:0 auto;">
+      <div style="background:var(--bg-card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:2.75rem 2.75rem 3rem;">
+        <div style="font-size:0.7rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.1rem;">The First One That Counted</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;color:var(--silver);margin:0 0 1.1rem;">Not a demo. <em style="color:var(--gold);font-style:italic;">A real one.</em></h2>
+        <p style="font-family:'Inter Tight',sans-serif;font-size:1.05rem;color:var(--silver-2);line-height:1.7;max-width:620px;margin:0 0 1.9rem;">Hundreds of dry runs, thousands of hours — then the right data partners fell into place and everything came together. This was the one that counted, run on an actual 2012 Mercedes-Benz ML350 that crossed from Florida into Canada. Not a sample. Not staged. See it start to finish.</p>
+        <a href="first-report.html" style="display:inline-block;background:var(--gold);color:#051008;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:1rem 2.25rem;border-radius:2px;text-decoration:none;">See it start to finish &rarr;</a>
       </div>
     </div>
   </section>
@@ -1439,25 +1463,6 @@
         <h2>History. Service records. Recalls.<br /><em>And the verdict on top.</em></h2>
         <p class="lede">Available accident reports. Reported service visits. Identified recalls — with the full text. Ownership history. Mileage timeline. Market value. Yes Car No Car pulls it all into a single independent Full VIN Report — then goes where a history report stops: the failure patterns coming for your exact engine, the real repair costs, and the verdict. One VIN. One honest answer.</p>
         <a class="fi-teaser-link" href="product.html">See what's in the report &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ COST PROJECTION ============ -->
-  <section class="costviz" data-color="var(--bad)">
-    <div class="container">
-      <div class="eyebrow">The number a report never gives you</div>
-      <h2>The $3,000 you don't <em>see coming.</em></h2>
-      <p class="lede">A history report tells you what happened. It never tells you what the next three years cost — the difference between a clean pick and the one repair that ambushes you.</p>
-      <div class="chartwrap">
-        <div class="chart-head">
-          <div class="chart-legend">
-            <span class="lg"><i style="background:var(--good)"></i>Good Car &mdash; projected</span>
-            <span class="lg"><i style="background:var(--bad)"></i>Missed Bad Car</span>
-          </div>
-          <span style="font-size:.72rem;letter-spacing:.06em;color:var(--text-mute)">3-year cost of ownership</span>
-        </div>
-        <canvas id="costChart" width="1000" height="340" role="img" aria-label="Three-year cost-of-ownership projection: a Good Car stays low and steady while a missed Bad Car spikes past $8,000."></canvas>
       </div>
     </div>
   </section>
