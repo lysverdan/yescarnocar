@@ -448,6 +448,7 @@
       projectKey: 'hck_pk_kYAVukdS-OICqoVk96IUQw5xUw1IpuAr',
       install: { framework: 'web', agent: 'claude-code' },
     });
+    window.__hcAnalytics = analytics;
   </script>
 </head>
 <body>
@@ -598,7 +599,6 @@
   <!-- waitlist analytics: fire waitlist_signup on Tally submit + preserve UTM source -->
   <script>
   (function(){
-    window.plausible = window.plausible || function(){ (window.plausible.q = window.plausible.q || []).push(arguments); };
     var KEYS=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
     function utms(){var q=new URLSearchParams(location.search),o={};KEYS.forEach(function(k){var v=q.get(k);if(v){try{sessionStorage.setItem('ycnc_'+k,v);}catch(e){}}var s=null;try{s=sessionStorage.getItem('ycnc_'+k);}catch(e){}if(s)o[k]=s;});return o;}
     var U=utms();
@@ -611,7 +611,7 @@
       if(typeof e.data!=='string')return;
       var d;try{d=JSON.parse(e.data);}catch(_){return;}
       if(d&&d.event==='Tally.FormSubmitted'){
-        try{window.plausible('waitlist_signup',{props:U});}catch(_){}
+        try{var a=window.__hcAnalytics;if(a){(a.capture||a.track||a.event||a.logEvent||function(){}).call(a,'waitlist_signup',U);}}catch(_){}
         try{window.dispatchEvent(new CustomEvent('waitlist_signup',{detail:U}));}catch(_){}
       }
     });
