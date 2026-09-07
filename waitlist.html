@@ -595,6 +595,28 @@
   </footer>
 
   <!-- Tally embed loader -->
+  <!-- waitlist analytics: fire waitlist_signup on Tally submit + preserve UTM source -->
+  <script>
+  (function(){
+    window.plausible = window.plausible || function(){ (window.plausible.q = window.plausible.q || []).push(arguments); };
+    var KEYS=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+    function utms(){var q=new URLSearchParams(location.search),o={};KEYS.forEach(function(k){var v=q.get(k);if(v){try{sessionStorage.setItem('ycnc_'+k,v);}catch(e){}}var s=null;try{s=sessionStorage.getItem('ycnc_'+k);}catch(e){}if(s)o[k]=s;});return o;}
+    var U=utms();
+    var qs=Object.keys(U).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(U[k]);}).join('&');
+    if(qs){
+      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(f){f.dataset.tallySrc+=(f.dataset.tallySrc.indexOf('?')>-1?'&':'?')+qs;});
+      document.querySelectorAll('a[href$="waitlist.html"]').forEach(function(a){try{var u=new URL(a.getAttribute('href'),location.href);Object.keys(U).forEach(function(k){u.searchParams.set(k,U[k]);});a.href=u.href;}catch(e){}});
+    }
+    window.addEventListener('message',function(e){
+      if(typeof e.data!=='string')return;
+      var d;try{d=JSON.parse(e.data);}catch(_){return;}
+      if(d&&d.event==='Tally.FormSubmitted'){
+        try{window.plausible('waitlist_signup',{props:U});}catch(_){}
+        try{window.dispatchEvent(new CustomEvent('waitlist_signup',{detail:U}));}catch(_){}
+      }
+    });
+  })();
+  </script>
   <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
   <script>
     const hamburger = document.getElementById('hamburger');
