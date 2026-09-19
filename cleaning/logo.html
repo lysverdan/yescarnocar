@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Que La Femme — Logo Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Cormorant+Garamond:wght@400;500;600&family=Parisienne&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --mauve:#8a5a66; --mauve-dark:#5d3a44; --blush:#f4e9ea;
+    --gold:#c19a5b; --gold-deep:#a8823f; --ink:#2a2529; --ivory:#fbf8f5;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Inter",sans-serif;background:var(--ivory);color:var(--ink);}
+  header{padding:56px 24px 30px;text-align:center;border-bottom:1px solid #ece2dd;}
+  header h1{font-family:"Fraunces",serif;font-weight:500;font-size:2.1rem;margin:0 0 8px;}
+  header p{color:#6f6469;max-width:56ch;margin:0 auto;}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 24px 80px;}
+  .concept{margin-bottom:56px;}
+  .concept > .label{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;}
+  .concept .label b{font-family:"Fraunces",serif;font-size:1.25rem;font-weight:600;}
+  .concept .label span{color:#6f6469;font-size:.92rem;}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .stage{border-radius:16px;padding:52px 32px;display:grid;place-items:center;min-height:230px;border:1px solid #ece2dd;}
+  .stage.light{background:#fff;}
+  .stage.dark{background:var(--mauve-dark);border-color:var(--mauve-dark);}
+  @media(max-width:720px){.pair{grid-template-columns:1fr;}}
+
+  /* ---------- Shared logo bits ---------- */
+  .serif{font-family:"Fraunces",serif;}
+  .script{font-family:"Parisienne",cursive;}
+  .cormorant{font-family:"Cormorant Garamond",serif;}
+
+  /* Concept A — stacked serif wordmark */
+  .A{text-align:center;line-height:1;}
+  .A .que{font-family:"Fraunces",serif;font-weight:500;font-size:2.9rem;letter-spacing:.02em;}
+  .A .la{font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:1.5rem;color:var(--gold-deep);margin:6px 0;}
+  .A .femme{font-family:"Fraunces",serif;font-weight:500;font-size:2.9rem;letter-spacing:.02em;}
+  .A .rule{width:70px;height:1px;background:var(--gold);margin:16px auto 12px;}
+  .A .tag{font-family:"Inter",sans-serif;font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:inherit;padding-left:.42em;}
+  .dark .A .la{color:var(--gold);}
+
+  /* Concept B — script signature */
+  .B{text-align:center;line-height:1;}
+  .B .sig{font-family:"Parisienne",cursive;font-size:4rem;color:var(--mauve);}
+  .dark .B .sig{color:#f4e9ea;}
+  .B .sig .cap{color:var(--gold-deep);}
+  .dark .B .sig .cap{color:var(--gold);}
+  .B .tag{font-family:"Inter",sans-serif;font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:#6f6469;margin-top:10px;}
+  .dark .B .tag{color:#d9c8ca;}
+
+  /* Concept C — horizontal lockup with monogram */
+  .C{display:flex;align-items:center;gap:20px;}
+  .C .mono{width:76px;height:76px;border-radius:14px;border:1.5px solid var(--gold);display:grid;place-items:center;background:var(--mauve);flex:none;}
+  .C .mono span{font-family:"Fraunces",serif;font-size:2.4rem;color:var(--gold);line-height:1;}
+  .dark .C .mono{background:transparent;}
+  .C .txt{line-height:1.05;}
+  .C .txt .name{font-family:"Fraunces",serif;font-weight:500;font-size:1.9rem;}
+  .C .txt .tag{font-family:"Inter",sans-serif;font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:#6f6469;margin-top:6px;}
+  .dark .C .txt{color:#fff;}
+  .dark .C .txt .tag{color:#d9c8ca;}
+
+  /* Concept D — oval crest / badge */
+  .D-badge{width:210px;height:150px;border:1.5px solid var(--gold);border-radius:50%/50%;display:grid;place-items:center;text-align:center;padding:16px;}
+  .dark .D-badge{border-color:var(--gold);}
+  .D .top{font-family:"Inter",sans-serif;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold-deep);}
+  .dark .D .top{color:var(--gold);}
+  .D .mid{font-family:"Fraunces",serif;font-size:1.45rem;font-weight:500;margin:7px 0;line-height:1.05;}
+  .D .mid em{font-style:italic;color:var(--gold-deep);}
+  .dark .D .mid{color:#fff;} .dark .D .mid em{color:var(--gold);}
+  .D .bot{font-family:"Inter",sans-serif;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:#6f6469;}
+  .dark .D .bot{color:#d9c8ca;}
+  .D .dot{color:var(--gold);font-size:.7rem;}
+
+  /* Concept E — monogram marks row (favicon / social) */
+  .marks{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
+  .m{width:92px;text-align:center;}
+  .m .box{width:92px;height:92px;border-radius:18px;display:grid;place-items:center;margin-bottom:8px;}
+  .m small{font-size:.72rem;color:#6f6469;}
+  .m1 .box{background:var(--mauve);}
+  .m1 .box span{font-family:"Fraunces",serif;font-size:2.8rem;color:var(--gold);}
+  .m2 .box{background:var(--gold);}
+  .m2 .box span{font-family:"Fraunces",serif;font-size:2.8rem;color:#fff;}
+  .m3 .box{background:#fff;border:1.5px solid var(--gold);}
+  .m3 .box span{font-family:"Fraunces",serif;font-size:2.1rem;color:var(--mauve);}
+  .m4 .box{background:var(--mauve-dark);}
+  .m4 .box span{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--gold);letter-spacing:.02em;}
+</style>
+</head>
+<body>
+<header>
+  <h1>Que La Femme — Logo Concepts</h1>
+  <p>Five directions in the site's mauve-rose &amp; gold palette. Each shown on light and dark. Tell me which one (or which mix) feels like her, and I'll refine it into final files and drop it into the site.</p>
+</header>
+
+<div class="wrap">
+
+  <!-- A -->
+  <div class="concept">
+    <div class="label"><b>A · The Stacked Serif</b><span>Classic, editorial, timeless. The safe-but-elegant flagship.</span></div>
+    <div class="pair">
+      <div class="stage light">
+        <div class="A"><div class="que">QUE</div><div class="la">la</div><div class="femme">FEMME</div><div class="rule"></div><div class="tag">Toronto Home Care</div></div>
+      </div>
+      <div class="stage dark" style="color:#fff;">
+        <div class="A"><div class="que">QUE</div><div class="la">la</div><div class="femme">FEMME</div><div class="rule"></div><div class="tag">Toronto Home Care</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="concept">
+    <div class="label"><b>B · The Signature</b><span>Feminine, personal, boutique. Feels hand-signed.</span></div>
+    <div class="pair">
+      <div class="stage light">
+        <div class="B"><div class="sig"><span class="cap">Q</span>ue <span class="cap">l</span>a <span class="cap">F</span>emme</div><div class="tag">Cleaning · Organizing · Estates · Books</div></div>
+      </div>
+      <div class="stage dark">
+        <div class="B"><div class="sig"><span class="cap">Q</span>ue <span class="cap">l</span>a <span class="cap">F</span>emme</div><div class="tag">Cleaning · Organizing · Estates · Books</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="concept">
+    <div class="label"><b>C · The Lockup</b><span>Monogram + wordmark. Most versatile for headers, cards, invoices.</span></div>
+    <div class="pair">
+      <div class="stage light">
+        <div class="C"><div class="mono"><span>Q</span></div><div class="txt"><div class="name">Que La Femme</div><div class="tag">Toronto · Home &amp; Life</div></div></div>
+      </div>
+      <div class="stage dark">
+        <div class="C"><div class="mono"><span>Q</span></div><div class="txt"><div class="name">Que La Femme</div><div class="tag">Toronto · Home &amp; Life</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D -->
+  <div class="concept">
+    <div class="label"><b>D · The Crest</b><span>A little badge/seal — great for a stamp, sticker, or car decal.</span></div>
+    <div class="pair">
+      <div class="stage light">
+        <div class="D"><div class="D-badge"><div><div class="top">Toronto</div><div class="mid">Que <em>la</em> Femme</div><div class="bot">Est. <span class="dot">✦</span> Home Care</div></div></div></div>
+      </div>
+      <div class="stage dark">
+        <div class="D"><div class="D-badge"><div><div class="top">Toronto</div><div class="mid">Que <em>la</em> Femme</div><div class="bot">Est. <span class="dot">✦</span> Home Care</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E -->
+  <div class="concept">
+    <div class="label"><b>E · The Marks</b><span>Icon / favicon / social-avatar versions of the monogram.</span></div>
+    <div class="stage light" style="min-height:auto;">
+      <div class="marks">
+        <div class="m m1"><div class="box"><span>Q</span></div><small>Primary</small></div>
+        <div class="m m2"><div class="box"><span>Q</span></div><small>Gold</small></div>
+        <div class="m m3"><div class="box"><span>Q</span></div><small>Outline</small></div>
+        <div class="m m4"><div class="box"><span>QLF</span></div><small>Initials</small></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
