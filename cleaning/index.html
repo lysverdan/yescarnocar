@@ -3,196 +3,199 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Que La Femme — Cleaning, Organizing & Bookkeeping in Toronto</title>
-<meta name="description" content="Que La Femme offers professional house cleaning, estate sale management, home organization, and bookkeeping services across Toronto and the GTA. Trustworthy, detail-oriented, and locally owned." />
+<title>Que La Femme — Cleaning, Organizing, Estates &amp; Bookkeeping | Toronto</title>
+<meta name="description" content="Que La Femme delivers discreet, meticulous home care for downtown Toronto and the GTA — house cleaning, home organization, estate management, and bookkeeping. Private. Precise. Professional." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --sage: #8a5a66;        /* primary: rich mauve-rose */
-    --sage-dark: #6d4551;   /* deeper mauve for hover / dark sections */
-    --sage-soft: #f4e9ea;   /* soft blush tint */
-    --cream: #fbf8f5;       /* warm ivory */
-    --cream-2: #f4ece6;
-    --ink: #2a2529;         /* soft charcoal */
-    --muted: #6f6469;
-    --line: #ece2dd;
-    --gold: #c19a5b;        /* refined antique gold accent */
-    --white: #ffffff;
-    --shadow: 0 12px 34px rgba(80, 55, 60, 0.10);
-    --radius: 16px;
-    --max: 1140px;
+  :root{
+    --ink:#0d0e11;
+    --charcoal:#16181d;
+    --charcoal-2:#1e2127;
+    --steel:#3a3f47;
+    --steel-2:#767c86;
+    --mist:#b9bec6;
+    --platinum:#e9ebee;
+    --platinum-2:#f4f5f7;
+    --line:#dcdfe4;
+    --line-dark:rgba(255,255,255,.12);
+    --white:#ffffff;
+    --sheen:linear-gradient(135deg,#eef0f2 0%,#aab0b8 42%,#4a4f57 100%);
+    --radius:3px;
+    --shadow:0 24px 60px rgba(13,14,17,.14);
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;font-family:"Inter",system-ui,sans-serif;color:var(--ink);
+    background:var(--platinum-2);line-height:1.7;font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:0;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 32px;}
+
+  .kicker{
+    font-family:"Inter",sans-serif;font-size:.7rem;font-weight:500;
+    letter-spacing:.34em;text-transform:uppercase;color:var(--steel-2);
+    display:inline-block;
   }
 
-  * { box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    margin: 0;
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
-    color: var(--ink);
-    background: var(--cream);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
+  .btn{
+    display:inline-block;font-family:"Inter",sans-serif;font-size:.74rem;font-weight:500;
+    letter-spacing:.22em;text-transform:uppercase;text-decoration:none;
+    padding:16px 34px;border-radius:var(--radius);cursor:pointer;
+    background:var(--ink);color:#fff;border:1px solid var(--ink);
+    transition:background .25s ease,color .25s ease,transform .25s ease;
   }
+  .btn:hover{transform:translateY(-2px);background:var(--charcoal-2);}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--steel);}
+  .btn.ghost:hover{background:var(--ink);color:#fff;}
+  .btn.light{background:#fff;color:var(--ink);border:1px solid #fff;}
+  .btn.light:hover{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);}
+  .btn.outline-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);}
+  .btn.outline-light:hover{background:#fff;color:var(--ink);}
 
-  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; }
+  /* ---------- Header ---------- */
+  header.site{position:sticky;top:0;z-index:60;background:rgba(13,14,17,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:var(--max);margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:#fff;}
+  .brand .mark{width:38px;height:38px;border:1px solid var(--steel-2);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:1.4rem;color:#fff;}
+  .brand .bname{font-family:"Cormorant Garamond",serif;font-size:1.3rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;}
+  .nav-links{display:flex;gap:34px;align-items:center;}
+  .nav-links a{text-decoration:none;color:var(--mist);font-size:.74rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:color .2s;}
+  .nav-links a:hover{color:#fff;}
+  .nav-links a.navbtn{border:1px solid rgba(255,255,255,.3);padding:11px 20px;color:#fff;}
+  .nav-links a.navbtn:hover{background:#fff;color:var(--ink);}
+  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;}
 
-  a { color: var(--sage-dark); }
+  /* ---------- Hero ---------- */
+  .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(120% 90% at 78% 8%,rgba(150,158,168,.20),transparent 55%),
+    radial-gradient(90% 70% at 12% 100%,rgba(90,96,104,.18),transparent 60%);}
+  .hero::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--sheen);opacity:.7;}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:104px 32px 112px;max-width:var(--max);margin:0 auto;}
+  .hero .kicker{color:var(--mist);}
+  .hero h1{font-size:clamp(3rem,6vw,5rem);margin:18px 0 22px;font-weight:400;letter-spacing:-.01em;}
+  .hero h1 em{font-style:italic;color:var(--mist);}
+  .hero .lede{font-size:1.12rem;color:var(--mist);max-width:46ch;margin:0 0 36px;font-weight:300;}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-meta{margin-top:40px;display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line-dark);padding-top:24px;}
+  .hero-meta div{padding-right:34px;margin-right:34px;border-right:1px solid var(--line-dark);}
+  .hero-meta div:last-child{border-right:none;}
+  .hero-meta b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:500;}
+  .hero-meta span{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel-2);}
 
-  img { max-width: 100%; display: block; }
+  .hero-panel{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);backdrop-filter:blur(6px);padding:36px;}
+  .hero-panel h3{font-size:1.6rem;margin:0 0 4px;color:#fff;}
+  .hero-panel p{color:var(--steel-2);font-size:.82rem;letter-spacing:.04em;margin:0 0 22px;}
+  .hero-panel ul{list-style:none;padding:0;margin:0 0 26px;}
+  .hero-panel li{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line-dark);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--platinum);}
+  .hero-panel li:last-child{border-bottom:none;}
+  .hero-panel li span{color:var(--steel-2);font-family:"Cormorant Garamond",serif;font-size:1.1rem;letter-spacing:0;}
 
-  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-
-  .btn {
-    display: inline-block;
-    background: var(--sage);
-    color: #fff;
-    padding: 14px 26px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.98rem;
-    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
-    border: none;
-    cursor: pointer;
-  }
-  .btn:hover { background: var(--sage-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
-  .btn.secondary { background: transparent; color: var(--sage-dark); border: 1.5px solid var(--sage); }
-  .btn.secondary:hover { background: var(--sage-soft); color: var(--sage-dark); }
-
-  /* Header */
-  header.site {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(250, 248, 243, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: var(--max); margin: 0 auto; }
-  .brand { font-family: "Fraunces", serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-  .brand .mark { width: 36px; height: 36px; border-radius: 10px; background: var(--sage); color: var(--gold); display: grid; place-items: center; font-family: "Fraunces", serif; font-size: 1.25rem; font-weight: 600; border: 1px solid var(--gold); }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.95rem; }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-cta { display: inline-block; }
-  .menu-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--ink); }
-
-  /* Hero */
-  .hero { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--sage-soft) 0%, var(--cream) 60%); }
-  .hero-inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; padding: 84px 24px 88px; max-width: var(--max); margin: 0 auto; }
-  .eyebrow { display: inline-block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-dark); background: var(--white); padding: 6px 14px; border-radius: 999px; box-shadow: var(--shadow); margin-bottom: 20px; }
-  .hero h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); margin: 0 0 18px; }
-  .hero h1 em { font-style: italic; color: var(--sage-dark); }
-  .hero p.lede { font-size: 1.15rem; color: var(--muted); margin: 0 0 30px; max-width: 42ch; }
-  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
-  .hero-trust { margin-top: 28px; display: flex; gap: 22px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; }
-  .hero-trust span { display: flex; align-items: center; gap: 7px; }
-  .hero-trust .dot { color: var(--gold); }
-
-  .hero-card {
-    background: var(--white); border-radius: 22px; padding: 30px; box-shadow: var(--shadow);
-    border: 1px solid var(--line);
-  }
-  .hero-card h3 { margin: 0 0 6px; font-size: 1.3rem; }
-  .hero-card p { color: var(--muted); font-size: 0.95rem; margin: 0 0 20px; }
-  .hero-card ul { list-style: none; padding: 0; margin: 0 0 22px; }
-  .hero-card li { padding: 9px 0; border-bottom: 1px dashed var(--line); display: flex; align-items: center; gap: 12px; font-weight: 500; }
-  .hero-card li:last-child { border-bottom: none; }
-  .hero-card li .ico { width: 30px; height: 30px; border-radius: 8px; background: var(--sage-soft); display: grid; place-items: center; flex: none; }
-
-  /* Sections */
-  section { padding: 82px 0; }
-  .section-head { text-align: center; max-width: 620px; margin: 0 auto 52px; }
-  .section-head .eyebrow { box-shadow: none; background: var(--sage-soft); }
-  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 0 0 14px; }
-  .section-head p { color: var(--muted); font-size: 1.08rem; margin: 0; }
+  /* ---------- Sections ---------- */
+  section{padding:104px 0;}
+  .section-head{max-width:660px;margin:0 auto 64px;text-align:center;}
+  .section-head h2{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:16px 0 0;font-weight:400;}
+  .section-head p{color:var(--steel-2);font-size:1.05rem;margin:18px auto 0;max-width:56ch;font-weight:300;}
 
   /* Services */
-  .services { background: var(--white); }
-  .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .service {
-    border: 1px solid var(--line); border-radius: var(--radius); padding: 32px;
-    background: var(--cream); transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .service:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-top: 3px solid var(--gold); }
-  .service .ico { width: 54px; height: 54px; border-radius: 14px; background: var(--sage); color:#fff; display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 18px; }
-  .service h3 { font-size: 1.4rem; margin: 0 0 10px; }
-  .service p { color: var(--muted); margin: 0 0 16px; }
-  .service ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.94rem; }
-  .service ul li { margin-bottom: 6px; }
+  .services{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);}
+  .service{padding:44px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;transition:background .3s ease;}
+  .service:nth-child(2n){border-right:none;}
+  .service:nth-child(n+3){border-bottom:none;}
+  .service:hover{background:var(--platinum-2);}
+  .service .num{font-family:"Cormorant Garamond",serif;font-size:1rem;color:var(--steel-2);letter-spacing:.1em;}
+  .service h3{font-size:1.9rem;margin:14px 0 12px;font-weight:500;}
+  .service p{color:var(--steel-2);margin:0 0 20px;font-weight:300;font-size:.98rem;}
+  .service ul{list-style:none;margin:0;padding:0;}
+  .service ul li{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);padding:9px 0;border-top:1px solid var(--line);}
 
   /* Why */
-  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-  .why { text-align: center; padding: 20px; }
-  .why .ico { width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 50%; background: var(--sage-soft); color: var(--sage-dark); display: grid; place-items: center; font-size: 1.6rem; }
-  .why h3 { font-size: 1.25rem; margin: 0 0 8px; }
-  .why p { color: var(--muted); margin: 0; font-size: 0.97rem; }
+  .why{background:var(--platinum-2);}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .why-cell{background:var(--platinum-2);padding:44px 34px;text-align:center;}
+  .why-cell .ic{width:44px;height:44px;margin:0 auto 22px;color:var(--ink);}
+  .why-cell .ic svg{width:100%;height:100%;}
+  .why-cell h3{font-size:1.5rem;margin:0 0 10px;font-weight:500;}
+  .why-cell p{color:var(--steel-2);margin:0;font-weight:300;font-size:.96rem;}
 
   /* About */
-  .about { background: var(--cream-2); }
-  .about-inner { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center; }
-  .about .photo { background: linear-gradient(160deg, var(--sage) 0%, var(--sage-dark) 100%); border-radius: 22px; aspect-ratio: 4/5; display: grid; place-items: center; color: rgba(255,255,255,0.85); text-align: center; padding: 24px; box-shadow: var(--shadow); }
-  .about .photo span { font-size: 0.9rem; }
-  .about h2 { font-size: clamp(1.9rem, 4vw, 2.5rem); margin: 0 0 18px; }
-  .about p { color: var(--muted); margin: 0 0 16px; font-size: 1.05rem; }
-  .about .sign { font-family: "Fraunces", serif; font-size: 1.2rem; color: var(--sage-dark); font-style: italic; }
+  .about{background:var(--ink);color:#fff;}
+  .about-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;}
+  .about .frame{aspect-ratio:4/5;border:1px solid var(--steel);background:
+    linear-gradient(160deg,var(--charcoal-2),var(--ink));display:grid;place-items:center;
+    color:var(--steel-2);text-align:center;padding:24px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;position:relative;}
+  .about .frame::after{content:"";position:absolute;top:12px;left:12px;right:12px;bottom:12px;border:1px solid var(--line-dark);pointer-events:none;}
+  .about h2{font-size:clamp(2.1rem,4.5vw,3rem);margin:16px 0 22px;font-weight:400;}
+  .about h2 em{font-style:italic;color:var(--mist);}
+  .about p{color:var(--mist);margin:0 0 18px;font-weight:300;font-size:1.05rem;}
+  .about .sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.4rem;color:#fff;margin-top:10px;}
+  .about .kicker{color:var(--steel-2);}
 
   /* Areas */
-  .areas { background: var(--sage-dark); color: #fff; text-align: center; }
-  .areas h2 { color: #fff; font-size: clamp(1.8rem,4vw,2.4rem); margin: 0 0 14px; }
-  .areas p { color: rgba(255,255,255,0.82); max-width: 60ch; margin: 0 auto 26px; }
-  .area-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-  .area-tags span { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 999px; font-size: 0.9rem; }
+  .areas{background:var(--charcoal);color:#fff;text-align:center;}
+  .areas h2{font-size:clamp(2.1rem,4.5vw,3rem);margin:16px 0 18px;font-weight:400;}
+  .areas h2 em{font-style:italic;color:var(--mist);}
+  .areas > .wrap > p{color:var(--steel-2);max-width:60ch;margin:0 auto 34px;font-weight:300;}
+  .area-tags{display:flex;flex-wrap:wrap;gap:0;justify-content:center;max-width:900px;margin:0 auto;border:1px solid var(--line-dark);}
+  .area-tags span{padding:15px 26px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);border-right:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);flex:1 1 auto;}
 
   /* Testimonials */
-  .quotes { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-  .quote { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
-  .quote .stars { color: var(--gold); margin-bottom: 12px; letter-spacing: 2px; }
-  .quote p { font-style: italic; color: var(--ink); margin: 0 0 16px; }
-  .quote .who { font-weight: 600; font-size: 0.92rem; color: var(--muted); }
+  .testimonials{background:var(--white);border-top:1px solid var(--line);}
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .quote{background:#fff;padding:40px 34px;}
+  .quote .qm{font-family:"Cormorant Garamond",serif;font-size:2.6rem;line-height:.6;color:var(--steel-2);}
+  .quote p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.28rem;line-height:1.4;color:var(--ink);margin:14px 0 22px;font-weight:400;}
+  .quote .who{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel-2);}
 
   /* Contact */
-  .contact { background: var(--white); }
-  .contact-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: start; }
-  .contact-info h2 { font-size: clamp(1.9rem,4vw,2.5rem); margin: 0 0 16px; }
-  .contact-info p { color: var(--muted); margin: 0 0 26px; }
-  .contact-list { list-style: none; padding: 0; margin: 0; }
-  .contact-list li { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
-  .contact-list .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--sage-soft); display: grid; place-items: center; flex: none; font-size: 1.1rem; }
-  .contact-list strong { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; }
-  .contact-list a, .contact-list span.v { color: var(--muted); text-decoration: none; }
+  .contact{background:var(--platinum-2);}
+  .contact-inner{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:start;}
+  .contact-info h2{font-size:clamp(2.1rem,4.5vw,3rem);margin:16px 0 20px;font-weight:400;}
+  .contact-info > p{color:var(--steel-2);margin:0 0 34px;font-weight:300;font-size:1.05rem;}
+  .contact-list{list-style:none;padding:0;margin:0;}
+  .contact-list li{display:flex;gap:18px;align-items:center;padding:20px 0;border-top:1px solid var(--line);}
+  .contact-list li:last-child{border-bottom:1px solid var(--line);}
+  .contact-list .ic{width:22px;height:22px;color:var(--ink);flex:none;}
+  .contact-list .ic svg{width:100%;height:100%;}
+  .contact-list .k{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--steel-2);display:block;margin-bottom:2px;}
+  .contact-list .v{font-family:"Cormorant Garamond",serif;font-size:1.25rem;text-decoration:none;color:var(--ink);}
 
-  form { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; }
-  .field { margin-bottom: 18px; }
-  label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 7px; }
-  input, select, textarea {
-    width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
-    font-family: inherit; font-size: 0.98rem; background: #fff; color: var(--ink);
-  }
-  input:focus, select:focus, textarea:focus { outline: 2px solid var(--sage); border-color: var(--sage); }
-  textarea { min-height: 110px; resize: vertical; }
-  .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 14px; }
+  form{background:var(--white);border:1px solid var(--line);padding:40px;}
+  .field{margin-bottom:22px;}
+  label{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);margin-bottom:9px;}
+  input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);font-family:inherit;font-size:.98rem;background:var(--platinum-2);color:var(--ink);}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink);background:#fff;}
+  textarea{min-height:120px;resize:vertical;}
+  .form-note{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel-2);margin-top:16px;}
 
   /* Footer */
-  footer.site { background: var(--ink); color: rgba(255,255,255,0.75); padding: 50px 0 30px; }
-  .footer-inner { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
-  footer .brand { color: #fff; margin-bottom: 12px; }
-  footer p { margin: 0 0 8px; font-size: 0.92rem; }
-  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-  .footer-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.92rem; }
-  .footer-links a:hover { color: #fff; }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 34px; padding-top: 20px; font-size: 0.82rem; color: rgba(255,255,255,0.5); text-align: center; }
+  footer.site{background:var(--ink);color:var(--mist);padding:64px 0 34px;border-top:1px solid var(--line-dark);}
+  .footer-inner{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  footer .brand{margin-bottom:16px;}
+  footer p{margin:0 0 8px;font-size:.8rem;letter-spacing:.06em;color:var(--steel-2);}
+  .footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+  .footer-links a{text-decoration:none;color:var(--mist);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;}
+  .footer-links a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid var(--line-dark);margin-top:40px;padding-top:24px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);text-align:center;}
 
-  /* Responsive */
-  @media (max-width: 860px) {
-    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); flex-direction: column; padding: 16px 24px; border-bottom: 1px solid var(--line); gap: 16px; }
-    .nav-links.open { display: flex; }
-    .menu-toggle { display: block; }
-    .hero-inner, .about-inner, .contact-inner { grid-template-columns: 1fr; }
-    .service-grid, .why-grid, .quotes { grid-template-columns: 1fr; }
-    .about .photo { aspect-ratio: 16/10; }
+  @media(max-width:880px){
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px 32px;gap:20px;border-bottom:1px solid var(--line-dark);align-items:flex-start;}
+    .nav-links.open{display:flex;}
+    .menu-toggle{display:block;}
+    .hero-inner,.about-inner,.contact-inner{grid-template-columns:1fr;}
+    .service-grid,.why-grid,.quotes{grid-template-columns:1fr;}
+    .service{border-right:none!important;border-bottom:1px solid var(--line)!important;}
+    .service:last-child{border-bottom:none!important;}
+    .why-cell,.quote{padding:36px 28px;}
+    .hero-meta div{border-right:none;padding-right:0;margin-right:0;}
   }
 </style>
 </head>
@@ -200,13 +203,13 @@
 
 <header class="site">
   <div class="nav">
-    <a href="#top" class="brand"><span class="mark">Q</span> Que La Femme</a>
+    <a href="#top" class="brand"><span class="mark">Q</span><span class="bname">Que&nbsp;La&nbsp;Femme</span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
+      <a href="#why">Approach</a>
       <a href="#about">About</a>
-      <a href="#areas">Areas</a>
-      <a href="#contact" class="btn nav-cta">Get a Free Quote</a>
+      <a href="#areas">Coverage</a>
+      <a href="#contact" class="navbtn">Enquire</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
   </div>
@@ -216,87 +219,87 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <span class="eyebrow">Toronto & the GTA</span>
-      <h1>A cleaner home, <em>handled with care.</em></h1>
-      <p class="lede">Que La Femme brings professional house cleaning, home organization, estate sale management, and bookkeeping under one trusted, local roof — so you can breathe easier.</p>
+      <span class="kicker">Downtown Toronto · By Appointment</span>
+      <h1>Meticulous care,<br><em>quietly delivered.</em></h1>
+      <p class="lede">Que La Femme is a discreet home-management studio for the city's most demanding addresses — cleaning, organization, estate management, and bookkeeping, held to a single standard: flawless.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn">Request a Free Quote</a>
-        <a href="#services" class="btn secondary">See Our Services</a>
+        <a href="#contact" class="btn light">Request Consultation</a>
+        <a href="#services" class="btn outline-light">View Services</a>
       </div>
-      <div class="hero-trust">
-        <span><span class="dot">★</span> Locally owned in Toronto</span>
-        <span><span class="dot">★</span> Insured &amp; reliable</span>
-        <span><span class="dot">★</span> Detail-obsessed</span>
+      <div class="hero-meta">
+        <div><b>04</b><span>Disciplines</span></div>
+        <div><b>GTA</b><span>Coverage</span></div>
+        <div><b>Private</b><span>&amp; Insured</span></div>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>How can we help today?</h3>
-      <p>One team, four ways to make life lighter.</p>
+    <aside class="hero-panel">
+      <h3>The Studio</h3>
+      <p>Four disciplines. One point of contact.</p>
       <ul>
-        <li><span class="ico">🧹</span> House &amp; deep cleaning</li>
-        <li><span class="ico">📦</span> Home organization</li>
-        <li><span class="ico">🏷️</span> Estate sales &amp; downsizing</li>
-        <li><span class="ico">📊</span> Bookkeeping for small business</li>
+        <li>Cleaning <span>01</span></li>
+        <li>Organization <span>02</span></li>
+        <li>Estate Management <span>03</span></li>
+        <li>Bookkeeping <span>04</span></li>
       </ul>
-      <a href="#contact" class="btn" style="width:100%; text-align:center;">Book a Consultation</a>
-    </div>
+      <a href="#contact" class="btn light" style="width:100%;text-align:center;">Begin</a>
+    </aside>
   </div>
 </section>
 
 <section class="services" id="services">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">What We Do</span>
-      <h2>Services tailored to your home &amp; life</h2>
-      <p>Whether it's a weekly tidy, a full move-out, or getting the books in order, we handle the details so you don't have to.</p>
+      <span class="kicker">Services</span>
+      <h2>Four disciplines, one standard</h2>
+      <p>From a weekly maintenance schedule to the full management of an estate, the work is precise, discreet, and handled directly.</p>
     </div>
     <div class="service-grid">
 
       <div class="service">
-        <div class="ico">🧹</div>
+        <div class="num">01 — Cleaning</div>
         <h3>House Cleaning</h3>
-        <p>Reliable, thorough cleaning that leaves every room fresh — one-time, weekly, or monthly.</p>
+        <p>Exacting, dependable cleaning on a schedule that suits your household — recurring, seasonal, or on demand.</p>
         <ul>
-          <li>Recurring &amp; one-time cleans</li>
-          <li>Deep cleans &amp; spring refresh</li>
-          <li>Move-in / move-out cleaning</li>
-          <li>Kitchens, baths, floors &amp; more</li>
+          <li>Recurring &amp; one-time service</li>
+          <li>Deep &amp; seasonal cleaning</li>
+          <li>Move-in / move-out</li>
+          <li>Condos, homes &amp; pieds-à-terre</li>
         </ul>
       </div>
 
       <div class="service">
-        <div class="ico">📦</div>
+        <div class="num">02 — Order</div>
         <h3>Home Organization</h3>
-        <p>Calm, functional spaces designed around how you actually live — from a single closet to the whole house.</p>
+        <p>Considered, functional order — spaces designed around how you actually live, then kept that way.</p>
         <ul>
           <li>Closets, pantries &amp; kitchens</li>
-          <li>Decluttering &amp; systems that last</li>
-          <li>Paperwork &amp; storage solutions</li>
-          <li>Move &amp; unpack organizing</li>
+          <li>Decluttering &amp; lasting systems</li>
+          <li>Paper &amp; storage solutions</li>
+          <li>Relocation &amp; unpacking</li>
         </ul>
       </div>
 
       <div class="service">
-        <div class="ico">🏷️</div>
-        <h3>Estate Sales</h3>
-        <p>Compassionate, organized estate sale management during life's big transitions and downsizing.</p>
+        <div class="num">03 — Transition</div>
+        <h3>Estate Management</h3>
+        <p>Composed, confidential handling of estates and downsizing — organized from first sort to final sale.</p>
         <ul>
-          <li>Sorting, staging &amp; pricing</li>
-          <li>Sale setup &amp; management</li>
+          <li>Sorting, staging &amp; valuation</li>
+          <li>Estate sale management</li>
           <li>Downsizing &amp; clear-outs</li>
-          <li>Respectful, discreet service</li>
+          <li>Discreet, respectful service</li>
         </ul>
       </div>
 
       <div class="service">
-        <div class="ico">📊</div>
+        <div class="num">04 — Ledger</div>
         <h3>Bookkeeping</h3>
-        <p>Tidy books for small businesses and busy households — the same care we bring to your home, for your finances.</p>
+        <p>The same precision, applied to your finances — clean books for small businesses and private households.</p>
         <ul>
           <li>Monthly bookkeeping</li>
           <li>Invoicing &amp; expense tracking</li>
-          <li>Reconciliations &amp; reports</li>
-          <li>Tax-season prep &amp; organization</li>
+          <li>Reconciliations &amp; reporting</li>
+          <li>Tax-season preparation</li>
         </ul>
       </div>
 
@@ -304,28 +307,28 @@
   </div>
 </section>
 
-<section class="why" id="why" style="background: var(--cream);">
+<section class="why" id="why">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Why Que La Femme</span>
-      <h2>Trust is the whole job</h2>
-      <p>When we're in your home or handling your books, dependability isn't a bonus — it's the point.</p>
+      <span class="kicker">The Approach</span>
+      <h2>Discretion is the service</h2>
+      <p>When someone is inside your home or handling your accounts, trust isn't a feature. It's the entire proposition.</p>
     </div>
     <div class="why-grid">
-      <div class="why">
-        <div class="ico">🔑</div>
-        <h3>Trustworthy</h3>
-        <p>Vetted, reliable, and respectful of your home and privacy — every single visit.</p>
+      <div class="why-cell">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="14" y="20" width="20" height="18"/><path d="M18 20v-4a6 6 0 0112 0v4"/><circle cx="24" cy="28" r="2"/></svg></div>
+        <h3>Confidential</h3>
+        <p>Vetted, insured, and bound to absolute privacy. What happens in your home stays there.</p>
       </div>
-      <div class="why">
-        <div class="ico">✨</div>
-        <h3>Detail-Oriented</h3>
-        <p>The corners other people skip are the ones we notice. Nothing gets left half-done.</p>
+      <div class="why-cell">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 8l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/></svg></div>
+        <h3>Exacting</h3>
+        <p>The details others overlook are the ones we're hired for. Nothing is left half-finished.</p>
       </div>
-      <div class="why">
-        <div class="ico">🤝</div>
-        <h3>Personal Service</h3>
-        <p>You work directly with the owner — real communication, no call-center runaround.</p>
+      <div class="why-cell">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="16"/><path d="M16 24l6 6 10-12"/></svg></div>
+        <h3>Direct</h3>
+        <p>You deal with the principal — one accountable point of contact, start to finish.</p>
       </div>
     </div>
   </div>
@@ -333,27 +336,28 @@
 
 <section class="about" id="about">
   <div class="wrap about-inner">
-    <div class="photo"><span>[Add a warm photo of the owner here]</span></div>
+    <div class="frame">[ Portrait of Melissa Kalef ]</div>
     <div>
-      <span class="eyebrow" style="background: var(--sage-soft);">Meet the Owner</span>
-      <h2>Hi, I'm Melissa Kalef</h2>
-      <p>[Write 2–3 sentences here in her own voice. For example: "I started Que La Femme because I love bringing order and calm to people's homes and lives. After years of helping friends and family declutter, clean, manage estate sales, and keep their books straight, I decided to make it my work."]</p>
-      <p>[A second short paragraph about her promise to clients — reliability, care, attention to detail — and what makes her different.]</p>
-      <p class="sign">— Melissa Kalef, Owner</p>
+      <span class="kicker">The Principal</span>
+      <h2>Melissa Kalef,<br><em>founder.</em></h2>
+      <p>[Two or three lines in Melissa's voice — why she founded Que La Femme, and the standard she holds. e.g. "I built Que La Femme for people who expect their home and affairs handled properly — quietly, precisely, and without having to ask twice."]</p>
+      <p>[A second short line on her promise: reliability, discretion, and a level of care usually reserved for far more than housekeeping.]</p>
+      <p class="sign">Melissa Kalef</p>
     </div>
   </div>
 </section>
 
 <section class="areas" id="areas">
   <div class="wrap">
-    <h2>Downtown Toronto — and anywhere the GTA takes us</h2>
-    <p>Based right downtown and happy to travel. From a King West condo to a home in the suburbs, wherever you are in the Greater Toronto Area, we'll come to you.</p>
+    <span class="kicker">Coverage</span>
+    <h2>Downtown by base — <em>the GTA by appointment</em></h2>
+    <p>Rooted in the core and mobile across the region. From a King West tower to a home in the suburbs, the studio comes to you.</p>
     <div class="area-tags">
-      <span>Downtown &amp; the Core</span>
-      <span>King West · Liberty Village</span>
-      <span>The Annex · Yorkville</span>
-      <span>The Beaches · Leslieville</span>
-      <span>East York · Leaside</span>
+      <span>Downtown &amp; Core</span>
+      <span>King West</span>
+      <span>Yorkville · Annex</span>
+      <span>Leslieville · Beaches</span>
+      <span>Leaside · East York</span>
       <span>North York</span>
       <span>Etobicoke</span>
       <span>Scarborough</span>
@@ -363,28 +367,28 @@
   </div>
 </section>
 
-<section class="testimonials" style="background: var(--cream);">
+<section class="testimonials">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Kind Words</span>
-      <h2>What clients say</h2>
-      <p>Replace these with real reviews once you have them — a few genuine lines from happy clients go a long way.</p>
+      <span class="kicker">Clients</span>
+      <h2>On the record</h2>
+      <p>Replace with genuine client words as they come in — a few precise lines carry more than a wall of stars.</p>
     </div>
     <div class="quotes">
       <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“[Placeholder testimonial — e.g. She left our home spotless and was so easy to work with. Booking again!]”</p>
-        <div class="who">— [Client Name], [Neighbourhood]</div>
+        <div class="qm">“</div>
+        <p>[Placeholder — e.g. Impeccable, and entirely discreet. The standard I'd given up finding.]</p>
+        <div class="who">— Client, Yorkville</div>
       </div>
       <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“[Placeholder testimonial — e.g. She managed my mother's estate sale with such care during a hard time. Truly grateful.]”</p>
-        <div class="who">— [Client Name], [Neighbourhood]</div>
+        <div class="qm">“</div>
+        <p>[Placeholder — e.g. She managed my mother's estate with composure and grace. I never had to chase a thing.]</p>
+        <div class="who">— Client, Rosedale</div>
       </div>
       <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“[Placeholder testimonial — e.g. My closets and my books have never been more organized. Worth every penny.]”</p>
-        <div class="who">— [Client Name], [Neighbourhood]</div>
+        <div class="qm">“</div>
+        <p>[Placeholder — e.g. My home and my books have never been in better order. Worth every dollar.]</p>
+        <div class="who">— Client, King West</div>
       </div>
     </div>
   </div>
@@ -393,61 +397,61 @@
 <section class="contact" id="contact">
   <div class="wrap contact-inner">
     <div class="contact-info">
-      <span class="eyebrow" style="background: var(--sage-soft);">Get in Touch</span>
-      <h2>Request a free quote</h2>
-      <p>Tell us a little about what you need and we'll get back to you within one business day.</p>
+      <span class="kicker">Enquiries</span>
+      <h2>Request a consultation</h2>
+      <p>Tell us what you need. We reply within one business day, in confidence.</p>
       <ul class="contact-list">
         <li>
-          <span class="ico">📞</span>
-          <div><strong>Call or Text</strong><a href="tel:[Phone]">[Phone]</a></div>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+          <div><span class="k">Telephone</span><a class="v" href="tel:[Phone]">[Phone]</a></div>
         </li>
         <li>
-          <span class="ico">✉️</span>
-          <div><strong>Email</strong><a href="mailto:[Email]">[Email]</a></div>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg></span>
+          <div><span class="k">Email</span><a class="v" href="mailto:[Email]">[Email]</a></div>
         </li>
         <li>
-          <span class="ico">📍</span>
-          <div><strong>Location</strong><span class="v">Toronto, Ontario</span></div>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></span>
+          <div><span class="k">Location</span><span class="v">Toronto, Ontario</span></div>
         </li>
         <li>
-          <span class="ico">🕘</span>
-          <div><strong>Hours</strong><span class="v">[e.g. Mon–Sat, 8am–6pm]</span></div>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+          <div><span class="k">Hours</span><span class="v">[e.g. Mon–Sat, by appointment]</span></div>
         </li>
       </ul>
     </div>
 
-    <!-- To make this form send email, sign up free at formspree.io and replace
-         the action URL below with your form's endpoint. Until then it opens the
-         visitor's email app via the mailto fallback. -->
+    <!-- To route submissions to an inbox, create a free form at formspree.io and
+         paste its endpoint into the action below. Until then, it opens the
+         visitor's email client via the mailto fallback. -->
     <form action="mailto:[Email]" method="post" enctype="text/plain">
       <div class="field">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required />
+        <input type="text" id="name" name="name" placeholder="Full name" required />
       </div>
       <div class="field">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="you@email.com" required />
       </div>
       <div class="field">
-        <label for="phone">Phone</label>
+        <label for="phone">Telephone</label>
         <input type="tel" id="phone" name="phone" placeholder="(416) 000-0000" />
       </div>
       <div class="field">
-        <label for="service">Which service?</label>
+        <label for="service">Discipline</label>
         <select id="service" name="service">
           <option>House Cleaning</option>
           <option>Home Organization</option>
-          <option>Estate Sale</option>
+          <option>Estate Management</option>
           <option>Bookkeeping</option>
-          <option>Not sure yet</option>
+          <option>Undecided</option>
         </select>
       </div>
       <div class="field">
-        <label for="message">How can we help?</label>
-        <textarea id="message" name="message" placeholder="Tell us a bit about your home or project..."></textarea>
+        <label for="message">Details</label>
+        <textarea id="message" name="message" placeholder="A few words about your home or project."></textarea>
       </div>
-      <button type="submit" class="btn" style="width:100%;">Send Request</button>
-      <p class="form-note">We'll never share your information. Free, no-obligation quotes.</p>
+      <button type="submit" class="btn" style="width:100%;">Send Enquiry</button>
+      <p class="form-note">Held in confidence · No obligation</p>
     </form>
   </div>
 </section>
@@ -456,39 +460,34 @@
   <div class="wrap">
     <div class="footer-inner">
       <div>
-        <div class="brand"><span class="mark">Q</span> Que La Femme</div>
-        <p>Cleaning · Organizing · Estate Sales · Bookkeeping</p>
+        <a href="#top" class="brand"><span class="mark">Q</span><span class="bname">Que&nbsp;La&nbsp;Femme</span></a>
+        <p>Cleaning · Organization · Estates · Bookkeeping</p>
         <p>Toronto &amp; the Greater Toronto Area</p>
       </div>
       <div>
         <div class="footer-links">
           <a href="#services">Services</a>
           <a href="#about">About</a>
-          <a href="#areas">Service Areas</a>
-          <a href="#contact">Contact</a>
+          <a href="#areas">Coverage</a>
+          <a href="#contact">Enquire</a>
         </div>
-        <p style="margin-top:14px;"><a href="tel:[Phone]">[Phone]</a> · <a href="mailto:[Email]">[Email]</a></p>
+        <p style="margin-top:18px;"><a href="tel:[Phone]" style="text-decoration:none;">[Phone]</a> &nbsp;·&nbsp; <a href="mailto:[Email]" style="text-decoration:none;">[Email]</a></p>
       </div>
     </div>
     <div class="footer-bottom">
-      © <span id="year"></span> Que La Femme. All rights reserved. · Locally owned in Toronto, ON.
+      © <span id="year"></span> Que La Femme · Toronto, ON · Private &amp; Insured
     </div>
   </div>
 </footer>
 
 <script>
-  // Mobile menu
-  document.getElementById('menuToggle').addEventListener('click', function () {
+  document.getElementById('menuToggle').addEventListener('click',function(){
     document.getElementById('navLinks').classList.toggle('open');
   });
-  // Close menu on link click (mobile)
-  document.querySelectorAll('#navLinks a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      document.getElementById('navLinks').classList.remove('open');
-    });
+  document.querySelectorAll('#navLinks a').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
   });
-  // Current year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 
 </body>
