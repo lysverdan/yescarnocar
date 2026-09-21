@@ -934,6 +934,15 @@
     .hero-demo .hb.scanning { animation:hero-rise 1.2s cubic-bezier(.2,.7,.2,1) .15s forwards, dm-hum 1.3s ease-in-out infinite; }
     @keyframes dm-hum { 50% { filter:drop-shadow(0 0 22px rgba(76,175,80,.55)); } }
     .hero-eyebrow { margin-top:1.6rem; font-size:.7rem; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); font-weight:600; opacity:0; animation:hero-fade 1.2s ease .4s forwards; }
+    .hero-live { display:inline-flex; align-items:center; gap:.55rem; margin-top:1.6rem; padding:.45rem 1rem; border:1px solid var(--gold); border-radius:100px; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700; background:rgba(76,175,80,.07); opacity:0; animation:hero-fade 1.2s ease .35s forwards; }
+    .hero-live .live-dot { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold); animation:live-pulse 2s ease-in-out infinite; }
+    @keyframes live-pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.8);} }
+    .hero-cta { margin-top:1.8rem; display:flex; flex-direction:column; align-items:center; gap:1rem; opacity:0; animation:hero-fade 1.2s ease .8s forwards; }
+    .hero-appstore { display:inline-flex; align-items:center; gap:.7rem; background:var(--gold); color:#04180a; text-decoration:none; font-weight:700; font-size:1rem; letter-spacing:.01em; padding:1.1rem 2.3rem; border-radius:12px; box-shadow:0 12px 34px -8px rgba(76,175,80,.7); transition:transform .15s, box-shadow .3s; }
+    .hero-appstore:hover { transform:translateY(-2px); box-shadow:0 18px 44px -8px rgba(76,175,80,.9); }
+    .hero-appstore svg { width:22px; height:22px; fill:currentColor; flex:none; }
+    .hero-roadmap { font-size:.82rem; letter-spacing:.02em; color:var(--silver-dim); line-height:1.5; max-width:40ch; }
+    .hero-roadmap strong { color:var(--silver-2); font-weight:600; }
     .hero-h1 { margin-top:.55rem; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(2.3rem,6vw,4rem); line-height:1.03; letter-spacing:-.01em; color:var(--silver); text-wrap:balance; opacity:0; animation:hero-fade 1.2s ease .5s forwards; }
     .hero-h1 em { font-style:italic; color:var(--silver-2); }
     .hero-sub2 { margin-top:1.1rem; max-width:36ch; font-size:1.08rem; color:var(--silver-2); line-height:1.5; opacity:0; animation:hero-fade 1.2s ease .7s forwards; }
@@ -1001,7 +1010,8 @@
     @media (prefers-reduced-motion:reduce){ .dm-cue svg{ animation:none; } .dm-go.cue-pulse{ animation:none; } }
     @media (max-width:640px){ .dm-btns{ flex-direction:column; } .dm-go{ width:100%; } }
     @media (prefers-reduced-motion:reduce){
-      .hero-demo .hb,.hero-eyebrow,.hero-h1,.hero-sub2,.dm-scan,.dm-stage,.hero-launch{ animation:none!important; opacity:1!important; transform:none!important; }
+      .hero-demo .hb,.hero-eyebrow,.hero-live,.hero-h1,.hero-sub2,.hero-cta,.dm-scan,.dm-stage,.hero-launch{ animation:none!important; opacity:1!important; transform:none!important; }
+      .hero-live .live-dot{ animation:none!important; }
       .rv{ opacity:1!important; transform:none!important; }
     }
     /* Mobile-only sticky bottom CTA — thumb-reachable, always visible without scrolling */
@@ -1127,9 +1137,17 @@
   <section class="hero" id="hero" data-color="var(--good)">
     <div class="hero-demo">
       <div class="hb" id="heroBadge"><img src="ycnc-badge.png" width="600" height="601" decoding="async" fetchpriority="high" alt="Yes Car No Car — an independent VIN report service that tells you whether a used car is a Good Car or a Bad Car before you buy it." /></div>
-      <p class="hero-eyebrow">The Independent VIN Check</p>
-      <h1 class="hero-h1">Every report tells you where the car has been. <em>One tells you where it's going.</em></h1>
+      <div class="hero-live"><span class="live-dot"></span>Now on iPhone · United States</div>
+      <h1 class="hero-h1">The independent VIN check is <em>live on iPhone.</em></h1>
       <p class="hero-sub2">Scan or type a VIN. Get a verdict — Good Car or Bad Car — plus what that car is about to cost you. Whether you're about to buy it or you already own it.</p>
+
+      <div class="hero-cta">
+        <a class="hero-appstore" href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 12.54c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-2.07-.92-3.4-.9-1.75.03-3.36 1.02-4.26 2.58-1.82 3.15-.46 7.8 1.3 10.36.86 1.25 1.88 2.65 3.22 2.6 1.29-.05 1.78-.83 3.34-.83 1.55 0 2 .83 3.36.81 1.39-.03 2.27-1.27 3.12-2.53.98-1.45 1.39-2.86 1.41-2.93-.03-.01-2.7-1.04-2.73-4.13-.02.14-.02.29-.02.51zM14.6 4.9c.71-.87 1.2-2.07 1.06-3.28-1.03.04-2.28.69-3.02 1.55-.66.76-1.24 1.99-1.09 3.16 1.15.09 2.33-.58 3.05-1.43z"/></svg>
+          Download on the App Store
+        </a>
+        <p class="hero-roadmap"><strong>Coming soon:</strong> iPad · Android on Google Play · Spanish (~1 week) · Canada, English &amp; French (~2 weeks)</p>
+      </div>
 
       <div class="dm-scan">
         <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Interactive preview &middot; example cars</p>
@@ -1166,7 +1184,6 @@
       </div>
 
       <p class="hero-trust" style="margin-top:1.6rem;font-size:0.9rem;color:var(--silver-dim);max-width:46ch;line-height:1.55;">From the one voice in the deal that isn't paid to sell it to you.</p>
-      <p class="hero-launch">Now on iPhone in the U.S. &nbsp;&middot;&nbsp; <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener">Get it on the App Store.</a></p>
     </div>
   </section>
 
