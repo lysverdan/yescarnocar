@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="theme-color" content="#0a0a0a" />
-  <title>Join the Waitlist — Yes Car No Car Early Access</title>
-  <meta name="description" content="Be first when Yes Car No Car launches. The first 500 waitlist members get their first Full VIN Report at $14.99 — $10 off the standard $24.99 price. No marketing spam; we email you when early access opens. Launching September 22, 2026." />
+  <title>Get the App — Yes Car No Car for iPhone</title>
+  <meta name="description" content="Yes Car No Car is now available on iPhone in the United States. Download it from the App Store to turn any VIN into a plain Good Car / Bad Car verdict. iPad, Android, Spanish, and Canada coming soon." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -17,8 +17,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yes Car No Car" />
-  <meta property="og:title" content="Join the Waitlist — Yes Car No Car Early Access" />
-  <meta property="og:description" content="Early access. First 500 waitlist members get their first report at $14.99. No marketing spam; we email you at early access. Launching September 22, 2026." />
+  <meta property="og:title" content="Get the App — Yes Car No Car for iPhone" />
+  <meta property="og:description" content="Now available on iPhone in the United States. Download Yes Car No Car from the App Store and turn any VIN into a plain Good Car / Bad Car verdict." />
   <meta property="og:image" content="https://yescarnocar.com/ycnc-social.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -26,8 +26,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Join the Waitlist — Yes Car No Car" />
-  <meta name="twitter:description" content="First 500 waitlist members get their first Full VIN Report at $14.99. Standard price at launch: $24.99. No marketing spam." />
+  <meta name="twitter:title" content="Get the App — Yes Car No Car" />
+  <meta name="twitter:description" content="Now available on iPhone in the United States. Download Yes Car No Car from the App Store and turn any VIN into a plain Good Car / Bad Car verdict." />
   <meta name="twitter:image" content="https://yescarnocar.com/ycnc-social.png" />
 
   <!-- JSON-LD -->
@@ -37,14 +37,14 @@
     "@type": "WebPage",
     "@id": "https://yescarnocar.com/waitlist.html",
     "url": "https://yescarnocar.com/waitlist.html",
-    "name": "Join the Waitlist — Yes Car No Car Early Access",
-    "description": "Sign up for early access to Yes Car No Car. The first 500 waitlist members get their first Full VIN Report at $14.99. Launching September 22, 2026.",
+    "name": "Get the App — Yes Car No Car for iPhone",
+    "description": "Yes Car No Car is now available on iPhone in the United States. Download it from the App Store to turn any VIN into a plain Good Car / Bad Car verdict.",
     "isPartOf": { "@id": "https://yescarnocar.com/#website" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yescarnocar.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Join the Waitlist", "item": "https://yescarnocar.com/waitlist.html" }
+        { "@type": "ListItem", "position": 2, "name": "Get the App", "item": "https://yescarnocar.com/waitlist.html" }
       ]
     }
   }
@@ -216,6 +216,61 @@
       color: var(--gold);
       font-weight: 600;
       margin-bottom: 3rem;
+    }
+
+    .appstore-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: var(--gold);
+      color: #0a0a0a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 1.05rem 2.4rem;
+      border-radius: 3px;
+      transition: all 0.25s ease;
+      box-shadow: 0 16px 40px rgba(76,175,80,0.28);
+    }
+    .appstore-btn:hover { background: var(--gold-bright); transform: translateY(-2px); }
+    .appstore-btn svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── ROADMAP ── */
+    .roadmap {
+      max-width: 520px;
+      margin: 3rem auto 0;
+      border-top: 1px solid var(--line);
+      padding-top: 2.5rem;
+    }
+    .roadmap-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--silver-dim);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .roadmap-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+      text-align: left;
+    }
+    .roadmap-item:last-child { margin-bottom: 0; }
+    .roadmap-dash { color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+    .roadmap-text { font-size: 0.95rem; color: var(--silver-2); line-height: 1.55; }
+    .roadmap-text strong { color: var(--silver); }
+    .roadmap-soon {
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-left: 0.5rem;
     }
 
     /* ── FORM SECTION ── */
@@ -505,7 +560,7 @@
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
           </a>
         </div>
-        <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
+        <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="nav-cta" target="_blank" rel="noopener">Get the App</a>
       </div>
     </div>
   </nav>
@@ -522,7 +577,7 @@
     <a href="good-used-cars-under-10000.html">Good Used Cars Under $10,000</a>
     <a href="best-used-suvs-worth-buying.html">Best Used SUVs Worth Buying</a>
     <a href="what-car-should-i-buy.html">What Car Should I Buy?</a>
-    <a href="waitlist.html" class="mobile-cta">Join the Waitlist</a>
+    <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="mobile-cta" target="_blank" rel="noopener">Get the App</a>
   </div>
 
 
@@ -533,21 +588,42 @@
       <div class="waitlist-badge">
         <img src="ycnc-badge.png" width="600" height="601" decoding="async" fetchpriority="high" alt="Yes Car No Car" />
       </div>
-      <div class="eyebrow">Launching September 22</div>
-      <h1>Be first <em>when we launch.</em></h1>
+      <div class="eyebrow">Now on iPhone</div>
+      <h1>It&rsquo;s <em>here.</em></h1>
       <p class="pricing-callout">
-        <strong>$14.99</strong> for the first 500 waitlist members &nbsp;&middot;&nbsp; <strong>$24.99</strong> standard at launch
+        Yes Car No Car is <strong>live on iPhone</strong> in the United States. Turn any VIN into a plain Good Car / Bad Car verdict.
       </p>
-      <p class="region-note">Currently available in the United States only.</p>
+      <p class="region-note">Available on iPhone · United States</p>
     </header>
 
-    <!-- FORM -->
+    <!-- DOWNLOAD -->
     <section class="waitlist-form-section">
-      <div class="waitlist-form-inner">
-        <div class="waitlist-embed">
-          <iframe data-tally-src="https://tally.so/embed/Bz6YVQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="157" frameborder="0" marginheight="0" marginwidth="0" title="YES CAR NO CAR WAITLIST"></iframe>
+      <div class="waitlist-form-inner" style="text-align:center;">
+        <a class="appstore-btn" href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 12.54c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-2.07-.92-3.4-.9-1.75.03-3.36 1.02-4.26 2.58-1.82 3.15-.46 7.8 1.3 10.36.86 1.25 1.88 2.65 3.22 2.6 1.29-.05 1.78-.83 3.34-.83 1.55 0 2 .83 3.36.81 1.39-.03 2.27-1.27 3.12-2.53.98-1.45 1.39-2.86 1.41-2.93-.03-.01-2.7-1.04-2.73-4.13-.02.14-.02.29-.02.51zM14.6 4.9c.71-.87 1.2-2.07 1.06-3.28-1.03.04-2.28.69-3.02 1.55-.66.76-1.24 1.99-1.09 3.16 1.15.09 2.33-.58 3.05-1.43z"/></svg>
+          Download on the App Store
+        </a>
+        <p class="waitlist-note" style="margin-top:1.5rem;">Free to download. The model-level verdict is free; the Full VIN Report is an in-app purchase.</p>
+
+        <div class="roadmap">
+          <div class="roadmap-title">Coming soon</div>
+          <div class="roadmap-item">
+            <span class="roadmap-dash">—</span>
+            <span class="roadmap-text"><strong>iPad</strong><span class="roadmap-soon">soon</span></span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dash">—</span>
+            <span class="roadmap-text"><strong>Android</strong>, on Google Play<span class="roadmap-soon">soon</span></span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dash">—</span>
+            <span class="roadmap-text"><strong>Spanish</strong><span class="roadmap-soon">~1 week</span></span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dash">—</span>
+            <span class="roadmap-text"><strong>Canada</strong>, English and French<span class="roadmap-soon">~2 weeks</span></span>
+          </div>
         </div>
-        <p class="waitlist-note">No marketing spam. We'll email you when early access opens — plus essential account communications if you become a customer.</p>
 
         <div class="trust-bullets">
           <div class="trust-bullet">
@@ -557,10 +633,6 @@
           <div class="trust-bullet">
             <span class="trust-bullet-dash">—</span>
             <span class="trust-bullet-text"><strong>The model-level verdict is free.</strong> You only pay for the Full VIN Report.</span>
-          </div>
-          <div class="trust-bullet">
-            <span class="trust-bullet-dash">—</span>
-            <span class="trust-bullet-text"><strong>First-500 rate locked</strong> on your first report.</span>
           </div>
         </div>
       </div>
@@ -595,29 +667,6 @@
     </div>
   </footer>
 
-  <!-- Tally embed loader -->
-  <!-- waitlist analytics: fire waitlist_signup on Tally submit + preserve UTM source -->
-  <script>
-  (function(){
-    var KEYS=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
-    function utms(){var q=new URLSearchParams(location.search),o={};KEYS.forEach(function(k){var v=q.get(k);if(v){try{sessionStorage.setItem('ycnc_'+k,v);}catch(e){}}var s=null;try{s=sessionStorage.getItem('ycnc_'+k);}catch(e){}if(s)o[k]=s;});return o;}
-    var U=utms();
-    var qs=Object.keys(U).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(U[k]);}).join('&');
-    if(qs){
-      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(f){f.dataset.tallySrc+=(f.dataset.tallySrc.indexOf('?')>-1?'&':'?')+qs;});
-      document.querySelectorAll('a[href$="waitlist.html"]').forEach(function(a){try{var u=new URL(a.getAttribute('href'),location.href);Object.keys(U).forEach(function(k){u.searchParams.set(k,U[k]);});a.href=u.href;}catch(e){}});
-    }
-    window.addEventListener('message',function(e){
-      if(typeof e.data!=='string')return;
-      var d;try{d=JSON.parse(e.data);}catch(_){return;}
-      if(d&&d.event==='Tally.FormSubmitted'){
-        try{var a=window.__hcAnalytics;if(a&&typeof a.trackEvent==='function'){a.trackEvent('waitlist_signup',U);}}catch(_){}
-        try{window.dispatchEvent(new CustomEvent('waitlist_signup',{detail:U}));}catch(_){}
-      }
-    });
-  })();
-  </script>
-  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');

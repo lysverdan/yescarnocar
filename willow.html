@@ -552,7 +552,7 @@
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
           </a>
         </div>
-        <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
+        <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="nav-cta" target="_blank" rel="noopener">Get the App</a>
       </div>
     </div>
   </nav>
@@ -569,7 +569,7 @@
     <a href="good-used-cars-under-10000.html">Good Used Cars Under $10,000</a>
     <a href="best-used-suvs-worth-buying.html">Best Used SUVs Worth Buying</a>
     <a href="what-car-should-i-buy.html">What Car Should I Buy?</a>
-    <a href="waitlist.html" class="mobile-cta">Join the Waitlist</a>
+    <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="mobile-cta" target="_blank" rel="noopener">Get the App</a>
   </div>
 
 
@@ -603,12 +603,8 @@
     </div>
 
     <div class="cta-block">
-      <p>Willow says: tell Dad to make money. (Join the waitlist. It's free. She'll know.)</p>
-      <p style="margin:0.25rem 0 0.9rem;color:#c8c8cc;font-size:1rem;">The verdict is always free. First 500 members get their first Full VIN Report at $14.99. Enter your email:</p>
-      <div class="inline-waitlist" style="max-width:460px;margin:0 auto 1.1rem;">
-        <iframe data-tally-src="https://tally.so/embed/Bz6YVQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="157" frameborder="0" marginheight="0" marginwidth="0" title="Yes Car No Car waitlist"></iframe>
-      </div>
-      <a class="cta-btn" href="waitlist.html">Open the full waitlist page</a>
+      <p>Willow says: tell Dad to make money. (It's on the App Store now. She'll know.)</p>
+      <a class="cta-btn" href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener">Download on the App Store</a>
       <p style="margin-top:1.5rem;font-size:0.98rem;color:#c8c8cc;line-height:1.7;">Now the human stuff: <a href="about.html" style="color:#4caf50;border-bottom:1px solid rgba(76,175,80,0.4);">read the company story</a> &nbsp;·&nbsp; <a href="product.html" style="color:#4caf50;border-bottom:1px solid rgba(76,175,80,0.4);">see what's in a report</a> &nbsp;·&nbsp; <a href="first-report.html" style="color:#4caf50;border-bottom:1px solid rgba(76,175,80,0.4);">look at a real sample report</a></p>
     </div>
 
@@ -673,27 +669,5 @@
       }
     })();
   </script>
-  <!-- waitlist analytics: fire waitlist_signup on Tally submit + preserve UTM source -->
-  <script>
-  (function(){
-    var KEYS=['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
-    function utms(){var q=new URLSearchParams(location.search),o={};KEYS.forEach(function(k){var v=q.get(k);if(v){try{sessionStorage.setItem('ycnc_'+k,v);}catch(e){}}var s=null;try{s=sessionStorage.getItem('ycnc_'+k);}catch(e){}if(s)o[k]=s;});return o;}
-    var U=utms();
-    var qs=Object.keys(U).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(U[k]);}).join('&');
-    if(qs){
-      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(f){f.dataset.tallySrc+=(f.dataset.tallySrc.indexOf('?')>-1?'&':'?')+qs;});
-      document.querySelectorAll('a[href$="waitlist.html"]').forEach(function(a){try{var u=new URL(a.getAttribute('href'),location.href);Object.keys(U).forEach(function(k){u.searchParams.set(k,U[k]);});a.href=u.href;}catch(e){}});
-    }
-    window.addEventListener('message',function(e){
-      if(typeof e.data!=='string')return;
-      var d;try{d=JSON.parse(e.data);}catch(_){return;}
-      if(d&&d.event==='Tally.FormSubmitted'){
-        try{var a=window.__hcAnalytics;if(a&&typeof a.trackEvent==='function'){a.trackEvent('waitlist_signup',U);}}catch(_){}
-        try{window.dispatchEvent(new CustomEvent('waitlist_signup',{detail:U}));}catch(_){}
-      }
-    });
-  })();
-  </script>
-  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
