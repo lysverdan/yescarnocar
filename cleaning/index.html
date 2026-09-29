@@ -202,6 +202,33 @@
     .why-cell,.quote{padding:36px 28px;}
     .hero-meta div{border-right:none;padding-right:0;margin-right:0;}
   }
+  /* --- routed detail views --- */
+  .route{display:none;}
+  .page-hero{position:relative;background:var(--ink);overflow:hidden;border-bottom:1px solid var(--line-dark);}
+  .page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 82% 0%,rgba(150,158,168,.18),transparent 55%);}
+  .page-hero .inner{position:relative;max-width:var(--max);margin:0 auto;padding:64px 32px 76px;}
+  .backlink{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--steel-2);text-decoration:none;display:inline-block;margin-bottom:34px;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+  .backlink:hover{color:#fff;}
+  .backlink .arw{display:inline-block;margin-right:8px;}
+  .page-hero h1{font-size:clamp(2.6rem,5.5vw,4.2rem);margin:16px 0 20px;font-weight:400;color:#fff;}
+  .page-hero .lede{font-size:1.15rem;color:var(--mist);max-width:52ch;font-weight:300;margin:0;}
+  .detail{padding:76px 0;}
+  .offer{display:grid;grid-template-columns:64px 1fr;gap:28px;padding:38px 0;border-top:1px solid var(--line-dark);}
+  .offer:last-child{border-bottom:1px solid var(--line-dark);}
+  .offer .idx{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--steel-2);}
+  .offer h3{font-size:1.7rem;margin:0 0 10px;color:#fff;font-weight:500;}
+  .offer p{margin:0;color:var(--steel-2);font-weight:300;font-size:1.02rem;max-width:64ch;}
+  .others{background:var(--charcoal);border-top:1px solid var(--line-dark);padding:72px 0;}
+  .others .kicker{display:block;text-align:center;margin-bottom:34px;}
+  .others-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);}
+  .others-grid a{background:var(--charcoal);padding:32px 28px;text-decoration:none;transition:background .25s;display:block;}
+  .others-grid a:hover{background:var(--ink);}
+  .others-grid .n{font-family:"Cormorant Garamond",serif;color:var(--steel-2);font-size:.95rem;}
+  .others-grid h4{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.35rem;color:#fff;margin:10px 0 0;}
+  .page-cta{background:var(--ink);text-align:center;padding:90px 0;}
+  .page-cta h2{font-size:clamp(2rem,4.5vw,3rem);color:#fff;font-weight:400;margin:14px 0 26px;}
+  .page-cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  @media(max-width:880px){.offer{grid-template-columns:1fr;gap:10px;}.others-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -221,6 +248,7 @@
 </header>
 
 <a id="top"></a>
+<main id="view-home">
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -260,7 +288,7 @@
     </div>
     <div class="service-grid">
 
-      <a class="service" href="maintenance.html">
+      <a class="service" href="#maintenance">
         <div class="num">01 — Maintenance</div>
         <h3>Home Maintenance Services</h3>
         <p>The full upkeep of a home — cleaning, repairs, gardens, painting, small-space design, and moves — held to one standard.</p>
@@ -273,7 +301,7 @@
         <span class="more">View details<span class="arw">→</span></span>
       </a>
 
-      <a class="service" href="organization.html">
+      <a class="service" href="#organization">
         <div class="num">02 — Order</div>
         <h3>Home Organization</h3>
         <p>Considered, functional order — spaces designed around how you actually live, then kept that way.</p>
@@ -286,7 +314,7 @@
         <span class="more">View details<span class="arw">→</span></span>
       </a>
 
-      <a class="service" href="estates.html">
+      <a class="service" href="#estates">
         <div class="num">03 — Transition</div>
         <h3>Estate Management</h3>
         <p>Composed, confidential handling of the estate and downsizing — organized from the first sort to the final sale.</p>
@@ -299,7 +327,7 @@
         <span class="more">View details<span class="arw">→</span></span>
       </a>
 
-      <a class="service" href="bookkeeping.html">
+      <a class="service" href="#bookkeeping">
         <div class="num">04 — Ledger</div>
         <h3>Bookkeeping</h3>
         <p>Decades of corporate finance, applied to your books — clean, current, and quietly kept.</p>
@@ -461,6 +489,136 @@
   </div>
 </section>
 
+</main>
+
+<section class="route" id="maintenance">
+  <div class="page-hero"><div class="inner">
+    <a class="backlink" href="#services"><span class="arw">←</span> All Services</a>
+    <span class="kicker">01 — Maintenance</span>
+    <h1>Home Maintenance Services</h1>
+    <p class="lede">The full upkeep of a home under one roof — cleaning, repairs, gardens, painting, small-space design, and moves. One studio, one standard, and one person accountable for all of it.</p>
+  </div></div>
+  <div class="detail"><div class="wrap">
+      <div class="offer"><div class="idx">01</div><div><h3>House Cleaning</h3><p>Exacting, dependable cleaning on a schedule that suits your household — recurring, seasonal, or on demand. Deep and seasonal cleans, move-in and move-out, for condos, homes, and pieds-à-terre.</p></div></div>
+      <div class="offer"><div class="idx">02</div><div><h3>Minor Household Repairs</h3><p>Furniture repairs, upholstery, and other small household fixes — including deck repair and patching. The little jobs that never quite get done, finally handled.</p></div></div>
+      <div class="offer"><div class="idx">03</div><div><h3>Garden Maintenance</h3><p>Planting and pruning, seasonal care, and fall and spring clean-ups that keep your outdoor space as considered as the rooms inside.</p></div></div>
+      <div class="offer"><div class="idx">04</div><div><h3>Small-Space Solutions</h3><p>Creative answers for compact living — whether custom shelving or clever use of what you already own. Save space, save money.</p></div></div>
+      <div class="offer"><div class="idx">05</div><div><h3>Interior Painting</h3><p>Guidance on colour schemes, careful preparation, and clean painting — from a single accent wall to a full refresh.</p></div></div>
+      <div class="offer"><div class="idx">06</div><div><h3>Relocation &amp; Moves</h3><p>Moving logistics, packing, and unpacking — managed end to end so that a move feels effortless.</p></div></div>
+  </div></div>
+  <div class="others"><div class="wrap">
+    <span class="kicker">Also from the studio</span>
+    <div class="others-grid">
+        <a href="#organization"><span class="n">02 — Order</span><h4>Home Organization</h4></a>
+        <a href="#estates"><span class="n">03 — Transition</span><h4>Estate Management</h4></a>
+        <a href="#bookkeeping"><span class="n">04 — Ledger</span><h4>Bookkeeping</h4></a>
+    </div>
+  </div></div>
+  <div class="page-cta"><div class="wrap">
+    <span class="kicker">Enquiries</span>
+    <h2>Let&#39;s discuss your home</h2>
+    <div class="btns">
+      <a href="#contact" class="btn light">Request Consultation</a>
+      <a href="#services" class="btn outline-light">All Services</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="route" id="organization">
+  <div class="page-hero"><div class="inner">
+    <a class="backlink" href="#services"><span class="arw">←</span> All Services</a>
+    <span class="kicker">02 — Order</span>
+    <h1>Home Organization</h1>
+    <p class="lede">Considered, functional order — spaces designed around how you actually live, and then kept that way. Calm rooms, clear surfaces, and systems that hold under real life.</p>
+  </div></div>
+  <div class="detail"><div class="wrap">
+      <div class="offer"><div class="idx">01</div><div><h3>Closets, Pantries &amp; Kitchens</h3><p>Beautiful, workable systems for the rooms and spaces you use most — arranged so everything has a place and stays in it.</p></div></div>
+      <div class="offer"><div class="idx">02</div><div><h3>Decluttering</h3><p>A calm, judgment-free sort that clears what no longer serves you and gives everything you keep a proper home.</p></div></div>
+      <div class="offer"><div class="idx">03</div><div><h3>Paper &amp; Storage Solutions</h3><p>Filing, document management, and storage designed to end the paper pile and the junk-drawer chaos for good.</p></div></div>
+      <div class="offer"><div class="idx">04</div><div><h3>Systems That Last</h3><p>Organization built to endure — routines and structures that survive busy weeks, not just look good on day one.</p></div></div>
+  </div></div>
+  <div class="others"><div class="wrap">
+    <span class="kicker">Also from the studio</span>
+    <div class="others-grid">
+        <a href="#maintenance"><span class="n">01 — Maintenance</span><h4>Home Maintenance Services</h4></a>
+        <a href="#estates"><span class="n">03 — Transition</span><h4>Estate Management</h4></a>
+        <a href="#bookkeeping"><span class="n">04 — Ledger</span><h4>Bookkeeping</h4></a>
+    </div>
+  </div></div>
+  <div class="page-cta"><div class="wrap">
+    <span class="kicker">Enquiries</span>
+    <h2>Let&#39;s discuss your home</h2>
+    <div class="btns">
+      <a href="#contact" class="btn light">Request Consultation</a>
+      <a href="#services" class="btn outline-light">All Services</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="route" id="estates">
+  <div class="page-hero"><div class="inner">
+    <a class="backlink" href="#services"><span class="arw">←</span> All Services</a>
+    <span class="kicker">03 — Transition</span>
+    <h1>Estate Management</h1>
+    <p class="lede">Composed, confidential handling of the estate and downsizing — organized from the first sort to the final sale. Handled quietly, respectfully, and without adding to a difficult time.</p>
+  </div></div>
+  <div class="detail"><div class="wrap">
+      <div class="offer"><div class="idx">01</div><div><h3>Sorting &amp; Cataloguing</h3><p>A careful, respectful first sort of a lifetime's belongings — catalogued and organized so that nothing of value or meaning is overlooked.</p></div></div>
+      <div class="offer"><div class="idx">02</div><div><h3>Staging &amp; Valuation</h3><p>Thoughtful presentation and fair valuation of items, so the estate is shown at its best and priced with care.</p></div></div>
+      <div class="offer"><div class="idx">03</div><div><h3>Estate Sale Management</h3><p>The sale itself, managed from the first sort to the final sale — set-up, pricing, oversight, and wind-down.</p></div></div>
+      <div class="offer"><div class="idx">04</div><div><h3>Downsizing &amp; Clear-Outs</h3><p>Measured downsizing and full clear-outs, handled with discretion and an eye for what deserves to be kept.</p></div></div>
+      <div class="offer"><div class="idx">05</div><div><h3>Discretion Throughout</h3><p>Every estate is handled quietly and in confidence, with respect for the family and the moment.</p></div></div>
+  </div></div>
+  <div class="others"><div class="wrap">
+    <span class="kicker">Also from the studio</span>
+    <div class="others-grid">
+        <a href="#maintenance"><span class="n">01 — Maintenance</span><h4>Home Maintenance Services</h4></a>
+        <a href="#organization"><span class="n">02 — Order</span><h4>Home Organization</h4></a>
+        <a href="#bookkeeping"><span class="n">04 — Ledger</span><h4>Bookkeeping</h4></a>
+    </div>
+  </div></div>
+  <div class="page-cta"><div class="wrap">
+    <span class="kicker">Enquiries</span>
+    <h2>Let&#39;s discuss your home</h2>
+    <div class="btns">
+      <a href="#contact" class="btn light">Request Consultation</a>
+      <a href="#services" class="btn outline-light">All Services</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="route" id="bookkeeping">
+  <div class="page-hero"><div class="inner">
+    <a class="backlink" href="#services"><span class="arw">←</span> All Services</a>
+    <span class="kicker">04 — Ledger</span>
+    <h1>Bookkeeping</h1>
+    <p class="lede">Decades of corporate finance, applied to your books — clean, current, and quietly kept. The same precision brought to your home, brought to your accounts.</p>
+  </div></div>
+  <div class="detail"><div class="wrap">
+      <div class="offer"><div class="idx">01</div><div><h3>Monthly Bookkeeping</h3><p>Your books maintained and reconciled month over month, so you always know where things stand.</p></div></div>
+      <div class="offer"><div class="idx">02</div><div><h3>Invoicing &amp; Expense Tracking</h3><p>Invoices sent, expenses tracked, and receipts kept in order — no more shoebox at year-end.</p></div></div>
+      <div class="offer"><div class="idx">03</div><div><h3>Reconciliations &amp; Reporting</h3><p>Accurate reconciliations and clear, readable reports that make sense of the numbers.</p></div></div>
+      <div class="offer"><div class="idx">04</div><div><h3>Tax-Season Preparation</h3><p>Everything organized and ready before your accountant asks — a calmer, cheaper tax season.</p></div></div>
+      <div class="offer"><div class="idx">05</div><div><h3>Business &amp; Household</h3><p>Suited to small businesses and private households alike, at whatever scale you need.</p></div></div>
+  </div></div>
+  <div class="others"><div class="wrap">
+    <span class="kicker">Also from the studio</span>
+    <div class="others-grid">
+        <a href="#maintenance"><span class="n">01 — Maintenance</span><h4>Home Maintenance Services</h4></a>
+        <a href="#organization"><span class="n">02 — Order</span><h4>Home Organization</h4></a>
+        <a href="#estates"><span class="n">03 — Transition</span><h4>Estate Management</h4></a>
+    </div>
+  </div></div>
+  <div class="page-cta"><div class="wrap">
+    <span class="kicker">Enquiries</span>
+    <h2>Let&#39;s discuss your home</h2>
+    <div class="btns">
+      <a href="#contact" class="btn light">Request Consultation</a>
+      <a href="#services" class="btn outline-light">All Services</a>
+    </div>
+  </div></div>
+</section>
+
 <footer class="site">
   <div class="wrap">
     <div class="footer-inner">
@@ -493,6 +651,26 @@
     a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
   });
   document.getElementById('year').textContent=new Date().getFullYear();
+
+  // --- in-page routing for service detail views ---
+  var ROUTES=['maintenance','organization','estates','bookkeeping'];
+  function qlfRouter(){
+    var h=(location.hash||'').replace('#','');
+    var home=document.getElementById('view-home');
+    document.querySelectorAll('.route').forEach(function(s){s.style.display='none';});
+    if(ROUTES.indexOf(h)>=0){
+      home.style.display='none';
+      var el=document.getElementById(h);
+      if(el){el.style.display='block';}
+      window.scrollTo(0,0);
+    }else{
+      home.style.display='';
+      if(h){var t=document.getElementById(h);if(t){setTimeout(function(){t.scrollIntoView();},0);}}
+      else{window.scrollTo(0,0);}
+    }
+  }
+  window.addEventListener('hashchange',qlfRouter);
+  qlfRouter();
 </script>
 
 </body>
