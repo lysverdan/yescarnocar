@@ -94,9 +94,12 @@
   .hero-panel h3{font-size:1.6rem;margin:0 0 4px;color:#fff;}
   .hero-panel p{color:var(--steel-2);font-size:.82rem;letter-spacing:.04em;margin:0 0 22px;}
   .hero-panel ul{list-style:none;padding:0;margin:0 0 26px;}
-  .hero-panel li{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line-dark);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--platinum);}
+  .hero-panel li{border-bottom:1px solid var(--line-dark);}
   .hero-panel li:last-child{border-bottom:none;}
-  .hero-panel li span{color:var(--steel-2);font-family:"Cormorant Garamond",serif;font-size:1.1rem;letter-spacing:0;}
+  .hero-panel li a{display:flex;justify-content:space-between;align-items:center;padding:15px 2px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--platinum);text-decoration:none;transition:color .2s,padding-left .2s;}
+  .hero-panel li a:hover{color:#fff;padding-left:9px;}
+  .hero-panel li a .n{color:var(--steel-2);font-family:"Cormorant Garamond",serif;font-size:1.1rem;letter-spacing:0;transition:color .2s;}
+  .hero-panel li a:hover .n{color:var(--mist);}
 
   /* ---------- Sections ---------- */
   section{padding:104px 0;}
@@ -399,10 +402,10 @@
       <h3>The Studio</h3>
       <p>Four disciplines. One point of contact.</p>
       <ul>
-        <li>Home Maintenance <span>01</span></li>
-        <li>Organization <span>02</span></li>
-        <li>Estate Management <span>03</span></li>
-        <li>Bookkeeping <span>04</span></li>
+        <li><a href="#maintenance">Home Maintenance <span class="n">01</span></a></li>
+        <li><a href="#organization">Organization <span class="n">02</span></a></li>
+        <li><a href="#estates">Estate Management <span class="n">03</span></a></li>
+        <li><a href="#bookkeeping">Bookkeeping <span class="n">04</span></a></li>
       </ul>
       <a href="#contact" class="btn light" style="width:100%;text-align:center;">Begin</a>
     </aside>
