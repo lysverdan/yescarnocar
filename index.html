@@ -18,7 +18,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yes Car No Car" />
   <meta property="og:title" content="Yes Car No Car — Independent VIN Check: Good Car or Bad Car" />
-  <meta property="og:description" content="An independent VIN check: scan any VIN and get an instant Good Car or Bad Car verdict, plus a full vehicle history report. No dealer conflicts, ever. Available now on iPhone in the U.S." />
+  <meta property="og:description" content="An independent VIN check: scan any VIN and get an instant Good Car or Bad Car verdict, plus a full vehicle history report. No dealer conflicts, ever. Available now on iPhone and Android in the U.S." />
   <meta property="og:image" content="https://yescarnocar.com/ycnc-social.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -142,7 +142,7 @@
         "name": "Where is Yes Car No Car available?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes Car No Car is available now on iPhone in the United States. A Full VIN Report on one exact car is $24.99; the model-level verdict is free. iPad, Android, Spanish, and Canada (English & French) are coming soon."
+          "text": "Yes Car No Car is available now on iPhone and Android in the United States. A Full VIN Report on one exact car is $24.99; the model-level verdict is free. iPad, Spanish, and Canada (English & French) are coming soon."
         }
       }
     ]
@@ -697,6 +697,7 @@
       transition: all 0.25s ease;
     }
     .cta-band-btn:hover { background: var(--gold-bright); transform: translateY(-1px); }
+    .cta-band-stores { display:flex; gap:0.8rem; flex-wrap:wrap; justify-content:center; }
     .cta-band-sub {
       display: block;
       margin-top: 1.25rem;
@@ -938,6 +939,7 @@
     .hero-live .live-dot { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold); animation:live-pulse 2s ease-in-out infinite; }
     @keyframes live-pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.8);} }
     .hero-cta { margin-top:1.8rem; display:flex; flex-direction:column; align-items:center; gap:1rem; opacity:0; animation:hero-fade 1.2s ease .8s forwards; }
+    .hero-stores { display:flex; gap:.8rem; flex-wrap:wrap; justify-content:center; }
     .hero-appstore { display:inline-flex; align-items:center; gap:.7rem; background:var(--gold); color:#04180a; text-decoration:none; font-weight:700; font-size:1rem; letter-spacing:.01em; padding:1.1rem 2.3rem; border-radius:12px; box-shadow:0 12px 34px -8px rgba(76,175,80,.7); transition:transform .15s, box-shadow .3s; }
     .hero-appstore:hover { transform:translateY(-2px); box-shadow:0 18px 44px -8px rgba(76,175,80,.9); }
     .hero-appstore svg { width:22px; height:22px; fill:currentColor; flex:none; }
@@ -1116,7 +1118,7 @@
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
           </a>
         </div>
-        <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="nav-cta" target="_blank" rel="noopener">Get the App</a>
+        <a href="waitlist.html" class="nav-cta">Get the App</a>
       </div>
     </div>
   </nav>
@@ -1133,7 +1135,7 @@
     <a href="good-used-cars-under-10000.html">Good Used Cars Under $10,000</a>
     <a href="best-used-suvs-worth-buying.html">Best Used SUVs Worth Buying</a>
     <a href="what-car-should-i-buy.html">What Car Should I Buy?</a>
-    <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="mobile-cta" target="_blank" rel="noopener">Get the App</a>
+    <a href="waitlist.html" class="mobile-cta">Get the App</a>
   </div>
 
 
@@ -1141,22 +1143,27 @@
   <section class="hero" id="hero" data-color="var(--good)">
     <div class="hero-demo">
       <div class="hb" id="heroBadge"><img src="ycnc-badge.png" width="600" height="601" decoding="async" fetchpriority="high" alt="Yes Car No Car — an independent VIN report service that tells you whether a used car is a Good Car or a Bad Car before you buy it." /></div>
-      <div class="hero-live"><span class="live-dot"></span>Now on iPhone · United States</div>
-      <h1 class="hero-h1">The independent VIN check is <em>live on iPhone.</em></h1>
+      <div class="hero-live"><span class="live-dot"></span>Now on iPhone &amp; Android · United States</div>
+      <h1 class="hero-h1">The independent VIN check is <em>live on iPhone and Android.</em></h1>
       <p class="hero-sub2">Scan or type a VIN. Get a verdict — Good Car or Bad Car — plus what that car is about to cost you. Whether you're about to buy it or you already own it.</p>
 
       <div class="hero-cta">
-        <a class="hero-appstore" href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 12.54c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-2.07-.92-3.4-.9-1.75.03-3.36 1.02-4.26 2.58-1.82 3.15-.46 7.8 1.3 10.36.86 1.25 1.88 2.65 3.22 2.6 1.29-.05 1.78-.83 3.34-.83 1.55 0 2 .83 3.36.81 1.39-.03 2.27-1.27 3.12-2.53.98-1.45 1.39-2.86 1.41-2.93-.03-.01-2.7-1.04-2.73-4.13-.02.14-.02.29-.02.51zM14.6 4.9c.71-.87 1.2-2.07 1.06-3.28-1.03.04-2.28.69-3.02 1.55-.66.76-1.24 1.99-1.09 3.16 1.15.09 2.33-.58 3.05-1.43z"/></svg>
-          Download on the App Store
-        </a>
+        <div class="hero-stores">
+          <a class="hero-appstore" href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 12.54c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-2.07-.92-3.4-.9-1.75.03-3.36 1.02-4.26 2.58-1.82 3.15-.46 7.8 1.3 10.36.86 1.25 1.88 2.65 3.22 2.6 1.29-.05 1.78-.83 3.34-.83 1.55 0 2 .83 3.36.81 1.39-.03 2.27-1.27 3.12-2.53.98-1.45 1.39-2.86 1.41-2.93-.03-.01-2.7-1.04-2.73-4.13-.02.14-.02.29-.02.51zM14.6 4.9c.71-.87 1.2-2.07 1.06-3.28-1.03.04-2.28.69-3.02 1.55-.66.76-1.24 1.99-1.09 3.16 1.15.09 2.33-.58 3.05-1.43z"/></svg>
+            Download on the App Store
+          </a>
+          <a class="hero-appstore" href="https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626-2.496-2.491 2.497-2.491zM5.864 2.658L16.802 8.99l-2.302 2.302-8.636-8.635z"/></svg>
+            Get it on Google Play
+          </a>
+        </div>
         <div class="hero-roadmap">
           <div class="hero-roadmap-label">Coming soon</div>
           <div class="hero-roadmap-chips">
             <span class="hero-roadmap-chip"><strong>iPad</strong></span>
-            <span class="hero-roadmap-chip"><strong>Android</strong> · Google Play</span>
-            <span class="hero-roadmap-chip"><strong>Spanish</strong> <span>~1 week</span></span>
-            <span class="hero-roadmap-chip"><strong>Canada</strong> · EN &amp; FR <span>~2 weeks</span></span>
+            <span class="hero-roadmap-chip"><strong>Spanish</strong></span>
+            <span class="hero-roadmap-chip"><strong>Canada</strong> · EN &amp; FR</span>
           </div>
         </div>
       </div>
@@ -1182,7 +1189,7 @@
           <button class="dm-chip" data-case="split">2016 Jeep Wrangler</button>
           <button class="dm-chip" data-case="bad">2015 Santa Fe Sport</button>
         </div>
-        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);">This is a preview using example cars &mdash; it doesn't look up your own VIN yet. The full VIN check is live in the app. <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" style="color:var(--gold);" target="_blank" rel="noopener">Download on the App Store &rarr;</a></p>
+        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);">This is a preview using example cars &mdash; it doesn't look up your own VIN yet. The full VIN check is live in the app. <a href="waitlist.html" style="color:var(--gold);">Get the app &rarr;</a></p>
       </div>
 
       <div class="dm-stage">
@@ -1507,7 +1514,10 @@
   <div class="cta-band">
     <div class="cta-band-inner">
       <h2>Ready to <em>know the car?</em></h2>
-      <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="cta-band-btn" target="_blank" rel="noopener">Download on the App Store &rarr;</a>
+      <div class="cta-band-stores">
+        <a href="https://apps.apple.com/app/yes-car-no-car/id6812071003" class="cta-band-btn" target="_blank" rel="noopener">Download on the App Store &rarr;</a>
+        <a href="https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar" class="cta-band-btn" target="_blank" rel="noopener">Get it on Google Play &rarr;</a>
+      </div>
       <span class="cta-band-sub">or <a href="product.html">learn what's in the report &rarr;</a></span>
       <span class="cta-refund">Free to join. And every report is protected &mdash; if one fails to generate you&rsquo;re never charged, and a defective report is fixed or refunded within 7 days. <a href="refunds.html">See our Refund Policy</a>.</span>
     </div>
@@ -1540,7 +1550,7 @@
     </div>
   </footer>
 
-  <a class="sticky-cta" href="https://apps.apple.com/app/yes-car-no-car/id6812071003" target="_blank" rel="noopener"><span>Now on iPhone —</span> <b>Get the App</b></a>
+  <a class="sticky-cta" href="waitlist.html"><span>iPhone &amp; Android —</span> <b>Get the App</b></a>
 
   <script>
     const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
