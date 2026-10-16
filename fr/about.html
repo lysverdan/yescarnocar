@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Pourquoi nous l'avons créé — Yes Car No Car</title>
+  <meta name="description" content="Yes Car No Car existe parce que l'acheteur d'une voiture d'occasion est la seule personne dans la transaction qui ne sait pas ce que tous les autres savent déjà. Nous avons créé quelque chose pour corriger ça." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://yescarnocar.com/fr/about.html" />
+  <link rel="alternate" hreflang="en" href="https://yescarnocar.com/about.html" />
+  <link rel="alternate" hreflang="es" href="https://yescarnocar.com/es/about.html" />
+  <link rel="alternate" hreflang="fr" href="https://yescarnocar.com/fr/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://yescarnocar.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yes Car No Car" />
+  <meta property="og:title" content="Pourquoi nous l'avons créé — Yes Car No Car" />
+  <meta property="og:description" content="L'acheteur d'une voiture d'occasion est la seule personne dans la transaction qui ne sait pas ce que tous les autres savent déjà. Nous avons créé quelque chose pour corriger ça." />
+  <meta property="og:image" content="https://yescarnocar.com/ycnc-social.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://yescarnocar.com/fr/about.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pourquoi nous l'avons créé — Yes Car No Car" />
+  <meta name="twitter:description" content="L'acheteur d'une voiture d'occasion est la seule personne dans la transaction qui ne sait pas ce que tous les autres savent déjà. Nous avons créé quelque chose pour corriger ça." />
+  <meta name="twitter:image" content="https://yescarnocar.com/ycnc-social.png" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://yescarnocar.com/fr/about.html",
+    "url": "https://yescarnocar.com/fr/about.html",
+    "name": "Pourquoi nous l'avons créé",
+    "description": "L'histoire des origines de Yes Car No Car — conçu pour mettre l'information sur le véhicule du côté de l'acheteur.",
+    "isPartOf": { "@id": "https://yescarnocar.com/#website" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Backed Wisely Inc.",
+      "url": "https://yescarnocar.com/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://yescarnocar.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Pourquoi nous l'avons créé", "item": "https://yescarnocar.com/fr/about.html" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-deep: #050505;
+      --bg-card: #131313;
+      --gold: #4caf50;
+      --gold-bright: #6fd06f;
+      --silver: #e8e8ec;
+      --silver-2: #c8c8cc;
+      --silver-dim: #a0a0a5;
+      --text-mute: #707075;
+      --line: rgba(76, 175, 80, 0.2);
+      --line-soft: rgba(255,255,255,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--silver);
+      font-family: 'Inter Tight', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(76, 175, 80, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(76, 175, 80, 0.12);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--silver);
+    }
+    .wordmark .gold { color: var(--gold); }
+    .wordmark .pipe { color: var(--gold); margin: 0 0.4em; font-weight: 400; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-link {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--silver-dim);
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--silver); }
+    .nav-link.active { color: var(--gold); }
+    .nav-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-socials a { color: var(--silver-dim); text-decoration: none; font-size: 1rem; transition: color 0.2s; }
+    .nav-socials a:hover { color: var(--gold); }
+    .nav-cta {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold); color: #0a0a0a; }
+    @media (max-width: 700px) {
+      .nav-socials { display: none; }
+      .nav-links { gap: 1.2rem; }
+    }
+
+    /* ── page hero ── */
+    .page-hero {
+      position: relative;
+      z-index: 1;
+      padding: 7rem 1.5rem 5rem;
+      max-width: 820px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--line);
+    }
+    .page-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+      color: var(--silver);
+    }
+    .page-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .page-lede {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--silver-2);
+      line-height: 1.65;
+      max-width: 600px;
+    }
+
+    /* ── article body ── */
+    article {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 6rem;
+    }
+
+    .section {
+      margin-bottom: 4.5rem;
+    }
+
+    .section-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 3rem;
+      background: var(--line);
+    }
+
+    .section p {
+      font-size: clamp(1rem, 1.8vw, 1.1rem);
+      color: var(--silver-2);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section p strong {
+      color: var(--silver);
+      font-weight: 600;
+    }
+    .section p em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    /* pull quote */
+    .pull-quote {
+      border-left: 2px solid var(--gold);
+      padding: 0.5rem 0 0.5rem 1.75rem;
+      margin: 2.5rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      font-style: italic;
+      color: var(--silver) !important;
+      line-height: 1.35;
+      margin-bottom: 0 !important;
+    }
+
+    /* promise block */
+    .promise-block {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      padding: 2.5rem;
+      margin-top: 2rem;
+    }
+    .promise-block p {
+      font-size: 0.95rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .promise-block p:last-child { margin-bottom: 0 !important; }
+    .promise-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .promise-item:last-child { border-bottom: none; }
+    .promise-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+    .promise-text {
+      font-size: 0.9rem;
+      color: var(--silver-2);
+      line-height: 1.6;
+    }
+    .promise-text strong { color: var(--silver); }
+
+    /* ── CTA ── */
+    .cta-block {
+      margin-top: 5rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .cta-block p {
+      font-size: 0.85rem;
+      color: var(--silver-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.5rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .cta-btn:hover { background: var(--gold); color: #0a0a0a; }
+
+    /* ── footer ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: var(--text-mute);
+      border-top: 1px solid var(--line-soft);
+    }
+    footer a { color: var(--silver-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+  
+    /* ── mobile menu button ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.2s;
+    }
+    .hamburger:hover { background: var(--gold); color: #0a0a0a; }
+    .hamburger.open { background: var(--gold); color: #0a0a0a; }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98);
+      z-index: 50;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 8vw, 2.8rem);
+      font-weight: 600;
+      color: var(--silver-2);
+      text-decoration: none;
+      padding: 1rem 2rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      width: 100%;
+      text-align: center;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      margin-top: 2rem;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.5rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    @media (max-width: 760px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; }
+      .nav-socials, .topbar-socials { display: none !important; }
+      .nav-cta { display: none; }
+      .wordmark { font-size: 0.8rem; letter-spacing: 0.18em; white-space: nowrap; }
+    }
+
+    
+    /* --- unified nav (dropdown + top-bar socials), ported from homepage --- */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--silver-dim);
+      font-weight: 500;
+      padding: 0;
+      transition: color 0.2s ease;
+    }
+    .nav-dropdown-toggle:hover { color: var(--silver); }
+    .nav-dropdown-toggle svg { width: 9px; height: 9px; transition: transform 0.2s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg,
+    .nav-dropdown:focus-within .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      margin-top: 1rem;
+      background: #101010;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      min-width: 240px;
+      padding: 0.4rem 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      z-index: 60;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown.open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.65rem 1.1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      color: var(--silver-dim);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+    .nav-dropdown-menu a:hover { color: var(--gold-bright, var(--gold)); background: rgba(255,255,255,0.03); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .socials { display: flex; align-items: center; gap: 1rem; }
+    .social-link {
+      display: flex; align-items: center; justify-content: center;
+      color: var(--silver-2);
+      transition: color 0.25s ease, transform 0.25s ease;
+      text-decoration: none;
+    }
+    .social-link:hover { color: var(--gold); transform: translateY(-1px); }
+    .social-link svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+    .topbar-socials .social-link { width: 18px; height: 18px; }
+    @media (max-width: 760px) { .topbar-socials { display: none !important; } }
+      .footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem auto 1.25rem; }
+    .footer-socials .social-link { width: 22px; height: 22px; }
+    /* founder page */
+    .photo-frame { position: relative; width: 100%; max-width: 300px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 60px -26px rgba(0,0,0,0.8); }
+    .photo-frame::before { content: ''; display: block; padding-top: 120%; }
+    .photo-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 16%; }
+    .founder-name { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--silver); margin: 1.1rem 0 0.15rem; text-align: center; }
+    .founder-role { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; text-align: center; }
+    .founder-sign { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--silver-2); margin-top: 1.4rem; }
+    .founder-origin { margin: 3rem auto 0; max-width: 400px; text-align: center; }
+    .founder-origin img { width: 100%; display: block; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 22px 55px -26px rgba(0,0,0,0.75); }
+    .founder-origin figcaption { margin-top: 0.95rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.08rem; color: var(--silver-2); line-height: 1.5; }
+    .founder-origin figcaption a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(76,175,80,0.35); transition: color .2s; }
+    .founder-origin figcaption a:hover { color: var(--gold-bright, #6fd06f); }
+    .meet-willow { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.3rem; padding: 0.72rem 1.5rem; border: 1px solid var(--gold); border-radius: 100px; color: var(--gold); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: background .2s, color .2s; }
+    .meet-willow:hover { background: var(--gold); color: #0a0a0a; }
+    /* company / founder toggle */
+    .ab-toggle { display: inline-flex; margin: 1.75rem auto 0; border: 1px solid var(--line); border-radius: 100px; padding: 4px; background: var(--bg-card); gap: 4px; }
+    .ab-toggle a { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--silver-dim); text-decoration: none; padding: 0.55rem 1.25rem; border-radius: 100px; transition: background .2s, color .2s; }
+    .ab-toggle a.active { background: var(--gold); color: #0a0a0a; }
+    .ab-toggle a:not(.active):hover { color: var(--silver); }
+      .lang-switch { display:flex; align-items:center; gap:0.45rem; }
+    .lang-switch a { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--silver-dim); text-decoration:none; font-weight:600; transition:color 0.2s ease; }
+    .lang-switch a:hover { color:var(--silver); }
+    .lang-switch a.lang-active { color:var(--gold); }
+    .lang-switch .sep { color:var(--line); font-size:0.7rem; }
+    @media (max-width:760px){ .nav-right .lang-switch { display:none; } }
+    .mobile-lang { display:flex; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .mobile-lang a { font-family:'Inter Tight',sans-serif; font-size:0.85rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--silver-dim); text-decoration:none; font-weight:600; }
+    .mobile-lang a.lang-active { color:var(--gold); }
+</style>
+  <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
+  <!-- HeyCatch analytics -->
+  <script type="module">
+    import { analytics } from 'https://esm.sh/@heycatch/sdk@0.7.0';
+    analytics.init({
+      projectKey: 'hck_pk_kYAVukdS-OICqoVk96IUQw5xUw1IpuAr',
+      install: { framework: 'web', agent: 'claude-code' },
+    });
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="wordmark" href="/fr/index.html">
+        <span class="gold">Yes Car</span><span class="pipe">|</span>No Car
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">MENU</button>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a class="nav-link" href="/fr/product.html">Ce que vous obtenez</a>
+          <a class="nav-link" href="/fr/owner.html">Pour les propriétaires</a>
+          <a class="nav-link" href="/fr/product.html#pricing">Tarifs</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Guides
+              <svg viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="/fr/good-used-cars-under-10000.html">Bonnes voitures d’occasion à moins de 10 000 $</a>
+              <a href="/fr/best-used-suvs-worth-buying.html">Meilleurs VUS d’occasion à acheter</a>
+              <a href="/fr/what-car-should-i-buy.html">Quelle voiture acheter ?</a>
+            </div>
+          </div>
+        <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Notre histoire
+              <svg viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="/fr/about.html">L’entreprise</a>
+              <a href="/founder.html">Le fondateur</a>
+            </div>
+          </div>
+          <a class="nav-link" href="/stories.html">Témoignages</a>
+          <a class="nav-link" href="/fr/faq.html">FAQ</a>
+        </div>
+        <div class="socials topbar-socials">
+          <a class="social-link" href="https://www.instagram.com/yescarnocar" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.2 8.8 2.2 12 2.2zm0-2.2C8.75 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.4A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.75 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.73 1.48 1.4 2.13a5.9 5.9 0 0 0 2.13 1.4c.76.3 1.64.5 2.91.56C8.33 23.99 8.75 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.4 5.9 5.9 0 0 0 1.4-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.7.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.4-2.13A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.25 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.facebook.com/profile.php?id=61592831604002" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@yescarnocar.app" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.66a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.09z"/></svg>
+          </a>
+          <a class="social-link" href="https://x.com/yescarnocarUSA" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@yescarnocarusa" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+          </a>
+        </div>
+        <div class="lang-switch">
+          <a href="/about.html">EN</a><span class="sep">·</span><a href="/fr/about.html" class="lang-active">FR</a><span class="sep">·</span><a href="/es/about.html">ES</a>
+        </div>
+        <a href="/fr/waitlist.html" class="nav-cta">Télécharger l’app</a>
+      </div>
+    </div>
+  </nav>
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/fr/index.html">Accueil</a>
+    <a href="/fr/product.html">Ce que vous obtenez</a>
+    <a href="/fr/product.html#pricing">Tarifs</a>
+    <a href="/fr/owner.html">Pour les propriétaires</a>
+    <a href="/fr/about.html">Notre histoire</a>
+    <a href="/founder.html">Le fondateur</a>
+    <a href="/stories.html">Témoignages</a>
+    <a href="/fr/faq.html">FAQ</a>
+    <a href="/fr/good-used-cars-under-10000.html">Bonnes voitures d’occasion à moins de 10 000 $</a>
+    <a href="/fr/best-used-suvs-worth-buying.html">Meilleurs VUS d’occasion à acheter</a>
+    <a href="/fr/what-car-should-i-buy.html">Quelle voiture acheter ?</a>
+    <a href="/fr/waitlist.html" class="mobile-cta">Télécharger l’app</a>
+    <div class="mobile-lang">
+      <a href="/about.html">EN</a>
+      <a href="/fr/about.html" class="lang-active">FR</a>
+      <a href="/es/about.html">ES</a>
+    </div>
+  </div>
+
+
+  <div class="page-hero">
+    <p class="page-eyebrow">Pourquoi nous l'avons créé</p>
+    <h1 class="page-title">Conçu pour ceux qui ne pouvaient pas se permettre de <em>se tromper.</em></h1>
+    <p class="page-lede">Yes Car No Car existe pour deux personnes. Celle qui est sur le point de dépenser ses économies pour une voiture où elle ne peut pas se tromper. Et celle qui conduit déjà une voiture sans savoir ce qui s'en vient.</p>
+    <span class="ab-toggle">
+      <a href="/fr/about.html" class="active">L’entreprise</a>
+      <a href="/founder.html">Le fondateur</a>
+    </span>
+  </div>
+
+  <article>
+
+    <div class="section">
+      <p class="section-label">Pourquoi nous existons</p>
+      <p style="font-size:1.15rem;line-height:1.75;color:var(--silver-2);margin:0;">Tout le monde connaît ce sentiment : être sur un terrain de concession, à fixer une voiture où l'on ne peut pas se tromper, en souhaitant avoir un ami qui s'y connaît vraiment en voitures — quelqu'un sans intérêt dans la vente, qui vous regarderait dans les yeux et vous dirait simplement la vérité. Yes Car No Car est cet ami, à grande échelle. Nous avons été conçus pour les gens que l'industrie compte garder dans le flou : les rapports d'historique ne tranchent pas, les sites d'avis sont payés pour être gentils, et le mécanicien coûte une journée que vous n'avez pas. Nous répondons à la seule question qui compte — devrais-je acheter cette voiture ? — et nous y répondons franchement, parce que nous n'avons rien à gagner de votre oui ni rien à perdre de votre non. Là où tous les autres outils vous disent où une voiture a été, nous vous disons où elle va.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">Ce que nous sommes</p>
+      <p class="positioning" style="font-size:1.18rem;line-height:1.7;color:var(--silver);border-left:3px solid var(--gold);padding-left:1.6rem;margin:0;">Pour la personne ordinaire sur le point de dépenser de l'argent réel pour une voiture d'occasion — qui n'est pas mécanicienne et craint de se faire avoir — Yes Car No Car est le verdict indépendant qui vous dit s'il faut acheter cette voiture précise, en langage clair, avant d'aller où que ce soit. Contrairement aux rapports d'historique qui vous disent seulement où une voiture a été, ou aux sites d'avis qui ne décrivent que le modèle en général, Yes Car No Car lit le véhicule réel devant vous et donne une réponse claire — parce que c'est le seul expert automobile sans concessionnaire à protéger, sans annonceur à satisfaire et sans rien à vous vendre d'autre que la vérité.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">Le moment</p>
+
+      <p>Imaginez une mère seule qui cherche une fourgonnette un samedi. Elle en a besoin pour fonctionner. Elle en a besoin pour ne pas la laisser tomber sur le chemin de l'école, du travail, des urgences à 2 h du matin. Elle a fait ses recherches. Elle a lu tous les avis. Elle est debout dans un stationnement, sur le point de dépenser un argent qu'elle a soigneusement économisé — et <strong>chaque personne présente dans cette transaction en sait plus sur ce véhicule qu'elle.</strong> Le vendeur sait ce qui cloche. Le concessionnaire sait ce qu'elle vaut. Le mécanicien qu'elle voudrait dans son camp n'est pas là. Elle prend la décision financière la plus importante de son mois avec le moins d'information dans la pièce.</p>
+
+      <p>Imaginez maintenant quelqu'un qui possède déjà une voiture. Elle roule bien. Aucun voyant. Aucun bruit étrange. Rien qui laisse croire que quelque chose cloche — parce que rien ne semble clocher. Ce qu'il ignore, c'est qu'une pièce précise sur son moteur précis, à son kilométrage précis, est la seule chose qui le sépare d'une réparation de 3 000 $. L'information existe. Elle se trouve dans les tendances d'entretien et les historiques de défaillances documentés. <strong>Elle ne se trouve simplement nulle part où une personne normale regarde un mardi.</strong></p>
+
+      <p>La plupart des gens entendent « rapport de véhicule » et pensent au moment de l'achat. Ce moment compte — nous l'avons conçu pour ça. Mais il y a 290 millions de véhicules immatriculés aux États-Unis et seule une fraction change de mains chaque année. <strong>Le plus grand public de ce que nous faisons, ce ne sont pas les gens qui achètent une voiture. Ce sont les gens qui en possèdent déjà une</strong> — et qui veulent savoir ce qui s'en vient avant que ça leur coûte 3 000 $. Aucun voyant. Aucun bruit. Juste une voiture qui allait bien hier et qui ne va plus aujourd'hui, parce que personne ne leur a dit quoi surveiller sur ce moteur exact, à ce kilométrage exact, en langage clair. C'est l'autre moitié de ce que nous avons bâti.</p>
+
+      <div class="pull-quote">
+        <p>« Ce n'est pas un manque d'information. C'est une conception. »</p>
+      </div>
+
+      <p>La transaction d'une voiture d'occasion est conçue pour que l'information circule dans un seul sens, et ce n'est pas le vôtre. Et la voiture que vous possédez déjà ne vient pas avec un manuel qui vous dit quoi surveiller sur ce moteur exact, à ce kilométrage exact, en langage clair. Nous avons regardé ces deux réalités et ça nous a mis en colère — parce que l'information existait. Personne ne la mettait du bon côté de la table. Alors nous l'avons fait.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">La décision</p>
+      <p>L'information pour corriger cela existait déjà. Historiques d'entretien, points de défaillance courants de modèles précis, registres de rappels, prix réels du marché — tout était là, dispersé dans des endroits où la plupart des acheteurs ne pensent jamais à regarder et qu'ils ne sauraient pas lire de toute façon. <strong>Le problème n'a jamais été que l'information n'existait pas. Le problème, c'est qu'elle ne s'est jamais trouvée du côté de l'acheteur de la table.</strong></p>
+      <p>Et elle ne le serait jamais, d'elle-même. Personne qui gagne de l'argent quand vous achetez une voiture n'a de raison de vous remettre un verdict lucide avant que vous signiez. Ni le concessionnaire. Ni la plateforme qui vous vend des prospects. Les intérêts de tous pointent dans la même direction, et ce n'est pas la vôtre. Alors nous avons cessé d'attendre que quelqu'un ayant un intérêt financier dans la vente le fasse, et nous avons bâti l'outil nous-mêmes.</p>
+      <p>Cette indépendance n'est pas un argument de vente ajouté après coup. <em>C'est la raison même de notre existence.</em> Aucun argent de concessionnaire. Aucun argent d'annonceur. Aucun partenariat avec l'industrie, aucun accord de partage de données, aucun arrangement discret avec qui que ce soit de l'autre côté de la table. Le verdict que vous obtenez provient du dossier réel de la voiture — pas de celui qui signe le chèque.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">Pour les gens</p>
+      <p>Ce n'est pas une entreprise financée par du capital-risque qui cherche à conquérir un marché avant la prochaine ronde de financement. C'est une équipe qui a vu des amis, de la famille et de parfaits inconnus se faire déjouer lors du plus gros achat de leur année — et qui a décidé que c'en était un de trop. <strong>Yes Car No Car existe parce que les acheteurs méritent quelqu'un dans leur camp qui n'est pas aussi payé par le vendeur.</strong></p>
+      <p>C'est pourquoi le verdict au niveau du modèle est gratuit pour tout le monde, et le restera toujours. Pas un truc de croissance, pas un compte à rebours conçu pour vous presser. C'est simple : avant de dépenser un sou, vous obtenez un avis honnête sur ce type de voiture. Cela reste petit et indépendant à dessein — parce que petit et indépendant, c'est ce qui le rend impossible à acheter.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">La promesse</p>
+      <p>Voici notre engagement. Non pas comme une posture marketing — mais comme le fondement permanent de l'entreprise.</p>
+      <div class="promise-block">
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text"><strong>Le verdict au niveau du modèle est gratuit.</strong> Avant de dépenser quoi que ce soit, vous obtenez un avis honnête sur ce type de voiture.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text"><strong>Aucun pourriel marketing.</strong> Nous n'envoyons que les communications essentielles liées au compte si vous devenez client.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text"><strong>Aucun lien avec les concessionnaires.</strong> Ni maintenant, ni plus tard, jamais.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text"><strong>Aucune entente avec des annonceurs.</strong> Personne ne nous paie pour influencer le verdict.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-dot"></div>
+          <p class="promise-text"><strong>Aucun conflit d'intérêts.</strong> Le produit gagne de l'argent quand les acheteurs paient pour de l'information. Point final.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <p>Indépendant. Conçu pour tous ceux qui conduisent. Maintenant sur iPhone et Android aux États-Unis.</p>
+      <a class="cta-btn" href="/fr/waitlist.html">Télécharger l’app</a>
+    </div>
+
+  </article>
+
+  <footer>
+    <div class="socials footer-socials">
+      <a class="social-link" href="https://www.instagram.com/yescarnocar" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.2 8.8 2.2 12 2.2zm0-2.2C8.75 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.4A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.75 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.73 1.48 1.4 2.13a5.9 5.9 0 0 0 2.13 1.4c.76.3 1.64.5 2.91.56C8.33 23.99 8.75 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.4 5.9 5.9 0 0 0 1.4-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.7.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.4-2.13A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.25 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+      </a>
+      <a class="social-link" href="https://www.facebook.com/profile.php?id=61592831604002" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+      </a>
+      <a class="social-link" href="https://www.tiktok.com/@yescarnocar.app" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.66a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.09z"/></svg>
+      </a>
+      <a class="social-link" href="https://x.com/yescarnocarUSA" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a class="social-link" href="https://www.youtube.com/@yescarnocarusa" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+      </a>
+    </div>
+    Un produit de <a href="https://backedwisely.com">Backed Wisely Inc.</a> &nbsp;&middot;&nbsp; &copy; 2026 &nbsp;&middot;&nbsp; <a href="/terms.html">Conditions</a>&nbsp;&middot;&nbsp; <a href="/refunds.html">Remboursements</a>&nbsp;&middot;&nbsp; <a href="/privacy.html">Politique de confidentialité</a> &nbsp;&middot;&nbsp; <a href="/disclaimer.html">Avis de non-responsabilité</a><br><span style="font-size:0.9em;opacity:0.8;">Les documents juridiques sont disponibles en anglais.</span>
+  </footer>
+
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+  <script>
+    (function(){
+      var navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+      var navDropdown = document.querySelector('.nav-dropdown');
+      if (navDropdownToggle && navDropdown) {
+        navDropdownToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = navDropdown.classList.toggle('open');
+          navDropdownToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+          if (!navDropdown.contains(e.target)) {
+            navDropdown.classList.remove('open');
+            navDropdownToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
