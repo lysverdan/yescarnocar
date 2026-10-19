@@ -10,12 +10,17 @@
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 2
 
-# Case-insensitive. KBB and NADA use word boundaries so "Canada" and stray
-# letter runs don't false-match. Add new names here as needed.
-PATTERN='kelley|\bKBB\b|blue book|edmunds|truecar|cars\.com|cargurus|autotrader|\bNADA\b|j\.?d\.? *power|carfax|autocheck'
+# Most names are matched case-insensitively. "NADA" (the valuation vendor) is
+# matched CASE-SENSITIVELY as the all-caps acronym, so the ordinary Spanish word
+# "nada" ("nothing") and "Canada" in the translated /es and /fr pages don't
+# false-match. Add new names here as needed.
+PATTERN_CI='kelley|\bKBB\b|blue book|edmunds|truecar|cars\.com|cargurus|autotrader|j\.?d\.? *power|carfax|autocheck'
+PATTERN_CS='\bNADA\b'
 
 # Only scan published content (HTML + the text discovery files), not this script.
-hits=$(grep -rniE "$PATTERN" --include='*.html' --include='*.txt' . 2>/dev/null)
+hits_ci=$(grep -rniE "$PATTERN_CI" --include='*.html' --include='*.txt' . 2>/dev/null)
+hits_cs=$(grep -rnE  "$PATTERN_CS" --include='*.html' --include='*.txt' . 2>/dev/null)
+hits=$(printf '%s\n%s' "$hits_ci" "$hits_cs" | grep -v '^$')
 
 if [ -n "$hits" ]; then
   echo "=================================================================="
