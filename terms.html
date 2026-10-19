@@ -13,6 +13,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="canonical" href="https://yescarnocar.com/terms.html" />
+  <link rel="alternate" hreflang="en" href="https://yescarnocar.com/terms.html" />
+  <link rel="alternate" hreflang="es" href="https://yescarnocar.com/es/terms.html" />
+  <link rel="alternate" hreflang="fr" href="https://yescarnocar.com/fr/terms.html" />
+  <link rel="alternate" hreflang="x-default" href="https://yescarnocar.com/terms.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -475,7 +479,16 @@
     .policy-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; color: var(--silver); margin: 1.6rem 0 0.6rem; font-weight: 600; letter-spacing: 0.01em; }
     .legal-address { font-style: normal; color: var(--silver-2); line-height: 1.85; }
     .legal-caps { font-size: 0.86rem; letter-spacing: 0.005em; color: var(--silver-dim); }
-  </style>
+      .lang-switch { display:flex; align-items:center; gap:0.45rem; }
+    .lang-switch a { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--silver-dim); text-decoration:none; font-weight:600; transition:color 0.2s ease; }
+    .lang-switch a:hover { color:var(--silver); }
+    .lang-switch a.lang-active { color:var(--gold); }
+    .lang-switch .sep { color:var(--line); font-size:0.7rem; }
+    @media (max-width:760px){ .nav-right .lang-switch { display:none; } }
+    .mobile-lang { display:flex; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .mobile-lang a { font-family:'Inter Tight',sans-serif; font-size:0.85rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--silver-dim); text-decoration:none; font-weight:600; }
+    .mobile-lang a.lang-active { color:var(--gold); }
+</style>
   <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
   <!-- HeyCatch analytics -->
@@ -540,6 +553,9 @@
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
           </a>
         </div>
+        <div class="lang-switch">
+          <a href="/terms.html" class="lang-active">EN</a><span class="sep">·</span><a href="/fr/terms.html">FR</a><span class="sep">·</span><a href="/es/terms.html">ES</a>
+        </div>
         <a href="waitlist.html" class="nav-cta">Get the App</a>
       </div>
     </div>
@@ -558,6 +574,11 @@
     <a href="best-used-suvs-worth-buying.html">Best Used SUVs Worth Buying</a>
     <a href="what-car-should-i-buy.html">What Car Should I Buy?</a>
     <a href="waitlist.html" class="mobile-cta">Get the App</a>
+    <div class="mobile-lang">
+      <a href="/terms.html" class="lang-active">EN</a>
+      <a href="/fr/terms.html">FR</a>
+      <a href="/es/terms.html">ES</a>
+    </div>
   </div>
 
 
@@ -610,7 +631,7 @@
       <div class="section-number">04</div>
       <h2>Eligibility, territories, and accounts</h2>
       <p>You must be at least 18 and legally able to enter this agreement. The Service is offered only where we make it available, currently the United States and, when enabled, Canada.</p>
-      <p>Paid products are offered to residents of the United States and of Canadian provinces and territories <strong>other than Quebec</strong>. We do not currently offer paid products to residents of Quebec, and the Service is currently provided in English only; we do not yet provide French-language service. If you are a Quebec resident, please do not purchase a paid product unless and until we expressly make it available to you. Availability in an app store does not guarantee that every vehicle, territory, or feature is supported.</p>
+      <p>Paid products are offered to residents of the United States and of all Canadian provinces and territories, including Quebec. The Service is available in English, French, and Spanish. Availability in an app store does not guarantee that every vehicle, territory, or feature is supported.</p>
       <p>An account may be created with your email address and a one-time sign-in code. Keep your email secure. You are responsible for authorized activity on your account and for providing accurate information. You may not impersonate others or operate multiple accounts to evade usage limits. We may verify eligibility or restrict suspicious usage.</p>
     </div>
 

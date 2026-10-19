@@ -13,6 +13,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="canonical" href="https://yescarnocar.com/privacy.html" />
+  <link rel="alternate" hreflang="en" href="https://yescarnocar.com/privacy.html" />
+  <link rel="alternate" hreflang="es" href="https://yescarnocar.com/es/privacy.html" />
+  <link rel="alternate" hreflang="fr" href="https://yescarnocar.com/fr/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://yescarnocar.com/privacy.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -475,7 +479,16 @@
     .policy-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; color: var(--silver); margin: 1.6rem 0 0.6rem; font-weight: 600; letter-spacing: 0.01em; }
     .legal-address { font-style: normal; color: var(--silver-2); line-height: 1.85; }
     .legal-caps { font-size: 0.86rem; letter-spacing: 0.005em; color: var(--silver-dim); }
-  </style>
+      .lang-switch { display:flex; align-items:center; gap:0.45rem; }
+    .lang-switch a { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--silver-dim); text-decoration:none; font-weight:600; transition:color 0.2s ease; }
+    .lang-switch a:hover { color:var(--silver); }
+    .lang-switch a.lang-active { color:var(--gold); }
+    .lang-switch .sep { color:var(--line); font-size:0.7rem; }
+    @media (max-width:760px){ .nav-right .lang-switch { display:none; } }
+    .mobile-lang { display:flex; justify-content:center; gap:1rem; margin-top:1.5rem; }
+    .mobile-lang a { font-family:'Inter Tight',sans-serif; font-size:0.85rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--silver-dim); text-decoration:none; font-weight:600; }
+    .mobile-lang a.lang-active { color:var(--gold); }
+</style>
   <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
   <!-- HeyCatch analytics -->
@@ -540,6 +553,9 @@
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
           </a>
         </div>
+        <div class="lang-switch">
+          <a href="/privacy.html" class="lang-active">EN</a><span class="sep">·</span><a href="/fr/privacy.html">FR</a><span class="sep">·</span><a href="/es/privacy.html">ES</a>
+        </div>
         <a href="waitlist.html" class="nav-cta">Get the App</a>
       </div>
     </div>
@@ -558,6 +574,11 @@
     <a href="best-used-suvs-worth-buying.html">Best Used SUVs Worth Buying</a>
     <a href="what-car-should-i-buy.html">What Car Should I Buy?</a>
     <a href="waitlist.html" class="mobile-cta">Get the App</a>
+    <div class="mobile-lang">
+      <a href="/privacy.html" class="lang-active">EN</a>
+      <a href="/fr/privacy.html">FR</a>
+      <a href="/es/privacy.html">ES</a>
+    </div>
   </div>
 
 
@@ -648,7 +669,7 @@
       <div class="section-number">08</div>
       <h2>Additional information for Canadian users</h2>
       <p>Where Canadian federal or provincial private-sector privacy legislation applies, we aim to provide meaningful notice and consent, reasonable access and correction mechanisms, appropriate safeguards, and accountability for personal information. Our privacy contact serves as the point of contact for the individual responsible for privacy compliance; the name or title of any designated privacy officer must be available where required by law.</p>
-      <p>Quebec residents may have additional rights under applicable Quebec law, including rights concerning information access, correction, portability in certain circumstances, consent withdrawal, and certain automated decisions, subject to applicable conditions and exceptions. We will provide legally required notices and human review mechanisms if the Service makes decisions solely through automated processing that trigger those requirements. Cross-border transfers involving Quebec personal information will receive any assessment and safeguards required by Quebec law before processing occurs. (Note: we do not currently offer paid products to Quebec residents or provide French-language service; see the <a href="terms.html">Terms</a>.)</p>
+      <p>Quebec residents may have additional rights under applicable Quebec law, including rights concerning information access, correction, portability in certain circumstances, consent withdrawal, and certain automated decisions, subject to applicable conditions and exceptions. We will provide legally required notices and human review mechanisms if the Service makes decisions solely through automated processing that trigger those requirements. Cross-border transfers involving Quebec personal information will receive any assessment and safeguards required by Quebec law before processing occurs. Quebec residents are served, and the Service is available in English, French, and Spanish; see the <a href="terms.html">Terms</a>.</p>
     </div>
 
     <hr class="section-divider" />
