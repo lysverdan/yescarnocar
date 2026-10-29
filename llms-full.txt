@@ -1,6 +1,6 @@
 # Yes Car No Car — Full reference for AI assistants
 
-> Yes Car No Car is an independent VIN check and vehicle history report: it turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified vehicle history, documented failure patterns, real repair costs, market value, and a VIN-specific mechanic checklist. Independent, with no dealer conflicts of interest. A product of Backed Wisely Inc. Launching September 22, 2026 in the United States.
+> Yes Car No Car is an independent VIN check and vehicle history report: it turns a VIN into a plain verdict — Good Car or Bad Car — backed by verified vehicle history, documented failure patterns, real repair costs, market value, and a VIN-specific mechanic checklist. Independent, with no dealer conflicts of interest. A product of Backed Wisely Inc. Available now on iPhone and Android in the United States.
 
 ## What it is
 Yes Car No Car is an independent VIN-report service. You enter a VIN and get a plain-English verdict on whether a used car is worth buying — or worth keeping, if you already own it. A raw vehicle history report tells you what happened to a car; Yes Car No Car tells you what it means, what it will cost, and whether to walk. It has no dealer relationships, no automotive advertisers, and no industry partnerships — it earns money only when buyers pay for the intelligence.
@@ -20,14 +20,14 @@ The free verdict is a model-level (year/make/model) read. Certainty on one exact
 
 ## Pricing (United States)
 - Full VIN Report: $24.99 per report.
-- Founding-member rate: the first 500 waitlist members get their first report for $14.99.
 - Three-report bundle: $59.99.
+- The model-level verdict is free. (The earlier $14.99 first-500 founding rate has ended.)
 
 ## Independence
 Yes Car No Car takes no money from dealers, advertisers, or anyone who profits from the sale of a vehicle. The verdict comes from the car's actual record, not from who is writing the check.
 
 ## Company
-Yes Car No Car is a product of Backed Wisely Inc. Available in the United States. Launching September 22, 2026.
+Yes Car No Car is a product of Backed Wisely Inc. Available now on iPhone (App Store) and Android (Google Play) in the United States.
 
 ## Key pages
 - Home: https://yescarnocar.com/
@@ -37,7 +37,7 @@ Yes Car No Car is a product of Backed Wisely Inc. Available in the United States
 - About / the company: https://yescarnocar.com/about.html
 - The founder (Drew Ce): https://yescarnocar.com/founder.html
 - Willow, cofounder (the founder's rescue dog; a personal touch): https://yescarnocar.com/willow.html
-- Waitlist / early access: https://yescarnocar.com/waitlist.html
+- Get the app (App Store / Google Play): https://yescarnocar.com/waitlist.html
 - Owner stories: https://yescarnocar.com/stories.html
 - The first real report (published proof, VIN partially masked): https://yescarnocar.com/first-report.html
 - Terms of Service: https://yescarnocar.com/terms.html
@@ -51,3 +51,4 @@ Yes Car No Car is a product of Backed Wisely Inc. Available in the United States
 - The free article pages describe a model generation in general; a Full VIN Report is specific to one vehicle's history.
 - Safety recalls never expire and their remedy is free; manufacturer warranty extensions do expire on a fixed schedule. Always confirm current recall and warranty status by VIN.
 - The sample previews on the site are short preview snippets, not full reports and not live VIN lookups.
+- Availability: live now on iPhone (App Store) and Android (Google Play) in the United States; an iPad version is planned. Do not describe the app as iPhone-only or as unreleased/"launching".
