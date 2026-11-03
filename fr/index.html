@@ -46,34 +46,44 @@
         "name": "Yes Car No Car",
         "description": "Une vérification NIV indépendante et un rapport sur le véhicule : scannez un NIV et obtenez un verdict Bonne voiture ou Mauvaise voiture, sans conflit avec les concessionnaires.",
         "publisher": {
-          "@type": "Organization",
-          "name": "Backed Wisely Inc.",
-          "url": "https://yescarnocar.com/"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://yescarnocar.com/?vin={search_term_string}",
-          "query-input": "required name=search_term_string"
+          "@id": "https://yescarnocar.com/#organization"
         }
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "MobileApplication",
+        "@id": "https://yescarnocar.com/#app",
         "name": "Yes Car No Car",
         "url": "https://yescarnocar.com/",
         "image": "https://yescarnocar.com/ycnc-social.png",
         "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web",
+        "operatingSystem": "iOS, Android",
+        "downloadUrl": [
+          "https://apps.apple.com/app/yes-car-no-car/id6812071003",
+          "https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar"
+        ],
+        "sameAs": [
+          "https://apps.apple.com/app/yes-car-no-car/id6812071003",
+          "https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar"
+        ],
         "description": "Une vérification NIV indépendante : saisissez un NIV et obtenez instantanément un verdict Bonne voiture ou Mauvaise voiture, puis un rapport complet d'historique du véhicule — schémas de défaillance, coûts réels de réparation, une liste pour le mécanicien et cinq questions de suivi.",
-        "offers": {
-          "@type": "Offer",
-          "price": "24.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/PreOrder",
-          "description": "Rapport NIV complet sur une voiture précise — 24,99 $."
-        },
-        "provider": {
-          "@type": "Organization",
-          "name": "Backed Wisely Inc."
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Verdict au niveau du modèle",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Rapport NIV complet",
+            "price": "24.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ],
+        "publisher": {
+          "@id": "https://yescarnocar.com/#organization"
         }
       },
       {
@@ -83,7 +93,11 @@
         "url": "https://yescarnocar.com/",
         "logo": "https://yescarnocar.com/ycnc-badge.png",
         "description": "Une vérification NIV indépendante et un rapport d'historique du véhicule : saisissez un NIV et obtenez un verdict Bonne voiture ou Mauvaise voiture, appuyé sur un historique vérifié et des données de coûts réelles, sans conflit d'intérêts avec les concessionnaires.",
-        "parentOrganization": { "@type": "Organization", "name": "Backed Wisely Inc.", "url": "https://backedwisely.com/" },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Backed Wisely Inc.",
+          "url": "https://backedwisely.com/"
+        },
         "sameAs": [
           "https://www.instagram.com/yescarnocar",
           "https://www.facebook.com/profile.php?id=61592831604002",

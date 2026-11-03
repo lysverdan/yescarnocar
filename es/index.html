@@ -46,34 +46,44 @@
         "name": "Yes Car No Car",
         "description": "Una verificación VIN independiente y un informe del vehículo: escanea un VIN y obtén un veredicto de Buen auto o Mal auto, sin conflictos con concesionarios.",
         "publisher": {
-          "@type": "Organization",
-          "name": "Backed Wisely Inc.",
-          "url": "https://yescarnocar.com/"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://yescarnocar.com/?vin={search_term_string}",
-          "query-input": "required name=search_term_string"
+          "@id": "https://yescarnocar.com/#organization"
         }
       },
       {
-        "@type": "SoftwareApplication",
+        "@type": "MobileApplication",
+        "@id": "https://yescarnocar.com/#app",
         "name": "Yes Car No Car",
         "url": "https://yescarnocar.com/",
         "image": "https://yescarnocar.com/ycnc-social.png",
         "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web",
+        "operatingSystem": "iOS, Android",
+        "downloadUrl": [
+          "https://apps.apple.com/app/yes-car-no-car/id6812071003",
+          "https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar"
+        ],
+        "sameAs": [
+          "https://apps.apple.com/app/yes-car-no-car/id6812071003",
+          "https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar"
+        ],
         "description": "Una verificación VIN independiente: ingresa un VIN y obtén al instante un veredicto de Buen auto o Mal auto, luego un informe completo de historial del vehículo: patrones de falla, costos reales de reparación, una lista para el mecánico y cinco preguntas de seguimiento.",
-        "offers": {
-          "@type": "Offer",
-          "price": "24.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/PreOrder",
-          "description": "Informe VIN completo sobre un auto exacto — $24.99."
-        },
-        "provider": {
-          "@type": "Organization",
-          "name": "Backed Wisely Inc."
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Veredicto a nivel de modelo",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Informe VIN completo",
+            "price": "24.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ],
+        "publisher": {
+          "@id": "https://yescarnocar.com/#organization"
         }
       },
       {
@@ -83,7 +93,11 @@
         "url": "https://yescarnocar.com/",
         "logo": "https://yescarnocar.com/ycnc-badge.png",
         "description": "Una verificación VIN independiente y un informe de historial del vehículo: ingresa un VIN y obtén un veredicto de Buen auto o Mal auto, respaldado por un historial verificado y datos reales de costos, sin conflictos de interés con concesionarios.",
-        "parentOrganization": { "@type": "Organization", "name": "Backed Wisely Inc.", "url": "https://backedwisely.com/" },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Backed Wisely Inc.",
+          "url": "https://backedwisely.com/"
+        },
         "sameAs": [
           "https://www.instagram.com/yescarnocar",
           "https://www.facebook.com/profile.php?id=61592831604002",
