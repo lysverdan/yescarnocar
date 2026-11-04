@@ -373,6 +373,7 @@
 
     /* ---------- Hero ---------- */
     .hero {
+      background: linear-gradient(to bottom, rgba(10,10,10,0.55), rgba(10,10,10,0.74) 58%, var(--bg) 100%), url('/hero-night-lot.jpg') center / cover no-repeat;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -677,6 +678,9 @@
     /* ---------- Final Intelligence teaser ---------- */
     .fi-teaser { border-top: 1px solid var(--line); }
     .fi-teaser-inner { max-width: 760px; }
+    .fi-teaser-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+    .fi-teaser-img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); filter: brightness(0.82); }
+    @media (min-width: 820px) { .fi-teaser-grid { grid-template-columns: 1.15fr 0.85fr; } }
     .fi-teaser-link {
       display: inline-flex;
       align-items: center;
@@ -1538,11 +1542,14 @@
   <!-- ============ FINAL INTELLIGENCE TEASER ============ -->
   <section class="fi-teaser">
     <div class="container">
+      <div class="fi-teaser-grid">
       <div class="fi-teaser-inner">
         <div class="eyebrow">One Report. Everything.</div>
         <h2>History. Service records. Recalls.<br /><em>And the verdict on top.</em></h2>
         <p class="lede">Available accident reports. Reported service visits. Identified recalls — with the full text. Ownership history. Mileage timeline. Market value. Yes Car No Car pulls it all into a single independent Full VIN Report — then goes where a history report stops: the failure patterns coming for your exact engine, the real repair costs, and the verdict. One VIN. One honest answer.</p>
         <a class="fi-teaser-link" href="product.html">See what's in the report &rarr;</a>
+      </div>
+      <img class="fi-teaser-img" src="/vin-plate.jpg" width="1672" height="941" loading="lazy" decoding="async" alt="Close-up of a VIN plate seen through a car windshield" />
       </div>
     </div>
   </section>
