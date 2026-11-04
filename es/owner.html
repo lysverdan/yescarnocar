@@ -134,9 +134,10 @@
     .page-hero {
       position: relative; z-index: 1;
       padding: 7rem 1.5rem 5rem;
-      max-width: 820px; margin: 0 auto;
       border-bottom: 1px solid var(--line);
+      background: linear-gradient(to bottom, rgba(10,10,10,0.68), rgba(10,10,10,0.82) 60%, var(--bg) 100%), url('/driveway-dusk.jpg') center / cover no-repeat;
     }
+    .page-hero-inner { max-width: 820px; margin: 0 auto; }
     .eyebrow {
       font-size: 0.62rem; letter-spacing: 0.28em;
       text-transform: uppercase; color: var(--gold);
@@ -573,9 +574,11 @@
 
   <!-- ── hero ── -->
   <div class="page-hero">
+    <div class="page-hero-inner">
     <p class="eyebrow">Para propietarios</p>
     <h1 class="page-title">Tu auto está bien. Hasta el día en que <em>no lo está.</em></h1>
     <p class="page-lede">Hay 290 millones de vehículos registrados en Estados Unidos. La mayoría los conducen personas que no tienen idea de lo que viene. No porque sean descuidadas, sino porque nadie les dijo qué vigilar en su motor exacto, a su kilometraje exacto, en lenguaje claro. Eso es lo que hacemos.</p>
+    </div>
   </div>
 
   <!-- ── stat strip ── -->

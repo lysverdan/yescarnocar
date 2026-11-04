@@ -373,6 +373,7 @@
 
     /* ---------- Hero ---------- */
     .hero {
+      background: linear-gradient(to bottom, rgba(10,10,10,0.55), rgba(10,10,10,0.74) 58%, var(--bg) 100%), url('/hero-night-lot.jpg') center / cover no-repeat;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -677,6 +678,9 @@
     /* ---------- Final Intelligence teaser ---------- */
     .fi-teaser { border-top: 1px solid var(--line); }
     .fi-teaser-inner { max-width: 760px; }
+    .fi-teaser-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+    .fi-teaser-img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); filter: brightness(0.82); }
+    @media (min-width: 820px) { .fi-teaser-grid { grid-template-columns: 1.15fr 0.85fr; } }
     .fi-teaser-link {
       display: inline-flex;
       align-items: center;
@@ -1539,11 +1543,14 @@
   <!-- ============ FINAL INTELLIGENCE TEASER ============ -->
   <section class="fi-teaser">
     <div class="container">
+      <div class="fi-teaser-grid">
       <div class="fi-teaser-inner">
         <div class="eyebrow">Un rapport. Tout.</div>
         <h2>Historique. Historiques d'entretien. Rappels.<br /><em>Et le verdict par-dessus.</em></h2>
         <p class="lede">Rapports d'accident disponibles. Visites d'entretien signalées. Rappels identifiés — avec le texte intégral. Historique de propriété. Chronologie du kilométrage. Valeur marchande. Yes Car No Car rassemble tout cela dans un seul rapport NIV complet et indépendant — puis va là où un rapport d'historique s'arrête : les schémas de défaillance qui guettent votre moteur exact, les coûts réels de réparation et le verdict. Un NIV. Une réponse honnête.</p>
         <a class="fi-teaser-link" href="/fr/product.html">Voyez ce que contient le rapport &rarr;</a>
+      </div>
+      <img class="fi-teaser-img" src="/vin-plate.jpg" width="1672" height="941" loading="lazy" decoding="async" alt="Gros plan d'une plaque NIV vue à travers le pare-brise d'une voiture" />
       </div>
     </div>
   </section>
