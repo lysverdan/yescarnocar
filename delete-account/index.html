@@ -109,13 +109,15 @@
       border-bottom: 1px solid rgba(76, 175, 80, 0.12);
     }
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1280px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .wordmark {
+      white-space: nowrap;
+      flex: none;
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem;
       letter-spacing: 0.26em;
@@ -132,6 +134,7 @@
       gap: 2rem;
     }
     .nav-link {
+      white-space: nowrap;
       font-size: 0.72rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -147,6 +150,7 @@
       gap: 2rem;
     }
     .nav-cta {
+      white-space: nowrap;
       font-size: 0.72rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -463,6 +467,7 @@
     }
     .social-link:hover { color: var(--gold); transform: translateY(-1px); }
     .social-link svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+    .topbar-socials { display: none; }
     .topbar-socials .social-link { width: 18px; height: 18px; }
     @media (max-width: 760px) { .topbar-socials { display: none !important; } }
       .footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem auto 1.25rem; }
@@ -478,7 +483,19 @@
     .policy-section h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; color: var(--silver); margin: 1.6rem 0 0.6rem; font-weight: 600; letter-spacing: 0.01em; }
     .legal-address { font-style: normal; color: var(--silver-2); line-height: 1.85; }
     .legal-caps { font-size: 0.86rem; letter-spacing: 0.005em; color: var(--silver-dim); }
-  </style>
+      /* Below 1100px the desktop links no longer fit beside the one-line
+       wordmark, so collapse them into the hamburger menu; keep Get the App. */
+    @media (max-width: 1100px) {
+      .nav-links { display: none !important; }
+      .nav-right .lang-switch { display: none !important; }
+      .hamburger { display: block !important; }
+      .nav-cta { display: inline-block !important; white-space: nowrap; padding: 0.45rem 0.7rem !important; font-size: 0.6rem !important; letter-spacing: 0.1em !important; }
+    }
+    @media (max-width: 480px) {
+      .wordmark { font-size: 0.7rem !important; letter-spacing: 0.1em !important; }
+      .nav-cta { padding: 0.4rem 0.55rem !important; font-size: 0.55rem !important; letter-spacing: 0.04em !important; }
+    }
+</style>
   <script defer data-domain="yescarnocar.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="Yes Car No Car" href="https://yescarnocar.com/feed.xml" />
   <!-- HeyCatch analytics -->
