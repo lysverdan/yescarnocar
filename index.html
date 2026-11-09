@@ -1335,6 +1335,64 @@
   </section>
 
 
+  <!-- ============ WHY NOT JUST ASK AI ============ -->
+  <style>
+    .vsai { border-top: 1px solid var(--line); }
+    .vsai-inner { max-width: 1080px; margin: 0 auto; }
+    .vsai h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.08; color: var(--silver); margin: 0.4rem 0 0; }
+    .vsai h2 em { font-style: italic; color: var(--gold-bright); }
+    .vsai .vsai-lede { color: var(--silver-2); font-size: 1.05rem; line-height: 1.55; max-width: 60ch; margin: 1.1rem 0 2.4rem; }
+    .vsai-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 820px) { .vsai-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
+    .vsai-col { border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem 1.5rem; background: rgba(255,255,255,0.015); }
+    .vsai-col.them { border-color: rgba(217,72,72,0.28); }
+    .vsai-col.us { border-color: rgba(111,208,111,0.5); background: rgba(76,175,80,0.05); box-shadow: 0 0 40px -18px rgba(76,175,80,0.5); }
+    .vsai-col h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.4rem; margin: 0 0 1.1rem; color: var(--silver); }
+    .vsai-col.us h3 { color: var(--gold-bright); }
+    .vsai-list { list-style: none; margin: 0; padding: 0; }
+    .vsai-list li { position: relative; padding-left: 1.9rem; margin-bottom: 1rem; color: var(--silver-2); font-size: 0.98rem; line-height: 1.5; }
+    .vsai-list li:last-child { margin-bottom: 0; }
+    .vsai-list li::before { position: absolute; left: 0; top: -0.02em; font-size: 1.1rem; font-weight: 700; }
+    .vsai-col.them .vsai-list li::before { content: "\00D7"; color: var(--bad); }
+    .vsai-col.us .vsai-list li::before { content: "\2713"; color: var(--good); }
+    .vsai-col.us .vsai-list li { color: var(--silver); }
+    .vsai-punch { text-align: center; margin: 2.6rem auto 0; max-width: 46ch; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.3rem, 2.6vw, 1.7rem); line-height: 1.3; color: var(--silver); }
+    .vsai-punch em { font-style: italic; color: var(--gold-bright); }
+  </style>
+  <section class="vsai">
+    <div class="container">
+      <div class="vsai-inner">
+        <div class="eyebrow">Why not just ask ChatGPT?</div>
+        <h2>A chatbot has opinions about cars. <em>We built a machine that does the real work.</em></h2>
+        <p class="vsai-lede">Go ahead and ask one. You'll get a confident paragraph that sounds right, skips what actually matters, and says something different if you ask it twice. That's a guess with nothing behind it. Here's the difference.</p>
+        <div class="vsai-grid">
+          <div class="vsai-col them">
+            <h3>Asking ChatGPT or Gemini</h3>
+            <ul class="vsai-list">
+              <li>Guesses from the model's general reputation &mdash; it never sees <em>your</em> actual car.</li>
+              <li>Confidently makes up repair costs and &ldquo;common problems&rdquo; &mdash; sometimes flat wrong.</li>
+              <li>A different answer every time you ask.</li>
+              <li>Hedges: &ldquo;it might be fine, go ask a mechanic.&rdquo;</li>
+              <li>Answers to no one when you buy a lemon on its advice.</li>
+            </ul>
+          </div>
+          <div class="vsai-col us">
+            <h3>Yes Car No Car</h3>
+            <ul class="vsai-list">
+              <li>Reads the real file on that exact VIN, then runs it through a system built on <em>years of research and months of engineering.</em></li>
+              <li>Grounded in documented failure patterns and real per-job costs for that exact engine.</li>
+              <li>The same rigorous analysis every time &mdash; built to work through every failure point a guess breezes past.</li>
+              <li>Commits to a verdict: Good Car or Bad Car, buy it or walk, and exactly why.</li>
+              <li>Stands behind it &mdash; a defective report gets fixed or refunded.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="vsai-punch">One of these answers is worth $20,000. <em>It isn't the chatbot's.</em></p>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ============ PROBLEM ============ -->
   <section class="problem">
     <div class="container">
