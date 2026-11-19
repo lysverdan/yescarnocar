@@ -546,7 +546,20 @@
       <span class="verdict-text" style="color: var(--teal);">GOOD CAR — WITH CONDITIONS</span>
     </div>
 
-    <div class="article-body">
+      <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
+  <div class="article-body">
       <h2>Why it's a good car</h2>
       <p>The 2014 E350 is the W212 facelift, and it has the right engine: the M276 3.5-liter V6 (about 302 hp) that replaced the earlier M272, whose balance-shaft defect ate engines from the inside. It is paired with the 722.9 7G-Tronic Plus seven-speed automatic and was built as a genuine long-distance car — high highway mileage is not the alarm it first appears to be. And on the North American rear-wheel-drive E350 sedan, the suspension is conventional steel springs, not the expensive air suspension fitted to some other E-Class variants — so there is no air-strut bill lurking on this specific car.</p>
 
@@ -609,6 +622,19 @@
   <div class="inline-disclaimer">
     <p>This is an informational opinion based on general vehicle data &mdash; not professional advice, and not a substitute for an in-person inspection by a qualified mechanic. Always get any used car independently inspected before you buy. See our full <a href="disclaimer.html">Disclaimer</a>.</p>
   </div>
+  <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
 
   <footer>
     <div class="socials footer-socials">

@@ -546,7 +546,20 @@
       <span class="verdict-text" style="color: var(--bad);">BAD CAR FOR YOU</span>
     </div>
 
-    <div class="article-body">
+      <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
+  <div class="article-body">
       <h2>Why it lands here</h2>
       <p>As a vehicle, the 2015 Santa Fe Sport is genuinely likeable — roomy, well-equipped, comfortable, and crash-tested well. None of that is the problem. The problem is under the hood. It was sold with two engines, a 2.4-liter and a 2.0-liter turbo, and both are Hyundai's "Theta II" direct-injection engines. That family has a documented connecting-rod bearing failure, traced to metallic manufacturing debris left in the engine's oil passages, that can starve the bearings, seize the engine, and in some cases cause an engine fire. It has been the subject of federal recalls, an extended engine-warranty program, and a major class-action settlement. Because both engines share the defect, choosing the base engine instead of the turbo does not get you out of it.</p>
 
@@ -610,6 +623,19 @@
   <div class="inline-disclaimer">
     <p>This is an informational opinion based on general vehicle data &mdash; not professional advice, and not a substitute for an in-person inspection by a qualified mechanic. Always get any used car independently inspected before you buy. See our full <a href="disclaimer.html">Disclaimer</a>.</p>
   </div>
+  <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
 
   <footer>
     <div class="socials footer-socials">

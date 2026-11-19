@@ -541,7 +541,20 @@
       <span class="verdict-text" style="color: var(--teal);">GOOD CAR — WITH CONDITIONS</span>
     </div>
 
-    <div class="article-body">
+      <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
+  <div class="article-body">
       <h2>Why it's a good car</h2>
       <p>The 1.9-litre ALH turbodiesel is genuinely one of the great engines of the last few decades — owners routinely post 400,000-mile and 500,000-km milestones as a matter of course. It returns exceptional real-world fuel economy, parts are still cheap and plentiful, and underneath the retro body it is a Mk4 Volkswagen sharing its bones with the Golf and Jetta of the same era. That makes it one of the most documented, supported, and DIY-friendly platforms in existence. The engine wants to live forever; the job is making sure the car around it has been kept up.</p>
 
@@ -605,6 +618,19 @@
   <div class="inline-disclaimer">
     <p>This is an informational opinion based on general vehicle data &mdash; not professional advice, and not a substitute for an in-person inspection by a qualified mechanic. Always get any used car independently inspected before you buy. See our full <a href="disclaimer.html">Disclaimer</a>.</p>
   </div>
+  <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
 
   <footer>
     <div class="socials footer-socials">
