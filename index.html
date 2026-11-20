@@ -6,7 +6,7 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="theme-color" content="#0a0a0a" />
   <title>Yes Car No Car — Predict a Used Car's Future by VIN</title>
-  <meta name="description" content="Scan a VIN and Yes Car No Car predicts the car's future: documented failure patterns for that exact engine, forecasted repair costs, verified history, market value, and a Good Car or Bad Car verdict. A rigorous report on the actual car — not a chatbot's guess about the model." />
+  <meta name="description" content="Scan a VIN and Yes Car No Car predicts the car's future: documented failure patterns for that exact engine, forecasted repair costs, verified history, market value, and a Good Car or Bad Car verdict. A rigorous report on the actual car." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -22,7 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yes Car No Car" />
   <meta property="og:title" content="Yes Car No Car — Independent VIN Check: Good Car or Bad Car" />
-  <meta property="og:description" content="Scan a VIN for a Good Car or Bad Car verdict backed by a full report on that exact car — documented failure patterns for its engine, forecasted repair costs, verified history, and market value. A rigorous analysis of the actual vehicle, not a chatbot's guess. Live on iPhone and Android in the U.S." />
+  <meta property="og:description" content="Scan a VIN for a Good Car or Bad Car verdict backed by a full report on that exact car — documented failure patterns for its engine, forecasted repair costs, verified history, and market value. A rigorous analysis of the actual vehicle. Live on iPhone and Android in the U.S." />
   <meta property="og:image" content="https://yescarnocar.com/ycnc-social.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -31,7 +31,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Yes Car No Car — Independent VIN Check: Good Car or Bad Car" />
-  <meta name="twitter:description" content="Scan a VIN for a Good Car or Bad Car verdict and a full report on that exact car: documented failure patterns for its engine, forecasted repair costs, verified history, and market value. The real analysis, not a chatbot's guess." />
+  <meta name="twitter:description" content="Scan a VIN for a Good Car or Bad Car verdict and a full report on that exact car: documented failure patterns for its engine, forecasted repair costs, verified history, and market value." />
   <meta name="twitter:image" content="https://yescarnocar.com/ycnc-social.png" />
 
   <!-- JSON-LD: WebSite + SoftwareApplication -->
@@ -65,7 +65,7 @@
           "https://apps.apple.com/app/yes-car-no-car/id6812071003",
           "https://play.google.com/store/apps/details?id=inc.backedwisely.yescarnocar"
         ],
-        "description": "Independent used-car intelligence: scan a VIN and get a Good Car or Bad Car verdict backed by a full report on that exact vehicle. Reads the real records for one specific car and runs them through an analysis methodology refined over years of research — documented failure patterns for that exact engine, forecasted repair costs, verified service and ownership history, accident and title records, recall detail, market value, and a mechanic checklist. Not a generic AI guess about the model; a rigorous analysis of the actual vehicle.",
+        "description": "Independent used-car intelligence: scan a VIN and get a Good Car or Bad Car verdict backed by a full report on that exact vehicle. Reads the real records for one specific car and runs them through an analysis methodology refined over years of research — documented failure patterns for that exact engine, forecasted repair costs, verified service and ownership history, accident and title records, recall detail, market value, and a mechanic checklist. A rigorous analysis of the actual vehicle.",
         "featureList": [
           "Good Car or Bad Car verdict on one exact VIN",
           "Documented failure patterns for that specific year, make, model, and engine",
@@ -155,14 +155,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes — completely. Yes Car No Car takes no money from dealers, no advertising from automotive brands, and has no financial relationship with any party involved in the sale of a vehicle. The verdict answers one question: is this a good car or not? That answer never changes based on who's selling it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can't I just ask ChatGPT or another AI instead?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can, but you'll get a generic guess. A general-purpose chatbot only knows a model's overall reputation — it has no access to the real records for the specific car you're looking at, and it may give a different answer each time you ask. Yes Car No Car reads the actual history tied to that exact VIN and runs it through an analysis system refined over years of research and months of engineering, built to work through the documented failure patterns, recalls, and real repair costs a casual AI answer skips. A chatbot gives you an opinion about the model; Yes Car No Car gives you a documented verdict on the actual car."
         }
       },
       {
@@ -1349,64 +1341,6 @@
           <h3>Now you hold the cards</h3>
           <p>You walked in knowing more than the seller does &mdash; the verdict, the costs, the whole future. <span style="display:block;margin-top:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.15rem;line-height:1.25;color:var(--gold-bright);">Surprise! You just took your power back.</span></p>
         </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ WHY NOT JUST ASK AI ============ -->
-  <style>
-    .vsai { border-top: 1px solid var(--line); }
-    .vsai-inner { max-width: 1080px; margin: 0 auto; }
-    .vsai h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.08; color: var(--silver); margin: 0.4rem 0 0; }
-    .vsai h2 em { font-style: italic; color: var(--gold-bright); }
-    .vsai .vsai-lede { color: var(--silver-2); font-size: 1.05rem; line-height: 1.55; max-width: 60ch; margin: 1.1rem 0 2.4rem; }
-    .vsai-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
-    @media (min-width: 820px) { .vsai-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
-    .vsai-col { border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem 1.5rem; background: rgba(255,255,255,0.015); }
-    .vsai-col.them { border-color: rgba(217,72,72,0.28); }
-    .vsai-col.us { border-color: rgba(111,208,111,0.5); background: rgba(76,175,80,0.05); box-shadow: 0 0 40px -18px rgba(76,175,80,0.5); }
-    .vsai-col h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.4rem; margin: 0 0 1.1rem; color: var(--silver); }
-    .vsai-col.us h3 { color: var(--gold-bright); }
-    .vsai-list { list-style: none; margin: 0; padding: 0; }
-    .vsai-list li { position: relative; padding-left: 1.9rem; margin-bottom: 1rem; color: var(--silver-2); font-size: 0.98rem; line-height: 1.5; }
-    .vsai-list li:last-child { margin-bottom: 0; }
-    .vsai-list li::before { position: absolute; left: 0; top: -0.02em; font-size: 1.1rem; font-weight: 700; }
-    .vsai-col.them .vsai-list li::before { content: "\00D7"; color: var(--bad); }
-    .vsai-col.us .vsai-list li::before { content: "\2713"; color: var(--good); }
-    .vsai-col.us .vsai-list li { color: var(--silver); }
-    .vsai-punch { text-align: center; margin: 2.6rem auto 0; max-width: 46ch; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.3rem, 2.6vw, 1.7rem); line-height: 1.3; color: var(--silver); }
-    .vsai-punch em { font-style: italic; color: var(--gold-bright); }
-  </style>
-  <section class="vsai">
-    <div class="container">
-      <div class="vsai-inner">
-        <div class="eyebrow">Why not just ask ChatGPT?</div>
-        <h2>A chatbot has opinions about cars. <em>We built a machine that does the real work.</em></h2>
-        <p class="vsai-lede">Go ahead and ask one. You'll get a confident paragraph that sounds right, skips what actually matters, and says something different if you ask it twice. That's a guess with nothing behind it. Here's the difference.</p>
-        <div class="vsai-grid">
-          <div class="vsai-col them">
-            <h3>Asking ChatGPT or Gemini</h3>
-            <ul class="vsai-list">
-              <li>Guesses from the model's general reputation &mdash; it never sees <em>your</em> actual car.</li>
-              <li>Confidently makes up repair costs and &ldquo;common problems&rdquo; &mdash; sometimes flat wrong.</li>
-              <li>A different answer every time you ask.</li>
-              <li>Hedges: &ldquo;it might be fine, go ask a mechanic.&rdquo;</li>
-              <li>Answers to no one when you buy a lemon on its advice.</li>
-            </ul>
-          </div>
-          <div class="vsai-col us">
-            <h3>Yes Car No Car</h3>
-            <ul class="vsai-list">
-              <li>Reads the real file on that exact VIN, then runs it through a system built on <em>years of research and months of engineering.</em></li>
-              <li>Grounded in documented failure patterns and real per-job costs for that exact engine.</li>
-              <li>The same rigorous analysis every time &mdash; built to work through every failure point a guess breezes past.</li>
-              <li>Commits to a verdict: Good Car or Bad Car, buy it or walk, and exactly why.</li>
-              <li>Stands behind it &mdash; a defective report gets fixed or refunded.</li>
-            </ul>
-          </div>
-        </div>
-        <p class="vsai-punch">One of these answers is worth $20,000. <em>It isn't the chatbot's.</em></p>
       </div>
     </div>
   </section>
