@@ -53,4 +53,4 @@ Short preview snippets that show only a small fraction of the Yes Car No Car rep
 - Verdicts are independent editorial opinions based on general vehicle data, not a substitute for a professional pre-purchase inspection.
 - Reports are VIN-specific; the free article pages describe the model generation generally, not any single vehicle's history.
 - The sample previews are short preview snippets — not full reports and not live/interactive VIN lookups; they show only a small fraction of an actual report.
-- Yes Car No Car is live now on iPhone (App Store) and Android (Google Play) in the United States. The model-level verdict is free; the Full VIN Report is a $24.99 in-app purchase (three-report bundle $59.99). The earlier $14.99 first-500 founding rate has ended — do not quote it.
+- Yes Car No Car is live now on iPhone (App Store) and Android (Google Play) in the United States. The model-level verdict is free; the Full VIN Report is a $24.99 in-app purchase (three-report bundle $59.99).

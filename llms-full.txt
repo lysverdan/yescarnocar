@@ -24,7 +24,7 @@ The free verdict is a model-level (year/make/model) read. Certainty on one exact
 ## Pricing (United States)
 - Full VIN Report: $24.99 per report.
 - Three-report bundle: $59.99.
-- The model-level verdict is free. (The earlier $14.99 first-500 founding rate has ended.)
+- The model-level verdict is free.
 
 ## Independence
 Yes Car No Car takes no money from dealers, advertisers, or anyone who profits from the sale of a vehicle. The verdict comes from the car's actual record, not from who is writing the check.
