@@ -541,7 +541,20 @@
       <span class="verdict-text" style="color: var(--condition);">GOOD/BAD CAR FOR YOU</span>
     </div>
 
-    <div class="article-body">
+      <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
+  <div class="article-body">
       <h2>First — which 2003 XJ are you looking at?</h2>
       <p>This matters before anything else, because a 2003 XJ Vanden Plas can be one of two very different cars. Most 2003 examples sold in North America are the outgoing steel-bodied model (the X308) with a 4.0-litre V8 and a five-speed automatic on conventional springs. The all-new aluminium model (the X350) — 4.2-litre V8, six-speed automatic, and air suspension at all four corners — arrived as a 2004 model, though the earliest cars were built in 2003. The quickest way to tell them apart is the engine: a 4.0-litre is the older X308, a 4.2-litre is the aluminium X350. The rest of this page covers the aluminium X350. If yours is the 4.0 X308, the big-ticket items are different — most notably that earlier V8's plastic timing-chain tensioners — so confirm the car by its engine and VIN first.</p>
 
@@ -609,6 +622,19 @@
   <div class="inline-disclaimer">
     <p>This is an informational opinion based on general vehicle data &mdash; not professional advice, and not a substitute for an in-person inspection by a qualified mechanic. Always get any used car independently inspected before you buy. See our full <a href="disclaimer.html">Disclaimer</a>.</p>
   </div>
+  <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
+
 
   <footer>
     <div class="socials footer-socials">

@@ -1136,6 +1136,21 @@
       install: { framework: 'web', agent: 'claude-code' },
     });
   </script>
+  <style>
+/* ---------- "Check this exact car" web VIN report box ---------- */
+.vinbox{max-width:640px;margin:2.5rem auto;padding:1.75rem 1.5rem;border:1px solid var(--gold,#4caf50);border-radius:16px;background:linear-gradient(180deg,rgba(76,175,80,0.07),rgba(10,10,10,0.15));box-shadow:0 0 50px -24px rgba(76,175,80,0.6);text-align:center;}
+.vinbox-h{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.1;color:var(--silver,#e8e8ec);margin:0 0 0.6rem;}
+.vinbox-sub{color:var(--silver-dim,#a0a0a5);font-size:0.98rem;line-height:1.5;margin:0 0 1.3rem;}
+.vinbox-price{display:inline-block;margin-top:0.35rem;color:var(--gold-bright,#6fd06f);font-weight:600;}
+.vinbox-form{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;}
+.vinbox-vin{flex:1 1 100%;padding:0.85rem 1rem;background:rgba(0,0,0,0.4);border:1px solid var(--line,rgba(76,175,80,0.3));border-radius:10px;color:var(--silver,#e8e8ec);font-size:1rem;text-align:center;letter-spacing:0.08em;text-transform:uppercase;font-family:inherit;}
+.vinbox-vin::placeholder{color:#6b6b70;letter-spacing:normal;text-transform:none;}
+.vinbox-vin:focus{outline:none;border-color:var(--gold,#4caf50);box-shadow:0 0 0 3px rgba(76,175,80,0.2);}
+.vinbox-market{flex:1 1 150px;padding:0.85rem 0.7rem;background:rgba(0,0,0,0.4);border:1px solid var(--line,rgba(76,175,80,0.3));border-radius:10px;color:var(--silver,#e8e8ec);font-size:0.95rem;font-family:inherit;}
+.vinbox-btn{flex:1 1 190px;padding:0.85rem 1.2rem;background:var(--gold,#4caf50);color:#0a0a0a;font-weight:700;font-size:0.95rem;border:none;border-radius:10px;cursor:pointer;letter-spacing:0.02em;font-family:inherit;}
+.vinbox-btn:hover{filter:brightness(1.08);}
+@media (max-width:520px){.vinbox-market,.vinbox-btn{flex:1 1 100%;}}
+  </style>
 </head>
 <body>
 
@@ -1288,6 +1303,19 @@
 
       <p class="hero-trust" style="margin-top:1.6rem;font-size:0.9rem;color:var(--silver-dim);max-width:46ch;line-height:1.55;">From the one voice in the deal that isn't paid to sell it to you.</p>
     </div>
+  </section>
+
+  <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
   </section>
 
   <!-- ============ COST PROJECTION ============ -->
@@ -1609,6 +1637,19 @@
       <span class="cta-refund">Free to join. And every report is protected &mdash; if one fails to generate you&rsquo;re never charged, and a defective report is fixed or refunded within 7 days. <a href="refunds.html">See our Refund Policy</a>.</span>
     </div>
   </div>
+
+  <section class="vinbox" aria-label="Check this exact car">
+    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number">
+      <select class="vinbox-market" name="market" aria-label="Market">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Get the full report</button>
+    </form>
+  </section>
 
   <!-- ============ FOOTER ============ -->
   <footer>
