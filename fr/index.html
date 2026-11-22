@@ -22,7 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yes Car No Car" />
   <meta property="og:title" content="Yes Car No Car — Vérification NIV indépendante : Bonne voiture ou Mauvaise voiture" />
-  <meta property="og:description" content="Scannez un NIV pour un verdict Bonne voiture ou Mauvaise voiture appuyé sur un rapport complet de cette voiture précise — schémas de défaillance documentés pour son moteur, coûts de réparation prévus, historique vérifié et valeur marchande. Une analyse rigoureuse du véhicule réel. Disponible sur iPhone et Android aux États-Unis." />
+  <meta property="og:description" content="Scannez un NIV pour un verdict Bonne voiture ou Mauvaise voiture appuyé sur un rapport complet de cette voiture précise — schémas de défaillance documentés pour son moteur, coûts de réparation prévus, historique vérifié et valeur marchande. Une analyse rigoureuse du véhicule réel. Disponible sur iPhone et Android aux États-Unis et au Canada." />
   <meta property="og:image" content="https://yescarnocar.com/ycnc-social.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -146,7 +146,7 @@
         "name": "Combien coûte un rapport Yes Car No Car ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le verdict au niveau du modèle est gratuit. Un rapport NIV complet sur une voiture précise coûte 24,99 $. Un forfait de trois rapports coûte 59,99 $ — faites trois rapports et économisez 15 $."
+          "text": "Le verdict au niveau du modèle est gratuit. Un rapport NIV complet sur une voiture précise coûte 24,99 $ US (34,99 $ CA au Canada). Un forfait de trois rapports coûte 59,99 $ US (dans l'application) — faites trois rapports et économisez 15 $."
         }
       },
       {
@@ -178,7 +178,7 @@
         "name": "Où Yes Car No Car est-il disponible ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes Car No Car est disponible maintenant sur iPhone et Android aux États-Unis. Un rapport NIV complet sur une voiture précise coûte 24,99 $ ; le verdict au niveau du modèle est gratuit. L'iPad, l'espagnol et le Canada (anglais et français) arrivent bientôt."
+          "text": "Yes Car No Car est disponible maintenant sur iPhone et Android aux États-Unis et au Canada. Un rapport NIV complet sur une voiture précise coûte 24,99 $ US (34,99 $ CA au Canada) ; le verdict au niveau du modèle est gratuit. L'iPad et l'application en français et en espagnol arrivent bientôt."
         }
       }
     ]
@@ -1228,7 +1228,7 @@
   <section class="hero" id="hero" data-color="var(--good)">
     <div class="hero-demo">
       <div class="hb" id="heroBadge"><img src="/ycnc-badge.png" width="600" height="601" decoding="async" fetchpriority="high" alt="Yes Car No Car — un service indépendant de rapports NIV qui vous dit si une voiture d'occasion est une Bonne voiture ou une Mauvaise voiture avant de l'acheter." /></div>
-      <div class="hero-live"><span class="live-dot"></span>Maintenant sur iPhone &amp; Android · États-Unis</div>
+      <div class="hero-live"><span class="live-dot"></span>Maintenant sur iPhone &amp; Android · États-Unis et Canada</div>
       <h1 class="hero-h1" style="font-size:clamp(2.7rem,7vw,4.6rem);">Qui a besoin d'un rapport d'historique quand vous pouvez <em>voir l'avenir ?</em></h1>
       <p class="hero-sub2" style="max-width:42ch;">Enfin — une appli qui vous dit si la voiture est une <em style="font-style:italic;color:var(--gold-bright);">POUBELLE</em> <em style="font-style:italic;color:var(--gold-bright);">AVANT DE L'ACHETER.</em> Scannez un NIV; on vous dit ce qu'elle vous coûtera une fois la lune de miel terminée — la réponse qu'aucun vendeur ne vous dira en face.</p>
 
@@ -1264,7 +1264,7 @@
         </div>
         <div class="dm-btns">
           <button class="dm-go cue-pulse" id="goBtn">Voir le verdict gratuit</button>
-          <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Rapport complet &mdash; 24,99 $ <span>&rarr;</span></a>
+          <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Rapport complet &mdash; 24,99 $ US / 34,99 $ CA <span>&rarr;</span></a>
         </div>
         <div class="dm-chips">
           <span class="dm-try">Try one:</span>
@@ -1697,7 +1697,7 @@
     var busy=false,current="ml350";
 
     if(badge&&go&&input&&paid&&verdict){
-      var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'Voir le rapport complet <span>&rarr;</span>':'Rapport complet &mdash; 24,99 $ <span>&rarr;</span>';};
+      var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'Voir le rapport complet <span>&rarr;</span>':'Rapport complet &mdash; 24,99 $ US / 34,99 $ CA <span>&rarr;</span>';};
       var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; input.value=c.vin; setPaid(k);
         document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.classList.toggle("sel", ch.getAttribute("data-case")===k); });
         verdict.classList.remove("show");

@@ -1,13 +1,13 @@
 # Yes Car No Car
 
-> Yes Car No Car is an independent used-car intelligence service: scan a VIN and get a Good Car or Bad Car verdict backed by a rigorous report on that exact vehicle — documented failure patterns for that specific engine, forecasted repair costs, verified service and ownership history, accident and title records, recall detail, market value, and a mechanic checklist. It reads the real records for one specific car and runs them through an analysis methodology refined over years of research, so the output is a decision-grade verdict. Independent, with no dealer conflicts of interest. Available now on iPhone and Android in the United States.
+> Yes Car No Car is an independent used-car intelligence service: scan a VIN and get a Good Car or Bad Car verdict backed by a rigorous report on that exact vehicle — documented failure patterns for that specific engine, forecasted repair costs, verified service and ownership history, accident and title records, recall detail, market value, and a mechanic checklist. It reads the real records for one specific car and runs them through an analysis methodology refined over years of research, so the output is a decision-grade verdict. Independent, with no dealer conflicts of interest. Available now on iPhone and Android in the United States and Canada.
 
 ## Product
 - [Home](https://yescarnocar.com/): Overview — scan a VIN, get a verdict, get the full report.
-- [Product](https://yescarnocar.com/product.html): What's included in a full vehicle report ($24.99 in-app purchase; the model-level verdict is free).
-- [Pricing](https://yescarnocar.com/product.html#pricing): Free model-level verdict; Full VIN Report $24.99; three-report bundle $59.99.
+- [Product](https://yescarnocar.com/product.html): What's included in a full vehicle report (US$24.99 (CA$34.99 in Canada) in-app purchase; the model-level verdict is free).
+- [Pricing](https://yescarnocar.com/product.html#pricing): Free model-level verdict; Full VIN Report US$24.99 (CA$34.99 in Canada); three-report bundle US$59.99 (in the app).
 - [FAQ](https://yescarnocar.com/faq.html): Common questions — free verdict vs. paid report, the four verdicts, pricing, how the service stays independent, data privacy, VIN scanning, and app availability.
-- [Get the App](https://yescarnocar.com/waitlist.html): Yes Car No Car is live now — download free on the App Store (iPhone) or Google Play (Android) in the U.S.
+- [Get the App](https://yescarnocar.com/waitlist.html): Yes Car No Car is live now — download free on the App Store (iPhone) or Google Play (Android) in the U.S. and Canada, or buy a report directly on the website.
 - [Owner Stories](https://yescarnocar.com/stories.html): Real used-car ownership stories and outcomes.
 - [The First One That Counted](https://yescarnocar.com/first-report.html): The real, complete Full VIN Report on a 2012 Mercedes-Benz ML350 4MATIC — the report where every piece of the methodology finally came together, after hundreds of earlier versions and the search for the right data partners, published as proof (VIN partially masked). A genuine full report, not a preview snippet.
 
@@ -52,4 +52,4 @@ Short preview snippets that show only a small fraction of the Yes Car No Car rep
 - Verdicts are independent editorial opinions based on general vehicle data, not a substitute for a professional pre-purchase inspection.
 - Reports are VIN-specific; the free article pages describe the model generation generally, not any single vehicle's history.
 - The sample previews are short preview snippets — not full reports and not live/interactive VIN lookups; they show only a small fraction of an actual report.
-- Yes Car No Car is live now on iPhone (App Store) and Android (Google Play) in the United States. The model-level verdict is free; the Full VIN Report is a $24.99 in-app purchase (three-report bundle $59.99).
+- Yes Car No Car is live now on iPhone (App Store) and Android (Google Play) in the United States and Canada. The model-level verdict is free; the Full VIN Report is US$24.99 (CA$34.99 in Canada) and can be bought in the app or directly on the website; the three-report bundle is US$59.99, in the app only. The app, the checkout page, and the reports are in English. Canadian reports are in kilometres and Canadian dollars and include Transport Canada recalls. iPad and the app in French and Spanish are coming soon — do not describe the app or reports as available in French or Spanish.

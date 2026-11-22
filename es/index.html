@@ -22,7 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yes Car No Car" />
   <meta property="og:title" content="Yes Car No Car — Verificación VIN independiente: Buen auto o Mal auto" />
-  <meta property="og:description" content="Escanea un VIN para un veredicto de Buen auto o Mal auto respaldado por un informe completo de ese auto exacto: patrones de falla documentados para su motor, costos de reparación proyectados, historial verificado y valor de mercado. Un análisis riguroso del vehículo real. Disponible en iPhone y Android en EE. UU." />
+  <meta property="og:description" content="Escanea un VIN para un veredicto de Buen auto o Mal auto respaldado por un informe completo de ese auto exacto: patrones de falla documentados para su motor, costos de reparación proyectados, historial verificado y valor de mercado. Un análisis riguroso del vehículo real. Disponible en iPhone y Android en EE. UU. y Canadá" />
   <meta property="og:image" content="https://yescarnocar.com/ycnc-social.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -146,7 +146,7 @@
         "name": "¿Cuánto cuesta un informe de Yes Car No Car?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "El veredicto a nivel de modelo es gratis. Un Informe VIN completo sobre un auto exacto cuesta $24.99. Un paquete de tres informes cuesta $59.99: haz tres informes y ahorra $15."
+          "text": "El veredicto a nivel de modelo es gratis. Un Informe VIN completo sobre un auto exacto cuesta US$24.99 (CA$34.99 en Canadá). Un paquete de tres informes cuesta US$59.99 (en la app): haz tres informes y ahorra $15."
         }
       },
       {
@@ -178,7 +178,7 @@
         "name": "¿Dónde está disponible Yes Car No Car?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes Car No Car está disponible ahora en iPhone y Android en Estados Unidos. Un Informe VIN completo sobre un auto exacto cuesta $24.99; el veredicto a nivel de modelo es gratis. iPad, español y Canadá (inglés y francés) llegarán pronto."
+          "text": "Yes Car No Car está disponible ahora en iPhone y Android en Estados Unidos y Canadá. Un Informe VIN completo sobre un auto exacto cuesta US$24.99 (CA$34.99 en Canadá); el veredicto a nivel de modelo es gratis. El iPad y la app en francés y español llegan pronto."
         }
       }
     ]
@@ -1228,7 +1228,7 @@
   <section class="hero" id="hero" data-color="var(--good)">
     <div class="hero-demo">
       <div class="hb" id="heroBadge"><img src="/ycnc-badge.png" width="600" height="601" decoding="async" fetchpriority="high" alt="Yes Car No Car — un servicio independiente de informes VIN que te dice si un auto usado es un Buen auto o un Mal auto antes de comprarlo." /></div>
-      <div class="hero-live"><span class="live-dot"></span>Ya en iPhone &amp; Android · Estados Unidos</div>
+      <div class="hero-live"><span class="live-dot"></span>Ya en iPhone &amp; Android · Estados Unidos y Canadá</div>
       <h1 class="hero-h1" style="font-size:clamp(2.7rem,7vw,4.6rem);">¿Quién necesita un informe de historial cuando puedes <em>ver el futuro?</em></h1>
       <p class="hero-sub2" style="max-width:42ch;">Por fin — una app que te dice si el auto es una <em style="font-style:italic;color:var(--gold-bright);">chatarra</em> <em style="font-style:italic;color:var(--gold-bright);">ANTES DE COMPRARLO.</em> Escanea un VIN; te decimos cuánto te costará cuando se acabe la luna de miel — la respuesta que ningún vendedor te dirá en la cara.</p>
 
@@ -1244,12 +1244,7 @@
           </a>
         </div>
         <div class="hero-roadmap">
-          <div class="hero-roadmap-label">Próximamente</div>
-          <div class="hero-roadmap-chips">
-            <span class="hero-roadmap-chip"><strong>iPad</strong></span>
-            <span class="hero-roadmap-chip"><strong>Español</strong></span>
-            <span class="hero-roadmap-chip"><strong>Canadá</strong> · EN &amp; FR</span>
-          </div>
+          <p class="hero-roadmap-note" style="margin:0;font-size:0.85rem;line-height:1.6;color:var(--silver-dim);"><strong style="color:var(--gold);">Ya en Canadá.</strong> Sepa lo que realmente compra antes de pagar: el historial del auto exacto, en kilómetros y dólares canadienses, con los retiros de Transport Canada. CA$34.99 por informe. El iPad y la app en francés y español llegan pronto.</p>
         </div>
       </div>
 
@@ -1264,7 +1259,7 @@
         </div>
         <div class="dm-btns">
           <button class="dm-go cue-pulse" id="goBtn">Ver el veredicto gratis</button>
-          <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Informe completo &mdash; $24.99 <span>&rarr;</span></a>
+          <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Informe completo &mdash; US$24.99 (CA$34.99 en Canadá) <span>&rarr;</span></a>
         </div>
         <div class="dm-chips">
           <span class="dm-try">Try one:</span>
@@ -1697,7 +1692,7 @@
     var busy=false,current="ml350";
 
     if(badge&&go&&input&&paid&&verdict){
-      var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'Ver el informe completo <span>&rarr;</span>':'Informe completo &mdash; $24.99 <span>&rarr;</span>';};
+      var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'Ver el informe completo <span>&rarr;</span>':'Informe completo &mdash; US$24.99 (CA$34.99 en Canadá) <span>&rarr;</span>';};
       var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; input.value=c.vin; setPaid(k);
         document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.classList.toggle("sel", ch.getAttribute("data-case")===k); });
         verdict.classList.remove("show");
