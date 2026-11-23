@@ -1266,7 +1266,7 @@
 
       <section class="vinbox" aria-label="Check this exact car">
         <h2 class="vinbox-h">Check the exact car before you buy.</h2>
-        <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+        <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99.</span> Less than a big-name history report, and it actually tells you what it means. One report, no subscription.<br>Ready in about 10 minutes, straight to your email.</p>
         <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
           <input type="hidden" name="src" value="home">
           <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number" autocapitalize="characters" autocomplete="off">
@@ -1278,17 +1278,17 @@
         </form>
       </section>
 
+      <div class="report-proof" style="width:100%;max-width:540px;margin:1.3rem auto 0;text-align:center;">
+        <a href="first-report.html" style="display:block;text-decoration:none;">
+          <span style="display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(0,0,0,0.8);"><img src="first-report-top.jpg" alt="The top of a real Yes Car No Car Full VIN Report on a 2012 Mercedes-Benz ML350 — verdict: Good Car, with conditions." loading="lazy" width="844" height="620" style="width:100%;height:auto;display:block;" /></span>
+          <span style="display:block;margin-top:0.7rem;font-size:0.85rem;line-height:1.5;color:var(--silver-dim);">Not a demo. A real one: 2012 Mercedes ML350, Florida to Canada. <span style="color:var(--gold);">See it start to finish &rarr;</span></span>
+        </a>
+      </div>
+
       <div class="dm-scan">
-        <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Not a brochure. Go ahead — poke it.</p>
-        <div class="dm-row">
-          <label class="dm-vin"><span class="dot"></span><input id="vinInput" spellcheck="false" readonly value="4JGDA5HB9••••••••" aria-label="Example VIN — preview only" title="Preview — choose an example car below" /></label>
-        </div>
-        <div class="dm-cue" id="dmCue" aria-hidden="true">
-          <span class="cue-txt">VIN it to win it</span>
-          <svg viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 2 V17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 12 L15 21 L24 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">See how a verdict reads. Pick an example:</p>
         <div class="dm-btns">
-          <button class="dm-go cue-pulse" id="goBtn">See the free verdict</button>
+          <button class="dm-go cue-pulse" id="goBtn">Show me the verdict</button>
           <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Full report &mdash; US$24.99 (CA$34.99 in Canada) <span>&rarr;</span></a>
         </div>
         <div class="dm-chips">
@@ -1299,11 +1299,11 @@
           <button class="dm-chip" data-case="split">2016 Jeep Wrangler</button>
           <button class="dm-chip" data-case="bad">2015 Santa Fe Sport</button>
         </div>
-        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);">This is a preview using example cars &mdash; it doesn't look up your own VIN yet. The full VIN check is live in the app. <a href="waitlist.html" style="color:var(--gold);">Get the app &rarr;</a></p>
+        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);"><a href="waitlist.html" style="color:var(--gold);">Get the app &rarr;</a></p>
       </div>
 
       <div class="dm-stage">
-        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Pick a car, then hit &ldquo;See the free verdict.&rdquo;</span></div></div>
+        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Pick a car, then hit &ldquo;Show me the verdict.&rdquo;</span></div></div>
         <div class="dm-verdict" id="dmVerdict">
           <span class="dm-vpill" id="dmPill">Free &middot; the model read</span>
           <div class="dm-vtitle" id="dmTitle">&mdash;</div>
@@ -1361,7 +1361,7 @@
         </div>
         <div class="diff">
           <h3>Rear-view mirror vs. windshield</h3>
-          <p>A history report only shows where the car's been. But the past won't strand you on the highway &mdash; its future will. We're the only ones who call it: the documented failure patterns coming for that exact VIN, and what they'll cost.</p>
+          <p>A history report only shows where the car's been. But the past won't strand you on the highway &mdash; its future will. We call it: the documented failure patterns coming for that exact VIN, and what they'll cost.</p>
         </div>
         <div class="diff">
           <h3>Now you hold the cards</h3>
@@ -1427,7 +1427,7 @@
           <div class="verdict-label">Verdict 04</div>
           <h3 class="verdict-title">Bad Car For You</h3>
           <p class="verdict-lede">Walk away.</p>
-          <p class="verdict-desc">The data points to recurring or catastrophic issues — a documented prevalent failure pattern on this specific year and engine, multiple safety recalls outstanding, or a price-to-condition mismatch that no negotiation can fix. We'll suggest better alternatives in the same class and budget so you don't leave empty-handed.</p>
+          <p class="verdict-desc">The data points to recurring or catastrophic issues — a documented prevalent failure pattern on this specific year and engine, multiple safety recalls outstanding, or a price-to-condition mismatch that no negotiation can fix. Where there's a better pick in the same class and budget, we'll name it, so you don't leave empty-handed.</p>
         </div>
 
       </div>
@@ -1620,7 +1620,7 @@
 
   <!-- positioning callout -->
   <section style="padding:4.5rem 1.5rem;border-top:1px solid var(--line);">
-    <p style="max-width:840px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);line-height:1.5;color:var(--silver);">Unlike history reports that only tell you where a car has been, or review sites that only describe the model in general, Yes Car No Car reads the actual vehicle in front of you and gives one clear answer — because it's <em style="font-style:italic;color:var(--gold);">the only car expert with no dealer to protect, no advertiser to please, and nothing to sell you but the truth.</em></p>
+    <p style="max-width:840px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);line-height:1.5;color:var(--silver);">Unlike history reports that only tell you where a car has been, or review sites that only describe the model in general, Yes Car No Car reads the actual vehicle in front of you and gives one clear answer — because it's <em style="font-style:italic;color:var(--gold);">a car expert with no dealer to protect, no advertiser to please, and nothing to sell you but the truth.</em></p>
   </section>
 
   <!-- ============ CTA BAND ============ -->
@@ -1638,7 +1638,7 @@
 
   <section class="vinbox" aria-label="Check this exact car">
     <h2 class="vinbox-h">Check the exact car before you buy.</h2>
-    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99.</span> Less than a big-name history report, and it actually tells you what it means. One report, no subscription.<br>Ready in about 10 minutes, straight to your email.</p>
     <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
       <input type="hidden" name="src" value="home">
       <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number" autocapitalize="characters" autocomplete="off">
@@ -1731,29 +1731,28 @@
     var COLOR={good:"var(--good)",cond:"var(--condition)",split:"var(--warning)",bad:"var(--bad)"};
     var STEPS=["Pulling verified history…","Checking accidents & recalls…","Matching failure patterns for this engine…","Weighing real repair costs…"];
     var $=function(id){return document.getElementById(id);};
-    var badge=$("heroBadge"),input=$("vinInput"),go=$("goBtn"),paid=$("paidBtn"),
+    var badge=$("heroBadge"),go=$("goBtn"),paid=$("paidBtn"),
         stageText=$("dmStageText"),verdict=$("dmVerdict"),pill=$("dmPill"),vtitle=$("dmTitle"),vline=$("dmLine");
     var busy=false,current="ml350";
 
-    if(badge&&go&&input&&paid&&verdict){
+    if(badge&&go&&paid&&verdict){
       var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'See the full report <span>&rarr;</span>':'Full report &mdash; US$24.99 (CA$34.99 in Canada) <span>&rarr;</span>';};
-      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; input.value=c.vin; setPaid(k);
+      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; setPaid(k);
         document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.classList.toggle("sel", ch.getAttribute("data-case")===k); });
         verdict.classList.remove("show");
-        stageText.innerHTML='<span class="dm-analyzing">Ready: <b style="color:var(--silver)">'+c.car+'</b> — hit “See the free verdict.”</span>'; };
+        stageText.innerHTML='<span class="dm-analyzing">Ready: <b style="color:var(--silver)">'+c.car+'</b> — hit “Show me the verdict.”</span>'; };
       var reveal=function(c){ badge.classList.remove("scanning");
         stageText.innerHTML='<span class="dm-analyzing">Free verdict for <b style="color:var(--silver)">'+c.car+'</b></span>';
         verdict.style.setProperty("--vc",COLOR[c.v]); pill.textContent="Free · the model read"; vtitle.textContent=c.label; vline.textContent=c.line;
         void verdict.offsetWidth; verdict.classList.add("show"); busy=false; go.disabled=false; };
       var run=function(k){ if(busy)return; var c=CASES[k]||CASES[current]; current=(k in CASES)?k:current; setPaid(current);
-        busy=true; go.disabled=true; input.value=c.vin; verdict.classList.remove("show"); badge.classList.add("scanning");
+        busy=true; go.disabled=true; verdict.classList.remove("show"); badge.classList.add("scanning");
         var i=0, dur=reduce?170:520;
         stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[0]+'</span>';
         var iv=setInterval(function(){ i++; if(i<STEPS.length){ stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[i]+'</span>'; } else { clearInterval(iv); reveal(c); } }, dur); };
       var cue=$("dmCue");
       var killCue=function(){ if(cue)cue.classList.add("gone"); go.classList.remove("cue-pulse"); };
       go.addEventListener("click",function(){ killCue(); run(current); });
-      input.addEventListener("keydown",function(e){ if(e.key==="Enter"){ killCue(); run(current); } });
       document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.addEventListener("click",function(){ killCue(); select(ch.getAttribute("data-case")); }); });
       select("ml350");
     }
