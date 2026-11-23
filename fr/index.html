@@ -1250,6 +1250,21 @@
         </div>
       </div>
 
+      <section class="vinbox" aria-label="Vérifiez ce véhicule">
+        <h2 class="vinbox-h">Vérifiez ce véhicule précis avant d&rsquo;acheter.</h2>
+        <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US &middot; un rapport, sans abonnement.</span></p>
+        <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+          <input type="hidden" name="src" value="home-fr">
+          <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Entrez le NIV de 17 caractères" required aria-label="Numéro d&rsquo;identification du véhicule" autocapitalize="characters" autocomplete="off">
+          <select class="vinbox-market" name="market" aria-label="Marché">
+            <option value="CA" selected>Canada</option>
+            <option value="US">États-Unis</option>
+          </select>
+          <button class="vinbox-btn" type="submit">Obtenir le rapport complet</button>
+        </form>
+        <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">La page de paiement et le rapport sont en anglais pour l&rsquo;instant.</p>
+      </section>
+
       <div class="dm-scan">
         <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Pas une brochure. Allez-y — fouinez.</p>
         <div class="dm-row">

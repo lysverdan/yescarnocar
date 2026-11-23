@@ -1264,6 +1264,20 @@
         </div>
       </div>
 
+      <section class="vinbox" aria-label="Check this exact car">
+        <h2 class="vinbox-h">Check the exact car before you buy.</h2>
+        <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
+        <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+          <input type="hidden" name="src" value="home">
+          <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number" autocapitalize="characters" autocomplete="off">
+          <select class="vinbox-market" name="market" aria-label="Market">
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+          </select>
+          <button class="vinbox-btn" type="submit">Get the full report</button>
+        </form>
+      </section>
+
       <div class="dm-scan">
         <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Not a brochure. Go ahead — poke it.</p>
         <div class="dm-row">
@@ -1300,20 +1314,6 @@
 
       <p class="hero-trust" style="margin-top:1.6rem;font-size:0.9rem;color:var(--silver-dim);max-width:46ch;line-height:1.55;">From the one voice in the deal that isn't paid to sell it to you.</p>
     </div>
-  </section>
-
-  <section class="vinbox" aria-label="Check this exact car">
-    <h2 class="vinbox-h">Check the exact car before you buy.</h2>
-    <p class="vinbox-sub">Its real history, what it&rsquo;s likely to cost you next, and our verdict for you.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; one report, no subscription.</span></p>
-    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
-      <input type="hidden" name="src" value="home">
-      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Enter the 17-character VIN" required aria-label="Vehicle Identification Number" autocapitalize="characters" autocomplete="off">
-      <select class="vinbox-market" name="market" aria-label="Market">
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-      </select>
-      <button class="vinbox-btn" type="submit">Get the full report</button>
-    </form>
   </section>
 
   <!-- ============ COST PROJECTION ============ -->
