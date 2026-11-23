@@ -1252,7 +1252,7 @@
 
       <section class="vinbox" aria-label="Revisa el auto exacto">
         <h2 class="vinbox-h">Revisa el auto exacto antes de comprar.</h2>
-        <p class="vinbox-sub">Su historial real, lo que probablemente te costará después y nuestro veredicto para ti.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; un informe, sin suscripción.</span></p>
+        <p class="vinbox-sub">Su historial real, lo que probablemente te costará después y nuestro veredicto para ti.<br><span class="vinbox-price">US$24.99 / CA$34.99.</span> Menos que un informe de historial de marca conocida, y de verdad te dice lo que significa. Un informe, sin suscripción.<br>Listo en unos 10 minutos, directo a tu correo.</p>
         <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
           <input type="hidden" name="src" value="home-es">
           <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Escribe el VIN de 17 caracteres" required aria-label="Número de identificación del vehículo" autocapitalize="characters" autocomplete="off">
@@ -1265,17 +1265,17 @@
         <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">Por ahora, la página de pago y el informe están en inglés.</p>
       </section>
 
+      <div class="report-proof" style="width:100%;max-width:540px;margin:1.3rem auto 0;text-align:center;">
+        <a href="/first-report.html" style="display:block;text-decoration:none;">
+          <span style="display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(0,0,0,0.8);"><img src="/first-report-top.jpg" alt="La parte superior de un Informe VIN completo real de Yes Car No Car sobre un Mercedes-Benz ML350 2012 — veredicto: Buen auto, con condiciones." loading="lazy" width="844" height="620" style="width:100%;height:auto;display:block;" /></span>
+          <span style="display:block;margin-top:0.7rem;font-size:0.85rem;line-height:1.5;color:var(--silver-dim);">No es una demo. Uno real: 2012 Mercedes ML350, de Florida a Canadá. <span style="color:var(--gold);">Míralo de principio a fin &rarr;</span></span>
+        </a>
+      </div>
+
       <div class="dm-scan">
-        <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Esto no es un folleto. Dale, toquetéalo.</p>
-        <div class="dm-row">
-          <label class="dm-vin"><span class="dot"></span><input id="vinInput" spellcheck="false" readonly value="4JGDA5HB9••••••••" aria-label="Example VIN — preview only" title="Preview — choose an example car below" /></label>
-        </div>
-        <div class="dm-cue" id="dmCue" aria-hidden="true">
-          <span class="cue-txt">VIN it to win it</span>
-          <svg viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 2 V17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 12 L15 21 L24 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Mira cómo se lee un veredicto. Elige un ejemplo:</p>
         <div class="dm-btns">
-          <button class="dm-go cue-pulse" id="goBtn">Ver el veredicto gratis</button>
+          <button class="dm-go cue-pulse" id="goBtn">Muéstrame el veredicto</button>
           <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Informe completo &mdash; US$24.99 (CA$34.99 en Canadá) <span>&rarr;</span></a>
         </div>
         <div class="dm-chips">
@@ -1286,11 +1286,11 @@
           <button class="dm-chip" data-case="split">2016 Jeep Wrangler</button>
           <button class="dm-chip" data-case="bad">2015 Santa Fe Sport</button>
         </div>
-        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);">Esta es una vista previa con autos de ejemplo &mdash; todavía no consulta tu propio VIN. La verificación VIN completa está disponible en la app. <a href="/es/waitlist.html" style="color:var(--gold);">Descarga la app &rarr;</a></p>
+        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);"><a href="/es/waitlist.html" style="color:var(--gold);">Descarga la app &rarr;</a></p>
       </div>
 
       <div class="dm-stage">
-        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Elige un auto y pulsa &ldquo;Ver el veredicto gratis.&rdquo;</span></div></div>
+        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Elige un auto y pulsa &ldquo;Muéstrame el veredicto.&rdquo;</span></div></div>
         <div class="dm-verdict" id="dmVerdict">
           <span class="dm-vpill" id="dmPill">Gratis &middot; la lectura del modelo</span>
           <div class="dm-vtitle" id="dmTitle">&mdash;</div>
@@ -1348,7 +1348,7 @@
         </div>
         <div class="diff">
           <h3>Retrovisor contra parabrisas</h3>
-          <p>Un informe de historial solo muestra por dónde ha estado el auto. Pero el pasado no te deja tirado en la carretera &mdash; su futuro sí. Somos los únicos que lo anticipan: los patrones de falla documentados que vienen por ese VIN exacto, y cuánto te van a costar.</p>
+          <p>Un informe de historial solo muestra por dónde ha estado el auto. Pero el pasado no te deja tirado en la carretera &mdash; su futuro sí. Lo anticipamos: los patrones de falla documentados que vienen por ese VIN exacto, y cuánto te van a costar.</p>
         </div>
         <div class="diff">
           <h3>Ahora la baraja la tienes tú</h3>
@@ -1414,7 +1414,7 @@
           <div class="verdict-label">Veredicto 04</div>
           <h3 class="verdict-title">Mal auto para ti</h3>
           <p class="verdict-lede">Aléjate.</p>
-          <p class="verdict-desc">Los datos apuntan a problemas recurrentes o catastróficos: un patrón de falla documentado y frecuente en este año y motor específicos, varios llamados a revisión de seguridad pendientes, o un desajuste entre precio y condición que ninguna negociación puede arreglar. Te sugeriremos mejores alternativas en la misma clase y presupuesto para que no te vayas con las manos vacías.</p>
+          <p class="verdict-desc">Los datos apuntan a problemas recurrentes o catastróficos: un patrón de falla documentado y frecuente en este año y motor específicos, varios llamados a revisión de seguridad pendientes, o un desajuste entre precio y condición que ninguna negociación puede arreglar. Cuando hay una mejor opción en la misma clase y presupuesto, te la nombramos, para que no te vayas con las manos vacías.</p>
         </div>
 
       </div>
@@ -1607,7 +1607,7 @@
 
   <!-- positioning callout -->
   <section style="padding:4.5rem 1.5rem;border-top:1px solid var(--line);">
-    <p style="max-width:840px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);line-height:1.5;color:var(--silver);">A diferencia de los informes de historial que solo te dicen dónde ha estado un auto, o de los sitios de reseñas que solo describen el modelo en general, Yes Car No Car lee el vehículo real que tienes delante y da una respuesta clara, porque es <em style="font-style:italic;color:var(--gold);">el único experto en autos sin concesionario que proteger, sin anunciante que complacer y sin nada que venderte salvo la verdad.</em></p>
+    <p style="max-width:840px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);line-height:1.5;color:var(--silver);">A diferencia de los informes de historial que solo te dicen dónde ha estado un auto, o de los sitios de reseñas que solo describen el modelo en general, Yes Car No Car lee el vehículo real que tienes delante y da una respuesta clara, porque es <em style="font-style:italic;color:var(--gold);">un experto en autos sin concesionario que proteger, sin anunciante que complacer y sin nada que venderte salvo la verdad.</em></p>
   </section>
 
   <!-- ============ CTA BAND ============ -->
@@ -1704,29 +1704,28 @@
     var COLOR={good:"var(--good)",cond:"var(--condition)",split:"var(--warning)",bad:"var(--bad)"};
     var STEPS=["Obteniendo el historial verificado…","Revisando accidentes y llamados a revisión…","Cruzando patrones de falla para este motor…","Sopesando los costos reales de reparación…"];
     var $=function(id){return document.getElementById(id);};
-    var badge=$("heroBadge"),input=$("vinInput"),go=$("goBtn"),paid=$("paidBtn"),
+    var badge=$("heroBadge"),go=$("goBtn"),paid=$("paidBtn"),
         stageText=$("dmStageText"),verdict=$("dmVerdict"),pill=$("dmPill"),vtitle=$("dmTitle"),vline=$("dmLine");
     var busy=false,current="ml350";
 
-    if(badge&&go&&input&&paid&&verdict){
+    if(badge&&go&&paid&&verdict){
       var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'Ver el informe completo <span>&rarr;</span>':'Informe completo &mdash; US$24.99 (CA$34.99 en Canadá) <span>&rarr;</span>';};
-      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; input.value=c.vin; setPaid(k);
+      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; setPaid(k);
         document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.classList.toggle("sel", ch.getAttribute("data-case")===k); });
         verdict.classList.remove("show");
-        stageText.innerHTML='<span class="dm-analyzing">Listo: <b style="color:var(--silver)">'+c.car+'</b> — pulsa "Ver el veredicto gratis."</span>'; };
+        stageText.innerHTML='<span class="dm-analyzing">Listo: <b style="color:var(--silver)">'+c.car+'</b> — pulsa "Muéstrame el veredicto."</span>'; };
       var reveal=function(c){ badge.classList.remove("scanning");
         stageText.innerHTML='<span class="dm-analyzing">Veredicto gratis para <b style="color:var(--silver)">'+c.car+'</b></span>';
         verdict.style.setProperty("--vc",COLOR[c.v]); pill.textContent="Gratis · la lectura del modelo"; vtitle.textContent=c.label; vline.textContent=c.line;
         void verdict.offsetWidth; verdict.classList.add("show"); busy=false; go.disabled=false; };
       var run=function(k){ if(busy)return; var c=CASES[k]||CASES[current]; current=(k in CASES)?k:current; setPaid(current);
-        busy=true; go.disabled=true; input.value=c.vin; verdict.classList.remove("show"); badge.classList.add("scanning");
+        busy=true; go.disabled=true; verdict.classList.remove("show"); badge.classList.add("scanning");
         var i=0, dur=reduce?170:520;
         stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[0]+'</span>';
         var iv=setInterval(function(){ i++; if(i<STEPS.length){ stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[i]+'</span>'; } else { clearInterval(iv); reveal(c); } }, dur); };
       var cue=$("dmCue");
       var killCue=function(){ if(cue)cue.classList.add("gone"); go.classList.remove("cue-pulse"); };
       go.addEventListener("click",function(){ killCue(); run(current); });
-      input.addEventListener("keydown",function(e){ if(e.key==="Enter"){ killCue(); run(current); } });
       document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.addEventListener("click",function(){ killCue(); select(ch.getAttribute("data-case")); }); });
       select("ml350");
     }

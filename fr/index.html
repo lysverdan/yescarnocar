@@ -1252,7 +1252,7 @@
 
       <section class="vinbox" aria-label="Vérifiez ce véhicule">
         <h2 class="vinbox-h">Vérifiez ce véhicule précis avant d&rsquo;acheter.</h2>
-        <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US &middot; un rapport, sans abonnement.</span></p>
+        <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US.</span> Moins cher qu&rsquo;un rapport d&rsquo;historique de grande marque, et il vous dit vraiment ce que ça veut dire. Un rapport, sans abonnement.<br>Prêt en une dizaine de minutes, directement dans votre courriel.</p>
         <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
           <input type="hidden" name="src" value="home-fr">
           <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Entrez le NIV de 17 caractères" required aria-label="Numéro d&rsquo;identification du véhicule" autocapitalize="characters" autocomplete="off">
@@ -1265,17 +1265,17 @@
         <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">La page de paiement et le rapport sont en anglais pour l&rsquo;instant.</p>
       </section>
 
+      <div class="report-proof" style="width:100%;max-width:540px;margin:1.3rem auto 0;text-align:center;">
+        <a href="/first-report.html" style="display:block;text-decoration:none;">
+          <span style="display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(0,0,0,0.8);"><img src="/first-report-top.jpg" alt="Le haut d&rsquo;un vrai rapport NIV complet Yes Car No Car sur une Mercedes-Benz ML350 2012 — verdict : Bonne voiture, avec conditions." loading="lazy" width="844" height="620" style="width:100%;height:auto;display:block;" /></span>
+          <span style="display:block;margin-top:0.7rem;font-size:0.85rem;line-height:1.5;color:var(--silver-dim);">Pas une démo. Du vrai : 2012 Mercedes ML350, de la Floride au Canada. <span style="color:var(--gold);">Voyez-le du début à la fin &rarr;</span></span>
+        </a>
+      </div>
+
       <div class="dm-scan">
-        <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Pas une brochure. Allez-y — fouinez.</p>
-        <div class="dm-row">
-          <label class="dm-vin"><span class="dot"></span><input id="vinInput" spellcheck="false" readonly value="4JGDA5HB9••••••••" aria-label="Example VIN — preview only" title="Preview — choose an example car below" /></label>
-        </div>
-        <div class="dm-cue" id="dmCue" aria-hidden="true">
-          <span class="cue-txt">VIN it to win it</span>
-          <svg viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 2 V17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 12 L15 21 L24 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <p class="dm-preview-label" style="margin:0 0 0.7rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;">Voyez comment se lit un verdict. Choisissez un exemple&nbsp;:</p>
         <div class="dm-btns">
-          <button class="dm-go cue-pulse" id="goBtn">Voir le verdict gratuit</button>
+          <button class="dm-go cue-pulse" id="goBtn">Montrez-moi le verdict</button>
           <a class="dm-go ghost" id="paidBtn" href="#" target="_blank" rel="noopener">Rapport complet &mdash; 24,99 $ US / 34,99 $ CA <span>&rarr;</span></a>
         </div>
         <div class="dm-chips">
@@ -1286,11 +1286,11 @@
           <button class="dm-chip" data-case="split">2016 Jeep Wrangler</button>
           <button class="dm-chip" data-case="bad">2015 Santa Fe Sport</button>
         </div>
-        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);">Ceci est un aperçu avec des voitures d'exemple &mdash; il ne vérifie pas encore votre propre NIV. La vérification NIV complète est disponible dans l'app. <a href="/fr/waitlist.html" style="color:var(--gold);">Téléchargez l'app &rarr;</a></p>
+        <p class="dm-preview-note" style="margin:1rem auto 0;max-width:56ch;font-size:0.8rem;line-height:1.55;color:var(--silver-dim);"><a href="/fr/waitlist.html" style="color:var(--gold);">Téléchargez l'app &rarr;</a></p>
       </div>
 
       <div class="dm-stage">
-        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Choisissez une voiture, puis appuyez sur &laquo;&nbsp;Voir le verdict gratuit.&nbsp;&raquo;</span></div></div>
+        <div class="dm-brow"><div id="dmStageText"><span class="dm-analyzing">Choisissez une voiture, puis appuyez sur &laquo;&nbsp;Montrez-moi le verdict.&nbsp;&raquo;</span></div></div>
         <div class="dm-verdict" id="dmVerdict">
           <span class="dm-vpill" id="dmPill">Gratuit &middot; la lecture du modèle</span>
           <div class="dm-vtitle" id="dmTitle">&mdash;</div>
@@ -1348,7 +1348,7 @@
         </div>
         <div class="diff">
           <h3>Rétroviseur contre pare-brise</h3>
-          <p>Un rapport d'historique ne montre que là où la voiture a été. Mais ce n'est pas le passé qui vous laissera en panne sur l'autoroute &mdash; c'est son avenir. On est les seuls à l'annoncer : les schémas de défaillance documentés qui guettent ce NIV précis, et ce qu'ils vont coûter.</p>
+          <p>Un rapport d'historique ne montre que là où la voiture a été. Mais ce n'est pas le passé qui vous laissera en panne sur l'autoroute &mdash; c'est son avenir. On l'annonce : les schémas de défaillance documentés qui guettent ce NIV précis, et ce qu'ils vont coûter.</p>
         </div>
         <div class="diff">
           <h3>Maintenant, c'est vous qui avez les cartes</h3>
@@ -1414,7 +1414,7 @@
           <div class="verdict-label">Verdict 04</div>
           <h3 class="verdict-title">Mauvaise voiture pour vous</h3>
           <p class="verdict-lede">Passez votre chemin.</p>
-          <p class="verdict-desc">Les données pointent vers des problèmes récurrents ou catastrophiques — un schéma de défaillance documenté et répandu sur cette année et ce moteur précis, plusieurs rappels de sécurité en suspens, ou un écart entre le prix et l'état qu'aucune négociation ne peut corriger. Nous vous suggérerons de meilleures options dans la même catégorie et le même budget pour que vous ne repartiez pas les mains vides.</p>
+          <p class="verdict-desc">Les données pointent vers des problèmes récurrents ou catastrophiques — un schéma de défaillance documenté et répandu sur cette année et ce moteur précis, plusieurs rappels de sécurité en suspens, ou un écart entre le prix et l'état qu'aucune négociation ne peut corriger. Quand il existe un meilleur choix dans la même catégorie et le même budget, nous vous le nommons, pour que vous ne repartiez pas les mains vides.</p>
         </div>
 
       </div>
@@ -1607,7 +1607,7 @@
 
   <!-- positioning callout -->
   <section style="padding:4.5rem 1.5rem;border-top:1px solid var(--line);">
-    <p style="max-width:840px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);line-height:1.5;color:var(--silver);">Contrairement aux rapports d'historique qui vous disent seulement où une voiture a été, ou aux sites d'avis qui ne décrivent que le modèle en général, Yes Car No Car lit le véhicule réel devant vous et donne une réponse claire — parce que c'est <em style="font-style:italic;color:var(--gold);">le seul expert automobile sans concessionnaire à protéger, sans annonceur à satisfaire et sans rien à vous vendre d'autre que la vérité.</em></p>
+    <p style="max-width:840px;margin:0 auto;text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);line-height:1.5;color:var(--silver);">Contrairement aux rapports d'historique qui vous disent seulement où une voiture a été, ou aux sites d'avis qui ne décrivent que le modèle en général, Yes Car No Car lit le véhicule réel devant vous et donne une réponse claire — parce que c'est <em style="font-style:italic;color:var(--gold);">un expert automobile sans concessionnaire à protéger, sans annonceur à satisfaire et sans rien à vous vendre d'autre que la vérité.</em></p>
   </section>
 
   <!-- ============ CTA BAND ============ -->
@@ -1704,29 +1704,28 @@
     var COLOR={good:"var(--good)",cond:"var(--condition)",split:"var(--warning)",bad:"var(--bad)"};
     var STEPS=["Extraction de l'historique vérifié…","Vérification des accidents et des rappels…","Recherche des schémas de défaillance pour ce moteur…","Évaluation des coûts réels de réparation…"];
     var $=function(id){return document.getElementById(id);};
-    var badge=$("heroBadge"),input=$("vinInput"),go=$("goBtn"),paid=$("paidBtn"),
+    var badge=$("heroBadge"),go=$("goBtn"),paid=$("paidBtn"),
         stageText=$("dmStageText"),verdict=$("dmVerdict"),pill=$("dmPill"),vtitle=$("dmTitle"),vline=$("dmLine");
     var busy=false,current="ml350";
 
-    if(badge&&go&&input&&paid&&verdict){
+    if(badge&&go&&paid&&verdict){
       var setPaid=function(k){var c=CASES[k]||CASES.ml350; paid.href=c.report||"#"; paid.innerHTML=c.real?'Voir le rapport complet <span>&rarr;</span>':'Rapport complet &mdash; 24,99 $ US / 34,99 $ CA <span>&rarr;</span>';};
-      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; input.value=c.vin; setPaid(k);
+      var select=function(k){ if(!(k in CASES))return; current=k; var c=CASES[k]; setPaid(k);
         document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.classList.toggle("sel", ch.getAttribute("data-case")===k); });
         verdict.classList.remove("show");
-        stageText.innerHTML='<span class="dm-analyzing">Prêt : <b style="color:var(--silver)">'+c.car+'</b> — appuyez sur « Voir le verdict gratuit. »</span>'; };
+        stageText.innerHTML='<span class="dm-analyzing">Prêt : <b style="color:var(--silver)">'+c.car+'</b> — appuyez sur « Montrez-moi le verdict. »</span>'; };
       var reveal=function(c){ badge.classList.remove("scanning");
         stageText.innerHTML='<span class="dm-analyzing">Verdict gratuit pour <b style="color:var(--silver)">'+c.car+'</b></span>';
         verdict.style.setProperty("--vc",COLOR[c.v]); pill.textContent="Gratuit · la lecture du modèle"; vtitle.textContent=c.label; vline.textContent=c.line;
         void verdict.offsetWidth; verdict.classList.add("show"); busy=false; go.disabled=false; };
       var run=function(k){ if(busy)return; var c=CASES[k]||CASES[current]; current=(k in CASES)?k:current; setPaid(current);
-        busy=true; go.disabled=true; input.value=c.vin; verdict.classList.remove("show"); badge.classList.add("scanning");
+        busy=true; go.disabled=true; verdict.classList.remove("show"); badge.classList.add("scanning");
         var i=0, dur=reduce?170:520;
         stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[0]+'</span>';
         var iv=setInterval(function(){ i++; if(i<STEPS.length){ stageText.innerHTML='<span class="dm-analyzing"><span class="tick">▍</span> '+STEPS[i]+'</span>'; } else { clearInterval(iv); reveal(c); } }, dur); };
       var cue=$("dmCue");
       var killCue=function(){ if(cue)cue.classList.add("gone"); go.classList.remove("cue-pulse"); };
       go.addEventListener("click",function(){ killCue(); run(current); });
-      input.addEventListener("keydown",function(e){ if(e.key==="Enter"){ killCue(); run(current); } });
       document.querySelectorAll(".dm-chip").forEach(function(ch){ ch.addEventListener("click",function(){ killCue(); select(ch.getAttribute("data-case")); }); });
       select("ml350");
     }
