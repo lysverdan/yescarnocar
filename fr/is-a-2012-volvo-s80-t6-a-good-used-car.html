@@ -548,7 +548,22 @@
       <span class="verdict-text" style="color: var(--condition);">BONNE/MAUVAISE VOITURE POUR VOUS</span>
     </div>
 
-    <div class="article-body">
+    <section class="vinbox" aria-label="Vérifiez ce véhicule">
+    <h2 class="vinbox-h">Vérifiez ce véhicule précis avant d&rsquo;acheter.</h2>
+    <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US &middot; un rapport, sans abonnement.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input type="hidden" name="src" value="model-fr-volvo-s80-t6">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Entrez le NIV de 17 caractères" required aria-label="Numéro d&rsquo;identification du véhicule" autocapitalize="characters" autocomplete="off">
+      <select class="vinbox-market" name="market" aria-label="Marché">
+        <option value="CA" selected>Canada</option>
+        <option value="US">États-Unis</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Obtenir le rapport complet</button>
+    </form>
+    <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">La page de paiement et le rapport sont en anglais pour l&rsquo;instant.</p>
+  </section>
+
+  <div class="article-body">
       <h2>Pourquoi ça peut être une bonne voiture</h2>
       <p>La S80 T6 est l'une des berlines de luxe les plus sous-estimées que vous puissiez acheter pour le prix, et la seule raison pour laquelle elle est bon marché est un badge qui effraie ceux qui n'en ont jamais possédé. Le six en ligne turbocompressé 3,0 litres développe 300 chevaux, utilise une chaîne de distribution plutôt qu'une courroie et n'a aucune panne moteur systémique documentée — les propriétaires qui suivent les vidanges voient couramment plus de 300 000 km. Elle est associée à la robuste automatique Aisin à six rapports, et les panneaux de carrosserie Volvo de cette époque résistent à la rouille bien mieux que leurs rivales allemandes. Elle repose sur la plateforme P3 de Volvo, partagée avec les S60, V70, XC70 et XC60 de la période.</p>
 
@@ -614,6 +629,21 @@
   <div class="inline-disclaimer">
     <p>Ceci est un avis informatif fondé sur des données générales du véhicule &mdash; ce n'est pas un conseil professionnel ni un substitut à une inspection en personne par un mécanicien qualifié. Faites toujours inspecter toute voiture d'occasion de façon indépendante avant d'acheter. Consultez notre <a href="/disclaimer.html">Avis de non-responsabilité</a><br><span style="font-size:0.9em;opacity:0.8;">Les documents juridiques sont disponibles en anglais.</span>.</p>
   </div>
+
+  <section class="vinbox" aria-label="Vérifiez ce véhicule">
+    <h2 class="vinbox-h">Vérifiez ce véhicule précis avant d&rsquo;acheter.</h2>
+    <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US &middot; un rapport, sans abonnement.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input type="hidden" name="src" value="model-fr-volvo-s80-t6">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Entrez le NIV de 17 caractères" required aria-label="Numéro d&rsquo;identification du véhicule" autocapitalize="characters" autocomplete="off">
+      <select class="vinbox-market" name="market" aria-label="Marché">
+        <option value="CA" selected>Canada</option>
+        <option value="US">États-Unis</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Obtenir le rapport complet</button>
+    </form>
+    <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">La page de paiement et le rapport sont en anglais pour l&rsquo;instant.</p>
+  </section>
 
   <footer>
     <div class="socials footer-socials">

@@ -559,7 +559,22 @@
       <span class="verdict-text" style="color:var(--teal);">BONNE VOITURE — AVEC CONDITIONS</span>
     </div>
 
-    <div class="article-body">
+    <section class="vinbox" aria-label="Vérifiez ce véhicule">
+    <h2 class="vinbox-h">Vérifiez ce véhicule précis avant d&rsquo;acheter.</h2>
+    <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US &middot; un rapport, sans abonnement.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input type="hidden" name="src" value="model-fr-ford-mustang">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Entrez le NIV de 17 caractères" required aria-label="Numéro d&rsquo;identification du véhicule" autocapitalize="characters" autocomplete="off">
+      <select class="vinbox-market" name="market" aria-label="Marché">
+        <option value="CA" selected>Canada</option>
+        <option value="US">États-Unis</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Obtenir le rapport complet</button>
+    </form>
+    <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">La page de paiement et le rapport sont en anglais pour l&rsquo;instant.</p>
+  </section>
+
+  <div class="article-body">
 <section class="ycnc-years" id="years-to-avoid" lang="fr">
 <h2>Ford Mustang : années à éviter</h2>
 <p>Notre lecture, année par année, des plaintes de propriétaires, bulletins techniques, rappels et enquêtes de sécurité publics pour le Ford Mustang (2007–2025). C&#x27;est une tendance observée sur de nombreux véhicules, et non une affirmation sur un véhicule en particulier.</p>
@@ -642,6 +657,21 @@
   <div class="inline-disclaimer">
     <p>Ceci est un avis informatif fondé sur des données générales du véhicule &mdash; ce n'est pas un conseil professionnel ni un substitut à une inspection en personne par un mécanicien qualifié. Faites toujours inspecter toute voiture d'occasion de façon indépendante avant d'acheter. Consultez notre <a href="/disclaimer.html">Avis de non-responsabilité</a><br><span style="font-size:0.9em;opacity:0.8;">Les documents juridiques sont disponibles en anglais.</span>.</p>
   </div>
+
+  <section class="vinbox" aria-label="Vérifiez ce véhicule">
+    <h2 class="vinbox-h">Vérifiez ce véhicule précis avant d&rsquo;acheter.</h2>
+    <p class="vinbox-sub">Son vrai historique, ce qu&rsquo;il risque de vous coûter ensuite, et notre verdict pour vous.<br><span class="vinbox-price">34,99 $ CA / 24,99 $ US &middot; un rapport, sans abonnement.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input type="hidden" name="src" value="model-fr-ford-mustang">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Entrez le NIV de 17 caractères" required aria-label="Numéro d&rsquo;identification du véhicule" autocapitalize="characters" autocomplete="off">
+      <select class="vinbox-market" name="market" aria-label="Marché">
+        <option value="CA" selected>Canada</option>
+        <option value="US">États-Unis</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Obtenir le rapport complet</button>
+    </form>
+    <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">La page de paiement et le rapport sont en anglais pour l&rsquo;instant.</p>
+  </section>
 
   <footer>
     <div class="socials footer-socials">

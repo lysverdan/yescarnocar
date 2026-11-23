@@ -543,7 +543,22 @@
       <span class="verdict-text" style="color: var(--condition);">BUEN/MAL AUTO PARA TI</span>
     </div>
 
-    <div class="article-body">
+    <section class="vinbox" aria-label="Revisa el auto exacto">
+    <h2 class="vinbox-h">Revisa el auto exacto antes de comprar.</h2>
+    <p class="vinbox-sub">Su historial real, lo que probablemente te costará después y nuestro veredicto para ti.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; un informe, sin suscripción.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input type="hidden" name="src" value="model-es-jaguar-xj-vanden-plas">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Escribe el VIN de 17 caracteres" required aria-label="Número de identificación del vehículo" autocapitalize="characters" autocomplete="off">
+      <select class="vinbox-market" name="market" aria-label="Mercado">
+        <option value="US" selected>Estados Unidos</option>
+        <option value="CA">Canadá</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Obtener el informe completo</button>
+    </form>
+    <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">Por ahora, la página de pago y el informe están en inglés.</p>
+  </section>
+
+  <div class="article-body">
       <h2>Primero — ¿qué 2003 XJ estás mirando?</h2>
       <p>Esto importa antes que nada, porque un 2003 XJ Vanden Plas puede ser uno de dos autos muy distintos. La mayoría de los ejemplares 2003 vendidos en Norteamérica son el modelo saliente de carrocería de acero (el X308) con un V8 4.0 litros y una automática de cinco velocidades sobre resortes convencionales. El modelo totalmente nuevo de aluminio (el X350) — V8 4.2 litros, automática de seis velocidades y suspensión neumática en las cuatro esquinas — llegó como modelo 2004, aunque los primeros autos se fabricaron en 2003. La forma más rápida de distinguirlos es el motor: un 4.0 litros es el X308 más antiguo, un 4.2 litros es el X350 de aluminio. El resto de esta página cubre el X350 de aluminio. Si el tuyo es el 4.0 X308, los gastos grandes son distintos — en particular los tensores de cadena de distribución de plástico de ese V8 anterior — así que confirma el auto por su motor y su VIN primero.</p>
 
@@ -611,6 +626,21 @@
   <div class="inline-disclaimer">
     <p>Esta es una opinión informativa basada en datos generales del vehículo &mdash; no es asesoramiento profesional ni sustituye una inspección presencial por un mecánico calificado. Siempre haz inspeccionar de forma independiente cualquier auto usado antes de comprarlo. Consulta nuestro <a href="/disclaimer.html">Aviso legal</a><br><span style="font-size:0.9em;opacity:0.8;">Los documentos legales están disponibles en inglés.</span>.</p>
   </div>
+
+  <section class="vinbox" aria-label="Revisa el auto exacto">
+    <h2 class="vinbox-h">Revisa el auto exacto antes de comprar.</h2>
+    <p class="vinbox-sub">Su historial real, lo que probablemente te costará después y nuestro veredicto para ti.<br><span class="vinbox-price">US$24.99 / CA$34.99 &middot; un informe, sin suscripción.</span></p>
+    <form class="vinbox-form" action="https://api.yescarnocar.com/buy/report" method="get">
+      <input type="hidden" name="src" value="model-es-jaguar-xj-vanden-plas">
+      <input class="vinbox-vin" name="vin" maxlength="17" placeholder="Escribe el VIN de 17 caracteres" required aria-label="Número de identificación del vehículo" autocapitalize="characters" autocomplete="off">
+      <select class="vinbox-market" name="market" aria-label="Mercado">
+        <option value="US" selected>Estados Unidos</option>
+        <option value="CA">Canadá</option>
+      </select>
+      <button class="vinbox-btn" type="submit">Obtener el informe completo</button>
+    </form>
+    <p class="vinbox-note" style="margin:0.85rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--silver-dim,#a0a0a5);">Por ahora, la página de pago y el informe están en inglés.</p>
+  </section>
 
   <footer>
     <div class="socials footer-socials">
